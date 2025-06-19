@@ -212,7 +212,7 @@ const CommonMainForm = () => {
             }
           />
                 <div className=" ">
-                    <div className="flex justify-center items-center pb-5 ">
+                    <div className="flex justify-center items-center pb-5 "> 
                         <Image
                             src="/logo-2024.webp"
                             width={150}
