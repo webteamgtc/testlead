@@ -8,7 +8,7 @@ import OtpInput from "react-otp-input";
 import { countryList } from "../context/useCountriesDetails";
 import { useLocationDetail } from "../context/useLocationDetail";
 import { toast } from "react-toastify";
-import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 
@@ -20,13 +20,6 @@ const CommonMainForm = () => {
     const [storedOtp, setStoredOtp] = useState("")
     const [isDisable, setIsDisable] = useState(true)
     const router = useRouter()
-     const source = useSearchParams().get("utm_source");
-    const campaign = useSearchParams().get("utm_campaign");
-    const utmID = useSearchParams().get("utm_id");
-    const paths = useSearchParams().get("utm_paths");
-    const medium = useSearchParams().get("utm_medium");
-    const fbclid = useSearchParams().get("fbclid");
-    const path = usePathname();
 
     useEffect(() => {
         if (countryData?.country) {
@@ -89,12 +82,6 @@ const CommonMainForm = () => {
             nickname: "",
             email: "",
             last_name: "",
-             fbclid: "",
-            utm_campaign: "",
-            utm_id: "",
-            utm_medium : "",
-            utm_paths: "",
-            utm_source: "",
             phone: "",
             password: generatePassword(),
             country: "",
@@ -117,7 +104,7 @@ const CommonMainForm = () => {
         onSubmit: async (values) => {
             try {
                 setLoading(true);
-                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/uoiznyy/", JSON.stringify(values));
+                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/2nppxqi/", JSON.stringify(values));
             } catch (error) {
             } finally {
                 sendDataToDb(values, formik, setLoading)
@@ -139,80 +126,8 @@ const CommonMainForm = () => {
     return (
         <section className="demo-account">
             <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
-                 <input
-            name="fbclid"
-            className="hidden"
-            type="text"
-            onChange={formik.handleChange}
-            value={
-              !formik.values.fbclid || formik.values.fbclid === ""
-                ? (formik.values.fbclid = fbclid)
-                : (formik.values.fbclid = fbclid)
-            }
-          />
-          <input
-            name="utm_campain"
-            className="hidden"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={
-              !formik.values.utm_campaign|| formik.values.utm_campaign === ""
-                ? (formik.values.utm_campaign = campaign)
-                : (formik.values.utm_campaign = campaign)
-            }
-          />
-          <input
-            name="utm_paths"
-            className="hidden"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={
-              !formik.values.utm_paths|| formik.values.utm_paths === ""
-                ? (formik.values.utm_paths = path)
-                : (formik.values.utm_paths = path)
-            }
-          />
-       
-          <input
-            name="utm_source"
-            className="hidden"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={
-              !formik.values.utm_source || formik.values.utm_source === ""
-                ? (formik.values.utm_source = source)
-                : (formik.values.utm_source = source)
-            }
-          />
-          <input
-            name="utm_medium"
-            className="hidden"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={
-              !formik.values.utm_medium || formik.values.utm_medium === ""
-                ? (formik.values.utm_medium = medium)
-                : (formik.values.utm_medium = medium)
-            }
-          />
-           <input
-            name="utm_id"
-            className="hidden"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={
-              !formik.values.utm_id || formik.values.utm_id=== ""
-                ? (formik.values.utm_id = utmID)
-                : (formik.values.utm_id = utmID)
-            }
-          />
                 <div className=" ">
-                    <div className="flex justify-center items-center pb-5 "> 
+                    <div className="flex justify-center items-center pb-5 ">
                         <Image
                             src="/logo-2024.webp"
                             width={150}

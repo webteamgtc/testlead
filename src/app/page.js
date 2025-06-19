@@ -10,9 +10,9 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-4 md:gap-8 items-center h-full">
 
               <div className="max-w-sm mx-auto">
-  <CommonMainForm />
+
               </div>
-            
+              <CommonMainForm />
       
           </div>
         
