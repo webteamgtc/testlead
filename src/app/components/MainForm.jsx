@@ -13,120 +13,135 @@ import Image from "next/image";
 
 
 const CommonMainForm = () => {
-    const { countryData } = useLocationDetail();
-    const [otpLoading, setOtpLoading] = useState(false)
-    const [showOtp, setShowOtp] = useState(false)
-    const [loading, setLoading] = useState(false);
-    const [storedOtp, setStoredOtp] = useState("")
-    const [isDisable, setIsDisable] = useState(true)
-    const router = useRouter()
+   const { countryData } = useLocationDetail();
+  const [otpLoading, setOtpLoading] = useState(false);
+  const [showOtp, setShowOtp] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [storedOtp, setStoredOtp] = useState("");
+  const [isDisable, setIsDisable] = useState(true);
+  const router = useRouter();
 
-    useEffect(() => {
-        if (countryData?.country) {
-            const filterData = countryList.find((item) => item?.alpha_2_code == countryData.country);
-            formik.setFieldValue("country", filterData ? filterData?.en_short_name : "");
-        }
-    }, [countryData?.country, countryList]);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    formik.setFieldValue("utm_source", params.get("utm_source") || "");
+    formik.setFieldValue("utm_medium", params.get("utm_medium") || "");
+    formik.setFieldValue("utm_campaign", params.get("utm_campaign") || "");
+    formik.setFieldValue("utm_id", params.get("utm_id") || "");
+    formik.setFieldValue("utm_term", params.get("utm_term") || "");
+    formik.setFieldValue("utm_content", params.get("utm_content") || "");
+    formik.setFieldValue("fbclid", params.get("fbclid") || "");
+    formik.setFieldValue("gclid", params.get("gclid") || "");
+  }, []);
 
-
-
-    const sendVerificationCode = () => {
-        setOtpLoading(true)
-        axios.post(`/api/otp-smtp`, {
-            email: formik?.values?.email,
-            type: "0"
-        }).then(res => {
-            if (res?.data?.message) {
-                setShowOtp(true)
-                setStoredOtp(res?.data?.message?.slice(4, -3))
-                toast.success("Otp send successfully!")
-            }
-            else {
-                toast.error(res?.data?.message)
-                setShowOtp(false)
-            }
-        }).catch(err => {
-            setShowOtp(false)
-        }).finally(() => {
-            setOtpLoading(false)
-        })
+  useEffect(() => {
+    if (countryData?.country) {
+      const filterData = countryList.find(
+        (item) => item?.alpha_2_code === countryData.country
+      );
+      formik.setFieldValue("country", filterData?.en_short_name || "");
     }
+  }, [countryData?.country]);
 
-    const generatePassword = (length = 12) => {
-        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-        return Array.from({ length }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
-    };
+  const generatePassword = (length = 12) => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+    return Array.from({ length }, () =>
+      chars[Math.floor(Math.random() * chars.length)]
+    ).join("");
+  };
 
-    const sendDataToDb = async (data) => {
-        const emailData = axios.post(
-            `/api/email`,
-            JSON.stringify(data)
-        ).then(res => {
-            toast.success('Successfully submitted');
-            formik.resetForm();
-            setLoading(false)
-            localStorage.setItem('user', JSON.stringify(data));
-            router.push("/test/thank-you",);
-            formik.resetForm()
-            setShowOtp(false)
-        }).catch(err => {
-            toast.error('Error inserting data: ' + result.error);
-            setLoading(false)
-        }).finally(() => {
-            setLoading(false);
-        })
-    }
+  const formik = useFormik({
+    initialValues: {
+      nickname: "",
+      email: "",
+      last_name: "",
+      phone: "",
+      password: generatePassword(),
+      country: "",
+      otp: "",
+      terms: false,
+      utm_source: "",
+      utm_medium: "",
+      utm_campaign: "",
+      utm_id: "",
+      utm_term: "",
+      utm_content: "",
+      fbclid: "",
+      gclid: "",
+    },
+    validationSchema: Yup.object({
+      nickname: Yup.string()
+        .matches(/^[A-Za-z\s]+$/, "Full name can only contain letters.")
+        .required("First name is required"),
+      last_name: Yup.string()
+        .matches(/^[A-Za-z\s]+$/, "Last name can only contain letters.")
+        .required("Last name is required"),
+      email: Yup.string().email("Invalid email address").required("Email is required"),
+      phone: Yup.string().required("Phone number is required"),
+      country: Yup.string().required("Country is required"),
+      otp: Yup.string().length(6, "OTP must be 6 digits").required("OTP is required"),
+      terms: Yup.bool().oneOf([true], "Please accept the terms and conditions"),
+    }),
+    onSubmit: async (values) => {
+      try {
+        setLoading(true);
+        await axios.post("https://hooks.zapier.com/hooks/catch/16420445/uoiznyy/", JSON.stringify(values));
+        await sendDataToDb(values);
+      } catch (error) {
+        toast.error("Submission failed.");
+        setLoading(false);
+      }
+    },
+  });
 
-    const formik = useFormik({
-        initialValues: {
-            nickname: "",
-            email: "",
-            last_name: "",
-            phone: "",
-            password: generatePassword(),
-            country: "",
-            otp: "",
-            terms: false,
-        },
-        validationSchema: Yup.object({
-            nickname: Yup.string()
-                .matches(/^[A-Za-z\s]+$/, "Full name can only contain letters.")
-                .required("First name is required"),
-            last_name: Yup.string()
-                .matches(/^[A-Za-z\s]+$/, "Last name can only contain letters.")
-                .required("Last name is required"),
-            email: Yup.string().email("Invalid email address").required("Email is required"),
-            phone: Yup.string().required("Phone number is required"),
-            country: Yup.string().required("Country is required"),
-            otp: Yup.string().length(6, "OTP must be 6 digits").required("OTP is required"),
-            terms: Yup.bool().oneOf([true], "Please accept the terms and conditions"),
-        }),
-        onSubmit: async (values) => {
-            try {
-                setLoading(true);
-                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/2nppxqi/", JSON.stringify(values));
-            } catch (error) {
-            } finally {
-                sendDataToDb(values, formik, setLoading)
-            }
-        },
-    });
-
-    const verifyOtpCode = async () => {
-        if (formik.values.otp == storedOtp) {
-            toast.success("Otp Verified Successfully!")
-            setShowOtp(false)
-            setIsDisable(false)
+  const sendVerificationCode = () => {
+    setOtpLoading(true);
+    axios
+      .post(`/api/otp-smtp`, {
+        email: formik?.values?.email,
+        type: "0",
+      })
+      .then((res) => {
+        if (res?.data?.message) {
+          setShowOtp(true);
+          setStoredOtp(res?.data?.message?.slice(4, -3));
+          toast.success("Otp sent successfully!");
+        } else {
+          toast.error(res?.data?.message);
+          setShowOtp(false);
         }
-        else {
-            toast.error("Otp Verification Failed try again!")
-        }
+      })
+      .catch(() => setShowOtp(false))
+      .finally(() => setOtpLoading(false));
+  };
+
+  const verifyOtpCode = () => {
+    if (formik.values.otp === storedOtp) {
+      toast.success("OTP Verified Successfully!");
+      setShowOtp(false);
+      setIsDisable(false);
+    } else {
+      toast.error("OTP Verification Failed. Try again!");
     }
+  };
+
+  const sendDataToDb = async (data) => {
+    try {
+      await axios.post(`/api/email`, JSON.stringify(data));
+      toast.success("Successfully submitted");
+      localStorage.setItem("user", JSON.stringify(data));
+      router.push("/test/thank-you");
+    } catch (err) {
+      toast.error("Error inserting data");
+    } finally {
+      formik.resetForm();
+      setLoading(false);
+    }
+  };
 
     return (
         <section className="demo-account">
-            <div className="max-w-6xl mx-auto p-5 bg-white shadow-2xl rounded-2xl">
-                <div className=" ">
+            <div className="max-w-sm mx-auto p-5 bg-white shadow-2xl rounded-2xl">
+                <div className="test">
                     <div className="flex justify-center items-center pb-5 ">
                         <Image
                             src="/logo-2024.webp"
@@ -147,6 +162,14 @@ const CommonMainForm = () => {
                     <form onSubmit={formik.handleSubmit} className="bg-white relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left">
                         {/* Full Name & Email */}
                         <div className="grid grid-cols-1 gap-3 mb-3">
+                            <input type="hidden" name="utm_source" value={formik.values.utm_source} />
+                            <input type="hidden" name="utm_medium" value={formik.values.utm_medium} />
+                            <input type="hidden" name="utm_campaign" value={formik.values.utm_campaign} />
+                            <input type="hidden" name="utm_id" value={formik.values.utm_id} />
+                            <input type="hidden" name="utm_term" value={formik.values.utm_term} />
+                            <input type="hidden" name="fbclid" value={formik.values.fbclid} />
+                            <input type="hidden" name="gclid" value={formik.values.gclid} />
+                            <input type="hidden" name="utm_content" value={formik.values.utm_content} />
                             <div className="relative">
                                 <svg className="absolute top-3 left-0 text-gray-400 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
