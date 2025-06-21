@@ -29,10 +29,16 @@ const generateEmailContent = (data) => {
                                     Thank you for your Time
                                 </h1>
                     <h3 style="font-size: 16px; color: #192055; margin-bottom: 16px; padding: 0px 20px;">
-                    Hi ${data?.nickname||""},
+                    Hi ${data?.nickname || ""},
                     </h3>
                     <p style="margin-bottom: 16px; padding: 0px 20px;">
                     Thanks for signing up with <b style="color: #b68756;">GTC</b>!
+                    </p>
+                         <p style="margin-bottom: 16px; padding: 0px 20px;">
+                    Email:  <b>${data?.email}</b>
+                    </p>
+                         <p style="margin-bottom: 16px; padding: 0px 20px;">
+                    Password <b >${data?.password}</b>
                     </p>
                     <p style="margin-bottom: 16px; padding: 0px 20px;">
 You’re almost there. To start trading with tighter spreads and instant execution, simply click the link below to register yourself and start trading.                    </p>
@@ -99,7 +105,7 @@ You’re almost there. To start trading with tighter spreads and instant executi
 export async function POST(req) {
     const reqBody = await req.json();
     const mailOption = {
-        from: "service@mx.gtcmail.com",
+        from: "portal@mx2.gtcmail.com",
         to: reqBody?.email,
     }
     try {

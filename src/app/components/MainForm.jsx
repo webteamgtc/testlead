@@ -13,130 +13,152 @@ import Image from "next/image";
 
 
 const CommonMainForm = () => {
-   const { countryData } = useLocationDetail();
-  const [otpLoading, setOtpLoading] = useState(false);
-  const [showOtp, setShowOtp] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [storedOtp, setStoredOtp] = useState("");
-  const [isDisable, setIsDisable] = useState(true);
-  const router = useRouter();
+    const { countryData } = useLocationDetail();
+    const [otpLoading, setOtpLoading] = useState(false);
+    const [showOtp, setShowOtp] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [storedOtp, setStoredOtp] = useState("");
+    const [isDisable, setIsDisable] = useState(true);
+    const router = useRouter();
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    formik.setFieldValue("utm_source", params.get("utm_source") || "");
-    formik.setFieldValue("utm_medium", params.get("utm_medium") || "");
-    formik.setFieldValue("utm_campaign", params.get("utm_campaign") || "");
-    formik.setFieldValue("utm_id", params.get("utm_id") || "");
-    formik.setFieldValue("utm_term", params.get("utm_term") || "");
-    formik.setFieldValue("utm_content", params.get("utm_content") || "");
-    formik.setFieldValue("fbclid", params.get("fbclid") || "");
-    formik.setFieldValue("gclid", params.get("gclid") || "");
-  }, []);
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        formik.setFieldValue("utm_source", params.get("utm_source") || "");
+        formik.setFieldValue("utm_medium", params.get("utm_medium") || "");
+        formik.setFieldValue("utm_campaign", params.get("utm_campaign") || "");
+        formik.setFieldValue("utm_id", params.get("utm_id") || "");
+        formik.setFieldValue("utm_term", params.get("utm_term") || "");
+        formik.setFieldValue("utm_content", params.get("utm_content") || "");
+        formik.setFieldValue("fbclid", params.get("fbclid") || "");
+        formik.setFieldValue("gclid", params.get("gclid") || "");
+    }, []);
 
-  useEffect(() => {
-    if (countryData?.country) {
-      const filterData = countryList.find(
-        (item) => item?.alpha_2_code === countryData.country
-      );
-      formik.setFieldValue("country", filterData?.en_short_name || "");
-    }
-  }, [countryData?.country]);
-
-  const generatePassword = (length = 12) => {
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-    return Array.from({ length }, () =>
-      chars[Math.floor(Math.random() * chars.length)]
-    ).join("");
-  };
-
-  const formik = useFormik({
-    initialValues: {
-      nickname: "",
-      email: "",
-      last_name: "",
-      phone: "",
-      password: generatePassword(),
-      country: "",
-      otp: "",
-      terms: false,
-      utm_source: "",
-      utm_medium: "",
-      utm_campaign: "",
-      utm_id: "",
-      utm_term: "",
-      utm_content: "",
-      fbclid: "",
-      gclid: "",
-    },
-    validationSchema: Yup.object({
-      nickname: Yup.string()
-        .matches(/^[A-Za-z\s]+$/, "Full name can only contain letters.")
-        .required("First name is required"),
-      last_name: Yup.string()
-        .matches(/^[A-Za-z\s]+$/, "Last name can only contain letters.")
-        .required("Last name is required"),
-      email: Yup.string().email("Invalid email address").required("Email is required"),
-      phone: Yup.string().required("Phone number is required"),
-      country: Yup.string().required("Country is required"),
-      otp: Yup.string().length(6, "OTP must be 6 digits").required("OTP is required"),
-      terms: Yup.bool().oneOf([true], "Please accept the terms and conditions"),
-    }),
-    onSubmit: async (values) => {
-      try {
-        setLoading(true);
-        await axios.post("https://hooks.zapier.com/hooks/catch/16420445/uoiznyy/", JSON.stringify(values));
-        await sendDataToDb(values);
-      } catch (error) {
-        toast.error("Submission failed.");
-        setLoading(false);
-      }
-    },
-  });
-
-  const sendVerificationCode = () => {
-    setOtpLoading(true);
-    axios
-      .post(`/api/otp-smtp`, {
-        email: formik?.values?.email,
-        type: "0",
-      })
-      .then((res) => {
-        if (res?.data?.message) {
-          setShowOtp(true);
-          setStoredOtp(res?.data?.message?.slice(4, -3));
-          toast.success("Otp sent successfully!");
-        } else {
-          toast.error(res?.data?.message);
-          setShowOtp(false);
+    useEffect(() => {
+        if (countryData?.country) {
+            const filterData = countryList.find(
+                (item) => item?.alpha_2_code === countryData.country
+            );
+            formik.setFieldValue("country", filterData?.en_short_name || "");
         }
-      })
-      .catch(() => setShowOtp(false))
-      .finally(() => setOtpLoading(false));
-  };
+    }, [countryData?.country]);
 
-  const verifyOtpCode = () => {
-    if (formik.values.otp === storedOtp) {
-      toast.success("OTP Verified Successfully!");
-      setShowOtp(false);
-      setIsDisable(false);
-    } else {
-      toast.error("OTP Verification Failed. Try again!");
-    }
-  };
+    const generatePassword = (length = 12) => {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+        return Array.from({ length }, () =>
+            chars[Math.floor(Math.random() * chars.length)]
+        ).join("");
+    };
 
-  const sendDataToDb = async (data) => {
-    try {
-      await axios.post(`/api/email`, JSON.stringify(data));
-      toast.success("Successfully submitted");
-      localStorage.setItem("user", JSON.stringify(data));
-      router.push("/test/thank-you");
-    } catch (err) {
-      toast.error("Error inserting data");
-    } finally {
-      formik.resetForm();
-      setLoading(false);
-    }
-  };
+    const formik = useFormik({
+        initialValues: {
+            nickname: "",
+            email: "",
+            last_name: "",
+            phone: "",
+            password: generatePassword(),
+            country: "",
+            otp: "",
+            terms: false,
+            utm_source: "",
+            utm_medium: "",
+            utm_campaign: "",
+            utm_id: "",
+            utm_term: "",
+            utm_content: "",
+            fbclid: "",
+            gclid: "",
+        },
+        validationSchema: Yup.object({
+            nickname: Yup.string()
+                .matches(/^[A-Za-z\s]+$/, "Full name can only contain letters.")
+                .required("First name is required"),
+            last_name: Yup.string()
+                .matches(/^[A-Za-z\s]+$/, "Last name can only contain letters.")
+                .required("Last name is required"),
+            email: Yup.string().email("Invalid email address").required("Email is required"),
+            phone: Yup.string().required("Phone number is required"),
+            country: Yup.string().required("Country is required"),
+            otp: Yup.string().length(6, "OTP must be 6 digits").required("OTP is required"),
+            terms: Yup.bool().oneOf([true], "Please accept the terms and conditions"),
+        }),
+        onSubmit: async (values) => {
+            try {
+                setLoading(true);
+                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/uoiznyy/", JSON.stringify(values));
+                await sendDataToDb(values);
+            } catch (error) {
+                toast.error("Submission failed.");
+                setLoading(false);
+            }
+        },
+    });
+
+    const sendVerificationCode = () => {
+        setOtpLoading(true);
+        axios
+            .post(`/api/getgcode`, {
+                email: formik?.values?.email,
+                type: "0",
+            })
+            .then((res) => {
+                if (res?.data?.message) {
+                    setShowOtp(true);
+                    setStoredOtp(res?.data?.message?.slice(4, -3));
+                    toast.success("Otp sent successfully!");
+                    setIsDisable(false);
+                } else {
+                    toast.error(res?.data?.message);
+                    setShowOtp(false);
+                }
+            })
+            .catch(() => setShowOtp(false))
+            .finally(() => setOtpLoading(false));
+    };
+
+    const verifyOtpCode = () => {
+        if (formik.values.otp === storedOtp) {
+            toast.success("OTP Verified Successfully!");
+            setShowOtp(false);
+            setIsDisable(false);
+        } else {
+            toast.error("OTP Verification Failed. Try again!");
+        }
+    };
+
+
+    const sendDataToDb = async (data) => {
+        console.log({ data })
+        try {
+            await axios.post(`/api/reg`, {
+                email: data?.email,
+                nickname: data?.nickname,
+                code: data?.otp,
+                country: data?.country,
+                phone: data?.phone,
+                password: data?.password,
+                last_name: data?.last_name,
+            }).then(res => {
+                if (res?.data?.success) {
+                    toast.success(res?.data?.message)
+                } else {
+                    toast.error(res?.data?.message)
+                }
+            }).catch(err => {
+                toast.success(err?.data?.message)
+            }).finally(() => {
+                setLoading(false)
+            })
+            await axios.post(`/api/email`, JSON.stringify(data));
+            toast.success("Successfully submitted");
+            localStorage.setItem("user", JSON.stringify(data));
+            router.push("/test/thank-you");
+        } catch (err) {
+            toast.error("Error inserting data");
+        } finally {
+            formik.resetForm();
+            setLoading(false);
+        }
+    };
 
     return (
         <section className="demo-account">
@@ -172,7 +194,7 @@ const CommonMainForm = () => {
                             <input type="hidden" name="utm_content" value={formik.values.utm_content} />
                             <div className="relative">
                                 <svg className="absolute top-3 left-0 text-gray-400 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                                 <input
                                     type="text"
@@ -186,7 +208,7 @@ const CommonMainForm = () => {
                             </div>
                             <div className="relative">
                                 <svg className="absolute top-3 left-0 text-gray-400 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                                 </svg>
                                 <input
                                     type="text"
@@ -206,13 +228,13 @@ const CommonMainForm = () => {
                             <div className="relative">
                                 <div className="relative">
                                     <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"
-                                    className="absolute top-3 left-0 w-4 h-4 text-gray-400 fill-current"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 512 512"
+                                        className="absolute top-3 left-0 w-4 h-4 text-gray-400 fill-current"
                                     >
-                                    <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z" />
+                                        <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z" />
                                     </svg>
-                                                                        <input
+                                    <input
                                         type="email"
                                         className={`w-full bg-white px-4 py-3 pl-5 border-b ${formik.touched.email && formik.errors.email ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none`}
                                         placeholder="Email"
@@ -262,13 +284,13 @@ const CommonMainForm = () => {
                                             )}
 
                                         </div>
-                                        <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center"
+                                        {/* <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center"
                                             onClick={() => {
                                                 verifyOtpCode()
                                             }}
                                         >
                                             Verify Code
-                                        </div>
+                                        </div> */}
                                     </div>
                                 }
                             </div>
@@ -295,7 +317,7 @@ const CommonMainForm = () => {
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
-                                >
+                            >
                                 <path
                                     d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22M12 2C9.49872 4.73835 8.07725 8.29203 8 12C8.07725 15.708 9.49872 19.2616 12 22M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22M2.50002 9H21.5M2.5 15H21.5"
                                     stroke="currentColor"
@@ -303,7 +325,7 @@ const CommonMainForm = () => {
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                 />
-                                </svg>
+                            </svg>
                             <select
                                 className={`w-full bg-white px-4 py-3 pl-5 border-b ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-gray-700`}
                                 {...formik.getFieldProps("country")}
@@ -350,7 +372,9 @@ const CommonMainForm = () => {
 
                         {/* Submit Button */}
                         <div className="text-center">
-                            <button disabled={isDisable} type="submit" className="bg-primary text-white w-full py-2 px-8 rounded-lg">
+                            <button
+                                disabled={isDisable}
+                                type="submit" className="bg-primary text-white w-full py-2 px-8 rounded-lg">
                                 {loading ? "Submitting.." : "Get Started Now"}
                             </button>
                         </div>
