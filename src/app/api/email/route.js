@@ -5,96 +5,146 @@ const generateEmailContent = (data) => {
     return {
         html: `
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Live Trading Account is Now Active</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body style="margin: 0; padding: 0; background-color: #F7F7F7; font-family: 'Outfit', Arial, sans-serif; color: #1e2158; text-align: left; line-height: 22px;">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="border-spacing: 0; width: 100%;">
-        <tr>
-            <td align="center" bgcolor="#F7F7F7">
-                <div class="container" style="max-width: 600px; margin: 0 auto; background-color: #192055; padding: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-radius: 36px; padding: 0px; background-color: #fff; width: 100%;">
-                        <tr>
-                            <td class="header" style="padding: 20px; text-align: center;">
-                                <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Global Capital Trade Logo" style="max-width: 165px; height: auto;">
-                            </td>
-                        </tr>
-                        <tr>
-                   <td class="content">
-                                <h1 style="color: #192055; text-align:center; font-size: 18px; max-width: 80%; margin: 0px auto;">
-                                    Thank you for your Time
-                                </h1>
-                    <h3 style="font-size: 16px; color: #192055; margin-bottom: 16px; padding: 0px 20px;">
-                    Hi ${data?.nickname || ""},
-                    </h3>
-                    <p style="margin-bottom: 16px; padding: 0px 20px;">
-                    Thanks for signing up with <b style="color: #b68756;">GTC</b>!
-                    </p>
-                         <p style="margin-bottom: 16px; padding: 0px 20px;">
-                    Email:  <b>${data?.email}</b>
-                    </p>
-                         <p style="margin-bottom: 16px; padding: 0px 20px;">
-                    Password <b >${data?.password}</b>
-                    </p>
-                    <p style="margin-bottom: 16px; padding: 0px 20px;">
-You’re almost there. To start trading with tighter spreads and instant execution, simply click the link below to register yourself and start trading.                    </p>
-                    <p style="text-align: center; margin: 20px 0;">
-                    <a href="https://web.mygtc.app/" target="_blank" style="background-color: #202a6b; text-decoration: none; color: #ffffff; padding: 10px 25px; border-radius: 5px; display: inline-block;">Register Now</a>
-                    </p>
-                    <p style="margin-bottom: 16px; padding: 0px 20px;">
-                    Didn’t sign up or received this by mistake? No problem, just ignore this email.
-                    </p>
-                    <p style="margin-bottom: 16px; padding: 0px 20px;">
-                    📞 Need help? <br><br>Reach us at <a href="tel:+9711800667788" style="color: #b68756; text-decoration: underline;">+971 1800667788</a> or email <a href="mailto:support@gtcfx.com" style="color: #b68756; text-decoration: underline;">support@gtcfx.com</a>.
-                    </p>
-                    <p style="padding: 0px 20px; margin-bottom: 0;">
-                    Talk soon.<br/>
-                    </p>
-                    <p style="line-height: 30px; padding: 0px 20px; ">Best Regards,<br><strong style="color: #192055; margin-top:5px;">The GTC Team</strong></p>
-                </td>
-                </tr>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GTC OTP Email</title>
+  </head>
+  <body style="margin:0; padding:0; font-family: Arial, sans-serif; background-color:#f8f8f8;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f8f8f8; padding: 30px 0;">
+      <tr>
+        <td align="center">
+          <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff; border-radius: 6px; padding: 40px 30px;">
+            <!-- Logo -->
+            <tr>
+              <td align="left" style="padding-bottom: 20px;">
+                <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Logo" style="width: 120px;" />
+              </td>
+            </tr>
 
-                        <tr>
-                            <td class="footer" style="padding: 20px 20px; font-size: 10px; color: #000; background-color: #f7f7f736; border-radius: 0 0 36px 36px; text-align: center;">
-                                <div class="social-icons" style="padding-bottom: 10px;">
-                                    <a href="https://www.facebook.com/gtcfxofficial" style="text-decoration: none;" target="_blank">
-                                        <img alt="Facebook" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/facebook_96.png" style="width: 24px; height: 24px; margin: 0 5px;">
-                                    </a>
-                                    <a href="https://twitter.com/GTC_fx" style="text-decoration: none;" target="_blank">
-                                        <img alt="Twitter" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/twitter_96.png" style="width: 24px; height: 24px; margin: 0 5px;">
-                                    </a>
-                                    <a href="https://linkedin.com/company/gtcfx-official" style="text-decoration: none;" target="_blank">
-                                        <img alt="LinkedIn" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/linkedin_96.png" style="width: 24px; height: 24px; margin: 0 5px;">
-                                    </a>
-                                    <a href="https://www.youtube.com/channel/UCnKWakjm1b9Bm63xgwNFXHA" style="text-decoration: none;" target="_blank">
-                                        <img alt="YouTube" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/youtube_96.png" style="width: 24px; height: 24px; margin: 0 5px;">
-                                    </a>
-                                    <a href="https://www.instagram.com/gtcfxofficial" style="text-decoration: none;" target="_blank">
-                                        <img alt="Instagram" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/instagram_96.png" style="width: 24px; height: 24px; margin: 0 5px;">
-                                    </a>
-                                    <a href="https://www.tiktok.com/@gtcgroup_official" style="text-decoration: none;" target="_blank">
-                                        <img alt="TikTok" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/tiktok_96.png" style="width: 24px; height: 24px; margin: 0 5px;">
-                                    </a>
-                                </div>
-                                <p style="font-size: 9px; line-height: 13px; text-align: left;">
-                                    Disclaimers: The information in this email is for general purposes only and does not constitute personal financial advice. Please assess the relevance of this information to your own financial goals and situation. Investing in contract for difference products carries significant risks and may not be suitable for all investors. Losses may exceed the initial deposit. You do not have ownership rights to the underlying assets of the contract. We advise seeking professional guidance to fully understand the risks before trading. Please review our user terms, risk warnings, privacy policy, and other relevant documents before making financial decisions.
-                                </p>
-                                <p style="font-size: 9px; line-height: 13px; text-align: left;">
-                                    Note that our products and services are not available in restricted countries.
-                                </p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </td>
-        </tr>
+            <!-- Heading -->
+            <tr>
+              <td style="font-size: 24px; font-weight: bold; color: #192055; padding-bottom: 10px;">
+                Welcome to GTC, ${data?.nickname || ""}!
+              </td>
+            </tr>
+
+            <!-- Subheading -->
+            <tr>
+              <td style="font-size: 15px; color: #192055; font-weight: 600; padding-bottom: 10px;">
+                Thank you for registering with GTC. Below are your account credentials:
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td style="border-bottom: 2px solid #e4e4e4; padding-bottom: 20px;"></td>
+            </tr>
+
+            <!-- User Credentials Table -->
+            <tr>
+  <td style="padding: 20px 0;">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%" style="font-size: 14px; color: #192055; border: 1px solid #ddd; border-collapse: collapse;">
+      <tr style="background-color: #f5f5f5;">
+        <th align="left" colspan="2" style="padding: 10px; border-bottom: 1px solid #ddd; font-size: 15px; background-color: #f5f5f5; color: #192055;">
+          Your GTC Portal Credentials
+        </th>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd;">👤 Username (Email):</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; font-weight: bold;">${data?.email}</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd;">🔐 Password:</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; font-weight: bold;">${data?.password}</td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd;">🔗 Portal Link:</td>
+        <td style="padding: 10px; border-bottom: 1px solid #ddd;">
+          <a href="https://web.mygtc.app/login/login" style="color: #b68756; text-decoration: underline;">G-Trader Portal</a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 10px; border-right: 1px solid #ddd;">📌 Platform Name:</td>
+        <td style="padding: 10px;">G-Trader Portal</td>
+      </tr>
     </table>
-</body>
+  </td>
+</tr>
+
+            <!-- Info -->
+            <tr>
+              <td style="font-size: 14px; color: #192055; line-height: 1.6; padding-top: 10px;">
+                📞 Need help? <br><br>
+                Reach us at <a href="tel:+9711800667788" style="color: #b68756; text-decoration: underline;">+971 1800667788</a> or email <a href="mailto:support@gtcfx.com" style="color: #b68756; text-decoration: underline;">support@gtcfx.com</a>.
+              </td>
+            </tr>
+
+            <!-- Signature -->
+            <tr>
+              <td style="font-size: 14px; color: #192055; padding-top: 20px;">
+                Best regards,<br/>
+                <strong>Your GTC Team</strong>
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td style="border-bottom: 2px solid #e4e4e4; padding: 30px 0;"></td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="padding-top: 20px;">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="left">
+                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Logo" style="width: 100px;" />
+                    </td>
+                    <td align="right" style="font-size: 13px; color: #192055; line-height: 25px;">
+                      📞 Phone: +971 800 667788<br/>
+                      ✉️ Email: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
+                    </td>
+                  </tr>
+                  
+                </table>
+              </td>
+            </tr>
+<tr>
+  <td style="font-size: 11px; color: #666; padding: 20px 0px; line-height: 1.5;">
+    This website is owned and operated by GTC Global Ltd, a limited company incorporated in Mauritius (company number: C188049) and licensed by the Financial Services Commission, Mauritius (No. GB22200292) to trade as an SEC-2.1B Investment Dealer. Registered Address: Cyberati Lounge, Ground Floor, The Catalyst, Silicon Avenue, 40 Cybercity, 72201 Ebene, Republic of Mauritius. The financial services and products promoted on this website are offered by GTC Global Ltd and GTC Global Trade Capital Co. Limited, a company authorised by the Vanuatu Financial Services Commission of the Republic of Vanuatu, Company License Number: 40354.
+    <br/><br/>
+    GTC Global Ltd and GTC Global Trade Capital Co. Limited belong to the GTC Financial Group, which consists of a group of entities across the globe.
+    <br/><br/>
+    Investing in derivative products carries significant risks and may not be suitable for all investors. Leveraging in these instruments can increase the level of risk and potential loss exposure. Before making any decision to engage in foreign exchange trading or CFDs, it is essential to carefully assess your investment objectives, level of experience, and risk tolerance. You should only invest funds that you can afford to lose. We strongly encourage you to educate yourself thoroughly about the associated risks and, if you have any questions, seek advice from an independent financial or tax advisor.
+    <br/><br/>
+    GTC Global Ltd and GTC Global Trade Capital Co. Limited do not provide services to individuals residing in specific jurisdictions and/or jurisdictions where distribution of such services would be contrary to local law or regulation.
+    <br/><br/>
+    <strong style="font-weight: 600p; color: #000;">Other Group Entities:</strong><br/>
+    The financial products and services offered on this website are <u>NOT</u> provided by the following group entities, and no recourse against the following entities is available. If you are interested in the products and services offered by each of the following entities, please visit their respective websites.
+    <br/><br/>
+    <strong>GTC Group LLC-FZ</strong> is a holding company incorporated in Dubai, United Arab Emirates with Business License Number: 2311147.01. Its registered office is at Business Center 1, M Floor, Meydan Hotel, Nad Al Sheba, Dubai, United Arab Emirates.
+    <br/><br/>
+    <strong>GTC Multi Trading DMCC</strong> is a limited company licensed and incorporated under the laws of the Dubai Multi Commodities Centre (No. DMCC-312687) and licensed by the Securities and Commodities Authority, United Arab Emirates (No. 202200000007) to practice the activity of Commodity Brokerage - Trading and Clearing. Registered Address: Unit No: 1501, 1 Lake Plaza, Plot No: JLT-PH2-T2A, Jumeirah Lakes Towers, Dubai, United Arab Emirates.
+    <br/><br/>
+    Each of the entities within the GTC Financial Group is managed separately. The financial products and services offered on this website are ONLY provided by GTC Global Ltd and GTC Global Trade Capital Co. Limited.
+    <br/><br/>
+    All trademarks are the property of their respective owners. All rights reserved. GTC Global Ltd is part of the GTC Financial Group, which consists of a group of entities across the globe.
+    <br/><br/>
+    <strong>Risk Warning:</strong> Trading leveraged products such as forex and derivatives may not be suitable for all investors as they carry a high degree of risk to your capital. Please ensure that you fully understand the risks involved and seek independent advice if necessary.
+  </td>
+</tr>
+              <td align="center" style="padding: 20px; font-size: 12px; color: #999;">
+                © Copyright 2025 GTCFX – All Rights Reserved
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
+
       
       `,
     };
@@ -112,7 +162,7 @@ export async function POST(req) {
         await transporter.sendMail({
             ...mailOption,
             ...generateEmailContent(reqBody),
-            subject: `New Registration`
+            subject: `Thank you for registering with GTC`
         });
         return NextResponse.json({ message: "Success", email: reqBody?.email }, { status: 200 })
     } catch (error) {
