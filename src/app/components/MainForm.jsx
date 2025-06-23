@@ -127,7 +127,6 @@ const CommonMainForm = () => {
 
 
     const sendDataToDb = async (data) => {
-        console.log({ data })
         try {
             await axios.post(`/api/reg`, {
                 email: data?.email,
@@ -140,6 +139,11 @@ const CommonMainForm = () => {
             }).then(res => {
                 if (res?.data?.success) {
                     toast.success(res?.data?.message)
+                    axios.post(`/api/email`, JSON.stringify(data)).then(() => {
+                        toast.success("Successfully submitted");
+                        localStorage.setItem("user", JSON.stringify(data));
+                        router.push("/test/thank-you");
+                    });
                 } else {
                     toast.error(res?.data?.message)
                 }
@@ -148,10 +152,7 @@ const CommonMainForm = () => {
             }).finally(() => {
                 setLoading(false)
             })
-            await axios.post(`/api/email`, JSON.stringify(data));
-            toast.success("Successfully submitted");
-            localStorage.setItem("user", JSON.stringify(data));
-            router.push("/test/thank-you");
+
         } catch (err) {
             toast.error("Error inserting data");
         } finally {
