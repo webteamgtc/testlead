@@ -51,7 +51,7 @@ const CommonMainForm = () => {
 
     const formik = useFormik({
         initialValues: {
-            nickname: "",
+            username: "",
             email: "",
             last_name: "",
             phone: "",
@@ -69,7 +69,7 @@ const CommonMainForm = () => {
             gclid: "",
         },
         validationSchema: Yup.object({
-            nickname: Yup.string()
+            username: Yup.string()
                 .matches(/^[A-Za-z\s]+$/, "Full name can only contain letters.")
                 .required("First name is required"),
             last_name: Yup.string()
@@ -130,7 +130,7 @@ const CommonMainForm = () => {
         try {
             await axios.post(`/api/reg`, {
                 email: data?.email,
-                nickname: data?.nickname,
+                username: data?.username,
                 code: data?.otp,
                 country: data?.country,
                 phone: data?.phone,
@@ -199,12 +199,12 @@ const CommonMainForm = () => {
                                 </svg>
                                 <input
                                     type="text"
-                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.nickname && formik.errors.nickname ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.username && formik.errors.username ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                     placeholder="First Name"
-                                    {...formik.getFieldProps("nickname")}
+                                    {...formik.getFieldProps("username")}
                                 />
-                                {formik.touched.nickname && formik.errors.nickname && (
-                                    <p className="text-red-500 text-left pt-1">{formik.errors.nickname}</p>
+                                {formik.touched.username && formik.errors.username && (
+                                    <p className="text-red-500 text-left pt-1">{formik.errors.username}</p>
                                 )}
                             </div>
                             <div className="relative">

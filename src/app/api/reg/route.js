@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export async function POST(req) {
     const {
         email,
-        nickname,
+        username,
         code,
         country,
         phone,
@@ -14,7 +14,7 @@ export async function POST(req) {
     try {
         const formData = new FormData();
         formData.append('email', email);
-        formData.append('nickname', nickname);
+        formData.append('username', username);
         formData.append('code', code);
         formData.append('country', country);
         formData.append('phone', phone);

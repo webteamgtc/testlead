@@ -25,7 +25,7 @@ const generateEmailContent = (data) => {
             <!-- Heading -->
             <tr>
               <td style="font-size: 24px; font-weight: bold; color: #192055; padding-bottom: 10px;">
-                Welcome to GTC, ${data?.nickname || ""}!
+                Welcome to GTC, ${data?.username || ""}!
               </td>
             </tr>
 
