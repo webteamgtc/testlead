@@ -9,6 +9,7 @@ export async function POST(req) {
         phone,
         password,
         server_id,
+        // username
     } = await req.json();
 
     try {
@@ -19,6 +20,7 @@ export async function POST(req) {
         formData.append('country', country);
         formData.append('phone', phone);
         formData.append('password', password);
+        // formData.append('username', username);
         formData.append('server_id', server_id);
 
         const response = await fetch('https://m.mygtc.app/api/pub/reg', {
@@ -27,8 +29,14 @@ export async function POST(req) {
         });
 
         const data = await response.json();
+        console.log({ data })
+        if (data?.code == 0) {
+            return NextResponse.json({ success: true, message: data?.message }, { status: 200 });
+        }
+        else {
+            return NextResponse.json({ success: true, message: data?.message }, { status: 400 });
 
-        return NextResponse.json({ success: true, message: data?.message }, { status: 200 });
+        }
 
     } catch (error) {
         return NextResponse.json(

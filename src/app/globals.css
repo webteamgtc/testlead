@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --font-sans: var(--font-poppins);
+  font-family: "Poppins", sans-serif;
 }
 @theme {
-  --color-primary: #02002f;     /* Dark blue */
-  --color-secondary: #b68756;   /* Gold yellow */
+  --color-primary: #02002f; /* Dark blue */
+  --color-secondary: #b68756; /* Gold yellow */
 }
 
 body {
-  font-family: var(--font-sans), sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  @apply max-w-[1380px] mx-auto px-3;
 }
 
 .flip-container {
@@ -58,4 +62,25 @@ body {
   color: #1d2746;
 }
 
+.table-bg {
+  background: url("/table-bg.svg") no-repeat center center;
+}
 
+.india-bg {
+  background: url("/india-bg.svg") no-repeat center center;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.ib-background-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/mandala.png"); /* ✅ must be in /public */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* or 'cover' */
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none; /* optional */
+}
