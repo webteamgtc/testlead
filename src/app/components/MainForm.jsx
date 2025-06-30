@@ -130,7 +130,8 @@ const CommonMainForm = () => {
         try {
             await axios.post(`/api/reg`, {
                 email: data?.email,
-                username: data?.username,
+                nickname: data?.nickname,
+                username: data?.nickname,
                 code: data?.otp,
                 country: data?.country,
                 phone: data?.phone,
@@ -141,7 +142,9 @@ const CommonMainForm = () => {
                     toast.success(res?.data?.message)
                     axios.post(`/api/email`, JSON.stringify(data)).then(() => {
                         toast.success("Successfully submitted");
-                        localStorage.setItem("user", JSON.stringify(data));
+                        localStorage.setItem("user", JSON.stringify({
+                            ...data, username: data?.nickname,
+                        }));
                         router.push("/test/thank-you");
                     });
                 } else {

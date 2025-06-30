@@ -1,13 +1,13 @@
 import nodemailer from 'nodemailer';
 
 export const transporter = nodemailer.createTransport({
-    host: 'smtpdm-eu-central-1.aliyuncs.com', // SMTP host
-    port: 465, // Port for secure connection (usually 465 for SSL/TLS)
-    secure:true,
-    auth: {
-        user: 'portal@mx2.gtcmail.com', // SMTP username
-        pass: 'MailerGTC12', // SMTP password
-    },
+  host: 'smtp.eu.mailgun.org', // Mailgun SMTP host
+  port: 465,                   // SSL/TLS port
+  secure: true,                // Use TLS
+  auth: {
+    user: 'portal@mx1.gtcmail.com', // Mailgun SMTP username
+    pass: '48490f5c91f63ae6e470633d79aa10fb-7c5e3295-a24fb77e', // Mailgun SMTP password
+  },
 });
 
 export const mailOptions = {
