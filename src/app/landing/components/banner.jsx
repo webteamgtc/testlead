@@ -30,24 +30,39 @@ const HeroSection = () => {
   ]
   return (
     <section className="bg-gradient-to-b from-[#0B0A2F] to-[#101243] text-[#E5E5EA] py-16 relative overflow-hidden">
-      <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 pointer-events-none">
-    <Image
-      src="/ib/layer1.webp"
-      alt="Decorative background"
-      fill
-      className="object-cover"
-    />
-  </div>
+
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-10">
+        <div className="relative w-full h-full scale-[1.4] origin-bottom-right">
+          <Image
+            src="/ib/layer1.webp"
+            alt="Decorative background"
+            fill
+            className="object-right-bottom object-contain"
+          />
+        </div>
+      </div>
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-100">
+        <div className="relative w-full h-full scale-[0.8] origin-bottom-right">
+          <Image
+            src="/ib/layer3.webp"
+            alt="Decorative background"
+            fill
+            className="object-right-bottom object-contain"
+          />
+        </div>
+      </div>
+
+
       <div className="container">
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
           {/* Left Column */}
           <div>
             <h3 className="text-xl md:text-3xl font-light">
-              India’s Top IBs Now Earn Up to 
+              India’s Top IBs Now Earn Up to
             </h3>
             <h1 className="text-2xl md:text-6xl font-bold">80% REVSHARE</h1>
- <h3 className="text-xl md:text-3xl mb-6 font-light">
-  with GTC
+            <h3 className="text-xl md:text-3xl mb-6 font-light">
+              with GTC
             </h3>
             <p className="text-sm md:text-base mb-8 leading-relaxed max-w-md">
               Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.
@@ -59,9 +74,9 @@ const HeroSection = () => {
           </div>
 
           {/* Right Column (Phone UI) */}
-         <div className="relative w-full h-[300px] md:h-[500px]">
-     
-    </div>
+          <div className="relative w-full h-[300px] md:h-[500px]">
+
+          </div>
         </div>
 
         {/* Bottom Feature Bar */}
@@ -80,14 +95,7 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
-      <div className="absolute right-0 top-0 h-full w-1/2 opacity-100 pointer-events-none">
-    <Image
-      src="/ib/layer3.webp"
-      alt="Decorative background"
-      fill
-      className="object-contain"
-    />
-    </div>
+
     </section >
   );
 };

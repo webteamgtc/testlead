@@ -72,6 +72,13 @@ body {
   background-size: contain;
 }
 
+.banner-bg {
+  background: url("/bg-banner.png") no-repeat center center;
+  background-position: bottom;
+  background-size: contain;
+}
+
+
 .ib-background-img::before {
   content: "";
   position: absolute;
