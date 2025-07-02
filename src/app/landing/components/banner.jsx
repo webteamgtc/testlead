@@ -1,6 +1,8 @@
 
 import React from "react";
 import Image from "next/image";
+import CustomButton from "@/app/components/common/CustomButton";
+
 const HeroSection = () => {
   const data = [
     {
@@ -32,7 +34,7 @@ const HeroSection = () => {
     <section className="bg-gradient-to-b from-[#0B0A2F] to-[#101243] text-[#E5E5EA] py-16 relative overflow-hidden">
 
       <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-10">
-        <div className="relative w-full h-full scale-[1.4] origin-bottom-right">
+        <div className="relative w-full h-[600px] scale-[1.4] origin-bottom-right">
           <Image
             src="/ib/layer1.webp"
             alt="Decorative background"
@@ -42,7 +44,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-100">
-        <div className="relative w-full h-full scale-[0.8] origin-bottom-right">
+        <div className="relative w-full h-full scale-[0.9] origin-bottom-right">
           <Image
             src="/ib/layer3.webp"
             alt="Decorative background"
@@ -64,13 +66,16 @@ const HeroSection = () => {
             <h3 className="text-xl md:text-3xl mb-6 font-light">
               with GTC
             </h3>
-            <p className="text-sm md:text-base mb-8 leading-relaxed max-w-md">
+            <p className="text-sm md:text-base mb-8 leading-relaxed max-w-xl">
               Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.
             </p>
-
-            <button className="bg-white text-[#1F2937] px-6 py-2 rounded-full shadow-md hover:bg-gray-100 transition">
-              Get 80% Revshare →
-            </button>
+            
+           <CustomButton
+            text="Get 80% Revshare"
+            bgColor="bg-white"
+            textColor="text-[#1F2937]"
+            strokeColor="#000032"
+          />
           </div>
 
           {/* Right Column (Phone UI) */}
@@ -80,7 +85,7 @@ const HeroSection = () => {
         </div>
 
         {/* Bottom Feature Bar */}
-        <div className="relative z-50 bg-gradient-to-r from-[#293794] to-[#000021] mt-14 py-2 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90 gap-4"
+        <div className="relative z-50 bg-gradient-to-r from-[#293794af] to-[#000021ab] mt-0 py-2 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90"
 
           style={{
             boxShadow: "1px 6px 16px 0px #00000080",
@@ -90,7 +95,7 @@ const HeroSection = () => {
           {data?.map((item, idx) => (
             <div key={idx} className="px-2">
               <img src={item?.icon} alt="Feature Icon" className="mx-auto mb-1 w-10 h-10" />
-              <span className="block">{item?.title}</span>
+              <span className="block font-sm w-48 mx-auto">{item?.title}</span>
             </div>
           ))}
         </div>

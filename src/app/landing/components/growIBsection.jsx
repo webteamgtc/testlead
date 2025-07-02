@@ -1,10 +1,18 @@
 import React from "react";
+import Image from "next/image";
 
 const GrowIBSection = () => {
     return (
-        <section className="bg-gradient-to-b from-[#1A1743] to-[#07052D] text-white md:py-20 py-12 text-center relative overflow-hidden">
-            {/* Background Mandala-like SVG or image could be added here */}
-            <div className="container mx-auto">
+        <section className="bg-gradient-to-b from-[#0B0A2F] to-[#101243] text-[#E5E5EA] py-12 md:py-16 relative overflow-hidden text-center">
+                    <div className="absolute top-0 h-full w-full opacity-50 pointer-events-none">
+                  <Image
+                    src="/ib/pattern.webp"
+                    alt="Decorative background"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                   <div className="relative container mx-auto">
                 <div className="max-w-4xl mx-auto z-10 relative">
                     <h2 className="text-lg md:text-2xl font-[200] mb-2">
                         Start Earning More.
@@ -18,7 +26,7 @@ const GrowIBSection = () => {
                     <p className="text-base md:text-lg text-white font-medium mb-10">
                         <span className="text-white">Join us today,</span> and your traders will thank you tomorrow.
                     </p>
-                        <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm text-white  px-6 py-2 rounded-xl transition-all duration-300">
+                        <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm text-white  px-6 py-3 rounded-lg transition-all duration-300">
                         Make the Switch
                     </button>
                 </div>

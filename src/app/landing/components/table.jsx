@@ -1,20 +1,21 @@
 'use client';
+import CustomButton from "@/app/components/common/CustomButton";
 
 const ComparisonTable = () => {
   return (
-    <section className="bg-[#f9f9fc] py-16 px-4 md:px-0">
+    <section className="bg-[#f9f9fc] py-12 md:py-16 px-4 md:px-0">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-2xl md:text-4xl font-bold text-[#000032] mb-10 max-w-3xl mx-auto leading-tight">
+        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize max-w-3xl mx-auto">
           Here’s what your traders will get when you refer them to GTC
         </h2>
 
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e0e4f6]">
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e0e4f6] my-10">
           <table className="w-full text-sm md:text-base text-[#1e2c54]">
             <thead>
               <tr className="bg-[#f1f4fb] text-left font-semibold text-[#1e2c54]">
                 <th className="py-4 px-5">Feature</th>
-                <th className="py-4 px-5">Your Broker</th>
-                <th className="py-4 px-5">
+                <th className="py-4 px-5 bg-gray-50">Your Broker</th>
+                <th className="py-4 px-5 bg-gray-50">
                   <img src="/logo-blue.svg" alt="GTC Logo" className="h-8" />
                 </th>
               </tr>
@@ -61,9 +62,15 @@ const ComparisonTable = () => {
           </table>
         </div>
 
-        <button className="mt-10 bg-[#000032] text-white text-sm px-6 py-3 rounded-xl hover:bg-[#091c45] transition">
-          Refer Your Traders
-        </button>
+   <div className="flex justify-center">
+      <CustomButton
+          text="Refer Your Traders"
+          bgColor="bg-[#000032]"
+          textColor="text-[#fff]"
+          showIcon={false} // No SVG arrow
+        />
+   </div>
+      
       </div>
     </section>
   );

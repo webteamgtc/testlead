@@ -27,12 +27,16 @@ const Broker = () => {
                 <div>
                     <img src="/divider.svg" alt="Broker Image" className="mx-auto py-16 w-full max-w-md md:max-w-lg" />
                 </div>
-                <div className="text-center col-span-2">
-                    <h2 className="text-3xl md:text-6xl font-bold text-center text-white leading-tight mb-6">
+                <div className="text-center col-span-2 flex flex-col justify-center items-center">
+                    <h2 className="text-3xl md:text-6xl font-bold text-center text-white leading-tight mb-10">
                         Switch to a broker that doesn’t just <br /> say it, we prove it every day.
                     </h2>
-                    <button className="mt-8 bg-white text-[#b57c50] hover:bg-[#f5f5f5] px-6 py-2 text-sm rounded-xl shadow transition-all duration-300">
-                        Start Earning →
+                    <button className="bg-white text-[#b57c50] hover:bg-[#f5f5f5] px-6 py-3 text-sm rounded-lg flex flex-row gap-4 items-center justify-center  shadow transition-all duration-300">
+                        Start Earning 
+                         <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L7 7L1 13" stroke="#B48755" stroke-width="2"/>
+                        </svg>
+
                     </button>
                 </div>
             </div>
