@@ -31,9 +31,9 @@ const HeroSection = () => {
     }
   ]
   return (
-    <section className="bg-gradient-to-b from-[#0B0A2F] to-[#101243] text-[#E5E5EA] py-16 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-12 md:py-20 relative overflow-hidden">
 
-      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-10">
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-10 hidden md:block">
         <div className="relative w-full h-[600px] scale-[1.4] origin-bottom-right">
           <Image
             src="/ib/layer1.webp"
@@ -43,7 +43,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-100">
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-100 hidden md:block">
         <div className="relative w-full h-full scale-[0.9] origin-bottom-right">
           <Image
             src="/ib/layer3.webp"
@@ -56,36 +56,34 @@ const HeroSection = () => {
 
 
       <div className="container">
-        <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
+        <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative mb-10">
           {/* Left Column */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-xl md:text-3xl font-light">
-              India’s Top IBs Now Earn Up to
+              India’s Top IB's Now Earn Up to
             </h3>
-            <h1 className="text-2xl md:text-6xl font-bold">80% REVSHARE</h1>
+            <h1 className="text-4xl md:text-6xl font-bold">80% REVSHARE</h1>
             <h3 className="text-xl md:text-3xl mb-6 font-light">
               with GTC
             </h3>
             <p className="text-sm md:text-base mb-8 leading-relaxed max-w-xl">
               Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.
             </p>
-            
-           <CustomButton
-            text="Get 80% Revshare"
-            bgColor="bg-white"
-            textColor="text-[#1F2937]"
-            strokeColor="#000032"
-          />
+            <div className="flex flex-row justify-center md:justify-start items-center gap-4 mb-6">
+              <CustomButton
+                        text="Get 80% Revshare"
+                        bgColor="bg-white"
+                        textColor="text-[#1F2937]"
+                        strokeColor="#000032"
+                      />
+            </div>
+        
           </div>
 
-          {/* Right Column (Phone UI) */}
-          <div className="relative w-full h-[300px] md:h-[500px]">
-
-          </div>
         </div>
 
         {/* Bottom Feature Bar */}
-        <div className="relative z-50 bg-gradient-to-r from-[#293794af] to-[#000021ab] mt-0 py-2 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90"
+        <div className="relative z-50 bg-gradient-to-b from-[#293794af] to-[#000021ab] mt-0 py-5 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90 gap-6 md:gap-0"
 
           style={{
             boxShadow: "1px 6px 16px 0px #00000080",
@@ -94,8 +92,8 @@ const HeroSection = () => {
           }}>
           {data?.map((item, idx) => (
             <div key={idx} className="px-2">
-              <img src={item?.icon} alt="Feature Icon" className="mx-auto mb-1 w-10 h-10" />
-              <span className="block font-sm w-48 mx-auto">{item?.title}</span>
+              <img src={item?.icon} alt="Feature Icon" className="mx-auto mb-1 w-12 h-12" />
+              <span className="block text-sm w-40 md:w-48 mx-auto line-clamp-2">{item?.title}</span>
             </div>
           ))}
         </div>

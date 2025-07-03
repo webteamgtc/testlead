@@ -3,13 +3,26 @@ import CustomButton from "@/app/components/common/CustomButton";
 
 const ComparisonTable = () => {
   return (
-    <section className="bg-[#f9f9fc] py-12 md:py-16 px-4 md:px-0">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize max-w-3xl mx-auto">
+        <section className="relative text-white py-12 md:py-20 overflow-hidden">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-white z-0" />
+
+      {/* Faded Background Image at Bottom Center */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-20">
+        <img
+          src="/ib/layer5.webp" // ✅ change this path if needed
+          alt="Decorative background"
+          className="w-full h-auto object-contain object-bottom"
+        />
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-7 justify-center text-center px-4 md:px-0">
+        <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] capitalize max-w-3xl mx-auto">
           Here’s what your traders will get when you refer them to GTC
         </h2>
 
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e0e4f6] my-10">
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e0e4f6]">
           <table className="w-full text-sm md:text-base text-[#1e2c54]">
             <thead>
               <tr className="bg-[#f1f4fb] text-left font-semibold text-[#1e2c54]">

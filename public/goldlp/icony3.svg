@@ -47,7 +47,7 @@
         stroke: url(#linear-gradient-3);
         stroke-dasharray: 40.84 33.11;
         stroke-miterlimit: 10;
-        stroke-width: 1.15px;
+        strokeWidth: 1.15px;
       }
 
       .cls-12 {

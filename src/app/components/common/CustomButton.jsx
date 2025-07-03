@@ -9,7 +9,7 @@ const CustomButton = ({
   return (
     <button
       onClick={onClick}
-      className={`px-6 py-3 rounded-lg shadow-md transition flex items-center gap-4 justify-center ${bgColor} ${textColor} hover:opacity-90`}
+      className={`px-8 py-3 rounded-xl shadow-md transition flex items-center gap-4 text-sm md:text-base xl:text-lg justify-center ${bgColor} ${textColor} hover:opacity-90`}
     >
       {text}
       {showIcon && (
