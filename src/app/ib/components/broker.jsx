@@ -42,10 +42,10 @@ const Broker = () => {
         </div>
 
         <div className="text-center col-span-2 flex flex-col justify-center items-center">
-          <h2 className="text-3xl md:text-6xl font-bold text-center text-white leading-tight mb-5 max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl xl:text-6xl font-bold text-center text-white leading-tight mb-5 sm:max-w-2xl xl:max-w-5xl mx-auto">
             Switch to a broker that doesn’t just say it, we prove it every day.
           </h2>
-          <button className="bg-white text-[#b57c50] hover:bg-[#f5f5f5] px-6 py-3 text-sm md:text-base xl:text-lg rounded-lg flex flex-row gap-4 items-center justify-center shadow transition-all duration-300">
+          <button className="bg-white text-[#6e4e35] hover:bg-[#f5f5f5] px-6 py-3 text-sm md:text-base xl:text-lg rounded-lg flex flex-row gap-4 items-center justify-center shadow transition-all duration-300">
             Start Earning
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L7 7L1 13" stroke="#B48755" strokeWidth="2" />

@@ -34,7 +34,7 @@ const HeroSection = () => {
     <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-12 md:py-20 relative overflow-hidden">
 
       <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-10 hidden md:block">
-        <div className="relative w-full h-[600px] scale-[1.4] origin-bottom-right">
+        <div className="relative w-full sm:h-96 xl:h-[600px] scale-[1.4] origin-bottom-right">
           <Image
             src="/ib/layer1.webp"
             alt="Decorative background"
@@ -93,7 +93,7 @@ const HeroSection = () => {
           {data?.map((item, idx) => (
             <div key={idx} className="px-2">
               <img src={item?.icon} alt="Feature Icon" className="mx-auto mb-1 w-12 h-12" />
-              <span className="block text-sm w-40 md:w-48 mx-auto line-clamp-2">{item?.title}</span>
+              <span className="block text-xs xl:text-base w-40 sm:w-40 xl:w-48 mx-auto line-clamp-2">{item?.title}</span>
             </div>
           ))}
         </div>
