@@ -7,7 +7,7 @@ import GrowIBSection from "./components/growIBsection";
 import Header from "./components/header";
 import IBTestimonials from "./components/IBTraders";
 import Paymore from "./components/payMore";
-import SliderModal from "./components/SliderModal";
+import SliderModal from "../partner/Component/SliderModal";
 import ComparisonTable from "./components/table";
 
 export default function Home() {

@@ -29,7 +29,7 @@ const Broker = () => {
           {/* Right Column */}
           <div>
             <ul className="text-sm md:text-base text-white/90 list-disc pl-5 space-y-5">
-              <li>Licensed by the UAE’s SCA, Australia’s ASIC, the UK’s FCA, Mauritius’s FSC, and South Africa’s FSCA.</li>
+              <li>Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA.</li>
               <li>Headquartered in Dubai with nearly 1 million global traders.</li>
               <li>World-class support with a real human touch.</li>
               <li>Customer-first culture where service is strategy.</li>

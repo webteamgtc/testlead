@@ -2,7 +2,7 @@ import React from "react";
 
 const testimonials = [
     {
-        text: `“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
+        text: `“As a forex partner, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
         name: "Judi Izdihar Shamoon, Dubai, UAE",
         stars: 5,
     },
