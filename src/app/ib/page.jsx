@@ -1,4 +1,5 @@
 'use client'
+import Footer from "../components/Footer";
 import BannerMain from "./components/banner";
 import Broker from "./components/broker";
 import GrowIBSection from "./components/growIBsection";
@@ -19,6 +20,7 @@ export default function Home() {
             <Broker />
             <IBTestimonials />
             <GrowIBSection />
+            <Footer />
         </section>
     );
 }

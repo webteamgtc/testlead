@@ -44,7 +44,7 @@ const TestimonialCard = ({ text, name, stars }) => (
 
 const IBTestimonials = () => {
     return (
-        <section className="bg-[#f9f9f9] india-bg md:py-16 py-12">
+        <section className="bg-[#f9f9f9] india-bg py-12 md:py-20">
             <div className="container mx-auto">
                 <div className=" grid md:grid-cols-2 items-start md:gap-16 gap-10">
                     {/* Left Section */}
@@ -55,10 +55,10 @@ const IBTestimonials = () => {
                         <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-lg">
                             Whether you’re a seasoned IB or just getting started, these partners made the switch and they or their traders haven’t looked back.
                         </p>
-                        <button className="w-fit bg-white border border-gray-300 hover:border-gray-400 text-sm font-medium text-[#1f2937] px-5 py-3 flex flex-row gap-4 items-center rounded-lg transition">
+                        <button className="w-fit bg-white border border-gray-300 hover:border-gray-400 text-sm md:text-base xl:text-lg font-medium text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition">
                             Join Us 
                              <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L7 7L1 13" stroke="#000032" stroke-width="2"/>
+              <path d="M1 1L7 7L1 13" stroke="#000032" strokeWidth="2"/>
               </svg>
                         </button>
                     </div>
