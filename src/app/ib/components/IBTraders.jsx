@@ -44,11 +44,11 @@ const TestimonialCard = ({ text, name, stars }) => (
 
 const IBTestimonials = () => {
     return (
-        <section className="bg-[#f9f9f9] india-bg py-12 md:py-20">
+        <section className="bg-[#f9f9f9] india-bg py-8 md:py-20">
             <div className="container mx-auto">
-                <div className=" grid md:grid-cols-2 items-start md:gap-16 gap-10">
+                <div className=" grid md:grid-cols-2 items-start gap-5 md:gap-16 ">
                     {/* Left Section */}
-                    <div className="flex flex-col justify-center space-y-6">
+                    <div className="flex flex-col text-center md:text-left justify-center items-center space-y-3 md:space-y-6">
                         <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize">
                             What India’s IBs & Traders <br /> Are Saying
                         </h2>
@@ -64,7 +64,7 @@ const IBTestimonials = () => {
                     </div>
 
                     {/* Testimonials Grid */}
-                    <div className="grid grid-cols-1 gap-6">
+                    <div className="grid grid-cols-1 gap-3 md:gap-6">
                         {testimonials.map((item, idx) => (
                             <TestimonialCard key={idx} {...item} />
                         ))}
