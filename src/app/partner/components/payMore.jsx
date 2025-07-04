@@ -113,10 +113,10 @@ const toggleFlip = (index) => {
             </button>
           ))}
         </div>
-
+ 
         {/* Footer Text and CTA */}
           <p className="text-sm md:text-base xl:text-2xl font-semibold text-white max-w-4xl mx-auto leading-relaxed ">
-                            From real trader bonuses to marketing support and instant payouts, this is the IB programme serious partners are switching to.
+                            From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to.
                         </p>
                         <div className='flex flex-row items-center justify-center md:mt-2'>
  <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300">

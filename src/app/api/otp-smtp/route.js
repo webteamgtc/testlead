@@ -53,7 +53,7 @@ export async function POST(req) {
             <!-- Greeting & OTP -->
             <tr>
               <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-                Dear <em>${username || "Client"}</em>, <!-- 👈 dynamic name here -->,<br><br>
+                Dear Client
                 Please use the following One-Time Password 398044 to complete your further process.
               </td>
             </tr>

@@ -127,17 +127,20 @@ const CommonMainForm = () => {
     return (
       
              
-                <div className="relative">
-                    <form onSubmit={formik.handleSubmit} className="bg-white relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left">
+                <div className="relative max-w-xl mx-auto">
+                    <form onSubmit={formik.handleSubmit} className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left">
                         {/* Full Name & Email */}
-                        <div className="grid grid-cols-1 gap-3 mb-3">
+                        <div className="grid grid-cols-2 gap-3 mb-3">
                             <div className="relative">
-                                <svg className="absolute top-3 left-0 text-gray-400 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                <div className="text-sm mb-2">
+                                    <label>First Name</label>
+                                </div>
+                                <svg className="absolute top-10 left-3 text-gray-400 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                 </svg>
                                 <input
                                     type="text"
-                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.nickname && formik.errors.nickname ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                    className={`w-full px-4 bg-[#1A1A47] py-3 pl-9 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.nickname && formik.errors.nickname ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                     placeholder="First Name"
                                     {...formik.getFieldProps("nickname")}
                                 />
@@ -146,12 +149,15 @@ const CommonMainForm = () => {
                                 )}
                             </div>
                             <div className="relative">
-                                <svg className="absolute top-3 left-0 text-gray-400 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                 <div className="text-sm mb-2">
+                                    <label>Last Name</label>
+                                </div>
+                                <svg className="absolute top-10 left-3 text-gray-400 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                                 </svg>
                                 <input
                                     type="text"
-                                    className={`w-full px-4 bg-white py-3 pl-5 border-b ${formik.touched.last_name && formik.errors.last_name ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                    className={`w-full px-4 bg-[#1A1A47] py-3 pl-9 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.last_name && formik.errors.last_name ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                     placeholder="Last Name"
                                     {...formik.getFieldProps("last_name")}
                                 />
@@ -166,23 +172,26 @@ const CommonMainForm = () => {
                         <div className="grid grid-cols-1 gap-3 mb-3">
                             <div className="relative">
                                 <div className="relative">
+                                    <div className="text-sm mb-2">
+                                    <label>Email</label>
+                                </div>
                                     <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 512 512"
-                                    className="absolute top-3 left-3 w-4 h-4 text-gray-400 fill-current"
+                                    className="absolute top-10 left-3 w-4 h-4 text-gray-400 fill-current"
                                     >
                                     <path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z" />
                                     </svg>
                                                                         <input
                                         type="email"
-                                        className={`w-full bg-white px-4 py-3 pl-9 border-b ${formik.touched.email && formik.errors.email ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none`}
+                                        className={`w-full bg-[#1A1A47] px-4 py-3 pl-9 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none focus:bg-none`}
                                         placeholder="Email"
                                         {...formik.getFieldProps("email")}
                                     />
                                     {formik.touched.email && formik.errors.email && (
                                         <p className="text-red-500 pt-1 text-left">{formik.errors.email}</p>
                                     )}
-                                    <div className="absolute top-2 bg-primary right-0 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                                    <div className="absolute top-9 bg-primary right-4 rounded-md cursor-pointer text-white  py-1.5 px-2"
                                         onClick={() => {
                                             sendVerificationCode()
                                         }}
@@ -210,11 +219,11 @@ const CommonMainForm = () => {
                                                     paddingBottom: '8px',
                                                     paddingTop: "8px",
                                                     width: "20%",
-                                                    backgroundColor: "#fff",
+                                                    backgroundColor: "#1A1A47",
                                                     color: "#000",
                                                     fontWeight: "700",
                                                     outlineColor: '#f9c617',
-                                                    border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ccc",
+                                                    border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ccc", 
                                                 }}
 
                                             />
@@ -223,7 +232,7 @@ const CommonMainForm = () => {
                                             )}
 
                                         </div>
-                                        <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center"
+                                        <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center mt-2"
                                             onClick={() => {
                                                 verifyOtpCode()
                                             }}
@@ -234,14 +243,16 @@ const CommonMainForm = () => {
                                 }
                             </div>
                             <div className="relative">
-
+<div className="text-sm mb-2">
+                                    <label>Phone Number</label>
+                                </div>
                                 <PhoneInput
                                     international
                                     countryCallingCodeEditable={false}
                                     defaultCountry="AE"
                                     value={formik.values.phone}
                                     onChange={(phone) => formik.setFieldValue("phone", phone)}
-                                    className={`w-full px-4 py-3 border-b ${formik.touched.phone && formik.errors.phone ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
+                                    className={`w-full px-4 py-3 pl-3 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 bg-[#1A1A47] ${formik.touched.phone && formik.errors.phone ? "border-b-red-500" : "border-b-gray-300"} focus:outline-none`}
                                 />
                                 {formik.touched.phone && formik.errors.phone && (
                                     <p className="text-red-500 text-sm text-left">{formik.errors.phone}</p>
@@ -251,8 +262,11 @@ const CommonMainForm = () => {
                         </div>
 
                         <div className="relative mb-3">
+                            <div className="text-sm mb-2">
+                                    <label>Country of Residence</label>
+                                </div>
                             <svg
-                                className="absolute top-3 left-3 w-4 h-4 text-gray-400"
+                                className="absolute top-10 left-3 w-4 h-4 text-gray-400"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +280,7 @@ const CommonMainForm = () => {
                                 />
                                 </svg>
                             <select
-                                className={`w-full bg-white px-4 py-3 pl-9 border-b ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-gray-700`}
+                                className={`w-full bg-[#1A1A47] px-4 py-3 pl-9 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.country && formik.errors.country ? "border-b-red-500" : "border-gray-300"} text-white`}
                                 {...formik.getFieldProps("country")}
                             >
                                 <option value="">Select Country</option>
@@ -283,7 +297,7 @@ const CommonMainForm = () => {
 
                         <div className="mb-5">
                             <label
-                                className={`block text-xs pb-2 ${formik.touched.terms && formik.errors.terms
+                                className={`block text-sm pb-2 ${formik.touched.terms && formik.errors.terms
                                     ? "text-red-500"
                                     : ""
                                     }`}
@@ -303,7 +317,7 @@ const CommonMainForm = () => {
                                     value="checked"
                                     className="h-5 w-5"
                                 />
-                                <p className="inline  text-[10px] text-primary">
+                                <p className="inline  text-sm leading-normal">
                                     By clicking Submit, I confirm that: (1) I have read and agree to the <a className="text-secondary underline" href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf">Client Agreements</a>; (2) I consent to GTCFX contacting me at reasonable times; and (3) my number is not on the Do Not Call Register (DNCR).
                                 </p>
                             </div>
@@ -311,8 +325,8 @@ const CommonMainForm = () => {
 
                         {/* Submit Button */}
                         <div className="text-center">
-                            <button disabled={isDisable} type="submit" className="bg-primary text-white w-full py-2 px-8 rounded-lg">
-                                {loading ? "Submitting.." : "Get Started Now"}
+                            <button disabled={isDisable} type="submit" className="bg-primary text-white w-full py-4 px-8 rounded-md">
+                                {loading ? "Submitting.." : "Get 80% RevShare"}
                             </button>
                         </div>
                     </form>

@@ -3,10 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import CustomButton from "@/app/components/common/CustomButton";
-import SliderModal from "./SliderModal";
+
 
 const Banner = ({setIsOpen}) => {
-  const data = [
+       const data = [
     {
       icon: "/icon1.svg",
       title: "Up to 80% RevShare Paid On Demand"
@@ -35,16 +35,36 @@ const Banner = ({setIsOpen}) => {
   return (
     <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden">
 
-    
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-10 hidden md:block">
+        <div className="relative w-full sm:h-96 xl:h-[600px] scale-[1.4] origin-bottom-right">
+          <Image
+            src="/ib/layer1.webp"
+            alt="Decorative background"
+            fill
+            className="object-right-bottom object-contain"
+          />
+        </div>
+      </div>
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-100 hidden md:block">
+        <div className="relative w-full h-full scale-[0.9] origin-bottom-right">
+          <Image
+            src="/ib/layer3.webp"
+            alt="Decorative background"
+            fill
+            className="object-right-bottom object-contain"
+          />
+        </div>
+      </div>
+
 
       <div className="container">
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative mb-8">
           {/* Left Column */}
           <div className="text-center md:text-left">
             <h3 className="text-xl md:text-3xl font-light">
-              UAE's Top Forex Partners Now Earn Up to
+              India’s Top IB's Now Earn Up to
             </h3>
-            <h1 className="text-4xl md:text-[75px] font-bold">80% RevShare</h1>
+            <h1 className="text-4xl md:text-6xl font-bold">80% REVSHARE</h1>
             <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
               with GTC
             </h3>
@@ -53,7 +73,7 @@ const Banner = ({setIsOpen}) => {
             </p>
             <div className="flex flex-row justify-center md:justify-start items-center gap-4">
               <CustomButton
-                        text="Get 80% RevShare"
+                        text="Get 80% Revshare"
                         bgColor="bg-white"
                         textColor="text-[#1F2937]"
                         strokeColor="#000032"

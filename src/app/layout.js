@@ -10,9 +10,10 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "India’s Top IBs Now Earn Up to 80% REVSHARE",
+  title: "UAE's Top Forex Partners Now Earn Up to 80% RevShare with GTC",
   description: "Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.",
 };
+
 
 export default function RootLayout({ children }) {
   return (
