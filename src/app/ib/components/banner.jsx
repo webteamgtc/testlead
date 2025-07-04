@@ -1,9 +1,11 @@
 
+"use client"
 import React from "react";
 import Image from "next/image";
 import CustomButton from "@/app/components/common/CustomButton";
+import SliderModal from "./SliderModal";
 
-const HeroSection = () => {
+const HeroSection = ({setIsOpen}) => {
   const data = [
     {
       icon: "/icon1.svg",
@@ -75,6 +77,7 @@ const HeroSection = () => {
                         bgColor="bg-white"
                         textColor="text-[#1F2937]"
                         strokeColor="#000032"
+                        onClick={() => setIsOpen(true)}
                       />
             </div>
         
@@ -100,7 +103,7 @@ const HeroSection = () => {
       </div>
 
     </section >
-  );
+   );
 };
 
 export default HeroSection;
