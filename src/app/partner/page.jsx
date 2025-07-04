@@ -8,6 +8,7 @@ import Broker from '../ib/components/broker';
 import IBTestimonials from '../ib/components/IBTraders';
 import GrowIBSection from '../ib/components/growIBsection';
 import Footer from '../components/Footer';
+import CommonMainForm from '../components/MainForm';
 
 export const metadata = {
   title: "UAE Top Partner Now Earn Up to 80% RevShare",
@@ -53,7 +54,7 @@ const page = () => {
           {/* Left Column */}
           <div className="text-center md:text-left">
             <h3 className="text-xl md:text-3xl font-light">
-              UAE Top Partner's Now Earn Up to
+              UAE Top Partner Now Earn Up to
             </h3>
             <h1 className="text-4xl md:text-[65px] font-bold">80% RevShare</h1>
             <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
@@ -64,7 +65,7 @@ const page = () => {
             </p>
             <div className="flex flex-row justify-center md:justify-start items-center gap-4">
               <CustomButton
-                        text="Get 80% Revshare"
+                        text="Get 80% RevShare"
                         bgColor="bg-white"
                         textColor="text-[#1F2937]"
                         strokeColor="#000032"
@@ -72,6 +73,7 @@ const page = () => {
             </div>
         
           </div>
+          
 
         </div>
 

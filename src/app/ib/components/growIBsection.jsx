@@ -21,7 +21,7 @@ const GrowIBSection = () => {
                         Grow Your IB Business with GTC
                     </h2>
                     <p className="text-base md:text-lg xl:text-[22px]">
-                        You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping India’s IBs scale faster, earn more, and build lasting trust with their traders.
+                        You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping UAE’s IBs scale faster, earn more, and build lasting trust with their traders.
                     </p>
                     <p className="text-xl xl:text-2xl text-white font-semibold">
                         <span className="text-white">Join us today,</span> and your traders will thank you tomorrow.
