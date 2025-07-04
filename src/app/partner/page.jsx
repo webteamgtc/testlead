@@ -17,10 +17,10 @@ export default function Home() {
             <Header />
             <BannerMain setIsOpen={setIsOpen} />
             <ComparisonTable setIsOpen={setIsOpen} />
-            <Paymore />
-            <Broker />
+            <Paymore setIsOpen={setIsOpen}/>
+            <Broker  setIsOpen={setIsOpen}/>
             <IBTestimonials />
-            <GrowIBSection />
+            <GrowIBSection setIsOpen={setIsOpen}/>
             <Footer />
             <SliderModal isOpen={isOpen}
                 onClose={() => setIsOpen(false)}

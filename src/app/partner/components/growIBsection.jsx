@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const GrowIBSection = () => {
+const GrowIBSection = ({setIsOpen}) => {
     return (
         <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden text-center">
                     <div className="absolute top-0 h-full w-full opacity-50 pointer-events-none">
@@ -27,7 +27,8 @@ const GrowIBSection = () => {
                         <span className="text-white">Join us today,</span> and your traders will thank you tomorrow.
                     </p>
                     <div className="flex flex-row justify-center items-center gap-4 mt-1">
-                          <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm md:text-base xl:text-lg text-white  px-6 py-3 rounded-lg transition-all duration-300">
+                          <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm md:text-base xl:text-lg text-white  px-6 py-3 rounded-lg transition-all duration-300"
+                          onClick={() => setIsOpen(true)}>
                         Make the Switch
                     </button>
                     </div>
