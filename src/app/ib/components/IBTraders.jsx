@@ -3,22 +3,22 @@ import React from "react";
 const testimonials = [
     {
         text: `“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
-        name: "Ravi T., Mumbai",
+        name: "Judi Izdihar Shamoon, Dubai, UAE",
         stars: 5,
     },
     {
-        text: `“I run monthly trading classes in Hyderabad. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
-        name: "Fatima S., Hyderabad",
+        text: `“I run monthly trading classes in Dubai. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
+        name: "Suoud Butrus Gaber, UAE",
         stars: 4,
     },
     {
         text: `“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”`,
-        name: "Rakesh P., Pune",
+        name: "Kutaiba Abdul-Matin Awad, UAE",
         stars: 5,
     },
     {
         text: `“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”`,
-        name: "Jignesh K., Dahil",
+        name: "Yasser Nu'aym Bazzi, UAE",
         stars: 4,
     },
 ];
@@ -48,12 +48,12 @@ const IBTestimonials = () => {
             <div className="container mx-auto">
                 <div className=" grid md:grid-cols-2 items-start gap-5 md:gap-16 ">
                     {/* Left Section */}
-                    <div className="flex flex-col text-center md:text-left justify-center items-center space-y-3 md:space-y-6">
-                        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize">
-                            What India’s IBs & Traders <br /> Are Saying
+                    <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-3 md:space-y-6">
+                        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize max-w-xl">
+                            What UAE's Partners & Traders Are Saying
                         </h2>
-                        <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-lg">
-                            Whether you’re a seasoned IB or just getting started, these partners made the switch and they or their traders haven’t looked back.
+                        <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-xl">
+                            Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back.
                         </p>
                         <button className="w-fit bg-white border border-gray-300 hover:border-gray-400 text-sm md:text-base xl:text-lg font-medium text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition">
                             Join Us 
