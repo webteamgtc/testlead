@@ -1,9 +1,9 @@
 'use client';
 import CustomButton from "@/app/components/common/CustomButton";
 
-const ComparisonTable = () => {
+const ComparisonTable = ({ setIsOpen }) => {
   return (
-        <section className="relative text-white py-12 md:py-20 overflow-hidden">
+    <section className="relative text-white py-12 md:py-20 overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-white z-0" />
 
@@ -75,15 +75,16 @@ const ComparisonTable = () => {
           </table>
         </div>
 
-   <div className="flex justify-center">
-      <CustomButton
-          text="Refer Your Traders"
-          bgColor="bg-[#000032]"
-          textColor="text-[#fff]"
-          showIcon={false} // No SVG arrow
-        />
-   </div>
-      
+        <div className="flex justify-center">
+          <CustomButton
+            text="Refer Your Traders"
+            bgColor="bg-[#000032]"
+            textColor="text-[#fff]"
+            showIcon={false} // No SVG arrow
+            onClick={() => setIsOpen(true)}
+          />
+        </div>
+
       </div>
     </section>
   );

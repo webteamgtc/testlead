@@ -5,7 +5,7 @@ import Image from "next/image";
 import CustomButton from "@/app/components/common/CustomButton";
 import SliderModal from "./SliderModal";
 
-const HeroSection = () => {
+const HeroSection = ({setIsOpen}) => {
   const data = [
     {
       icon: "/icon1.svg",
@@ -32,7 +32,6 @@ const HeroSection = () => {
       title: "Multi-Regulated Brokerage: SCA, FCA & ASIC"
     }
   ]
-  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <>
     <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-12 md:py-20 relative overflow-hidden">
@@ -105,9 +104,6 @@ const HeroSection = () => {
       </div>
 
     </section >
-    <SliderModal isOpen={isOpen}
-    onClose={() => setIsOpen(false)}
-    />
     </>
   );
 };
