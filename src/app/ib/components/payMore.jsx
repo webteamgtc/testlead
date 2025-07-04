@@ -57,18 +57,14 @@ const IbProgrammeSection = () => {
         description: "24/7 priority support and a personal account manager." }
   ];
 
-  const [flipped, setFlipped] = useState(Array(features.length).fill(false));
+ const [flippedIndex, setFlippedIndex] = useState(null);
 
-  const toggleFlip = index => {
-    setFlipped(prev => {
-      const newState = [...prev];
-      newState[index] = !newState[index];
-      return newState;
-    });
-  };
+const toggleFlip = (index) => {
+  setFlippedIndex(prevIndex => prevIndex === index ? null : index);
+};
 
   return (
-    <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-12 md:py-20 relative overflow-hidden text-center">
+    <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden text-center">
              <div className="absolute top-0 h-full w-full opacity-50 pointer-events-none">
            <Image
              src="/ib/pattern.webp"
@@ -77,7 +73,7 @@ const IbProgrammeSection = () => {
              className="object-cover"
            />
          </div>
-            <div className="relative container flex flex-col gap-5">
+            <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-3 md:gap-5 px-4">
         {/* Section Title */}
 
           <h4 className="text-lg md:text-2xl font-[200]">An IB Programme That</h4>
@@ -90,7 +86,7 @@ const IbProgrammeSection = () => {
 
 
         {/* Flip Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 justify-center">
           {features.map((feat, idx) => (
             <button 
               key={idx}
@@ -98,10 +94,10 @@ const IbProgrammeSection = () => {
               onClick={() => toggleFlip(idx)}
               className="relative w-full h-60 [perspective:1000px] focus:outline-none bg-white rounded-2xl text-[#1F2937] flex flex-col items-center"
             >
-              <div className={
-                "relative w-full h-full transition-all duration-500 [transform-style:preserve-3d]" + 
-                (flipped[idx] ? " [transform:rotateY(180deg)]" : "")
-              }>
+             <div className={
+  "relative w-full h-full transition-all duration-500 [transform-style:preserve-3d]" +
+  (flippedIndex === idx ? " [transform:rotateY(180deg)]" : "")
+}>
                 {/* Front Face */}
                 <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center [backface-visibility:hidden] px-10 ">
                   {/* Placeholder SVG icon (circle) */}
@@ -110,7 +106,7 @@ const IbProgrammeSection = () => {
                 </div>
                 {/* Back Face */}
                 <div className="absolute bg-secondary text-white inset-0 flex items-center justify-center p-6 rounded-xl text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                  <p className="text-sm md:text-base">{feat.description}</p>
+                  <p className="text-sm md:text-base max-w-60 mx-auto">{feat.description}</p>
                 </div>
               </div>
             </button>
@@ -121,7 +117,7 @@ const IbProgrammeSection = () => {
           <p className="text-sm md:text-base xl:text-2xl font-semibold text-white max-w-4xl mx-auto leading-relaxed ">
                             From real trader bonuses to marketing support and instant payouts, this is the IB programme serious partners are switching to.
                         </p>
-                        <div className='flex flex-row items-center justify-center'>
+                        <div className='flex flex-row items-center justify-center md:mt-2'>
  <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300">
                             Partner with GTC
                         </button>

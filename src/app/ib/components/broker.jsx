@@ -1,11 +1,11 @@
 const Broker = () => {
     return (
-   <section className="relative text-white py-12 md:py-20 overflow-hidden">
+   <section className="relative text-white py-8 md:py-20 overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#E1CFBB] to-[#956D42] z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#cea679] to-[#956D42] z-0" />
 
       {/* Background Image at Bottom Center with Opacity */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-50">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-80">
         <img
           src="/ib/candle.webp"
           alt="Decorative candle"
