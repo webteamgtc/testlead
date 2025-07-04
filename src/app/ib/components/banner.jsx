@@ -31,7 +31,7 @@ const HeroSection = () => {
     }
   ]
   return (
-    <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-12 md:py-20 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden">
 
       <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-10 hidden md:block">
         <div className="relative w-full sm:h-96 xl:h-[600px] scale-[1.4] origin-bottom-right">
@@ -56,20 +56,20 @@ const HeroSection = () => {
 
 
       <div className="container">
-        <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative mb-10">
+        <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative mb-8">
           {/* Left Column */}
           <div className="text-center md:text-left">
             <h3 className="text-xl md:text-3xl font-light">
               India’s Top IB's Now Earn Up to
             </h3>
             <h1 className="text-4xl md:text-6xl font-bold">80% REVSHARE</h1>
-            <h3 className="text-xl md:text-3xl mb-6 font-light">
+            <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
               with GTC
             </h3>
-            <p className="text-sm md:text-base mb-8 leading-relaxed max-w-xl">
+            <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
               Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.
             </p>
-            <div className="flex flex-row justify-center md:justify-start items-center gap-4 mb-6">
+            <div className="flex flex-row justify-center md:justify-start items-center gap-4">
               <CustomButton
                         text="Get 80% Revshare"
                         bgColor="bg-white"

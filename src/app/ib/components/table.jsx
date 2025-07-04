@@ -3,7 +3,7 @@ import CustomButton from "@/app/components/common/CustomButton";
 
 const ComparisonTable = () => {
   return (
-        <section className="relative text-white py-12 md:py-20 overflow-hidden">
+        <section className="relative text-white py-8 md:py-20 overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-white z-0" />
 
@@ -17,8 +17,8 @@ const ComparisonTable = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-7 justify-center text-center px-4 md:px-0">
-        <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] capitalize max-w-3xl mx-auto">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-8 justify-center text-center px-4 md:px-0">
+        <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] capitalize max-w-3xl mx-auto leading-none">
           Here’s what your traders will get when you refer them to GTC
         </h2>
 
@@ -75,7 +75,7 @@ const ComparisonTable = () => {
           </table>
         </div>
 
-   <div className="flex justify-center">
+   <div className="flex justify-center mt-2">
       <CustomButton
           text="Refer Your Traders"
           bgColor="bg-[#000032]"
