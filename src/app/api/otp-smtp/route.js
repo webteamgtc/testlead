@@ -4,14 +4,14 @@ import otpGenerator from 'otp-generator';
 import { transporter } from '../../config/nodemailer'
 
 export async function POST(req) {
-    const { email } = await req.json();
-    const otp = otpGenerator.generate(6, { upperCaseAlphabets: false, specialChars: false, digits: true, lowerCaseAlphabets: false });
-    const mailData = {
-        from: '"GTCFX" <portal@mx2.gtcmail.com>',
-        to: email,
-        subject: "Your GTCFX OTP Code",
-        text: `Your OTP is ${otp}`,
-        html: `
+  const { email, first_name } = await req.json();
+  const otp = otpGenerator.generate(6, { upperCaseAlphabets: false, specialChars: false, digits: true, lowerCaseAlphabets: false });
+  const mailData = {
+    from: '"GTCFX" <portal@mx2.gtcmail.com>',
+    to: email,
+    subject: "Your GTCFX OTP Code",
+    text: `Your OTP is ${otp}`,
+    html: `
         <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,8 +53,13 @@ export async function POST(req) {
             <!-- Greeting & OTP -->
             <tr>
               <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-                Dear Client
-                Please use the following One-Time Password 398044 to complete your further process.
+                Dear ${first_name || "Client"},
+              </td>
+            </tr>
+             <tr>
+              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
+              Please use the following One-Time Password 398044 to complete your further process.
+
               </td>
             </tr>
             <tr>
@@ -193,12 +198,12 @@ export async function POST(req) {
 </html>
 
         `
-    };
-    try {
-        await transporter.sendMail(mailData);
-        return NextResponse.json({ message: `5649${otp}632` }, { status: 200 })
-    } catch (error) {
-        console.log(error);
-        return NextResponse.json({ message: 'Error Sending OTP' }, { status: 500 })
-    }
+  };
+  try {
+    await transporter.sendMail(mailData);
+    return NextResponse.json({ message: `5649${otp}632` }, { status: 200 })
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json({ message: 'Error Sending OTP' }, { status: 500 })
+  }
 }

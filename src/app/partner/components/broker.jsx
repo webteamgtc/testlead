@@ -1,4 +1,4 @@
-const Broker = () => {
+const Broker = ({setIsOpen}) => {
     return (
    <section className="relative text-white py-8 md:py-20 overflow-hidden">
       {/* Gradient Background */}
@@ -45,7 +45,9 @@ const Broker = () => {
           <h2 className="text-3xl sm:text-4xl xl:text-6xl font-bold text-center text-white leading-tight mb-5 sm:max-w-2xl xl:max-w-5xl mx-auto">
             Switch to a broker that doesn’t just say it, we prove it every day.
           </h2>
-          <button className="bg-white text-[#6e4e35] hover:bg-[#f5f5f5] px-6 py-3 text-sm md:text-base xl:text-lg rounded-lg flex flex-row gap-4 items-center justify-center shadow transition-all duration-300">
+          <button className="bg-white text-[#6e4e35] hover:bg-[#f5f5f5] px-6 py-3 text-sm md:text-base xl:text-lg rounded-lg flex flex-row gap-4 items-center justify-center shadow transition-all duration-300"
+          onClick={() => setIsOpen(true)}
+          >
             Start Earning
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L7 7L1 13" stroke="#B48755" strokeWidth="2" />

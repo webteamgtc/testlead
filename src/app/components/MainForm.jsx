@@ -35,6 +35,7 @@ const CommonMainForm = () => {
         setOtpLoading(true)
         axios.post(`/api/otp-smtp`, {
             email: formik?.values?.email,
+            first_name: formik?.values?.nickname,
             type: "0"
         }).then(res => {
             if (res?.data?.message) {
