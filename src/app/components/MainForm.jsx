@@ -68,7 +68,7 @@ const CommonMainForm = () => {
             formik.resetForm();
             setLoading(false)
             localStorage.setItem('user', JSON.stringify(data));
-            router.push("/thank-you",);
+            router.push("/partner/thank-you",);
             formik.resetForm()
             setShowOtp(false)
         }).catch(err => {
@@ -211,17 +211,17 @@ const CommonMainForm = () => {
                                                 containerStyle={{
                                                     justifyContent: 'space-around',
                                                     alignItems: "center",
-                                                    gap: "5px"
+                                                    gap: "10px"
                                                 }}
                                                 renderInput={(props) => <input {...props} />}
                                                 isInputNum
                                                 inputStyle={{
                                                     borderRadius: '5px',
-                                                    paddingBottom: '8px',
-                                                    paddingTop: "8px",
+                                                    paddingBottom: '10px',
+                                                    paddingTop: "10px",
                                                     width: "20%",
                                                     backgroundColor: "#1A1A47",
-                                                    color: "#000",
+                                                    color: "#fff",
                                                     fontWeight: "700",
                                                     outlineColor: '#f9c617',
                                                     border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ccc", 
