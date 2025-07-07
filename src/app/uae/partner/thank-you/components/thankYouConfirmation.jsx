@@ -5,7 +5,7 @@ const ConfirmationThankYou = ({ user }) => {
     return (
         <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden">
                <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-50 hidden md:block">
-                     <div className="relative w-full sm:h-96 xl:h-[500px] 2xl:h-[500px] 3xl:h-[600px] scale-[1.2] origin-bottom-right">
+                     <div className="relative w-full sm:h-96 xl:h-[500px] 2xl:h-[450px] 3xl:h-[600px] scale-[1.2] origin-bottom-center">
                        <Image
                          src="/ib/bottom-overlay.webp"
                          alt="Decorative background"

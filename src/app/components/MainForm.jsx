@@ -86,7 +86,7 @@ const CommonMainForm = () => {
             formik.resetForm();
             setLoading(false)
             localStorage.setItem('user', JSON.stringify(data));
-            router.push("/partner/thank-you",);
+            router.push("/uae/partner/thank-you",);
             formik.resetForm()
             setShowOtp(false)
         }).catch(err => {
