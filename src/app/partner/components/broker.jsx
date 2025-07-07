@@ -2,7 +2,7 @@ const Broker = ({setIsOpen}) => {
     return (
    <section className="relative text-white py-8 md:py-20 overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#cea679] to-[#956D42] z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#E1CFBB] to-[#956D42] z-0" />
 
       {/* Background Image at Bottom Center with Opacity */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-80">
@@ -45,7 +45,7 @@ const Broker = ({setIsOpen}) => {
           <h2 className="text-3xl sm:text-4xl xl:text-6xl font-bold text-center text-white leading-tight mb-6 sm:max-w-2xl xl:max-w-5xl mx-auto">
             Switch to a broker that doesn’t just say it, we prove it every day.
           </h2>
-          <button className="bg-white text-[#B48755] hover:bg-[#f5f5f5] px-6 py-3 text-sm md:text-base font-bold xl:text-lg rounded-lg flex flex-row gap-4 items-center justify-center shadow transition-all duration-300"
+          <button className="bg-white text-[#B48755]  hover:bg-[#4e4d71] cursor-pointer px-6 py-3 text-sm md:text-base font-bold xl:text-lg rounded-lg flex flex-row gap-4 items-center justify-center shadow transition-all duration-300"
           onClick={() => setIsOpen(true)}
           >
             Start Earning

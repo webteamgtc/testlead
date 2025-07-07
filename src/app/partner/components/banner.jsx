@@ -551,7 +551,7 @@ const HeroSection = ({setIsOpen}) => {
      
 
       <div className="container">
-        <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative mb-8">
+        <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
           {/* Left Column */}
           <div className="text-center md:text-left">
            <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
@@ -564,10 +564,10 @@ const HeroSection = ({setIsOpen}) => {
             <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
               Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.
             </p>
-            <div className="flex flex-row justify-center md:justify-start items-center gap-4">
+            <div className="flex flex-row justify-center md:justify-start items-center gap-4 pb-8 md:pb-20">
               <CustomButton
                         text="Get 80% RevShare"
-                        bgColor="bg-white"
+                        bgColor="bg-white hover:bg-[#b2b2c2]"
                         textColor="text-[#1F2937]"
                         strokeColor="#000032"
                         onClick={() => setIsOpen(true)}

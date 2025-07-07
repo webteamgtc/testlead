@@ -57,7 +57,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
         </svg>
       ),
       title: "Instant Commission Payouts",
-      description: "24/7 priority support and a personal account manager."
+      description: "Withdraw your partner earnings the moment they hit."
     }
   ];
 
@@ -89,40 +89,38 @@ const IbProgrammeSection = ({ setIsOpen }) => {
         </p>
 
 
-        {/* Flip Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-5 justify-center">
-          {features.map((feat, idx) => (
-            <button
-              key={idx}
-              type="button"
-              onClick={() => toggleFlip(idx)}
-              className="relative w-full h-60 [perspective:1000px] focus:outline-none bg-white rounded-2xl text-[#1F2937] flex flex-col items-center"
-            >
-              <div className={
-                "relative w-full h-full transition-all duration-500 [transform-style:preserve-3d]" +
-                (flippedIndex === idx ? " [transform:rotateY(180deg)]" : "")
-              }>
-                {/* Front Face */}
-                <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center [backface-visibility:hidden] px-10 ">
-                  {/* Placeholder SVG icon (circle) */}
-                  <p className='text-4xl'>{feat.icon}</p>
-                  <h3 className="text-lg font-medium">{feat.title}</h3>
-                </div>
-                {/* Back Face */}
-                <div className="absolute bg-secondary text-white inset-0 flex items-center justify-center p-6 rounded-xl text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                  <p className="text-sm md:text-base max-w-60 mx-auto">{feat.description}</p>
-                </div>
-              </div>
-            </button>
-          ))}
+       {/* Flip Cards Grid */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-5 justify-center">
+  {features.map((feat, idx) => (
+    <div
+      key={idx}
+      className="group relative w-full h-60 [perspective:1000px] bg-white rounded-2xl text-[#1F2937] flex flex-col items-center"
+    >
+      <div
+        className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+      >
+        {/* Front Face */}
+        <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center [backface-visibility:hidden] px-10">
+          <p className="text-4xl">{feat.icon}</p>
+          <h3 className="text-lg font-medium">{feat.title}</h3>
         </div>
+
+        {/* Back Face */}
+        <div className="absolute bg-secondary text-white inset-0 flex items-center justify-center p-6 rounded-xl text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <p className="text-sm md:text-base max-w-60 mx-auto">{feat.description}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* Footer Text and CTA */}
         <p className="text-sm md:text-base xl:text-2xl font-semibold text-white max-w-4xl mx-auto leading-relaxed mt-2">
           From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to.
         </p>
         <div className='flex flex-row items-center justify-center mt-2'>
-          <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
+          <button className="bg-gradient-to-r  from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
           onClick={() => setIsOpen(true)}>
             Partner with GTC
           </button>

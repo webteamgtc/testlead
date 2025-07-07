@@ -18,7 +18,7 @@ const ComparisonTable = ({setIsOpen}) => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-8 justify-center text-center px-4 md:px-0">
-        <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] capitalize max-w-3xl mx-auto leading-none md:leading-tight">
+        <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#000032] capitalize max-w-3xl mx-auto leading-none md:leading-tight">
           Here’s what your traders will get when you refer them to GTC
         </h2>
 
@@ -51,7 +51,7 @@ const ComparisonTable = ({setIsOpen}) => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Scripted replies
+                 
                   </span>,
                   <span className="text-green-600 flex items-center gap-2">
                     <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
@@ -61,7 +61,7 @@ const ComparisonTable = ({setIsOpen}) => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    GTC VIP + Exclusive Bonus
+                    GTC VIP + Margin Bonus
                   </span>,
                 ],
               ].map(([feature, broker, gtc], idx) => (
@@ -78,7 +78,7 @@ const ComparisonTable = ({setIsOpen}) => {
    <div className="flex justify-center md:mt-2">
       <CustomButton
           text="Refer Your Traders"
-          bgColor="bg-[#000032]"
+          bgColor="bg-[#000032] hover:bg-[#4e4d71]"
           textColor="text-[#fff]"
            onClick={() => setIsOpen(true)}
           showIcon={false} // No SVG arrow

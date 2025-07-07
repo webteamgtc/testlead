@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "UAE's Top Forex Partners Now Earn Up to 80% RevShare with GTC",
-  description: "Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.",
+  title: "Become a GTC Partner in the UAE Today",
+  description: "Join GTC as an Partner in the UAE. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker.",
 };
 
 

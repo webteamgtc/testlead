@@ -27,7 +27,7 @@ const GrowIBSection = ({setIsOpen}) => {
                         <span className="text-white">Join us today,</span> and your traders will thank you tomorrow.
                     </p>
                     <div className="flex flex-row justify-center items-center gap-4 mt-2">
-                          <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm md:text-base font-bold xl:text-lg text-white  px-6 py-3 rounded-lg transition-all duration-300"
+                          <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm md:text-base font-bold xl:text-lg text-white  px-6 py-3 rounded-lg transition-all duration-300"
                           onClick={() => setIsOpen(true)}>
                         Make the Switch
                     </button>

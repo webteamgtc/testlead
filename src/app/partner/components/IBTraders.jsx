@@ -2,12 +2,12 @@ import React from "react";
 
 const testimonials = [
     {
-        text: `“As a forex partner, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
+        text: `“As an FX partner, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
         name: "Judi Izdihar Shamoon, Dubai, UAE",
         stars: 5,
     },
     {
-        text: `“I run monthly trading classes in Dubai. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
+        text: `“I run monthly trading classes in Dubai, UAE. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
         name: "Suoud Butrus Gaber, UAE",
         stars: 4,
     },
@@ -49,13 +49,13 @@ const IBTestimonials = ({setIsOpen}) => {
                 <div className=" grid md:grid-cols-2 items-start gap-8 md:gap-16 ">
                     {/* Left Section */}
                     <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-8 md:space-y-6">
-                        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize w-72 md:w-full mx-auto max-w-xl">
+                        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize w-72 md:w-full mx-auto md:mx-0 max-w-xl">
                             What UAE's Partners & Traders Are Saying
                         </h2>
                         <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-xl">
                             Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back.
                         </p>
-                        <button className="w-fit bg-white border border-gray-300 hover:border-gray-400 text-sm font-bold md:text-base xl:text-lg text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition"   onClick={() => setIsOpen(true)}>
+                        <button className="w-fit bg-white border border-gray-300 hover:bg-[#4e4d71] hover:text-white hover:border-gray-400 text-sm font-bold md:text-base xl:text-lg text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition"   onClick={() => setIsOpen(true)}>
                             Join Us 
                              <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L7 7L1 13" stroke="#000032" strokeWidth="3"/>
