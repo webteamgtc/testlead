@@ -11,6 +11,7 @@ import { useLocationDetail } from "../context/useLocationDetail";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Select from "react-select";
 
 
 const CommonMainForm = () => {
@@ -22,12 +23,29 @@ const CommonMainForm = () => {
     const [isDisable, setIsDisable] = useState(true)
     const router = useRouter()
 
+    const options = countryList.map((item) => ({
+        value: item.en_short_name,
+        label: (
+            <div className="flex items-center gap-2">
+                <img
+                    src={`https://flagcdn.com/w40/${item.alpha_2_code.toLowerCase()}.png`}
+                    alt={item.en_short_name}
+                    className="w-5 h-4 object-cover"
+                />
+                <span>{item.en_short_name}</span>
+            </div>
+        ),
+    }));
+
     useEffect(() => {
         if (countryData?.country) {
             const filterData = countryList.find((item) => item?.alpha_2_code == countryData.country);
             formik.setFieldValue("country", filterData ? filterData?.en_short_name : "");
         }
     }, [countryData?.country, countryList]);
+
+
+
 
 
 
@@ -125,203 +143,217 @@ const CommonMainForm = () => {
         }
     }
 
+    console.log({ countryList, countryData, formik })
+
+
+
     return (
-      
-             
-                <div className="relative max-w-xl mx-auto">
-                    <form onSubmit={formik.handleSubmit} className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left">
-                        {/* Full Name & Email */}
-                        <div className="grid grid-cols-2 gap-3 mb-3">
-                            <div className="relative">
-                                <div className="text-sm mb-2">
-                                    <label>First Name</label>
-                                </div>
-                            
-                                <input
-                                    type="text"
-                                    className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.nickname && formik.errors.nickname ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
 
-                                    {...formik.getFieldProps("nickname")}
-                                />
-                                {formik.touched.nickname && formik.errors.nickname && (
-                                    <p className="text-red-500 text-left pt-1">{formik.errors.nickname}</p>
-                                )}
-                            </div>
-                            <div className="relative">
-                                 <div className="text-sm mb-2">
-                                    <label>Last Name</label>
-                                </div>
-                        
-                                <input
-                                    type="text"
-                                    className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.last_name && formik.errors.last_name ? "border-red-500" : "border-[#ffffff1a]"} focus:outline-none`}
-                                    {...formik.getFieldProps("last_name")}
-                                />
-                                {formik.touched.last_name && formik.errors.last_name && (
-                                    <p className="text-red-500  pt-1 text-left">{formik.errors.last_name}</p>
-                                )}
-                            </div>
 
+        <div className="relative max-w-xl mx-auto">
+            <form onSubmit={formik.handleSubmit} className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left">
+                {/* Full Name & Email */}
+                <div className="grid grid-cols-2 gap-3 mb-3">
+                    <div className="relative">
+                        <div className="text-sm mb-2">
+                            <label>First Name</label>
                         </div>
 
+                        <input
+                            type="text"
+                            className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.nickname && formik.errors.nickname ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
 
-                        <div className="grid grid-cols-1 gap-3 mb-3">
-                            <div className="relative">
-                                <div className="relative">
-                                    <div className="text-sm mb-2">
-                                    <label>Email</label>
-                                </div>
-                             
-                                                                        <input
-                                        type="email"
-                                        className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email ? "border-red-500" : "border-[#ffffff1a]"} focus:outline-none focus:bg-none`}
-                                        {...formik.getFieldProps("email")}
-                                    />
-                                    {formik.touched.email && formik.errors.email && (
-                                        <p className="text-red-500 pt-1 text-left">{formik.errors.email}</p>
-                                    )}
-                                    <div className="absolute top-9 bg-primary right-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
-                                        onClick={() => {
-                                            sendVerificationCode()
-                                        }}
-                                    >
-                                        {otpLoading ? "Sending.." : "Get Code"}
-                                    </div>
-                                </div>
-                                {showOtp &&
-                                    <div className="grid grid-cols-1 gap-2">
-                                        <div>
-                                            <p className="my-2 text-left pt-1">OTP has been sent to given Email</p>
-                                            <OtpInput
-                                                value={formik.values.otp}
-                                                onChange={(otp) => formik.setFieldValue("otp", otp)}
-                                                numInputs={6}
-                                                containerStyle={{
-                                                    justifyContent: 'space-around',
-                                                    alignItems: "center",
-                                                    gap: "10px"
-                                                }}
-                                                renderInput={(props) => <input {...props} />}
-                                                isInputNum
-                                                inputStyle={{
-                                                    borderRadius: '5px',
-                                                    paddingBottom: '10px',
-                                                    paddingTop: "10px",
-                                                    width: "20%",
-                                                    backgroundColor: "#1A1A47",
-                                                    color: "#fff",
-                                                    fontWeight: "700",
-                                                    outlineColor: '#f9c617',
-                                                    border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ffffff1a", 
-                                                }}
-
-                                            />
-                                            {formik.touched.otp && formik.errors.otp && (
-                                                <p className="text-red-500 text-sm mt-2">{formik.errors.otp}</p>
-                                            )}
-
-                                        </div>
-                                        <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center mt-2 border border-[#ffffff1a]"
-                                            onClick={() => {
-                                                verifyOtpCode()
-                                            }}
-                                        >
-                                            Verify Code
-                                        </div>
-                                    </div>
-                                }
-                            </div>
-                           <div className="relative">
-  <div className="text-sm mb-2 text-white">
-    <label htmlFor="phone">Mobile Number</label>
-  </div>
-  <PhoneInput
-    id="phone"
-    name="phone"
-    international
-    countryCallingCodeEditable={false}
-    defaultCountry="AE"
-    value={formik.values.phone}
-    onChange={(phone) => formik.setFieldValue("phone", phone)}
-    className={`flex w-full overflow-hidden rounded-md border border-[#ffffff1a] bg-[#1A1A47] phone-setting text-white focus:outline-none
-      ${formik.touched.phone && formik.errors.phone ? "border-red-500" : ""}
-    `}
-    style={{
-      display: 'flex',
-      width: '100%',
-      backgroundColor: '#1A1A47',
-      borderRadius: '0.5rem',
-      border: '1px solid rgba(255,255,255,0.1)',
-      padding: '0.75rem',
-      color: 'white',
-    }}
-  />
-  {formik.touched.phone && formik.errors.phone && (
-    <p className="text-red-500 text-sm text-left mt-1">{formik.errors.phone}</p>
-  )}
-</div>
-
-
+                            {...formik.getFieldProps("nickname")}
+                        />
+                        {formik.touched.nickname && formik.errors.nickname && (
+                            <p className="text-red-500 text-left pt-1">{formik.errors.nickname}</p>
+                        )}
+                    </div>
+                    <div className="relative">
+                        <div className="text-sm mb-2">
+                            <label>Last Name</label>
                         </div>
 
-                        <div className="relative mb-3">
-                            <div className="text-sm mb-2">
-                                    <label>Country of Residence</label>
-                                </div>
-                           
-                            <select
-                                className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.country && formik.errors.country ? "border-red-500" : "border-[#ffffff1a]"} text-white`}
-                                {...formik.getFieldProps("country")}
-                            >
-                                <option value="">Select Country</option>
-                                {countryList?.map((item) => (
-                                    <option key={`${item?.alpha_2_code}-${item?.alpha_3_code}`} value={item?.en_short_name}>
-                                        {item?.en_short_name}
-                                    </option>
-                                ))}
-                            </select>
-                            {formik.touched.country && formik.errors.country && (
-                                <p className="text-red-500 text-sm text-left">{formik.errors.country}</p>
-                            )}
-                        </div>
+                        <input
+                            type="text"
+                            className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.last_name && formik.errors.last_name ? "border-red-500" : "border-[#ffffff1a]"} focus:outline-none`}
+                            {...formik.getFieldProps("last_name")}
+                        />
+                        {formik.touched.last_name && formik.errors.last_name && (
+                            <p className="text-red-500  pt-1 text-left">{formik.errors.last_name}</p>
+                        )}
+                    </div>
 
-                        <div className="mb-5">
-                            <label
-                                className={`block text-sm pb-2 ${formik.touched.terms && formik.errors.terms
-                                    ? "text-red-500"
-                                    : ""
-                                    }`}
-                                htmlFor="terms"
-                            >
-                                {formik.touched.terms && formik.errors.terms
-                                    ? formik.errors.terms
-                                    : "Please accept the terms and conditions"}
-                            </label>
-                            <div className="flex items-start gap-1">
-                                <input
-                                    type="checkbox"
-                                    name="terms"
-                                    id="terms"
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    value="checked"
-                                    className="h-5 w-5"
-                                />
-                                <p className="inline text-xs md:text-sm leading-normal">
-                                    By clicking Submit, I confirm that: (1) I have read and agree to the <a className="text-secondary underline" href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf">Client Agreements</a>; (2) I consent to GTCFX contacting me at reasonable times; and (3) my number is not on the Do Not Call Register (DNCR).
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Submit Button */}
-                        <div className="text-center">
-                            <button disabled={isDisable} type="submit" className="bg-primary text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]">
-                                {loading ? "Submitting.." : "Get 80% RevShare"}
-                            </button>
-                        </div>
-                    </form>
                 </div>
-   
+
+
+                <div className="grid grid-cols-1 gap-3 mb-3">
+                    <div className="relative">
+                        <div className="relative">
+                            <div className="text-sm mb-2">
+                                <label>Email</label>
+                            </div>
+
+                            <input
+                                type="email"
+                                className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email ? "border-red-500" : "border-[#ffffff1a]"} focus:outline-none focus:bg-none`}
+                                {...formik.getFieldProps("email")}
+                            />
+                            {formik.touched.email && formik.errors.email && (
+                                <p className="text-red-500 pt-1 text-left">{formik.errors.email}</p>
+                            )}
+                            <div className="absolute top-9 bg-primary right-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                                onClick={() => {
+                                    sendVerificationCode()
+                                }}
+                            >
+                                {otpLoading ? "Sending.." : "Get Code"}
+                            </div>
+                        </div>
+                        {showOtp &&
+                            <div className="grid grid-cols-1 gap-2">
+                                <div>
+                                    <p className="my-2 text-left pt-1">OTP has been sent to given Email</p>
+                                    <OtpInput
+                                        value={formik.values.otp}
+                                        onChange={(otp) => formik.setFieldValue("otp", otp)}
+                                        numInputs={6}
+                                        containerStyle={{
+                                            justifyContent: 'space-around',
+                                            alignItems: "center",
+                                            gap: "10px"
+                                        }}
+                                        renderInput={(props) => <input {...props} />}
+                                        isInputNum
+                                        inputStyle={{
+                                            borderRadius: '5px',
+                                            paddingBottom: '10px',
+                                            paddingTop: "10px",
+                                            width: "20%",
+                                            backgroundColor: "#1A1A47",
+                                            color: "#fff",
+                                            fontWeight: "700",
+                                            outlineColor: '#f9c617',
+                                            border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ffffff1a",
+                                        }}
+
+                                    />
+                                    {formik.touched.otp && formik.errors.otp && (
+                                        <p className="text-red-500 text-sm mt-2">{formik.errors.otp}</p>
+                                    )}
+
+                                </div>
+                                <div className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center mt-2 border border-[#ffffff1a]"
+                                    onClick={() => {
+                                        verifyOtpCode()
+                                    }}
+                                >
+                                    Verify Code
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div className="relative">
+                        <div className="text-sm mb-2 text-white">
+                            <label htmlFor="phone">Mobile Number</label>
+                        </div>
+                        <PhoneInput
+                            id="phone"
+                            name="phone"
+                            international
+                            countryCallingCodeEditable={false}
+                            defaultCountry={countryData?.country || "AE"}
+                            value={formik.values.phone}
+                            onChange={(phone) => formik.setFieldValue("phone", phone)}
+                            className={`flex w-full overflow-hidden rounded-md border border-[#ffffff1a] bg-[#1A1A47] phone-setting text-white focus:outline-none
+    ${formik.touched.phone && formik.errors.phone ? "border-red-500" : ""}
+  `}
+                            style={{
+                                display: 'flex',
+                                width: '100%',
+                                backgroundColor: '#1A1A47',
+                                borderRadius: '0.5rem',
+                                border: '1px solid rgba(255,255,255,0.1)',
+                                padding: '0.75rem',
+                                color: 'white',
+                            }}
+                        />
+
+                        {formik.touched.phone && formik.errors.phone && (
+                            <p className="text-red-500 text-sm text-left mt-1">{formik.errors.phone}</p>
+                        )}
+                    </div>
+
+
+                </div>
+
+                <div className="relative mb-3">
+                    <div className="text-sm mb-2">
+                        <label>Country of Residence</label>
+                    </div>
+
+                    <Select
+                        name="country"
+                        options={options}
+                        classNamePrefix="react-select"
+                        onChange={(selectedOption) => formik.setFieldValue("country", selectedOption?.value)}
+                        onBlur={() => formik.setFieldTouched("country", true)}
+                        value={options.find((opt) => opt.value === formik.values.country)} // ✅ ADD THIS LINE
+                        className="text-white"
+                        styles={{
+                            control: (base, state) => ({
+                                ...base,
+                                backgroundColor: "#1A1A47",
+                                borderColor: formik.touched.country && formik.errors.country ? "red" : "#ccccd679",
+                                color: "white",
+                            }),
+                            singleValue: (base) => ({ ...base, color: "white" }),
+                            menu: (base) => ({ ...base, backgroundColor: "#1A1A47", color: "white" }),
+                        }}
+                    />
+
+                    {formik.touched.country && formik.errors.country && (
+                        <p className="text-red-500 text-sm">{formik.errors.country}</p>
+                    )}
+                </div>
+
+                <div className="mb-5">
+                    <label
+                        className={`block text-sm pb-2 ${formik.touched.terms && formik.errors.terms
+                            ? "text-red-500"
+                            : ""
+                            }`}
+                        htmlFor="terms"
+                    >
+                        {formik.touched.terms && formik.errors.terms
+                            ? formik.errors.terms
+                            : "Please accept the terms and conditions"}
+                    </label>
+                    <div className="flex items-start gap-1">
+                        <input
+                            type="checkbox"
+                            name="terms"
+                            id="terms"
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            value="checked"
+                            className="h-5 w-5"
+                        />
+                        <p className="inline text-xs md:text-sm leading-normal">
+                            By clicking Submit, I confirm that: (1) I have read and agree to the <a className="text-secondary underline" href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf">Client Agreements</a>; (2) I consent to GTCFX contacting me at reasonable times; and (3) my number is not on the Do Not Call Register (DNCR).
+                        </p>
+                    </div>
+                </div>
+
+                {/* Submit Button */}
+                <div className="text-center">
+                    <button disabled={isDisable} type="submit" className="bg-primary text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]">
+                        {loading ? "Submitting.." : "Get 80% RevShare"}
+                    </button>
+                </div>
+            </form>
+        </div>
+
     );
 };
 
