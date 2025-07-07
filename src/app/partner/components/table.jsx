@@ -75,7 +75,7 @@ const ComparisonTable = ({setIsOpen}) => {
           </table>
         </div>
 
-   <div className="flex justify-center mt-2">
+   <div className="flex justify-center md:mt-2">
       <CustomButton
           text="Refer Your Traders"
           bgColor="bg-[#000032]"

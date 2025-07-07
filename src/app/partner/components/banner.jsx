@@ -528,16 +528,36 @@ const HeroSection = ({setIsOpen}) => {
   return (
     <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden">
 
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-50 hidden md:block">
+        <div className="relative w-full sm:h-96 xl:h-[450px] 2xl:h-[500px] 3xl:h-[600px] scale-[1.8] origin-bottom-right">
+          <Image
+            src="/ib/overlayNew.webp"
+            alt="Decorative background"
+            fill
+            className="object-right-bottom object-contain"
+          />
+        </div>
+      </div>
+      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-100 hidden md:block">
+        <div className="relative w-full h-full scale-[1.0] origin-bottom-right">
+          <Image
+            src="/ib/phone.webp"
+            alt="Decorative background"
+            fill
+            className="object-right-bottom object-contain"
+          />
+        </div>
+      </div>
      
 
       <div className="container">
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative mb-8">
           {/* Left Column */}
           <div className="text-center md:text-left">
-           <h3 className="text-xl md:text-3xl font-light">
+           <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
               UAE's Top Forex Partners Now Earn Up to
             </h3>
-            <h1 className="text-4xl md:text-[73px] font-bold">80% RevShare</h1>
+            <h1 className="text-3xl md:text-[73px] font-bold text-secondary"><span className="text-5xl md:text-[88px] ">80%</span> RevShare</h1>
             <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
               with GTC
             </h3>
@@ -546,7 +566,7 @@ const HeroSection = ({setIsOpen}) => {
             </p>
             <div className="flex flex-row justify-center md:justify-start items-center gap-4">
               <CustomButton
-                        text="Get 80% Revshare"
+                        text="Get 80% RevShare"
                         bgColor="bg-white"
                         textColor="text-[#1F2937]"
                         strokeColor="#000032"

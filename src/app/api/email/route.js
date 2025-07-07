@@ -21,7 +21,7 @@ const generateEmailContent = (data) => {
            <!-- Logo -->
             <tr>
               <td align="left" style="padding-bottom: 20px;">
-                <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Logo" style="width: 120px;" />
+                <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Logo" style="width: 140px;" />
               </td>
             </tr>
 
@@ -33,7 +33,7 @@ const generateEmailContent = (data) => {
             </tr>
             <tr>
               <td style="font-size:14px;color:#000000;padding-bottom:20px;">
-You’ve just fi lled in the GTC Partnership Programme form. Here’s what to do next.
+You’ve just filled in the GTC Partnership Programme form. Here’s what to do next.
               </td>
             </tr>
 
@@ -42,51 +42,42 @@ You’ve just fi lled in the GTC Partnership Programme form. Here’s what to do
 </tr>
 
             <!-- Greeting & OTP -->
-            <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-                Hi ${data?.nickname || "Client"},
-              </td>
-            </tr>
-             <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-Welcome aboard! 
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-GTC Team here again. 
-              </td>
-            </tr>
-             <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-You’ve just taken the first step towards the GTC Partnership Programme that’s geared at ensuring you grow your IB business faster and a lot more rewarding. 
-              </td>
-            </tr>
-             <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-Go ahead and activate your email by clicking on the link below. 
-              </td>
-            </tr>
-        
-            <!-- Support Info -->
-            <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:20px;">
-              Once you’ve clicked, you’ll be redirected to a page where you can book a call with me.
-              </td>
-            </tr>
-             <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-Need help? Simply call me on [BDM PHONE NUMBER] or email me directly on [BDM EMAIL].
-              </td>
-            </tr>
-
-            <!-- Signoff -->
-            <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:30px;">
-                Talk soon,<br>
-                Your GTC Team
-              </td>
-            </tr>
+           <tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    Hi ${data?.nickname || "Client"},
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    Thank you for registering your interest with us.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    You’ve just taken the first step towards the GTC Partnership Programme that’s geared at ensuring you grow your FX partnership business faster, meaning it’s a lot more rewarding.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    One of our outstanding Partnership Managers will call you.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    They’ll get you activated and walk you through our partnership programme.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:20px;">
+    Need help? Simply call us on <a href="tel:+971800667788" style="color:#000000; text-decoration: underline;">+971 800 667788</a> or email us at <a href="mailto:partners@gtcfx.com" style="color:#000000; text-decoration: underline;">partners@gtcfx.com</a>.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:30px;">
+    Talk soon,<br/>
+    The GTC Partnership Team
+  </td>
+</tr>
 
              <tr>
   <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
@@ -98,7 +89,7 @@ Need help? Simply call me on [BDM PHONE NUMBER] or email me directly on [BDM EMA
                 <table width="100%" cellpadding="0" cellspacing="0">
                   <tr>
                     <td align="left">
-                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Logo" style="width: 100px;" />
+                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="GTC Logo" style="width: 140px;" />
                     </td>
                     <td align="right" style="font-size: 13px; color: #192055; line-height: 25px;">
                       📞 Phone: +971 800 667788<br/>
@@ -142,43 +133,43 @@ Need help? Simply call me on [BDM PHONE NUMBER] or email me directly on [BDM EMA
     <table align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td style="padding: 0 5px;">
-          <a href="https://facebook.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24" style="display:block;">
+          <a href="https://www.facebook.com/GTCFXGlobalTradeCapital" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://twitter.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="X" width="24" height="24" style="display:block;">
+          <a href="https://x.com/GTC_fx" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="X" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://youtube.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24" height="24" style="display:block;">
+          <a href="https://www.youtube.com/channel/UCnKWakjm1b9Bm63xgwNFXHA" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://linkedin.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" width="24" height="24" style="display:block;">
+          <a href="https://linkedin.com/company/gtcfx-official" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://instagram.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24" style="display:block;">
+          <a href="https://www.instagram.com/gtcfxofficial/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://wa.me" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24" height="24" style="display:block;">
+          <a href="https://api.whatsapp.com/send/?phone=448000488461&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://telegram.org" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="24" height="24" style="display:block;">
+          <a href="https://t.me/gtc_vip_signal" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://tiktok.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="24" height="24" style="display:block;">
+          <a href="https://www.tiktok.com/@gtcgroup_official" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="20" height="20" style="display:block;">
           </a>
         </td>
       </tr>

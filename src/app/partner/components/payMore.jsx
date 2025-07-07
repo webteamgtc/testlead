@@ -71,7 +71,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
     <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden text-center">
       <div className="absolute top-0 h-full w-full opacity-50 pointer-events-none">
         <Image
-          src="/ib/pattern.webp"
+          src="/ib/overlNew.webp"
           alt="Decorative background"
           fill
           className="object-cover"
@@ -118,11 +118,11 @@ const IbProgrammeSection = ({ setIsOpen }) => {
         </div>
 
         {/* Footer Text and CTA */}
-        <p className="text-sm md:text-base xl:text-2xl font-semibold text-white max-w-4xl mx-auto leading-relaxed ">
+        <p className="text-sm md:text-base xl:text-2xl font-semibold text-white max-w-4xl mx-auto leading-relaxed mt-2">
           From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to.
         </p>
-        <div className='flex flex-row items-center justify-center md:mt-2'>
-          <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
+        <div className='flex flex-row items-center justify-center mt-2'>
+          <button className="bg-gradient-to-r  from-[#E1CFBB] to-[#956D42] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
           onClick={() => setIsOpen(true)}>
             Partner with GTC
           </button>

@@ -19,7 +19,7 @@ export default function Home() {
             <ComparisonTable setIsOpen={setIsOpen} />
             <Paymore setIsOpen={setIsOpen}/>
             <Broker  setIsOpen={setIsOpen}/>
-            <IBTestimonials />
+            <IBTestimonials setIsOpen={setIsOpen} />
             <GrowIBSection setIsOpen={setIsOpen}/>
             <Footer />
             <SliderModal isOpen={isOpen}

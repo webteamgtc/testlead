@@ -42,23 +42,23 @@ const TestimonialCard = ({ text, name, stars }) => (
     </div>
 );
 
-const IBTestimonials = () => {
+const IBTestimonials = ({setIsOpen}) => {
     return (
         <section className="bg-[#f9f9f9] india-bg py-8 md:py-20">
             <div className="container mx-auto">
-                <div className=" grid md:grid-cols-2 items-start gap-5 md:gap-16 ">
+                <div className=" grid md:grid-cols-2 items-start gap-8 md:gap-16 ">
                     {/* Left Section */}
-                    <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-3 md:space-y-6">
-                        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize max-w-xl">
+                    <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-8 md:space-y-6">
+                        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize w-72 md:w-full mx-auto max-w-xl">
                             What UAE's Partners & Traders Are Saying
                         </h2>
                         <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-xl">
                             Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back.
                         </p>
-                        <button className="w-fit bg-white border border-gray-300 hover:border-gray-400 text-sm md:text-base xl:text-lg font-medium text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition">
+                        <button className="w-fit bg-white border border-gray-300 hover:border-gray-400 text-sm font-bold md:text-base xl:text-lg text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition"   onClick={() => setIsOpen(true)}>
                             Join Us 
                              <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L7 7L1 13" stroke="#000032" strokeWidth="2"/>
+              <path d="M1 1L7 7L1 13" stroke="#000032" strokeWidth="3"/>
               </svg>
                         </button>
                     </div>

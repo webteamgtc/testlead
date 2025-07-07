@@ -30,9 +30,9 @@ const SliderModal = ({ isOpen, onClose }) => {
         >
             {/* Backdrop */}
             <div className="absolute inset-0 bg-black/60" />
-             <div className="absolute inset-0 z-10 opacity-10 pointer-events-none">
+             <div className="absolute inset-0 z-10 opacity-20 pointer-events-none">
   <img
-    src="/ib/layer5.webp"
+    src="/ib/lp.webp"
     alt="Decorative background"
     className="w-full h-full object-cover object-bottom"
   />
