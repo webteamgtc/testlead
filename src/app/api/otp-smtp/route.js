@@ -58,7 +58,7 @@ export async function POST(req) {
             </tr>
              <tr>
               <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-              Please use the following One-Time Password 398044 to complete your further process.
+              Please use the following One-Time Password to complete your further process.
 
               </td>
             </tr>
@@ -139,43 +139,43 @@ export async function POST(req) {
     <table align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td style="padding: 0 5px;">
-          <a href="https://facebook.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="24" height="24" style="display:block;">
+          <a href="https://www.facebook.com/GTCFXGlobalTradeCapital" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://twitter.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="X" width="24" height="24" style="display:block;">
+          <a href="https://x.com/GTC_fx" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="X" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://youtube.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24" height="24" style="display:block;">
+          <a href="https://www.youtube.com/channel/UCnKWakjm1b9Bm63xgwNFXHA" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://linkedin.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" width="24" height="24" style="display:block;">
+          <a href="https://linkedin.com/company/gtcfx-official" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://instagram.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24" style="display:block;">
+          <a href="https://www.instagram.com/gtcfxofficial/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://wa.me" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24" height="24" style="display:block;">
+          <a href="https://api.whatsapp.com/send/?phone=448000488461&text&type=phone_number&app_absent=0" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://telegram.org" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="24" height="24" style="display:block;">
+          <a href="https://t.me/gtc_vip_signal" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20" style="display:block;">
           </a>
         </td>
         <td style="padding: 0 5px;">
-          <a href="https://tiktok.com" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="24" height="24" style="display:block;">
+          <a href="https://www.tiktok.com/@gtcgroup_official" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="20" height="20" style="display:block;">
           </a>
         </td>
       </tr>
