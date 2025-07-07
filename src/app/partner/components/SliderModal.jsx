@@ -44,7 +44,7 @@ const SliderModal = ({ isOpen, onClose }) => {
                     }`}
             >
                 <div className=" container flex-col mx-auto flex justify-center items-center h-full w-full">
-                    <div className="flex justify-end w-full p-4">
+                    <div className="flex justify-end w-full pb-4">
                         <button className="text-white text-2xl cursor-pointer"
                             onClick={onClose}
                         >
@@ -61,7 +61,7 @@ const SliderModal = ({ isOpen, onClose }) => {
                                       className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
                                      />
 
-                        <h2 className="text-center text-3xl font-medium mb-8 mt-10">Register Now</h2>
+                        <h2 className="text-center text-2xl md:text-3xl font-medium my-5 md:my-8">Register Now</h2>
 
                      <CommonMainForm />
 

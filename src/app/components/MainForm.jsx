@@ -227,7 +227,12 @@ const CommonMainForm = () => {
                                             alignItems: "center",
                                             gap: "10px"
                                         }}
-                                        renderInput={(props) => <input {...props} />}
+                                        renderInput={(props) =>  <input
+                                            {...props}
+                                            type="tel"             // Triggers number pad
+                                            inputMode="numeric"    // Helps mobile keyboard detect numeric input
+                                            pattern="[0-9]*"       // Optional: enforce numeric
+                                            />}
                                         isInputNum
                                         inputStyle={{
                                             borderRadius: '5px',
@@ -351,7 +356,7 @@ const CommonMainForm = () => {
 
                 {/* Submit Button */}
                 <div className="text-center">
-                    <button disabled={isDisable} type="submit" className="bg-primary text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]">
+                    <button disabled={isDisable} type="submit" className="bg-secondary mb-10 text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]">
                         {loading ? "Submitting.." : "Get 80% RevShare"}
                     </button>
                 </div>
