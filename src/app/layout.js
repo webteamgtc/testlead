@@ -23,6 +23,8 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;@300;@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
       </head>
       <body className={`${poppins.variable} font-sans antialiased`}>
         {children}

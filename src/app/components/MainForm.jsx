@@ -153,7 +153,7 @@ const CommonMainForm = () => {
         <div className="relative max-w-xl mx-auto">
             <form onSubmit={formik.handleSubmit} className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left">
                 {/* Full Name & Email */}
-                <div className="grid grid-cols-2 gap-3 mb-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                     <div className="relative">
                         <div className="text-sm mb-2">
                             <label>First Name</label>
@@ -161,6 +161,8 @@ const CommonMainForm = () => {
 
                         <input
                             type="text"
+                             inputMode="text"
+                            autoComplete="off"
                             className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.nickname && formik.errors.nickname ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
 
                             {...formik.getFieldProps("nickname")}
@@ -176,7 +178,9 @@ const CommonMainForm = () => {
 
                         <input
                             type="text"
-                            className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.last_name && formik.errors.last_name ? "border-red-500" : "border-[#ffffff1a]"} focus:outline-none`}
+                             inputMode="text"
+                                autoComplete="off"
+                            className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.last_name && formik.errors.last_name ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
                             {...formik.getFieldProps("last_name")}
                         />
                         {formik.touched.last_name && formik.errors.last_name && (
