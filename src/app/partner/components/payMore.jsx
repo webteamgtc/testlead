@@ -77,7 +77,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
           className="object-cover"
         />
       </div>
-      <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-3 md:gap-5 px-4">
+      <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4">
         {/* Section Title */}
 
         <h4 className="text-lg md:text-2xl font-[200]">A Forex Partnership Programme That</h4>
@@ -90,7 +90,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
 
 
         {/* Flip Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-5 justify-center">
           {features.map((feat, idx) => (
             <button
               key={idx}
