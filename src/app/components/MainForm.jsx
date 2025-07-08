@@ -37,6 +37,19 @@ const CommonMainForm = () => {
         ),
     }));
 
+      useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    formik.setFieldValue("utm_source", params.get("utm_source") || "");
+    formik.setFieldValue("utm_medium", params.get("utm_medium") || "");
+    formik.setFieldValue("utm_campaign", params.get("utm_campaign") || "");
+    formik.setFieldValue("utm_id", params.get("utm_id") || "");
+    formik.setFieldValue("utm_term", params.get("utm_term") || "");
+    formik.setFieldValue("utm_content", params.get("utm_content") || "");
+    formik.setFieldValue("fbclid", params.get("fbclid") || "");
+    formik.setFieldValue("gclid", params.get("gclid") || "");
+  }, []);
+
+
     useEffect(() => {
         if (countryData?.country) {
             const filterData = countryList.find((item) => item?.alpha_2_code == countryData.country);
@@ -107,6 +120,14 @@ const CommonMainForm = () => {
             country: "",
             otp: "",
             terms: false,
+             utm_source: "",
+                utm_medium: "",
+                utm_campaign: "",
+                utm_id: "",
+                utm_term: "",
+                utm_content: "",
+                fbclid: "",
+                gclid: "",
         },
         validationSchema: Yup.object({
             nickname: Yup.string()
@@ -154,6 +175,14 @@ const CommonMainForm = () => {
             <form onSubmit={formik.handleSubmit} className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left text-white">
                 {/* Full Name & Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                      <input type="hidden" name="utm_source" value={formik.values.utm_source} />
+                            <input type="hidden" name="utm_medium" value={formik.values.utm_medium} />
+                            <input type="hidden" name="utm_campaign" value={formik.values.utm_campaign} />
+                            <input type="hidden" name="utm_id" value={formik.values.utm_id} />
+                            <input type="hidden" name="utm_term" value={formik.values.utm_term} />
+                            <input type="hidden" name="fbclid" value={formik.values.fbclid} />
+                            <input type="hidden" name="gclid" value={formik.values.gclid} />
+                            <input type="hidden" name="utm_content" value={formik.values.utm_content} />
                     <div className="relative">
                         <div className="text-sm mb-2">
                             <label>First Name</label>
