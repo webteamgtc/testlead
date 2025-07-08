@@ -235,16 +235,20 @@ const CommonMainForm = () => {
                                             />}
                                         isInputNum
                                         inputStyle={{
+                                            fontSize: '16px', // ✅ critical to stop iOS zoom
                                             borderRadius: '5px',
                                             paddingBottom: '10px',
-                                            paddingTop: "10px",
-                                            width: "20%",
-                                            backgroundColor: "#1A1A47",
-                                            color: "#fff",
-                                            fontWeight: "700",
+                                            paddingTop: '10px',
+                                            width: '20%',
+                                            backgroundColor: '#1A1A47',
+                                            color: '#fff',
+                                            fontWeight: '700',
                                             outlineColor: '#f9c617',
-                                            border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ffffff1a",
-                                        }}
+                                            border:
+                                                formik.touched.otp && formik.errors.otp
+                                                ? '1px solid red'
+                                                : '1px solid #ffffff1a',
+                                            }}
 
                                     />
                                     {formik.touched.otp && formik.errors.otp && (
