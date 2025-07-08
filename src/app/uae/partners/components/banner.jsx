@@ -526,29 +526,21 @@ const HeroSection = ({setIsOpen}) => {
     }
   ]
   return (
-    <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] py-8 md:py-20 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 md:py-28 relative overflow-hidden">
 
-      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-50 hidden md:block">
-        <div className="relative w-full sm:h-96 xl:h-[450px] 2xl:h-[500px] 3xl:h-[600px] scale-[1.8] origin-bottom-right">
-          <Image
-            src="/ib/overlayNew.webp"
-            alt="Decorative background"
-            fill
-            className="object-right-bottom object-contain"
-          />
-        </div>
-      </div>
-      <div className="absolute bottom-0 right-0 w-1/2 h-full z-0 pointer-events-none opacity-100 hidden md:block">
-        <div className="relative w-full h-full scale-[1.0] origin-bottom-right">
-          <Image
-            src="/ib/phone.webp"
-            alt="Decorative background"
-            fill
-            className="object-right-bottom object-contain"
-          />
-        </div>
-      </div>
+  {/* Desktop Background Image Only */}
+  <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
+    <Image
+      src="/ib/banner-main.webp"
+      alt="Hero BG"
+      fill
+      className="object-cover object-right 3xl:object-contain"
+      priority
+    />
+  </div>
+
      
+
 
       <div className="container">
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">

@@ -12,8 +12,9 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
       },
-        screens: {
-        '3xl': '1920px',
+         screens: {
+        ...defaultScreens, // ✅ keep default breakpoints
+        '3xl': '1720px',
         '4xl': '2250px',
       },
     },
