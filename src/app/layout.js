@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
+import CookieConsent from "./components/CookieConsent";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
         {/* End Google Tag Manager (noscript) */}
         {children}
         <ToastContainer autoClose={3000} />
+        <CookieConsent/>
       </body>
     </html>
   );

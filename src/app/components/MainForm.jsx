@@ -381,9 +381,28 @@ const CommonMainForm = () => {
                             value="checked"
                             className="h-5 w-5"
                         />
-                        <p className="inline text-xs md:text-sm leading-normal">
-                            By clicking Submit, I confirm that: (1) I have read and agree to the <a className="text-secondary underline" href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf">Client Agreements</a>; (2) I consent to GTCFX contacting me at reasonable times; and (3) my number is not on the Do Not Call Register (DNCR).
-                        </p>
+                       <p className="inline text-xs md:text-[13px] leading-normal">
+  By clicking on the <strong>Get 80% RevShare</strong> button, I confirm that I am over the age of 18, have read and agree to the{' '}
+  <a
+    className="text-secondary underline"
+    href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Client Agreement
+  </a>{' '}
+  & the{' '}
+  <a
+    className="text-secondary underline"
+    href="/privacy-policy"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Privacy Policy
+  </a>
+  , I consent to GTC contacting me at reasonable times, and that my number is not on the Do Not Call Register (DNCR).
+</p>
+
                     </div>
                 </div>
 
