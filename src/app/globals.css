@@ -157,3 +157,10 @@ body {
 .phone-setting .PhoneInputCountry {
     gap: 12px !important;
 }
+.react-select__value-container {
+    padding: 10px 8px !important;
+} 
+.react-select__control.css-1losk6k-control {
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
