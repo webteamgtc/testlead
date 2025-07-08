@@ -163,7 +163,7 @@ const CommonMainForm = () => {
                             type="text"
                              inputMode="text"
                             autoComplete="off"
-                            className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 text-sm md:text-base border-[.5px] rounded-md border-opacity-10  ${formik.touched.nickname && formik.errors.nickname ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
+                            className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 text-base border-[.5px] rounded-md border-opacity-10  ${formik.touched.nickname && formik.errors.nickname ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
 
                             {...formik.getFieldProps("nickname")}
                         />
@@ -180,7 +180,7 @@ const CommonMainForm = () => {
                             type="text"
                              inputMode="text"
                                 autoComplete="off"
-                            className={`w-full px-4 bg-[#1A1A47] text-sm md:text-base py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.last_name && formik.errors.last_name ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
+                            className={`w-full px-4 bg-[#1A1A47] text-base py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.last_name && formik.errors.last_name ? "border-red-500" : " border-[#ffffff1a] "} focus:outline-none`}
                             {...formik.getFieldProps("last_name")}
                         />
                         {formik.touched.last_name && formik.errors.last_name && (
@@ -200,7 +200,7 @@ const CommonMainForm = () => {
 
                             <input
                                 type="email"
-                                className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 text-sm md:text-base border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email ? "border-red-500" : "border-[#ffffff1a]"} focus:outline-none focus:bg-none`}
+                                className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 text-base border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email ? "border-red-500" : "border-[#ffffff1a]"} focus:outline-none focus:bg-none`}
                                 {...formik.getFieldProps("email")}
                             />
                             {formik.touched.email && formik.errors.email && (
@@ -274,7 +274,7 @@ const CommonMainForm = () => {
                             defaultCountry={countryData?.country || "AE"}
                             value={formik.values.phone}
                             onChange={(phone) => formik.setFieldValue("phone", phone)}
-                            className={`flex w-full overflow-hidden rounded-md text-sm md:text-base border border-[#ffffff1a] bg-[#1A1A47] phone-setting text-white focus:outline-none
+                            className={`flex w-full overflow-hidden rounded-md text-base border border-[#ffffff1a] bg-[#1A1A47] phone-setting text-white focus:outline-none
     ${formik.touched.phone && formik.errors.phone ? "border-red-500" : ""}
   `}
                             style={{

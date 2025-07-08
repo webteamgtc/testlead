@@ -34,7 +34,7 @@ const nextConfig = {
       },
       {
         source: '/uae',
-        destination: '/uae/partner',
+        destination: '/uae/partners',
         permanent: true,
       },
     ];
