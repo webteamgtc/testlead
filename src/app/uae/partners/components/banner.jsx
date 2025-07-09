@@ -549,8 +549,12 @@ const HeroSection = ({setIsOpen}) => {
            <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
               UAE's Top Forex Partners Now Earn Up to
             </h3>
-            <h1 className="text-3xl md:text-[73px] font-bold text-secondary"><span className="text-5xl md:text-[88px] ">80%</span> RevShare</h1>
-            <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
+                  <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
+        <span className="text-6xl md:text-[88px]">80% </span> 
+        <br className="block md:hidden" />
+         RevShare
+      </h1>
+                  <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
               with GTC
             </h3>
             <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
