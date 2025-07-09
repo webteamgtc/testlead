@@ -35,22 +35,23 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-[#293794] to-[#000021] text-white px-6 py-4 text-xs md:text-sm flex flex-col max-w-5xl w-[95%] rounded-md border border-[#f2f2f27c] border-opacity-30 md:flex-row items-center justify-between gap-3 md:gap-6">
-  <p className="text-center md:text-left">
-    By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.{' '}
-    <a
-          href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/PRIVACY+POLICY+GTCFX.pdf"
-    target='_blank'
-      rel="noopener noreferrer"
-      className="underline text-secondary"
-    >
-      Learn more
-    </a>
-  </p>
+ <p className="text-center md:text-left">
+  By clicking "Find By Me”, you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts  
+  <span className="mx-1"></span> {/* Adds horizontal spacing */}
+  <a
+    href="/uae/partners/privacy-policy"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="underline text-secondary"
+  >
+    Read our privacy policy here.
+  </a>
+</p>
   <button
     onClick={handleAccept}
     className="bg-secondary text-white font-semibold px-4 py-2 rounded-md hover:bg-opacity-90 transition md:w-64"
   >
-    Accept All Cookies
+    Fine By Me
   </button>
 </div>
 
