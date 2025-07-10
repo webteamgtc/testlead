@@ -91,13 +91,24 @@ const IbProgrammeSection = ({ setIsOpen }) => {
 
        {/* Flip Cards Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-5 justify-center">
-  {features.map((feat, idx) => (
+{features.map((feat, idx) => {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+  const isFlipped = isMobile && flippedIndex === idx;
+
+  return (
     <div
       key={idx}
       className="group relative w-full h-60 [perspective:1000px] bg-white rounded-2xl text-[#1F2937] flex flex-col items-center"
+      onClick={() => {
+        if (isMobile) {
+          toggleFlip(idx);
+        }
+      }}
     >
       <div
-        className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+        className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] ${
+          isFlipped ? '[transform:rotateY(180deg)]' : ''
+        } group-hover:[transform:rotateY(180deg)]`}
       >
         {/* Front Face */}
         <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center [backface-visibility:hidden] px-10">
@@ -111,7 +122,9 @@ const IbProgrammeSection = ({ setIsOpen }) => {
         </div>
       </div>
     </div>
-  ))}
+  );
+})}
+
 </div>
 
 
