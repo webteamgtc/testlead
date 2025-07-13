@@ -67,25 +67,25 @@ const FormWithPhoneOTP = () => {
     const sendVerificationCode = () => {
         setOtpLoading(true)
         setShowPhoneOtp(true)
-        // axios.post(`/api/otp-smtp`, {
-        //     email: formik?.values?.email,
-        //     first_name: formik?.values?.nickname,
-        //     type: "0"
-        // }).then(res => {
-        //     if (res?.data?.message) {
-        //         setShowOtp(true)
-        //         setStoredOtp(res?.data?.message?.slice(4, -3))
-        //         toast.success("Otp send successfully!")
-        //     }
-        //     else {
-        //         toast.error(res?.data?.message)
-        //         setShowOtp(false)
-        //     }
-        // }).catch(err => {
-        //     setShowOtp(false)
-        // }).finally(() => {
-        //     setOtpLoading(false)
-        // })
+        axios.post(`/api/sentOtp`, {
+            email: formik?.values?.email,
+            phoneNumber: "0095755792541",
+            type: "0"
+        }).then(res => {
+            if (res?.data?.message) {
+                setShowOtp(true)
+                setStoredOtp(res?.data?.message?.slice(4, -3))
+                toast.success("Otp send successfully!")
+            }
+            else {
+                toast.error(res?.data?.message)
+                setShowOtp(false)
+            }
+        }).catch(err => {
+            setShowOtp(false)
+        }).finally(() => {
+            setOtpLoading(false)
+        })
     }
 
     const generatePassword = (length = 12) => {
@@ -326,7 +326,7 @@ const FormWithPhoneOTP = () => {
                             />
                             <div className="absolute top-2 bg-primary right-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
                                 onClick={() => {
-                                    sendVerificationCode(true)
+                                    sendVerificationCode()
                                 }}
                             >
                                 {phoneLoading ? "Sending.." : "Get Code"}

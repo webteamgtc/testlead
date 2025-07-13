@@ -133,12 +133,9 @@
 // }
 
 
+// info bip
 
-// src/app/api/proxySendOtp/route.js
-import { NextResponse } from 'next/server';
 import axios from 'axios';
-import { storeOtp, deleteOtp } from '../otpStorage';
-
 
 function generateOtp(length = 6) {
   return Math.floor(10 ** (length - 1) + Math.random() * 9 * 10 ** (length - 1)).toString();
@@ -155,55 +152,117 @@ export async function POST(req) {
   }
 
   const otp = generateOtp();
-  const otpExpiration = 300; // OTP expiry time in seconds (5 minutes)
+
+  const apiKey = "34c0e5d9eee3db260c6c8f8fcd7a42de-b35dcbb0-946e-4fa7-a08b-1361adfdc4a1";
+const baseUrl = "https://jjqzdk.api.infobip.com";
+  const sender = "GTCFX";
 
   try {
-    // Prepare the payload for CM.com
-    const payload = {
-      messages: {
-        authentication: {
-          productToken: "82f5555b-184d-4140-8741-b802ff743cd8"
-        },
-        msg: [
-          {
-            from: "GTC",
-            to: [
-              {
-                "number": phoneNumber
-              }
-            ],
-            body: {
-              "type": "auto",
-              "content": `My first CM.com message ${otp}`
-            },
-            reference: "my_reference_123"
-          }
-        ]
-      }
-    };
-
-    // Send the request to CM.com
-    const response = await axios.post(
-      'https://gw.cmtelecom.com/v1.0/message',
-      payload,
-      { headers: { 'Content-Type': 'application/json' } }
-    );
-
-    // Store OTP in Redis with an expiration
-    storeOtp(phoneNumber, otp);
-    // Return a successful response
-    return NextResponse.json({ success: true, data: response.data, otp }, { status: 200 });
-  } catch (error) {
-  console.error('Error in proxySendOtp API route:', error?.response?.data || error.message);
-
-  return NextResponse.json(
-    {
-      success: false,
-      message: 'Failed to send OTP',
-      error: error?.response?.data || error.message,
+  await axios.post(
+  `${baseUrl}/sms/2/text/advanced`,
+  {
+    messages: [
+      {
+        from: sender,
+        destinations: [{ to: phoneNumber }],
+        text: `Your OTP code is: ${otp}`,
+      },
+    ],
+  },
+  {
+    headers: {
+      Authorization: `App ${apiKey}`,
+      'Content-Type': 'application/json',
     },
-    { status: 500 }
-  );
+  }
+);
+
+    return new Response(JSON.stringify({ success: true, otp }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (error) {
+    console.error('Infobip Error:', error?.response?.data || error.message);
+    return new Response(
+      JSON.stringify({ success: false, error: error?.response?.data || error.message }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
 }
 
-}
+
+
+
+// src/app/api/proxySendOtp/route.js
+// import { NextResponse } from 'next/server';
+// import axios from 'axios';
+// import { storeOtp, deleteOtp } from '../otpStorage';
+
+
+// function generateOtp(length = 6) {
+//   return Math.floor(10 ** (length - 1) + Math.random() * 9 * 10 ** (length - 1)).toString();
+// }
+
+// export async function POST(req) {
+//   const { phoneNumber } = await req.json();
+
+//   if (!phoneNumber) {
+//     return new Response(JSON.stringify({ message: 'Phone number is required' }), {
+//       status: 400,
+//       headers: { 'Content-Type': 'application/json' },
+//     });
+//   }
+
+//   const otp = generateOtp();
+//   const otpExpiration = 300; // OTP expiry time in seconds (5 minutes)
+
+//   try {
+//     // Prepare the payload for CM.com
+//     const payload = {
+//       messages: {
+//         authentication: {
+//           productToken: "82f5555b-184d-4140-8741-b802ff743cd8"
+//         },
+//         msg: [
+//           {
+//             from: "GTC",
+//             to: [
+//               {
+//                 "number": phoneNumber
+//               }
+//             ],
+//             body: {
+//               "type": "auto",
+//               "content": `My first CM.com message ${otp}`
+//             },
+//             reference: "my_reference_123"
+//           }
+//         ]
+//       }
+//     };
+
+//     // Send the request to CM.com
+//     const response = await axios.post(
+//       'https://gw.cmtelecom.com/v1.0/message',
+//       payload,
+//       { headers: { 'Content-Type': 'application/json' } }
+//     );
+
+//     // Store OTP in Redis with an expiration
+//     storeOtp(phoneNumber, otp);
+//     // Return a successful response
+//     return NextResponse.json({ success: true, data: response.data, otp }, { status: 200 });
+//   } catch (error) {
+//   console.error('Error in proxySendOtp API route:', error?.response?.data || error.message);
+
+//   return NextResponse.json(
+//     {
+//       success: false,
+//       message: 'Failed to send OTP',
+//       error: error?.response?.data || error.message,
+//     },
+//     { status: 500 }
+//   );
+// }
+
+// }
