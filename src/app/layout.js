@@ -2,10 +2,11 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import CookieConsent from "./components/CookieConsent";
+import { LanguageProvider } from "./components/LanguageProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["200","300","400", "500", "600", "700"],
+  weight: ["200", "300", "400", "500", "600", "700"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
- {/* Google Tag Manager */}
+        {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -37,7 +38,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${poppins.variable} font-sans antialiased`}>
-          {/* Google Tag Manager (noscript) */}
+        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PSWH9QF"
@@ -46,10 +47,13 @@ export default function RootLayout({ children }) {
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
+
         {/* End Google Tag Manager (noscript) */}
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
         <ToastContainer autoClose={3000} />
-        <CookieConsent/>
+        <CookieConsent />
       </body>
     </html>
   );
