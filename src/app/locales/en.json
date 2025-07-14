@@ -1,7 +1,24 @@
- {
-  "meta": {
-    "title": "Welcome to GTCFX",
-    "description": "Trade with GTCFX – trusted global broker."
+{
+  "partner": {
+    "meta": {
+      "title": "Welcome to GTCFX",
+      "description": "Trade with GTCFX – trusted global broker."
+    },
+    "banner":{
+        "title":"80% RevShare",
+        "para1":"UAE's Top Forex Partners Now Earn Up to",
+        "para2":"with GTC",
+        "para3":"Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs."
+    },
+    "layer":{
+        "column1":"Up to 80% RevShare Paid On Demand",
+        "column2":"Become a Partner in Just a Few Clicks",
+        "column3":"Dynamic Leverage Up to 1:2000",
+        "column4":"Your Traders Get a Tradable Bonus",
+        "column5":"Full Marketing & Event Support Provided",
+        "column6":"Multi-Regulated Brokerage: SCA, FSC"
+    },
+    "btnText":"Get 80% RevShare"
   },
   "welcome": "Welcome"
 }

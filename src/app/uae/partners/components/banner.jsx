@@ -5,11 +5,9 @@ import Image from "next/image";
 import CustomButton from "@/app/components/common/CustomButton";
 import SliderModal from "./SliderModal";
 import SlidePanelExample from "./SlidePanel";
-// import { useTranslations } from "next-intl";
-// import { useLanguage } from "@/app/components/LanguageProvider";
+import { useTranslations } from "next-intl";
 const HeroSection = ({ setIsOpen }) => {
-  //   const t = useTranslations();
-  // const { locale, setLocale } = useLanguage();
+  const t = useTranslations();
 
   const data = [
     {
@@ -73,7 +71,7 @@ const HeroSection = ({ setIsOpen }) => {
             </filter>
           </defs>
         </svg>),
-      title: "Up to 80% RevShare Paid On Demand"
+      title: t("partner.layer.column1")
     },
     {
       icon: (<svg
@@ -139,7 +137,7 @@ const HeroSection = ({ setIsOpen }) => {
         </defs>
       </svg>
       ),
-      title: "Become a Partner in Just a Few Clicks"
+      title: t("partner.layer.column2")
     },
     {
       icon: (<svg
@@ -206,7 +204,7 @@ const HeroSection = ({ setIsOpen }) => {
         </defs>
       </svg>
       ),
-      title: "Dynamic Leverage Up to 1:2000"
+      title: t("partner.layer.column3")
     },
     {
       icon: (
@@ -368,7 +366,7 @@ const HeroSection = ({ setIsOpen }) => {
           </defs>
         </svg>
       ),
-      title: "Your Traders Get a Tradable Bonus"
+      title: t("partner.layer.column4")
     },
     {
       icon: (<svg
@@ -460,7 +458,7 @@ const HeroSection = ({ setIsOpen }) => {
         </defs>
       </svg>
       ),
-      title: "Full Marketing & Event Support Provided"
+      title: t("partner.layer.column5")
     },
     {
       icon: (<svg
@@ -527,7 +525,7 @@ const HeroSection = ({ setIsOpen }) => {
         </defs>
       </svg>
       ),
-      title: "Multi-Regulated Brokerage: SCA, FSC"
+      title: t("partner.layer.column6")
     }
   ]
   return (
@@ -552,7 +550,7 @@ const HeroSection = ({ setIsOpen }) => {
           {/* Left Column */}
           <div className="text-center md:text-left">
             <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
-              UAE's Top Forex Partners Now Earn Up to
+              {t("partner.banner.para1")}
             </h3>
             <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
               <span className="text-6xl md:text-[88px]">80% </span>
@@ -560,14 +558,16 @@ const HeroSection = ({ setIsOpen }) => {
               RevShare
             </h1>
             <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
-              with GTC
+              {t("partner.banner.para2")}
+
             </h3>
             <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
-              Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.
+              {t("partner.banner.para3")}
+
             </p>
             <div className="flex flex-row justify-center md:justify-start items-center gap-4 pb-8 md:pb-20">
               <CustomButton
-                text="Get 80% RevShare"
+                text={t("partner.btnText")}
                 bgColor="bg-white hover:bg-[#b2b2c2]"
                 textColor="text-[#1F2937]"
                 strokeColor="#000032"
