@@ -145,7 +145,7 @@ const IndForm = () => {
         onSubmit: async (values) => {
             try {
                 setLoading(true);
-                await axios.post("https://go.pardot.com/l/1016962/2025-07-15/47kc2", JSON.stringify(values));
+                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/u2dwx3b/", JSON.stringify(values));
             } catch (error) {
             } finally {
                 sendDataToDb(values, formik, setLoading)
