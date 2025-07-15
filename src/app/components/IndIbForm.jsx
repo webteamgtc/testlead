@@ -164,7 +164,7 @@ const IndIbForm = () => {
         }
     }
 
-    console.log({ countryList, countryData, formik })
+   // console.log({ countryList, countryData, formik })
 
 
 
