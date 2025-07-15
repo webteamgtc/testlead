@@ -5,7 +5,7 @@ import Broker from "../india/partners/components/broker";
 import GrowIBSection from '../india/partners/components/growIBsection'
 import Header from '../india/partners/components/header'
 import IBTestimonials from '../india/partners/components/IBTraders'
-import SliderModal from '../india/partners/components/SliderModal'
+import SliderModal from "../india/ib/components/SliderModal";
 
 import HeroSection from "../india/partners/components/banner";
 import ComparisonTable from "../india/partners/components/table";
