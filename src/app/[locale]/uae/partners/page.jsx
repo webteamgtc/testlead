@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import Footer from "../../components/Footer";
+import Footer from "../../../components/Footer";
 import BannerMain from "./components/banner";
 import Broker from "./components/broker";
 import GrowIBSection from "./components/growIBsection";

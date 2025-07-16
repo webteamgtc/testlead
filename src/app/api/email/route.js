@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { transporter, mailOptions } from "../../config/nodemailer";
+import { transporter, mailOptions } from "../../[locale]/config/nodemailer";
 
 const generateEmailContent = (data) => {
   return {

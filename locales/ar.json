@@ -1,4 +1,8 @@
- {
+{
+  "HomePage": {
+    "title": "Hello world! arabic",
+    "about": "Go to the about page"
+  },
   "meta": {
     "title": "مرحبًا بك في GTCFX",
     "description": "تداول مع GTCFX – وسيط عالمي موثوق."

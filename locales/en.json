@@ -1,4 +1,8 @@
 {
+   "HomePage": {
+    "title": "Hello world!",
+    "about": "Go to the about page"
+  },
   "partner": {
     "meta": {
       "title": "Welcome to GTCFX",

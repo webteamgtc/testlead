@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 import otpGenerator from 'otp-generator';
-import { transporter } from '../../config/nodemailer'
+import { transporter } from '../../[locale]/config/nodemailer'
 
 export async function POST(req) {
   const { email, first_name } = await req.json();
