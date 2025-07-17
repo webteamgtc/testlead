@@ -1,28 +1,139 @@
 {
-   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
-  },
   "partner": {
     "meta": {
-      "title": "Welcome to GTCFX",
-      "description": "Trade with GTCFX – trusted global broker."
+      "title": "Become a GTC Partner in the UAE Today",
+      "description": "Join GTC as an Partner in the UAE. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
     },
-    "banner":{
-        "title":"80% RevShare",
-        "para1":"UAE's Top Forex Partners Now Earn Up to",
-        "para2":"with GTC",
-        "para3":"Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs."
+    "banner": {
+      "no": "80%",
+      "title": "RevShare",
+      "para1": "UAE's Top Forex Partners Now Earn Up to",
+      "para2": "with GTC",
+      "para3": "Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.",
+      "btnText": "Get 80% RevShare"
     },
-    "layer":{
-        "column1":"Up to 80% RevShare Paid On Demand",
-        "column2":"Become a Partner in Just a Few Clicks",
-        "column3":"Dynamic Leverage Up to 1:2000",
-        "column4":"Your Traders Get a Tradable Bonus",
-        "column5":"Full Marketing & Event Support Provided",
-        "column6":"Multi-Regulated Brokerage: SCA, FSC"
+    "layer": {
+      "column1": "Up to 80% RevShare Paid On Demand",
+      "column2": "Become a Partner in Just a Few Clicks",
+      "column3": "Dynamic Leverage Up to 1:2000",
+      "column4": "Your Traders Get a Tradable Bonus",
+      "column5": "Full Marketing & Event Support Provided",
+      "column6": "Multi-Regulated Brokerage: SCA, FSC"
     },
-    "btnText":"Get 80% RevShare"
+    "comparisonTable": {
+      "title": "Here’s what your traders will get when you refer them to GTC",
+      "cta": "Refer Your Traders",
+      "colHeader1": "Feature",
+      "colHeader2": "Your Broker",
+      "col1": {
+        "point1": "Average EURUSD Spread",
+        "point2": "Leverage",
+        "point3": "Withdrawal Time",
+        "point4": "Scalping Rule",
+        "point5": "Slippage During News",
+        "point6": "Support Quality",
+        "point7": "Loyalty Rewards"
+      },
+      "col2": {
+        "point1": "3 pips",
+        "point2": "1:500",
+        "point3": "24 hours",
+        "point4": "3 minutes",
+        "point5": "Increased",
+        "point6": "Scripted replies",
+        "point7": "❌"
+      },
+      "col3": {
+        "point1": "0 pips",
+        "point2": "1:2000",
+        "point3": "Instant – 10 hours max",
+        "point4": "1 minute",
+        "point5": "Unchanged",
+        "point6": "Real human care",
+        "point7": "GTC VIP + Margin Bonus"
+      }
+    },
+    "payMore": {
+      "subtitle": "A Forex Partnership Programme That",
+      "title": "Pays More Than Just Commission",
+      "intro": "Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% RevShare; we give you the tools to grow your business.",
+      "outro": "From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to.",
+      "cta": "Partner with GTC",
+      "features": {
+        "feature1": {
+          "title": "Earn Up to 80% RevShare",
+          "description": "No caps, no limits. Just real payouts you can count on."
+        },
+        "feature2": {
+          "title": "Tradeable Bonus for Your Traders",
+          "description": "Higher deposits, more volume, more commission for you."
+        },
+        "feature3": {
+          "title": "Events & Marketing Tools",
+          "description": "We’ll help you attract & convert more traders."
+        },
+        "feature4": {
+          "title": "Instant Commission Payouts",
+          "description": "Withdraw your partner earnings the moment they hit."
+        }
+      }
+    },
+    "broker": {
+      "heading": "A Broker You Can <br /> Actually Trust",
+      "paragraph": "We’re not a fly-by-night operation. GTC is licensed and regulated in multiple respected jurisdictions. Here’s how we give you confidence to trade.",
+      "points": {
+        "p1": "Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA.",
+        "p2": "Headquartered in Dubai with nearly 1 million global traders.",
+        "p3": "World-class support with a real human touch.",
+        "p4": "Customer-first culture where service is strategy."
+      },
+      "bottomTitle": "Switch to a broker that doesn’t just say it, we prove it every day.",
+      "cta": "Start Earning"
+    },
+    "testimonials": {
+    "title": "What UAE's Partners & Traders Are Saying",
+    "description": "Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back.",
+    "cta": "Join Us",
+    "list": {
+      "t1": {
+        "text": "“As an FX partner, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”",
+        "name": "Judi Izdihar Shamoon, Dubai, UAE",
+        "stars": 5
+      },
+      "t2": {
+        "text": "“I run monthly trading classes in Dubai, UAE. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”",
+        "name": "Suoud Butrus Gaber, UAE",
+        "stars": 4
+      },
+      "t3": {
+        "text": "“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”",
+        "name": "Kutaiba Abdul-Matin Awad, UAE",
+        "stars": 5
+      },
+      "t4": {
+        "text": "“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”",
+        "name": "Yasser Nu'aym Bazzi, UAE",
+        "stars": 4
+      }
+    }
   },
-  "welcome": "Welcome"
+   "growIB": {
+    "subtitle": "Start Earning More.",
+    "title": "Grow Your FX Partnership Business with GTC",
+    "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping UAE’s Forex Partners scale faster, earn more, and build lasting trust with their traders.",
+    "description2": "Join us today, and your traders will thank you tomorrow.",
+    "cta": "Make the Switch"
+  }
+  },
+  "footer": {
+  "riskWarningTitle": "Risk Warning:",
+  "riskWarningText": "Trading leveraged products such as CFDs involves a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Please ensure you fully understand the risks and consult an independent advisor if needed.",
+  "company1": "GTC Global Ltd, regulated by the FSC Mauritius (License No. GB22200292)",
+  "company2": "GTC Global Pty Ltd, regulated by the Australian Securities and Investments Commission (ASIC)",
+  "company3": "GTC Global Trade Capital Co., Limited, registered in Vanuatu and licensed by the Vanuatu Financial Services Commission (VFSC)",
+  "jurisdictionNoticeTitle": "Jurisdiction Notice:",
+  "jurisdictionNoticeText": "GTC does not provide services in jurisdictions where such offerings would be contrary to local laws.",
+  "affiliateNoticeTitle": "Affiliate Notice:",
+  "affiliateNoticeText": "Affiliate/partner content is for referral and marketing purposes only and does not constitute financial advice."
+}
 }

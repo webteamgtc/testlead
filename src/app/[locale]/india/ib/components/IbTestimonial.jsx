@@ -1,6 +1,27 @@
-import { useTranslations } from "next-intl";
 import React from "react";
 
+const testimonials = [
+    {
+        text: `““As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.””`,
+        name: "Ravi T., Mumbai",
+        stars: 5,
+    },
+    {
+        text: `“I run monthly trading classes in Hyderabad. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
+        name: "Fatima S., Hyderabad",
+        stars: 4,
+    },
+    {
+        text: `“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”`,
+        name: "Rakesh P., Pune",
+        stars: 5,
+    },
+    {
+        text: `“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”`,
+        name: "Jignesh K., Delhi",
+        stars: 4,
+    },
+];
 
 const TestimonialCard = ({ text, name, stars, odd }) => (
     <div className={`bg-white rounded-lg p-6 text-sm space-y-4 flex flex-col gap-6 ${odd == true ? " items-end" : ""}`}
@@ -25,55 +46,27 @@ const TestimonialCard = ({ text, name, stars, odd }) => (
     </div>
 );
 
-const IBTestimonials = ({ setIsOpen }) => {
-
-  const t = useTranslations('partner.testimonials');
-
-  const testimonials = [
-    {
-        text: t("list.t1.text"),
-        name: t("list.t1.name"),
-        stars: 5,
-    },
-    {
-         text: t("list.t2.text"),
-        name: t("list.t2.name"),
-        stars: 4,
-    },
-    {
-         text: t("list.t3.text"),
-        name: t("list.t4.name"),
-        stars: 5,
-    },
-    {
-        text: t("list.t4.text"),
-        name: t("list.t4.name"),
-        stars: 4,
-    },
-];
-
+const IbTestimonial = ({ setIsOpen }) => {
     return (
         <section className="bg-[#f9f9f9] india-bg py-8 md:py-20">
             <div className="container mx-auto">
                 <div className=" grid md:grid-cols-2 items-start gap-8 md:gap-16 ">
                     {/* Left Section */}
-                     <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-8 md:space-y-6">
-            <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize w-72 md:w-full mx-auto md:mx-0 max-w-xl">
-              {t('title')}
-            </h2>
-            <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-xl">
-              {t('description')}
-            </p>
-            <button
-              className="w-fit bg-white border border-gray-300 hover:bg-[#4e4d71] hover:text-white hover:border-gray-400 text-sm font-bold md:text-base xl:text-lg text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition"
-              onClick={() => setIsOpen(true)}
-            >
-              {t('cta')}
-              <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L1 13" stroke="#000032" strokeWidth="3" />
-              </svg>
-            </button>
-          </div>
+                    <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-8 md:space-y-6">
+                        <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize w-72 md:w-full mx-auto md:mx-0 max-w-xl">
+                            What India’s IBs & Traders Are Saying
+                        </h2>
+                        <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-xl">
+                          Whether you’re a seasoned IB or just ge ing started, these partners made the switch and they or their traders haven’t looked back.
+                        </p>
+                        <button className="w-fit bg-white border border-gray-300 hover:bg-[#4e4d71] hover:text-white hover:border-gray-400 text-sm font-bold md:text-base xl:text-lg text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition" onClick={() => setIsOpen(true)}>
+                            Join Us
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L7 7L1 13" stroke="#000032" strokeWidth="3" />
+                            </svg>
+                        </button>
+                    </div>
+
                     {/* Testimonials Grid */}
                     <div className="grid grid-cols-1 gap-3 md:gap-6">
                         {testimonials.map((item, idx) => {
@@ -89,4 +82,4 @@ const IBTestimonials = ({ setIsOpen }) => {
     );
 };
 
-export default IBTestimonials;
+export default IbTestimonial

@@ -553,9 +553,9 @@ const HeroSection = ({ setIsOpen }) => {
               {t("partner.banner.para1")}
             </h3>
             <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
-              <span className="text-6xl md:text-[88px]">80% </span>
+              <span className="text-6xl md:text-[88px]"> {t("partner.banner.no")} </span>
               <br className="block md:hidden" />
-              RevShare
+              {t("partner.banner.title")}
             </h1>
             <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
               {t("partner.banner.para2")}
@@ -567,7 +567,7 @@ const HeroSection = ({ setIsOpen }) => {
             </p>
             <div className="flex flex-row justify-center md:justify-start items-center gap-4 pb-8 md:pb-20">
               <CustomButton
-                text={t("partner.btnText")}
+                text={t("partner.banner.btnText")}
                 bgColor="bg-white hover:bg-[#b2b2c2]"
                 textColor="text-[#1F2937]"
                 strokeColor="#000032"

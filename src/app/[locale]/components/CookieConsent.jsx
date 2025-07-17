@@ -39,7 +39,7 @@ export default function CookieConsent() {
   By clicking "Find By Me”, you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts  
   <span className="mx-1"></span> {/* Adds horizontal spacing */}
   <a
-    href="/uae/partners/privacy-policy"
+    href="/privacy-policy"
     target="_blank"
     rel="noopener noreferrer"
     className="underline text-secondary"

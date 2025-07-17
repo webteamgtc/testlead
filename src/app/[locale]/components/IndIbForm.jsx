@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import OtpInput from "react-otp-input";
-import { countryList } from "../[locale]/context/useCountriesDetails";
+import { countryList } from "../context/useCountriesDetails";
 import { useLocationDetail } from "../[locale]/context/useLocationDetail";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
@@ -14,7 +14,7 @@ import Image from "next/image";
 import Select from "react-select";
 
 
-const CommonMainForm = () => {
+const IndIbForm = () => {
     const { countryData } = useLocationDetail();
     const [otpLoading, setOtpLoading] = useState(false)
     const [showOtp, setShowOtp] = useState(false)
@@ -99,7 +99,7 @@ const CommonMainForm = () => {
             formik.resetForm();
             setLoading(false)
             localStorage.setItem('user', JSON.stringify(data));
-            router.push("/uae/partners/success",);
+            router.push("/india/ib/success",);
             formik.resetForm()
             setShowOtp(false)
         }).catch(err => {
@@ -145,7 +145,7 @@ const CommonMainForm = () => {
         onSubmit: async (values) => {
             try {
                 setLoading(true);
-                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/2nppxqi/", JSON.stringify(values));
+                await axios.post("https://hooks.zapier.com/hooks/catch/16420445/u2djork/", JSON.stringify(values));
             } catch (error) {
             } finally {
                 sendDataToDb(values, formik, setLoading)
@@ -164,7 +164,7 @@ const CommonMainForm = () => {
         }
     }
 
-    console.log({ countryList, countryData, formik })
+   // console.log({ countryList, countryData, formik })
 
 
 
@@ -417,5 +417,4 @@ const CommonMainForm = () => {
 
     );
 };
-
-export default CommonMainForm;
+export default IndIbForm

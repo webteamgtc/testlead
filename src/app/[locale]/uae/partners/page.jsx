@@ -11,6 +11,7 @@ import SliderModal from "./components/SliderModal";
 import ComparisonTable from "./components/table";
 import { useTranslations } from "next-intl";
 import Meta from "@/app/components/common/MetaData";
+import MainFooter from "../../components/MainFooter";
 
 export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Home() {
                 <Broker setIsOpen={setIsOpen} />
                 <IBTestimonials setIsOpen={setIsOpen} />
                 <GrowIBSection setIsOpen={setIsOpen} />
-                <Footer />
+                <MainFooter />
                 <SliderModal isOpen={isOpen}
                     onClose={() => setIsOpen(false)}
                 />

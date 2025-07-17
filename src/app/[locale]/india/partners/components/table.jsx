@@ -1,9 +1,7 @@
 'use client';
 import CustomButton from "@/app/components/common/CustomButton";
-import { useTranslations } from "next-intl";
 
 const ComparisonTable = ({setIsOpen}) => {
-  const t = useTranslations("partner.comparisonTable");
   return (
         <section className="relative text-white py-8 md:py-20 overflow-hidden">
       {/* Gradient Background */}
@@ -21,15 +19,15 @@ const ComparisonTable = ({setIsOpen}) => {
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-8 justify-center text-center px-4 md:px-0">
         <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#000032] capitalize max-w-3xl mx-auto leading-none md:leading-tight">
-          {t("title")}
+          Here’s what your traders will get when you refer them to GTC
         </h2>
 
         <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e0e4f6]">
           <table className="w-full text-sm md:text-base text-[#1e2c54]">
             <thead>
               <tr className="bg-[#f1f4fb] text-left font-semibold text-[#1e2c54]">
-                <th className="py-4 px-5">{t('colHeader1')}</th>
-                <th className="py-4 px-5 bg-gray-50">{t('colHeader2')}</th>
+                <th className="py-4 px-5">Feature</th>
+                <th className="py-4 px-5 bg-gray-50">Your Broker</th>
                 <th className="py-4 px-5 bg-gray-50">
                   <img src="/logo-blue.svg" alt="GTC Logo" className="h-8" />
                 </th>
@@ -37,14 +35,14 @@ const ComparisonTable = ({setIsOpen}) => {
             </thead>
             <tbody>
               {[
-                [t("col1.point1"), t("col2.point1"), t("col3.point1")],
-                [t("col1.point2"), t("col2.point2"), t("col3.point2")],
-                [t("col1.point3"), t("col2.point3"), t("col3.point3")],
-                [t("col1.point4"), t("col2.point4"), t("col3.point4")],
-                [t("col1.point5"), t("col2.point5"), t("col3.point5")],
-                [t("col1.point6"), t("col2.point6"), t("col3.point6")],
+                ['Average EURUSD Spread', '3 pips', '0 pips'],
+                ['Leverage', '1:500', '1:2000'],
+                ['Withdrawal Time', '24 hours', 'Instant – 10 hours max'],
+                ['Scalping Rule', '3 minutes', '1 minute'],
+                ['Slippage During News', 'Increased', 'Unchanged'],
+                ['Support Quality', 'Scripted replies', 'Real human care'],
                 [
-                  t("col1.point7"),
+                  'Loyalty Rewards',
                   <span className="text-red-500 flex items-center gap-2">
                     <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
@@ -63,7 +61,7 @@ const ComparisonTable = ({setIsOpen}) => {
                         clipRule="evenodd"
                       />
                     </svg>
-                     {t("col3.point7")}
+                    GTC VIP + Margin Bonus
                   </span>,
                 ],
               ].map(([feature, broker, gtc], idx) => (
@@ -79,7 +77,7 @@ const ComparisonTable = ({setIsOpen}) => {
 
    <div className="flex justify-center md:mt-2">
       <CustomButton
-           text={t('cta')}
+          text="Refer Your Traders"
           bgColor="bg-[#000032] hover:bg-[#4e4d71]"
           textColor="text-[#fff]"
            onClick={() => setIsOpen(true)}
