@@ -4,7 +4,7 @@ import Footer from "../../../components/Footer";
 import BannerMain from "./components/banner";
 import Broker from "./components/broker";
 import GrowIBSection from "./components/growIBsection";
-import Header from "./components/header";
+import MainHeader from "../../components/MainHeader";
 import IBTestimonials from "./components/IBTraders";
 import Paymore from "./components/payMore";
 import SliderModal from "./components/SliderModal";
@@ -20,7 +20,7 @@ export default function Home() {
         <>
             <Meta title={t('partner.meta.title')} description={t('partner.meta.description')}/>
             <section className="">
-                <Header />
+                <MainHeader />
                 <BannerMain setIsOpen={setIsOpen} />
                 <ComparisonTable setIsOpen={setIsOpen} />
                 <Paymore setIsOpen={setIsOpen} />

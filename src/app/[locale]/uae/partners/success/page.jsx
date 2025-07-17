@@ -1,8 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import Header from "@/app/uae/partners/components/header";
+import MainHeader from "@/app/[locale]/components/MainHeader";
 import Footer from "@/app/components/Footer";
 import ConfirmationThankYou from "./components/thankYouConfirmation";
 import HelpSection from "./components/helpSection";
@@ -38,7 +37,7 @@ const ThankYouPage = () => {
 
     return (
         <section className="">
-            <Header />
+            <MainHeader />
             <ConfirmationThankYou user={user} />
             <HelpSection />
             <Footer />

@@ -1,11 +1,11 @@
 import Footer from '@/app/components/Footer'
 import React from 'react'
-import Header from '../components/header'
+import MainHeader from '@/app/[locale]/components/MainHeader'
 
 const page = () => {
   return (
     <>
-    <Header />
+    <MainHeader />
 <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Header */}
       <header className="bg-white text-primary py-16 px-4">
