@@ -462,7 +462,7 @@ const SuaForm = () => {
                             & the{" "}
                             <a
                                 className="text-secondary underline"
-                                href="/privacy-policy"
+                                href="/ar/privacy-policy"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

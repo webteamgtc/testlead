@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl'; // for localization
 import { useState } from "react";
 import Image from "next/image";
 import CommonMainForm from "@/app/[locale]/components/MainForm";
+import SuaForm from '@/app/[locale]/components/SuaForm';
 
 const SliderModal = ({ isOpen, onClose }) => {
   const t = useTranslations("partner.form"); // adjust namespace if needed
@@ -45,7 +46,7 @@ const SliderModal = ({ isOpen, onClose }) => {
               {t("heading")}
             </h2>
 
-            <CommonMainForm />
+            <SuaForm /> 
           </div>
         </div>
       </div>

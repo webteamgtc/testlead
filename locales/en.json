@@ -190,6 +190,154 @@
   "message": "By clicking 'Fine By Me', you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.",
   "cta": "Fine By Me",
   "linkText": "Read our privacy policy here."
+},
+"privacyPolicy": {
+    "header": {
+      "title": "Privacy Policy",
+      "subtitle": "Protecting your information across all GTC platforms and subdomains"
+    },
+    "whoWeAre": {
+    "title": "Who We Are",
+    "intro1": "This Privacy Policy applies to GTC, including all of its subdomains such as reg.gtcfx.com (and all other GTC-related subdomains), and covers how we handle your personal information.",
+    "intro2": "When we say “GTC,” “GTCFX,” “we,” “our,” or “us,” we’re referring to:",
+    "entity1": {
+      "title": "GTC Global Trade Capital Co. Ltd",
+      "line1": "Authorised by the Vanuatu Financial Services Commission (VFSC).",
+      "line2": "Licence Number: 40354.",
+      "line3": "Address: 1st Floor, B&P House, Kumul Highway, Port Vila, Vanuatu."
+    },
+    "entity2": {
+      "title": "GTC Global Ltd",
+      "line1": "Authorised by the Financial Services Commission of Mauritius.",
+      "line2": "Licence Number: GB22200292.",
+      "line3": "Address: The Cyberati Lounge, Ground Floor, The Catalyst, 40 Cybercity, 72201 Ebene, Mauritius."
+    }
+  },
+  "ourCommitment": {
+    "title": "Our Commitment",
+    "description": "At GTC, your privacy isn’t just a checkbox, it’s a priority. We’re committed to protecting your personal data and being fully transparent about how it’s collected, used, and safeguarded across all our domains.",
+    "subheading": "This policy explains:",
+    "point": {
+      "one": "What personal data we collect",
+      "two": "Why we collect it",
+      "three": "How we protect it",
+      "four": "Your rights and how to exercise them"
+    }
+  },
+   "personalData": {
+    "title": "The Personal Data We Collect",
+    "intro": "When you interact with GTC – whether through opening an account, visiting our site, or signing up on any of our landing pages, we may collect:",
+    "personal": {
+      "title": "Personal Information",
+      "items": {
+        "one": "Full name, date and place of birth, gender, and nationality.",
+        "two": "Contact details: email, phone number, residential address.",
+        "three": "Employment and income details."
+      }
+    },
+    "financial": {
+      "title": "Financial & Technical Data",
+      "items": {
+        "one": "Financial info: bank details, source of funds, trading history.",
+        "two": "Identity documents: passport, driving licence, national ID.",
+        "three": "Trading preferences and performance.",
+        "four": "IP address, device info, cookies, and platform usage."
+      }
+    },
+    "note": "We may also record phone calls and chat conversations for compliance and training."
+  },
+  "howWeUse": {
+  "title": "How We Use Your Information",
+  "description": "We only use your data when we have a lawful reason to do so.",
+  "points": {
+    "one": "To provide services – So we can set up and manage your trading account.",
+    "two": "To meet legal obligations – Including anti-money laundering and regulatory requirements.",
+    "three": "To protect our business interests – Like improving our platforms, analysing user behaviour, and managing risk.",
+    "four": "With your consent – For email marketing and exclusive webinar invites.",
+    "five": "For customer support – To help you with requests or resolve issues.",
+    "six": "To improve our website experience – Using cookies, geolocation, and session tracking.",
+    "seven": "To keep records – For auditing, legal, and tax reasons."
+  },
+  "footer": "We’ll never sell your data. Period."
+},
+"whoWeShare": {
+  "title": "Who We Share Your Data With",
+  "description": "Your data may be shared with:",
+  "items": {
+    "one": "Other GTC entities (e.g. regulated arms in Vanuatu and Mauritius).",
+    "two": "Payment providers and identity verification services.",
+    "three": "Legal, compliance, and financial service partners.",
+    "four": "Regulatory authorities, when required by law.",
+    "five": "Marketing tools (but never for third-party marketing)."
+  },
+  "footer": "We only share data on a need-to-know basis and make sure any third party meets strict data protection standards."
+},
+"cookiesTracking": {
+  "title": "Cookies & Tracking",
+  "description": "We use cookies and tracking tech on all GTCFX domains to:",
+  "points": {
+    "one": "Remember your preferences.",
+    "two": "Show you relevant content.",
+    "three": "Analyse website usage.",
+    "four": "Run remarketing campaigns."
+  },
+  "footer": "You can manage your cookie settings in your browser. For more info, see our",
+  "linkText": "Cookies Policy"
+},
+
+"internationalTransfers": {
+  "title": "International Transfers",
+  "description": "Because we operate globally, your data might be processed outside the EEA. Whenever we do this, we make sure your data is just as safe as it would be under EU laws, using safeguards like GDPR-compliant contracts."
+},
+
+"yourRights": {
+  "title": "Your Rights",
+  "description": "Here’s what you’re entitled to under data protection laws:",
+  "points": {
+    "one": "Access your data.",
+    "two": "Update or correct it.",
+    "three": "Request deletion if we no longer need it.",
+    "four": "Limit how we use it.",
+    "five": "Withdraw consent at any time.",
+    "six": "Request transfer of your data to another provider.",
+    "seven": "Object to marketing or data profiling."
+  },
+  "footer": "To exercise any of these rights, email:",
+  "email": "support@gtcfx.com"
+},
+  "dataRetention": {
+  "title": "Data Retention",
+  "intro": "We’ll keep your data:",
+  "points": {
+    "one": {
+      "icon": "∞",
+      "text": "For as long as your account is active."
+    },
+    "two": {
+      "icon": "5+",
+      "text": "For at least 5 years after closing your account, to meet AML and regulatory obligations."
+    },
+    "three": {
+      "icon": "⚖️",
+      "text": "Longer if required for legal, tax, or dispute purposes."
+    }
+  }
+},
+"dataSafety": {
+  "title": "Keeping Your Data Safe",
+  "description": "We store your data in secure servers, limit staff access, and train our team regularly on data protection. We also use encryption, access controls, and strict monitoring to keep your data protected."
+},
+"policyUpdates": {
+  "title": "Updates to This Policy",
+  "description": "We may update this Privacy Policy from time to time. Any updates will be posted on gtcfx.com and across relevant subdomains."
+},
+"contact": {
+  "title": "Contact Us",
+  "description": "Questions? Need help with your data rights?",
+  "buttonText": "Email us at support@gtcfx.com",
+  "email": "support@gtcfx.com"
 }
+
+  }
  
 }
