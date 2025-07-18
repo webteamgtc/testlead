@@ -25,7 +25,7 @@ const UaePartnerPage = () => {
             <SliderModal isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
             />
-    </>
+    </> 
   )
 }
 
