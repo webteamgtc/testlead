@@ -31,9 +31,9 @@ const Broker = ({ setIsOpen }) => {
       <div className="container mx-auto relative z-10">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-12 text-left items-center">
           {/* Left Column */}
-          <div className="text-left md:text-right">
+          <div className="ltr:text-left rtl:text-right">
             <h3
-              className="text-2xl md:text-2xl ltr:xl:text-[40px] rtl:xl:text-[55px] font-bold text-white mb-3"
+              className="ltr:text-2xl rtl:text-4xl md:text-2xl ltr:xl:text-[40px] rtl:xl:text-[55px] font-bold text-white mb-3 "
               dangerouslySetInnerHTML={{ __html: t('heading') }}
             />
             <p className="text-base text-white/90">{t('paragraph')}</p>
@@ -55,7 +55,7 @@ const Broker = ({ setIsOpen }) => {
         </div>
 
         <div className="text-center col-span-2 flex flex-col justify-center items-center">
-          <h2 className="text-3xl sm:text-4xl xl:text-6xl font-bold text-center text-white leading-tight mb-6 sm:max-w-2xl xl:max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl xl:text-6xl font-bold text-center text-white ltr:leading-tight rtl:leading-normal mb-6 sm:max-w-2xl xl:max-w-5xl mx-auto ">
             {t('bottomTitle')}
           </h2>
           <button

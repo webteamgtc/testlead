@@ -560,11 +560,11 @@ const HeroSection = ({ setIsOpen }) => {
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
           {/* Left Column */}
           <div className="text-center ltr:md:text-left rtl:md:text-right">
-            <h3 className="text-xl ltr:md:text-3xl rtl:text-xl font-light w-60 md:w-full mx-auto  ltr:md:text-left rtl:md:text-right rtl:font-semibold rtl:pb-4">
+            <h3 className="text-xl ltr:md:text-3xl rtl:text-xl font-light md:w-60 md:w-full mx-auto  ltr:md:text-left rtl:md:text-right rtl:font-semibold rtl:pb-4">
               {t("partner.banner.para1")}
             </h3>
             <h1 className="text-3xl rtl:md:text-[50px] ltr:md:text-[73px] font-bold text-secondary ltr:leading-tight rtl:leading-normal rtl:max-w-xl rtl:pb-3">
-              <span className="text-6xl rtl:text-[70px] ltr:md:text-[88px]"> {t("partner.banner.no")} </span>
+              <span className="ltr:text-6xl rtl:text-5xl rtl:md:text-[70px] ltr:md:text-[88px]"> {t("partner.banner.no")} </span>
               <br className="block md:hidden" />
               {t("partner.banner.title")}
             </h1>
@@ -601,7 +601,7 @@ const HeroSection = ({ setIsOpen }) => {
           {data?.map((item, idx) => (
             <div key={idx} className="px-2 flex flex-col gap-2 items-center justify-center">
               <p>{item?.icon}</p>
-              <span className="block text-xs xl:text-base w-40 sm:w-40 xl:w-48 mx-auto line-clamp-2">{item?.title}</span>
+              <span className="block text-xs xl:text-base ltr:w-40 rtl:w-34 sm:w-40 xl:w-48 mx-auto line-clamp-2 text-wrap">{item?.title}</span>
             </div>
           ))}
         </div>
