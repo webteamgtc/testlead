@@ -601,7 +601,7 @@ const HeroSection = ({ setIsOpen }) => {
           {data?.map((item, idx) => (
             <div key={idx} className="px-2 flex flex-col gap-2 items-center justify-center">
               <p>{item?.icon}</p>
-              <span className="block text-xs xl:text-base ltr:w-40 rtl:w-34 sm:w-40 xl:w-48 mx-auto line-clamp-2 text-wrap">{item?.title}</span>
+              <span className="block text-xs xl:text-base ltr:w-40 rtl:w-34 rtl:md:w-48 sm:w-40 xl:w-48 mx-auto line-clamp-2 text-wrap">{item?.title}</span>
             </div>
           ))}
         </div>
