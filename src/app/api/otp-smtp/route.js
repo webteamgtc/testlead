@@ -1,17 +1,126 @@
-import nodemailer from 'nodemailer';
-import { NextResponse } from 'next/server';
-import otpGenerator from 'otp-generator';
-import { transporter } from '../../[locale]/config/nodemailer'
+import nodemailer from "nodemailer";
+import { NextResponse } from "next/server";
+import otpGenerator from "otp-generator";
+import { transporter } from "../../[locale]/config/nodemailer";
 
 export async function POST(req) {
-  const { email, first_name } = await req.json();
-  const otp = otpGenerator.generate(6, { upperCaseAlphabets: false, specialChars: false, digits: true, lowerCaseAlphabets: false });
+  const { email, first_name, locale } = await req.json();
+  const otp = otpGenerator.generate(6, {
+    upperCaseAlphabets: false,
+    specialChars: false,
+    digits: true,
+    lowerCaseAlphabets: false,
+  });
   const mailData = {
     from: '"GTCFX" <portal@mx2.gtcmail.com>',
     to: email,
     subject: "Your GTCFX OTP Code",
     text: `Your OTP is ${otp}`,
-    html: `
+    html:
+      locale == "ar"
+        ? `
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>رمز التحقق GTC</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700&display=swap');
+    </style>
+  </head>
+  <body  dir="rtl" style="margin:0;padding:0;background-color:#ffffff;font-family:'Noto Kufi Arabic', sans-serif; direction: rtl;">
+    <table  dir="rtl" width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Noto Kufi Arabic', sans-serif; padding: 20px;">
+      <tr>
+        <td align="center">
+          <table width="900" cellpadding="0" cellspacing="0" style="border:1px solid #e0e0e0;border-radius:8px;padding:30px;">
+            <!-- Logo -->
+            <tr>
+              <td align="right" style="padding-bottom: 20px;">
+                <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="شعار GTC" style="width: 120px;" />
+              </td>
+            </tr>
+
+            <!-- Heading -->
+            <tr>
+              <td style="font-size:20px;font-weight:600;color:#000000;padding-bottom:10px;">
+                رمز التحقق الخاص بك من GTC
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px;color:#000000;padding-bottom:20px;">
+                شكرًا لاختيارك GTCFX.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
+            </tr>
+
+            <!-- Greeting & OTP -->
+            <tr>
+              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
+                عزيزي ${first_name || "العميل"},
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
+                يرجى استخدام رمز التحقق لمرة واحدة التالي لإكمال العملية.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:24px;font-weight:600;color:#2e2e2e;padding-bottom:20px;">
+                ${otp}
+              </td>
+            </tr>
+
+            <!-- Support Info -->
+            <tr>
+              <td style="font-size:14px;color:#000000;padding-bottom:20px;">
+                إذا كانت لديك أي أسئلة أو تحتاج إلى مساعدة إضافية، فلا تتردد في التواصل معنا عبر 
+                <a href="mailto:support@gtcfx.com" style="color:#0066cc;text-decoration:none;">support@gtcfx.com</a>.
+                نحن هنا لدعمك وضمان أفضل تجربة لك معنا.
+              </td>
+            </tr>
+
+            <!-- Signoff -->
+            <tr>
+              <td style="font-size:14px;color:#000000;padding-bottom:30px;">
+                نتمنى لك يومًا سعيدًا،<br>
+                فريق GTC
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
+            </tr>
+
+            <!-- Contact Info -->
+            <tr>
+              <td style="padding-top: 0px;">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="right">
+                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="شعار GTC" style="width: 100px;" />
+                    </td>
+                    <td align="left" style="font-size: 13px; color: #192055; line-height: 25px;">
+                      📞 الهاتف: +971 800 667788<br/>
+                      ✉️ البريد الإلكتروني: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Footer and Socials -->
+            <!-- You can reuse the existing legal and social HTML without changes or ask me to translate that too -->
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+`
+        : `
         <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -197,13 +306,13 @@ export async function POST(req) {
   </body>
 </html>
 
-        `
+        `,
   };
   try {
     await transporter.sendMail(mailData);
-    return NextResponse.json({ message: `5649${otp}632` }, { status: 200 })
+    return NextResponse.json({ message: `5649${otp}632` }, { status: 200 });
   } catch (error) {
     console.log(error);
-    return NextResponse.json({ message: 'Error Sending OTP' }, { status: 500 })
+    return NextResponse.json({ message: "Error Sending OTP" }, { status: 500 });
   }
 }

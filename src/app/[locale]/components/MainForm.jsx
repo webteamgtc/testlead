@@ -70,6 +70,7 @@ const CommonMainForm = () => {
                 email: formik?.values?.email,
                 first_name: formik?.values?.nickname,
                 type: "0",
+                locale: locale
             })
             .then((res) => {
                 if (res?.data?.message) {
@@ -235,8 +236,8 @@ const CommonMainForm = () => {
                             inputMode="text"
                             autoComplete="off"
                             className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 text-base border-[.5px] rounded-md border-opacity-10  ${formik.touched.nickname && formik.errors.nickname
-                                    ? "border-red-500"
-                                    : " border-[#ffffff1a] "
+                                ? "border-red-500"
+                                : " border-[#ffffff1a] "
                                 } focus:outline-none`}
                             {...formik.getFieldProps("nickname")}
                         />
@@ -256,8 +257,8 @@ const CommonMainForm = () => {
                             inputMode="text"
                             autoComplete="off"
                             className={`w-full px-4 bg-[#1A1A47] text-base py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.last_name && formik.errors.last_name
-                                    ? "border-red-500"
-                                    : " border-[#ffffff1a] "
+                                ? "border-red-500"
+                                : " border-[#ffffff1a] "
                                 } focus:outline-none`}
                             {...formik.getFieldProps("last_name")}
                         />
@@ -279,8 +280,8 @@ const CommonMainForm = () => {
                             <input
                                 type="email"
                                 className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 text-base border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email
-                                        ? "border-red-500"
-                                        : "border-[#ffffff1a]"
+                                    ? "border-red-500"
+                                    : "border-[#ffffff1a]"
                                     } focus:outline-none focus:bg-none`}
                                 {...formik.getFieldProps("email")}
                             />
