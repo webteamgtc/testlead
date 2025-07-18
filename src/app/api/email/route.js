@@ -2,8 +2,121 @@ import { NextResponse } from "next/server";
 import { transporter, mailOptions } from "../../[locale]/config/nodemailer";
 
 const generateEmailContent = (data) => {
-  return {
-    html: `
+  if (data?.locale == "ar") {
+    return {
+      html: `
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>بريد التحقق من GTC</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;700&display=swap');
+    </style>
+  </head>
+  <body style="margin:0;padding:0;background-color:#ffffff;font-family:'Noto Kufi Arabic',sans-serif; direction: rtl;">
+    <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Noto Kufi Arabic', sans-serif; padding: 20px; direction: rtl;">
+      <tr>
+        <td align="center">
+          <table width="900" cellpadding="0" cellspacing="0" style="border:1px solid #e0e0e0;border-radius:8px;padding:30px;">
+            <!-- Logo -->
+            <tr>
+              <td align="right" style="padding-bottom: 20px;">
+                <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="شعار GTC" style="width: 140px;" />
+              </td>
+            </tr>
+
+            <!-- Heading -->
+            <tr>
+              <td style="font-size:20px;font-weight:600;color:#000000;padding-bottom:10px;">
+                الانضمام إلى برنامج الشراكة GTC
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px;color:#000000;padding-bottom:20px;">
+                لقد قمت للتو بتعبئة نموذج برنامج الشراكة مع GTC. إليك ما يجب فعله بعد ذلك.
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
+            </tr>
+
+            <!-- Greeting & OTP -->
+            <tr>
+              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+                مرحباً ${data?.nickname || "عميلنا"},
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+                شكراً لتسجيل اهتمامك معنا.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+                لقد اتخذت للتو الخطوة الأولى نحو برنامج الشراكة الخاص بـ GTC المصمم لمساعدتك على تنمية أعمالك في الفوركس بسرعة وربحية أكبر.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+                سيتواصل معك أحد مدراء الشراكات المميزين لدينا قريباً.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+                وسيساعدك في تفعيل حسابك وشرح تفاصيل البرنامج لك.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px; color:#000000; padding-bottom:20px;">
+                هل تحتاج إلى مساعدة؟ اتصل بنا على <a href="tel:+971800667788" style="color:#000000; text-decoration: underline;">+971 800 667788</a> أو أرسل بريداً إلكترونياً إلى <a href="mailto:partners@gtcfx.com" style="color:#000000; text-decoration: underline;">partners@gtcfx.com</a>.
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size:14px; color:#000000; padding-bottom:30px;">
+                نراك قريباً،<br/>
+                فريق الشراكات في GTC
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
+            </tr>
+
+            <!-- Contact Info -->
+            <tr>
+              <td style="padding-top: 0px;">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="right">
+                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="شعار GTC" style="width: 140px;" />
+                    </td>
+                    <td align="left" style="font-size: 13px; color: #192055; line-height: 25px;">
+                      📞 الهاتف: +971 800 667788<br/>
+                      ✉️ البريد الإلكتروني: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Legal and Social Footer -->
+            <!-- You can reuse the same content from the English version as-is here (or translate if needed) -->
+
+            <!-- Social icons, disclaimer, and copyright -->
+            ...
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+`,
+    };
+  } else {
+    return {
+      html: `
       <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -193,7 +306,8 @@ You’ve just filled in the GTC Partnership Programme form. Here’s what to do 
 
       
       `,
-  };
+    };
+  }
 };
 
 export async function POST(req) {
