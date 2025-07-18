@@ -2,8 +2,8 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Header from "@/app/uae/partners/components/header";
-import Footer from "@/app/components/Footer";
+import MainHeader from "@/app/[locale]/components/MainHeader";
+import MainFooter from "@/app/[locale]/components/MainFooter";
 import ConfirmationThankYou from "./components/thankYouConfirmation";
 import HelpSection from "./components/helpSection";
   

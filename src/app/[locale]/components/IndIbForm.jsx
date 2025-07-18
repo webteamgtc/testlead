@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import OtpInput from "react-otp-input";
 import { countryList } from "../context/useCountriesDetails";
-import { useLocationDetail } from "../[locale]/context/useLocationDetail";
+import { useLocationDetail } from "../context/useLocationDetail";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import Image from "next/image";

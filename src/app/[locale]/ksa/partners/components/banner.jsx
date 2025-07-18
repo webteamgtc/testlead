@@ -529,15 +529,26 @@ const HeroSection = ({ setIsOpen }) => {
     }
   ]
   return (
-    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 md:py-28 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 rtl:py-18 ltr:md:py-28 relative overflow-hidden">
 
       {/* Desktop Background Image Only */}
-      <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
+      <div className="hidden ltr:md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
         <Image
           src="/ib/banner-main.webp"
           alt="Hero BG"
           fill
           className="object-cover object-right 3xl:object-contain"
+          priority
+        />
+      </div>
+
+        {/* Desktop Background Image Only */}
+      <div className="hidden rtl:md:block absolute inset-0 z-0 rtl:scale-[1.0] origin-bottom-right hero-bg">
+        <Image
+          src="/ib/arw.webp"
+          alt="Hero BG"
+          fill
+          className="object-cover object-left 3xl:object-contain"
           priority
         />
       </div>
@@ -548,12 +559,12 @@ const HeroSection = ({ setIsOpen }) => {
       <div className="container">
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
           {/* Left Column */}
-          <div className="text-center md:text-left">
-            <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
+          <div className="text-center ltr:md:text-left rtl:md:text-right">
+            <h3 className="text-xl ltr:md:text-3xl rtl:text-xl font-light w-60 md:w-full mx-auto  ltr:md:text-left rtl:md:text-right rtl:font-semibold rtl:pb-4">
               {t("partner.banner.para1")}
             </h3>
-            <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
-              <span className="text-6xl md:text-[88px]"> {t("partner.banner.no")} </span>
+            <h1 className="text-3xl rtl:md:text-[50px] ltr:md:text-[73px] font-bold text-secondary ltr:leading-tight rtl:leading-normal rtl:max-w-xl rtl:pb-3">
+              <span className="text-6xl rtl:text-[70px] ltr:md:text-[88px]"> {t("partner.banner.no")} </span>
               <br className="block md:hidden" />
               {t("partner.banner.title")}
             </h1>

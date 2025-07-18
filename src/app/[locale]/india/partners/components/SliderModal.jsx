@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
-import CommonMainForm from "@/app/components/MainForm";
 import Image from "next/image";
 import IndForm from "@/app/[locale]/components/IndForm";
 

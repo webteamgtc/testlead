@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import MainHeader from "@/app/[locale]/components/MainHeader";
-import Footer from "@/app/components/Footer";
+import MainFooter from "@/app/[locale]/components/MainFooter";
 import ConfirmationThankYou from "./components/thankYouConfirmation";
 import HelpSection from "./components/helpSection";
   
@@ -40,7 +40,7 @@ const ThankYouPage = () => {
             <MainHeader />
             <ConfirmationThankYou user={user} />
             <HelpSection />
-            <Footer />
+            <MainFooter />
 
         </section>
     

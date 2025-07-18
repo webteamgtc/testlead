@@ -34,8 +34,9 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-[#293794] to-[#000021] text-white px-6 py-4 text-xs md:text-sm flex flex-col max-w-5xl w-[95%] rounded-md border border-[#f2f2f27c] border-opacity-30 md:flex-row items-center justify-between gap-3 md:gap-6">
- <p className="text-center md:text-left">
+    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-[#293794] to-[#000021] text-white px-6 py-4 text-xs md:text-sm rtl:hidden ltr:flex flex-col max-w-5xl w-[95%] rounded-md border border-[#f2f2f27c] border-opacity-30 md:flex-row items-center justify-between gap-3 md:gap-6v" >
+    
+<p className="text-center md:text-left">
   By clicking "Find By Me”, you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts  
   <span className="mx-1"></span> {/* Adds horizontal spacing */}
   <a
@@ -53,6 +54,8 @@ export default function CookieConsent() {
   >
     Fine By Me
   </button>
+ 
+  
 </div>
 
   );

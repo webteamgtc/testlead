@@ -1,15 +1,24 @@
 'use client';
 import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
 
 const Broker = ({ setIsOpen }) => {
   const t = useTranslations('partner.broker');
+
+  // Detect direction
+  const [isRtl, setIsRtl] = useState(false);
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      setIsRtl(document.documentElement.dir === 'rtl');
+    }
+  }, []);
 
   return (
     <section className="relative text-white py-8 md:py-20 overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#E1CFBB] to-[#956D42] z-0" />
 
-      {/* Background Image at Bottom Center with Opacity */}
+      {/* Background Image */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-80">
         <img
           src="/ib/candle.webp"
@@ -24,7 +33,7 @@ const Broker = ({ setIsOpen }) => {
           {/* Left Column */}
           <div className="text-left md:text-right">
             <h3
-              className="text-2xl md:text-2xl xl:text-[40px] font-bold text-white mb-3"
+              className="text-2xl md:text-2xl ltr:xl:text-[40px] rtl:xl:text-[55px] font-bold text-white mb-3"
               dangerouslySetInnerHTML={{ __html: t('heading') }}
             />
             <p className="text-base text-white/90">{t('paragraph')}</p>
@@ -32,7 +41,7 @@ const Broker = ({ setIsOpen }) => {
 
           {/* Right Column */}
           <div>
-            <ul className="text-sm md:text-base text-white/90 list-disc pl-5 space-y-5">
+            <ul className="text-sm md:text-base text-white/90 list-disc pl-5 space-y-5 ltr:text-left rtl:text-right">
               <li>{t('points.p1')}</li>
               <li>{t('points.p2')}</li>
               <li>{t('points.p3')}</li>
@@ -54,8 +63,18 @@ const Broker = ({ setIsOpen }) => {
             onClick={() => setIsOpen(true)}
           >
             {t('cta')}
-            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L7 7L1 13" stroke="#B48755" strokeWidth="3" />
+            <svg
+              width="9"
+              height="14"
+              viewBox="0 0 9 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d={isRtl ? "M8 1L2 7L8 13" : "M1 1L7 7L1 13"}
+                stroke="#B48755"
+                strokeWidth="3"
+              />
             </svg>
           </button>
         </div>

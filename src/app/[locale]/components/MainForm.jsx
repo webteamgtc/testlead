@@ -12,7 +12,8 @@ import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Select from "react-select";
-
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl'; // make sure this is imported
 
 const CommonMainForm = () => {
     const { countryData } = useLocationDetail();
@@ -22,7 +23,8 @@ const CommonMainForm = () => {
     const [storedOtp, setStoredOtp] = useState("")
     const [isDisable, setIsDisable] = useState(true)
     const router = useRouter()
-
+    const t = useTranslations('partner.form');
+const locale = useLocale(); // inside your component
     const options = countryList.map((item) => ({
         value: item.en_short_name,
         label: (
@@ -72,7 +74,7 @@ const CommonMainForm = () => {
             if (res?.data?.message) {
                 setShowOtp(true)
                 setStoredOtp(res?.data?.message?.slice(4, -3))
-                toast.success("Otp send successfully!")
+                toast.success(t('otpSent'));
             }
             else {
                 toast.error(res?.data?.message)
@@ -95,11 +97,13 @@ const CommonMainForm = () => {
             `/api/email`,
             JSON.stringify(data)
         ).then(res => {
-            toast.success('Data inserted successfully');
+            toast.success(t('thankYou1'));
             formik.resetForm();
             setLoading(false)
             localStorage.setItem('user', JSON.stringify(data));
-            router.push("/uae/partners/success",);
+              // Redirect based on locale
+                const targetLocale = locale === 'ar' ? '/ar/uae/partners/success' : '/uae/partners/success';
+                router.push(targetLocale);
             formik.resetForm()
             setShowOtp(false)
         }).catch(err => {
@@ -130,18 +134,32 @@ const CommonMainForm = () => {
                 gclid: "",
         },
         validationSchema: Yup.object({
-            nickname: Yup.string()
-                .matches(/^[A-Za-z\s]+$/, "Full name can only contain letters.")
-                .required("First name is required"),
-            last_name: Yup.string()
-                .matches(/^[A-Za-z\s]+$/, "Last name can only contain letters.")
-                .required("Last name is required"),
-            email: Yup.string().email("Invalid email address").required("Email is required"),
-            phone: Yup.string().required("Phone number is required"),
-            country: Yup.string().required("Country is required"),
-            otp: Yup.string().length(6, "OTP must be 6 digits").required("OTP is required"),
-            terms: Yup.bool().oneOf([true], "Please accept the terms and conditions"),
-        }),
+  nickname: Yup.string()
+    .matches(/^[A-Za-z\s]+$/, t('errors.fullNameFormat'))
+    .required(t('errors.firstNameRequired')),
+
+  last_name: Yup.string()
+    .matches(/^[A-Za-z\s]+$/, t('errors.lastNameFormat'))
+    .required(t('errors.lastNameRequired')),
+
+  email: Yup.string()
+    .email(t('errors.emailInvalid'))
+    .required(t('errors.emailRequired')),
+
+  phone: Yup.string()
+    .required(t('errors.phoneRequired')),
+
+  country: Yup.string()
+    .required(t('errors.countryRequired')),
+
+  otp: Yup.string()
+    .length(6, t('errors.otpLength'))
+    .required(t('errors.otpRequired')),
+
+  terms: Yup.bool()
+    .oneOf([true], t('errors.termsRequired')),
+}),
+
         onSubmit: async (values) => {
             try {
                 setLoading(true);
@@ -155,12 +173,12 @@ const CommonMainForm = () => {
 
     const verifyOtpCode = async () => {
         if (formik.values.otp == storedOtp) {
-            toast.success("Otp Verified Successfully!")
+            toast.success(t('otpSuccess'))
             setShowOtp(false)
             setIsDisable(false)
         }
         else {
-            toast.error("Otp Verification Failed try again!")
+            toast.error(t('otpFail'))
         }
     }
 
@@ -172,7 +190,7 @@ const CommonMainForm = () => {
 
 
         <div className="relative max-w-xl mx-auto">
-            <form onSubmit={formik.handleSubmit} className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting text-left text-white">
+            <form onSubmit={formik.handleSubmit} className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting ltr:text-left rtl:text-right text-white">
                 {/* Full Name & Email */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                       <input type="hidden" name="utm_source" value={formik.values.utm_source} />
@@ -185,7 +203,7 @@ const CommonMainForm = () => {
                             <input type="hidden" name="utm_content" value={formik.values.utm_content} />
                     <div className="relative">
                         <div className="text-sm mb-2">
-                            <label>First Name</label>
+                            <label>{t('firstName')}</label>
                         </div>
 
                         <input
@@ -197,12 +215,12 @@ const CommonMainForm = () => {
                             {...formik.getFieldProps("nickname")}
                         />
                         {formik.touched.nickname && formik.errors.nickname && (
-                            <p className="text-red-500 text-left pt-1">{formik.errors.nickname}</p>
+                            <p className="text-red-500 ltr:text-left rtl:text-right pt-1">{formik.errors.nickname}</p>
                         )}
                     </div>
                     <div className="relative">
                         <div className="text-sm mb-2">
-                            <label>Last Name</label>
+                            <label>{t('lastName')}</label>
                         </div>
 
                         <input
@@ -213,7 +231,7 @@ const CommonMainForm = () => {
                             {...formik.getFieldProps("last_name")}
                         />
                         {formik.touched.last_name && formik.errors.last_name && (
-                            <p className="text-red-500  pt-1 text-left">{formik.errors.last_name}</p>
+                            <p className="text-red-500  pt-1 ltr:text-left rtl:text-right">{formik.errors.last_name}</p>
                         )}
                     </div>
 
@@ -224,7 +242,7 @@ const CommonMainForm = () => {
                     <div className="relative">
                         <div className="relative">
                             <div className="text-sm mb-2">
-                                <label>Email</label>
+                                <label>{t('email')}</label>
                             </div>
 
                             <input
@@ -233,20 +251,20 @@ const CommonMainForm = () => {
                                 {...formik.getFieldProps("email")}
                             />
                             {formik.touched.email && formik.errors.email && (
-                                <p className="text-red-500 pt-1 text-left">{formik.errors.email}</p>
+                                <p className="text-red-500 pt-1 ltr:text-left rtl:text-right">{formik.errors.email}</p>
                             )}
-                            <div className="absolute top-9 bg-primary right-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                            <div className="absolute top-9 bg-primary ltr:right-3 rtl:left-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
                                 onClick={() => {
                                     sendVerificationCode()
                                 }}
                             >
-                                {otpLoading ? "Sending.." : "Get Code"}
+                                {otpLoading ? t("sending") : t("getCode")}
                             </div>
                         </div>
                         {showOtp &&
                             <div className="grid grid-cols-1 gap-2">
                                 <div>
-                                    <p className="my-2 text-left pt-1">OTP has been sent to given Email</p>
+                                    <p className="my-2 ltr:text-left rtl:text-right pt-1">{t("otp")}</p>
                                     <OtpInput
                                         value={formik.values.otp}
                                         onChange={(otp) => formik.setFieldValue("otp", otp)}
@@ -290,14 +308,14 @@ const CommonMainForm = () => {
                                         verifyOtpCode()
                                     }}
                                 >
-                                    Verify Code
+                                    {t("verifyCode")}
                                 </div>
                             </div>
                         }
                     </div>
                     <div className="relative">
                         <div className="text-sm mb-2 text-white">
-                            <label htmlFor="phone">Mobile Number</label>
+                            <label htmlFor="phone">{t('phone')}</label>
                         </div>
                         <PhoneInput
                             id="phone"
@@ -322,7 +340,7 @@ const CommonMainForm = () => {
                         />
 
                         {formik.touched.phone && formik.errors.phone && (
-                            <p className="text-red-500 text-sm text-left mt-1">{formik.errors.phone}</p>
+                            <p className="text-red-500 text-sm ltr:text-left rtl:text-right mt-1">{formik.errors.phone}</p>
                         )}
                     </div>
 
@@ -331,7 +349,7 @@ const CommonMainForm = () => {
 
                 <div className="relative mb-3">
                     <div className="text-sm mb-2">
-                        <label>Country of Residence</label>
+                        <label>{t('country')}</label>
                     </div>
 
                     <Select
@@ -369,7 +387,8 @@ const CommonMainForm = () => {
                     >
                         {formik.touched.terms && formik.errors.terms
                             ? formik.errors.terms
-                            : "Please accept the terms and conditions"}
+                            : t("termsLabel")
+                            }
                     </label>
                     <div className="flex items-start gap-1">
                         <input
@@ -382,14 +401,14 @@ const CommonMainForm = () => {
                             className="h-5 w-5"
                         />
                        <p className="inline text-xs md:text-[13px] leading-normal">
-  By clicking on the <strong>Get 80% RevShare</strong> button, I confirm that I am over the age of 18, have read and agree to the{' '}
+  {t("termsText")}
   <a
     className="text-secondary underline"
     href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf"
     target="_blank"
     rel="noopener noreferrer"
   >
-    Client Agreement
+    {t("clientAgreement")}
   </a>{' '}
   & the{' '}
   <a
@@ -398,9 +417,9 @@ const CommonMainForm = () => {
     target="_blank"
     rel="noopener noreferrer"
   >
-    Privacy Policy
+    {t("privacyPolicy")}
   </a>
-  , I consent to GTC contacting me at reasonable times, and that my number is not on the Do Not Call Register (DNCR).
+  , {t("conset")}.
 </p>
 
                     </div>
@@ -409,7 +428,7 @@ const CommonMainForm = () => {
                 {/* Submit Button */}
                 <div className="text-center">
                     <button disabled={isDisable} type="submit" className="bg-secondary cursor-pointer mb-10 text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]">
-                        {loading ? "Submitting.." : "Get 80% RevShare"}
+                        {loading ? t("submitting") : t("submit")}
                     </button>
                 </div>
             </form>

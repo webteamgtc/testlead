@@ -123,7 +123,57 @@
     "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping UAE’s Forex Partners scale faster, earn more, and build lasting trust with their traders.",
     "description2": "Join us today, and your traders will thank you tomorrow.",
     "cta": "Make the Switch"
-  }
+  },
+  "form": {
+      "heading": "Register Now",
+      "closeAlt": "Close the modal",
+      "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Mobile Number",
+    "country": "Country of Residence",
+    "otp": "OTP has been sent to given Email",
+    "getCode": "Get Code",
+    "sending": "Sending...",
+    "sendOtp": "Send OTP",
+    "verifyCode": "Verify Code",
+    "termsLabel": "Please accept the terms and conditions",
+    "termsText": "By clicking on the Get 80% RevShare button, I confirm that I am over the age of 18, have read and agree to the ",
+    "conset": "I consent to GTC contacting me at reasonable times, and that my number is not on the Do Not Call Register (DNCR).",
+    "clientAgreement": "Client Agreement",
+    "privacyPolicy": "Privacy Policy",
+    "submit": "Get 80% RevShare",
+    "submitting": "Submitting...",
+    "otpSuccess": "Otp Verified Successfully!",
+    "otpFail": "Otp Verification Failed try again!",
+    "thankYou1":"Thank you for registering with GTC!",
+    "otpSent": "Otp sent successfully!",
+        "errors": {
+          "fullNameFormat": "Full name can only contain letters.",
+          "firstNameRequired": "First name is required",
+          "lastNameFormat": "Last name can only contain letters.",
+          "lastNameRequired": "Last name is required",
+          "emailInvalid": "Invalid email address",
+          "emailRequired": "Email is required",
+          "phoneRequired": "Phone number is required",
+          "countryRequired": "Country is required",
+          "otpLength": "OTP must be 6 digits",
+          "otpRequired": "OTP is required",
+          "termsRequired": "Please accept the terms and conditions"
+        },
+        "thankYou": "Thanks",
+  "almostThere": "You’re Almost There!",
+  "emailSent": "We’ve just sent you an email to {email}, which explains what happens next.",
+  "checkSpam": "It’s also a good idea to check your spam or junk folder as sometimes emails like to hide there. If the email we’ve sent you has made its way into your spam or junk folder, simply move it back into your inbox.",
+  "seeYou": "See you soon!",
+      "helpSection": {
+      "title": "Having trouble?",
+      "phoneLabel": "Contact us on",
+      "phone": "+971 800 667788",
+      "emailLabel": "or email the GTC Partnership Team at",
+      "email": "partners@gtcfx.com"
+    }
+    }
   },
   "footer": {
   "riskWarningTitle": "Risk Warning:",
@@ -135,5 +185,11 @@
   "jurisdictionNoticeText": "GTC does not provide services in jurisdictions where such offerings would be contrary to local laws.",
   "affiliateNoticeTitle": "Affiliate Notice:",
   "affiliateNoticeText": "Affiliate/partner content is for referral and marketing purposes only and does not constitute financial advice."
+},
+"cookie": {
+  "message": "By clicking 'Fine By Me', you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.",
+  "cta": "Fine By Me",
+  "linkText": "Read our privacy policy here."
 }
+ 
 }
