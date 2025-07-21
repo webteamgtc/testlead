@@ -20,11 +20,11 @@ const GrowIBSection = ({ setIsOpen }) => {
 
       {/* Main Content */}
       <div className="relative container mx-auto">
-        <div className="ltr:max-w-4xl rtl:max-w-2xl mx-auto z-10 relative flex flex-col gap-5 md:gap-5">
+        <div className="ltr:max-w-4xl rtl:max-w-3xl mx-auto z-10 relative flex flex-col gap-5 md:gap-5">
           <h4 className="text-lg md:text-2xl xl:text-3xl font-[200]">
             {t("subtitle")}
           </h4>
-          <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA] ltr:max-w-xl rtl:max-w-lg mx-auto">
+          <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA] ltr:max-w-xl rtl:max-w-6xl mx-auto">
             {t("title")}
           </h2>
           <p className="text-base md:text-lg xl:text-[22px]">
