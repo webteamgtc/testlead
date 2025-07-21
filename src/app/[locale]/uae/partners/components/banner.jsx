@@ -134,7 +134,7 @@ const HeroSection = ({setIsOpen}) => {
   </defs>
 </svg>
 ),
-      title: "Become a Partner in Just a Few Clicks"
+      title: "Become an IB in Just a Few Clicks"
     },
     {
       icon: (<svg
@@ -547,7 +547,7 @@ const HeroSection = ({setIsOpen}) => {
           {/* Left Column */}
           <div className="text-center md:text-left">
            <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
-              UAE's Top Forex Partners Now Earn Up to
+              Lebanon’s Top Introducing Brokers Now Earn Up to
             </h3>
                   <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
         <span className="text-6xl md:text-[88px]">80% </span> 
