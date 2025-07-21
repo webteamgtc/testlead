@@ -77,7 +77,7 @@ const generateEmailContent = (data) => {
 <tr>
   <td style="font-size:14px; color:#000000; padding-bottom:30px;">
     نحن هنا لدعمك،<br/>
-    فريق الشراكات،
+    GTC فريق الشراكات،
   </td>
 </tr>
 
