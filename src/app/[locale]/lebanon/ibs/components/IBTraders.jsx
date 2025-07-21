@@ -2,23 +2,23 @@ import React from "react";
 
 const testimonials = [
     {
-        text: `“As an FX partner, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
-        name: "Judi Izdihar Shamoon, Dubai, UAE",
+        text: `“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
+        name: "Judi Izdihar Shamoon, Dubai, Beirut",
         stars: 5,
     },
     {
-        text: `“I run monthly trading classes in Dubai, UAE. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
-        name: "Suoud Butrus Gaber, UAE",
+        text: `“I run monthly trading classes in Lebanon Arabia. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
+        name: "Suoud Butrus Gaber, Tripoli",
         stars: 4,
     },
     {
         text: `“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”`,
-        name: "Kutaiba Abdul-Matin Awad, UAE",
+        name: "Kutaiba Abdul-Matin Awad, Byblos",
         stars: 5,
     },
     {
         text: `“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”`,
-        name: "Yasser Nu'aym Bazzi, UAE",
+        name: "Yasser Nu'aym Bazzi, Beirut",
         stars: 4,
     },
 ];
@@ -54,7 +54,8 @@ const IBTestimonials = ({ setIsOpen }) => {
                     {/* Left Section */}
                     <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-8 md:space-y-6">
                         <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize w-72 md:w-full mx-auto md:mx-0 max-w-xl">
-                            What UAE's Partners & Traders Are Saying
+                            What the Lebanon’s IBs & Traders Are Saying
+
                         </h2>
                         <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-xl">
                             Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back.

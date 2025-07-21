@@ -1,4 +1,4 @@
-import UaePartnerPage from "../../pages/UaePartner";
+import LebanonIbPage from "../../pages/LebanonIb";
 
 
 export const metadata = {
@@ -13,7 +13,7 @@ export default function Home() {
     return (
         <>
  
-          <UaePartnerPage />
+          <LebanonIbPage />
       
         </>
     );

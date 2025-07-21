@@ -26,15 +26,26 @@ const HelpSection = () => {
             <h3 className="text-xl md:text-2xl 2xl:text-3xl font-semibold text-[#956D42] mb-3">
               {t('title')}
             </h3>
-            <p className="text-sm text-[#956D42] mb-3 leading-relaxed">
+           <p className="text-sm text-[#956D42] mb-3 leading-relaxed">
               📞 {t('phoneLabel')}{' '}
-              <a href={`tel:${t('phone')}`} className="font-medium underline hover:text-[#b68756]">
+              <a
+                href={`tel:${t('phone')}`}
+                className="font-medium underline hover:text-[#b68756]"
+                dir="ltr"
+                style={{ unicodeBidi: 'plaintext' }}
+              >
                 {t('phone')}
               </a>, {t('emailLabel')}{' '}
-              <a href={`mailto:${t('email')}`} className="font-medium underline hover:text-[#b68756]">
+              <a
+                href={`mailto:${t('email')}`}
+                className="font-medium underline hover:text-[#b68756]"
+                dir="ltr"
+                style={{ unicodeBidi: 'plaintext' }}
+              >
                 {t('email')}
               </a>.
             </p>
+
           </div>
 
           {/* Icon */}

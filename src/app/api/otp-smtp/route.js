@@ -48,7 +48,7 @@ export async function POST(req) {
             </tr>
             <tr>
               <td style="font-size:14px;color:#000000;padding-bottom:20px;">
-                شكرًا لاختيارك GTCFX.
+                شكرًا لاختيارك GTC.
               </td>
             </tr>
 
@@ -102,10 +102,10 @@ export async function POST(req) {
                     <td align="right">
                       <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="شعار GTC" style="width: 100px;" />
                     </td>
-                    <td align="left" style="font-size: 13px; color: #192055; line-height: 25px;">
-                      📞 الهاتف: +971 800 667788<br/>
-                      ✉️ البريد الإلكتروني: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
-                    </td>
+                  <td align="right" dir="rtl" style="font-size: 13px; color: #192055; line-height: 25px; text-align: right;">
+                    📞 الهاتف: <span dir="ltr">+971 800 667788</span><br/>
+                    ✉️ البريد الإلكتروني: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
+                  </td>
                   </tr>
                 </table>
               </td>

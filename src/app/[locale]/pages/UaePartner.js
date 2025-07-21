@@ -8,7 +8,7 @@ import Broker from '../uae/partners/components/broker'
 import GrowIBSection from '../uae/partners/components/growIBsection'
 import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
-import PayMoreCom from "../india/partners/components/PayMoreCom";
+import IbProgrammeSection from "../uae/partners/components/payMore";
 
 const UaePartnerPage = () => {
      const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,7 @@ const UaePartnerPage = () => {
       <MainHeader />
             <HeroSection setIsOpen={setIsOpen} />
             <ComparisonTable setIsOpen={setIsOpen} />
-           <PayMoreCom setIsOpen={setIsOpen} />
+           <IbProgrammeSection setIsOpen={setIsOpen} />
             <Broker  setIsOpen={setIsOpen}/>
             <IBTestimonials setIsOpen={setIsOpen} />
             <GrowIBSection setIsOpen={setIsOpen}/>
