@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
 import CommonMainForm from "@/app/[locale]/components/MainForm";
 import Image from "next/image";
+import LebForm from "@/app/[locale]/components/LebForm";
 
 const RegisterSchema = Yup.object().shape({
     firstName: Yup.string().required("Required"),
@@ -63,7 +64,7 @@ const SliderModal = ({ isOpen, onClose }) => {
 
                         <h2 className="text-center text-2xl md:text-3xl font-medium my-5 md:my-8">Register Now</h2>
 
-                     <CommonMainForm />
+                     <LebForm />
 
                     </div>
                 </div>
