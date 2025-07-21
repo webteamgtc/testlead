@@ -1,3 +1,6 @@
+'use client';
+import { useEffect, useState } from 'react';
+
 const CustomButton = ({
   text,
   bgColor,
@@ -6,6 +9,14 @@ const CustomButton = ({
   showIcon = true,
   onClick,
 }) => {
+  const [isRtl, setIsRtl] = useState(false);
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      setIsRtl(document.documentElement.dir === 'rtl');
+    }
+  }, []);
+
   return (
     <button
       onClick={onClick}
@@ -14,7 +25,11 @@ const CustomButton = ({
       {text}
       {showIcon && (
         <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 1L7 7L1 13" stroke={strokeColor} strokeWidth="3" />
+          <path
+            d={isRtl ? 'M8 1L2 7L8 13' : 'M1 1L7 7L1 13'}
+            stroke={strokeColor}
+            strokeWidth="3"
+          />
         </svg>
       )}
     </button>
