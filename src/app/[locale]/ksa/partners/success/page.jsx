@@ -5,12 +5,15 @@ import MainHeader from "@/app/[locale]/components/MainHeader";
 import MainFooter from "@/app/[locale]/components/MainFooter";
 import ConfirmationThankYou from "./components/thankYouConfirmation";
 import HelpSection from "./components/helpSection";
+import Meta from "@/app/components/common/MetaData";
+import { useTranslations } from "next-intl";
   
 const ThankYouPage = () => {
     const router = useRouter();
 
     const [user, setUser] = useState(null);
     const [checked, setChecked] = useState(false); // Track if we've checked localStorage
+    const t= useTranslations("");
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -36,13 +39,14 @@ const ThankYouPage = () => {
     if (!checked) return null; // Don't render anything until we've checked
 
     return (
-        <section className="">
+        <>
+        <Meta title={t('partner.thankYoumeta.title')} description={t('partner.thankYoumeta.description')}/>
             <MainHeader />
             <ConfirmationThankYou user={user} />
             <HelpSection />
             <MainFooter />
 
-        </section>
+        </>
     
     );
 };
