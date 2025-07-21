@@ -9,23 +9,24 @@ import GrowIBSection from '../uae/partners/components/growIBsection'
 import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
 import PayMoreCom from "../india/partners/components/PayMoreCom";
+import NewHeader from "../components/NewHeader";
 
 const UaePartnerPage = () => {
-     const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <MainHeader />
-            <HeroSection setIsOpen={setIsOpen} />
-            <ComparisonTable setIsOpen={setIsOpen} />
-           <PayMoreCom setIsOpen={setIsOpen} />
-            <Broker  setIsOpen={setIsOpen}/>
-            <IBTestimonials setIsOpen={setIsOpen} />
-            <GrowIBSection setIsOpen={setIsOpen}/>
-            <MainFooter />
-            <SliderModal isOpen={isOpen}
-                onClose={() => setIsOpen(false)}
-            />
-    </> 
+      <NewHeader />
+      <HeroSection setIsOpen={setIsOpen} />
+      <ComparisonTable setIsOpen={setIsOpen} />
+      <PayMoreCom setIsOpen={setIsOpen} />
+      <Broker setIsOpen={setIsOpen} />
+      <IBTestimonials setIsOpen={setIsOpen} />
+      <GrowIBSection setIsOpen={setIsOpen} />
+      <MainFooter />
+      <SliderModal isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      />
+    </>
   )
 }
 
