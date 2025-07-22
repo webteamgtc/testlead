@@ -24,6 +24,7 @@ const TestimonialCard = ({ text, name, stars, odd }) => (
 
 const IBTestimonials = ({ setIsOpen }) => {
   const t = useTranslations('partner.testimonials');
+  const t2 = useTranslations('bahrain');
   const [isRtl, setIsRtl] = useState(false);
 
   useEffect(() => {
@@ -34,23 +35,23 @@ const IBTestimonials = ({ setIsOpen }) => {
 
   const testimonials = [
     {
-      text: t("list.t1.text"),
-      name: t("list.t1.name"),
+      text: t2("list.t1.text"),
+      name: t2("list.t1.name"),
       stars: 5,
     },
     {
-      text: t("list.t2.text"),
-      name: t("list.t2.name"),
+      text: t2("list.t2.text"),
+      name: t2("list.t2.name"),
       stars: 4,
     },
     {
-      text: t("list.t3.text"),
-      name: t("list.t3.name"),
+      text: t2("list.t3.text"),
+      name: t2("list.t3.name"),
       stars: 5,
     },
     {
-      text: t("list.t4.text"),
-      name: t("list.t4.name"),
+      text: t2("list.t4.text"),
+      name: t2("list.t4.name"),
       stars: 4,
     },
   ];
@@ -62,7 +63,7 @@ const IBTestimonials = ({ setIsOpen }) => {
           {/* Left Section */}
           <div className="flex flex-col text-center rtl:text-right ltr:md:text-left justify-center items-center rtl:items-start ltr:md:items-baseline space-y-8 md:space-y-6">
             <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize ltr:w-72 ltr:md:w-full md:w-full mx-auto md:mx-0 max-w-xl">
-              {t('title')}
+              {t2('title1')}
             </h2>
             <p className="text-sm md:text-base xl:text-[22px] text-gray-600 ltr:max-w-xl rtl:max-w-2xl">
               {t('description')}

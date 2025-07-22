@@ -9,9 +9,10 @@ import GrowIBSection from '../uae/partners/components/growIBsection'
 import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
 import IbProgrammeSection from "../uae/partners/components/payMore";
+import NewHeader from "../components/NewHeader";
 
 const UaePartnerPage = () => {
-     const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <MainHeader />

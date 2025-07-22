@@ -1,20 +1,20 @@
 {
   "partner": {
     "meta": {
-      "title": "Become a GTC Partner in the UAE Today",
-      "description": "Join GTC as an Partner in the UAE. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+      "title": "Become a GTC Partner in the Saudi Today",
+      "description": "Join GTC as a Partner in Saudi. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
     },
     "banner": {
       "no": "80%",
       "title": "RevShare",
-      "para1": "UAE's Top Forex Partners Now Earn Up to",
+      "para1": "Saudi’s Top Forex Partners Now Earn Up to",
       "para2": "with GTC",
       "para3": "Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.",
       "btnText": "Get 80% RevShare"
     },
     "layer": {
       "column1": "Up to 80% RevShare Paid On Demand",
-      "column2": "Become a Partner in Just a Few Clicks",
+      "column2": "Become an FX Partner in Just a Few Clicks",
       "column3": "Dynamic Leverage Up to 1:2000",
       "column4": "Your Traders Get a Tradable Bonus",
       "column5": "Full Marketing & Event Support Provided",
@@ -54,10 +54,10 @@
       }
     },
     "payMore": {
-      "subtitle": "A Forex Partnership Programme That",
+      "subtitle": "An FX Partnership Programme That",
       "title": "Pays More Than Just Commission",
       "intro": "Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% RevShare; we give you the tools to grow your business.",
-      "outro": "From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to.",
+      "outro": "From real trader bonuses to marketing support and instant payouts, this is the Forex partnership programme serious partners are switching to.",
       "cta": "Partner with GTC",
       "features": {
         "feature1": {
@@ -91,36 +91,36 @@
       "cta": "Start Earning"
     },
     "testimonials": {
-    "title": "What UAE's Partners & Traders Are Saying",
+    "title": "What the Saudi’s FX Partners & Traders Are Saying",
     "description": "Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back.",
     "cta": "Join Us",
     "list": {
       "t1": {
         "text": "“As an FX partner, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”",
-        "name": "Judi Izdihar Shamoon, Dubai, UAE",
+        "name": "Judi Izdihar Shamoon, Riyadh",
         "stars": 5
       },
       "t2": {
-        "text": "“I run monthly trading classes in Dubai, UAE. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”",
-        "name": "Suoud Butrus Gaber, UAE",
+        "text": "“I run monthly trading classes in Saudi Arabia. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”",
+        "name": "Suoud Butrus Gaber, Jeddah",
         "stars": 4
       },
       "t3": {
         "text": "“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”",
-        "name": "Kutaiba Abdul-Matin Awad, UAE",
+        "name": "Kutaiba Abdul-Matin Awad, Dammam",
         "stars": 5
       },
       "t4": {
         "text": "“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”",
-        "name": "Yasser Nu'aym Bazzi, UAE",
+        "name": "Yasser Nu'aym Bazzi, Riyadh",
         "stars": 4
       }
     }
   },
    "growIB": {
     "subtitle": "Start Earning More.",
-    "title": "Grow Your FX Partnership Business with GTC",
-    "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping UAE’s Forex Partners scale faster, earn more, and build lasting trust with their traders.",
+    "title": "Grow Your FX Partner Business with GTC",
+    "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping the Saudi’s FX partners scale faster, earn more, and build lasting trust with their traders.",
     "description2": "Join us today, and your traders will thank you tomorrow.",
     "cta": "Make the Switch"
   },
@@ -196,6 +196,10 @@
   "linkText": "Read our privacy policy here."
 },
 "privacyPolicy": {
+  "meta": {
+    "title": "Privacy Policy – GTC | Regulated Forex & CFD Broker",
+  "description": "Read GTCFX’s Privacy Policy to learn how we collect, use, and protect your personal data across our regulated platforms in Vanuatu, Mauritius, and UAE."
+  },
     "header": {
       "title": "Privacy Policy",
       "subtitle": "Protecting your information across all GTC platforms and subdomains"
@@ -342,6 +346,102 @@
   "email": "support@gtcfx.com"
 }
 
-  }
- 
+  },
+ "oman":{
+    "meta": {
+      "title": "Become a GTC Partner in the Oman Today",
+      "description": "Join GTC as a Partner in Oman. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+    },
+    "para1": "Omani’s Top IBs Now Earn Up to",
+    "column2": "Become an IB in Just a Few Clicks",
+    "subtitle": "An IB Programme That",
+     "outro": "From realtrader bonuses to marketing support and instant payouts,this is the IB programme serious partners are switching to.",
+     "title": "Grow Your IB Business with GTC",
+    "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Omani’s partners scale faster, earn more, and build lasting trust with their traders.",
+     "title1": "What the Omani’s IBs & Traders Are Saying",
+       "list": {
+      "t1": {
+        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "name": "Judi Izdihar Shamoon, Muscat",
+        "stars": 5
+      },
+      "t2": {
+        "text": "“I run monthly trading classes in Oman. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”",
+        "name": "Suoud Butrus Gaber, Nizwa",
+        "stars": 4
+      },
+      "t3": {
+        "text": "“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”",
+        "name": "Kutaiba Abdul-Matin Awad, Salalah",
+        "stars": 5
+      },
+      "t4": {
+        "text": "“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”",
+        "name": "Yasser Nu'aym Bazzi, Muscat",
+        "stars": 4
+      }
+    }
+ },
+  "bahrain":{
+    "meta": {
+      "title": "Become a GTC Partner in the Bahrain Today",
+      "description": "Join GTC as a Partner in Bahrain. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+    },
+    "para1": "Bahrain’s Top IBs Now Earn Up to",
+    "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Bahrain’s partners scale faster, earn more, and build lasting trust with their traders.",
+     "title1": "What the Bahrain’s IBs & Traders Are Saying",
+       "list": {
+      "t1": {
+        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "name": "Judi Izdihar Shamoon, Manama",
+        "stars": 5
+      },
+      "t2": {
+        "text": "“I run monthly trading classes in Bahrain. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”",
+        "name": "Suoud Butrus Gaber, Al-Muharraq",
+        "stars": 4
+      },
+      "t3": {
+        "text": "“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”",
+        "name": "Kutaiba Abdul-Matin Awad, Al-Muharraq",
+        "stars": 5
+      },
+      "t4": {
+        "text": "“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”",
+        "name": "Yasser Nu'aym Bazzi, Manama",
+        "stars": 4
+      }
+    }
+ },
+  "qatar":{
+    "meta": {
+      "title": "Become a GTC Partner in the Qatar Today",
+      "description": "Join GTC as a Partner in Qatar. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+    },
+    "para1": "Qatar’s Top IBs Now Earn Up to",
+    "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Qatar’s partners scale faster, earn more, and build lasting trust with their traders.",
+     "title1": "What the Qatar’s IBs & Traders Are Saying",
+       "list": {
+      "t1": {
+        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "name": "Judi Izdihar Shamoon, Doha",
+        "stars": 5
+      },
+      "t2": {
+        "text": "“I run monthly trading classes in Qatar. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”",
+        "name": "Suoud Butrus Gaber, Al Khor",
+        "stars": 4
+      },
+      "t3": {
+        "text": "“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”",
+        "name": "Kutaiba Abdul-Matin Awad, Al Rayyan",
+        "stars": 5
+      },
+      "t4": {
+        "text": "“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”",
+        "name": "Yasser Nu'aym Bazzi, Doha",
+        "stars": 4
+      }
+    }
+ }
 }
