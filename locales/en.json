@@ -196,6 +196,10 @@
   "linkText": "Read our privacy policy here."
 },
 "privacyPolicy": {
+  "meta": {
+    "title": "Privacy Policy – GTC | Regulated Forex & CFD Broker",
+  "description": "Read GTCFX’s Privacy Policy to learn how we collect, use, and protect your personal data across our regulated platforms in Vanuatu, Mauritius, and UAE."
+  },
     "header": {
       "title": "Privacy Policy",
       "subtitle": "Protecting your information across all GTC platforms and subdomains"
