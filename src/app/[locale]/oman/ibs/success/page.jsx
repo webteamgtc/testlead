@@ -7,6 +7,7 @@ import ConfirmationThankYou from "./components/thankYouConfirmation";
 import HelpSection from "./components/helpSection";
 import Meta from "@/app/components/common/MetaData";
 import { useTranslations } from "next-intl";
+import NewHeader from "@/app/[locale]/components/NewHeader";
   
 const ThankYouPage = () => {
     const router = useRouter();
@@ -41,7 +42,7 @@ const ThankYouPage = () => {
     return (
         <>
         <Meta title={t('partner.thankYoumeta.title')} description={t('partner.thankYoumeta.description')}/>
-            <MainHeader />
+            <NewHeader />
             <ConfirmationThankYou user={user} />
             <HelpSection />
             <MainFooter />
