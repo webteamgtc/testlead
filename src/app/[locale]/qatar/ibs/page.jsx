@@ -20,7 +20,7 @@ export default function Home() {
 
     return (
         <>
-            <Meta title={t('partner.meta.title')} description={t('partner.meta.description')}/>
+            <Meta title={t('qatar.meta.title')} description={t('qatar.meta.description')}/>
             <section className="">
                 <NewHeader />
                 <BannerMain setIsOpen={setIsOpen} />
