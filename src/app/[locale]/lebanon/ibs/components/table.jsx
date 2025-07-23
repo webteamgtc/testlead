@@ -61,7 +61,7 @@ const ComparisonTable = ({setIsOpen}) => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    GTC VIP + Margin Bonus
+                    GTC VIP + Exclusive Bonus
                   </span>,
                 ],
               ].map(([feature, broker, gtc], idx) => (
