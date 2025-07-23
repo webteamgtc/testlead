@@ -49,6 +49,8 @@ const BahrainForm = () => {
         formik.setFieldValue("utm_content", params.get("utm_content") || "");
         formik.setFieldValue("fbclid", params.get("fbclid") || "");
         formik.setFieldValue("gclid", params.get("gclid") || "");
+            // ✅ Add this line:
+         formik.setFieldValue("language", locale || "");
     }, []);
 
     useEffect(() => {
@@ -143,6 +145,7 @@ const BahrainForm = () => {
             utm_content: "",
             fbclid: "",
             gclid: "",
+              language: "",
         },
         validationSchema: Yup.object({
             nickname: Yup.string()
