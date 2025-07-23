@@ -50,7 +50,7 @@
         "point4": "1 minute",
         "point5": "Unchanged",
         "point6": "Real human care",
-        "point7": "GTC VIP + Margin Bonus"
+        "point7": "GTC VIP + Exclusive Bonus"
       }
     },
     "payMore": {
@@ -358,6 +358,7 @@
      "outro": "From realtrader bonuses to marketing support and instant payouts,this is the IB programme serious partners are switching to.",
      "title": "Grow Your IB Business with GTC",
     "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Omani’s partners scale faster, earn more, and build lasting trust with their traders.",
+    "description": "Whether you’re a seasoned IB or just getting started, these partners made the switch and they or their traders haven’t looked back.",
      "title1": "What the Omani’s IBs & Traders Are Saying",
        "list": {
       "t1": {
@@ -440,6 +441,37 @@
       "t4": {
         "text": "“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”",
         "name": "Yasser Nu'aym Bazzi, Doha",
+        "stars": 4
+      }
+    }
+ },
+ "egypt":{
+    "meta": {
+      "title": "Become a GTC Partner in the Egypt Today",
+      "description": "Join GTC as a Partner in Egypt. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+    },
+    "para1": "Egypt’s Top IBs Now Earn Up to",
+    "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Egypt’s partners scale faster, earn more, and build lasting trust with their traders.",
+     "title1": "What the Egypt’s IBs & Traders Are Saying",
+       "list": {
+      "t1": {
+        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "name": "Judi Izdihar Shamoon, Cairo",
+        "stars": 5
+      },
+      "t2": {
+        "text": "“I run monthly trading classes in Egypt. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”",
+        "name": "Suoud Butrus Gaber, Luxor",
+        "stars": 4
+      },
+      "t3": {
+        "text": "“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”",
+        "name": "Kutaiba Abdul-Matin Awad, Alexandria",
+        "stars": 5
+      },
+      "t4": {
+        "text": "“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”",
+        "name": "Yasser Nu'aym Bazzi, Cairo",
         "stars": 4
       }
     }

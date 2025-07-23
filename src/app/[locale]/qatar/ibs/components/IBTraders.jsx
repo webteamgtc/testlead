@@ -25,7 +25,7 @@ const TestimonialCard = ({ text, name, stars, odd }) => (
 const IBTestimonials = ({ setIsOpen }) => {
   const t = useTranslations('partner.testimonials');
   const [isRtl, setIsRtl] = useState(false);
-const t2 = useTranslations('qatar');
+const t2 = useTranslations();
   useEffect(() => {
     if (typeof document !== 'undefined') {
       setIsRtl(document.documentElement.dir === 'rtl');
@@ -34,23 +34,23 @@ const t2 = useTranslations('qatar');
 
   const testimonials = [
     {
-      text: t2("list.t1.text"),
-      name: t2("list.t1.name"),
+      text: t2("qatar.list.t1.text"),
+      name: t2("qatar.list.t1.name"),
       stars: 5,
     },
     {
-      text: t2("list.t2.text"),
-      name: t2("list.t2.name"),
+      text: t2("qatar.list.t2.text"),
+      name: t2("qatar.list.t2.name"),
       stars: 4,
     },
     {
-      text: t2("list.t3.text"),
-      name: t2("list.t3.name"),
+      text: t2("qatar.list.t3.text"),
+      name: t2("qatar.list.t3.name"),
       stars: 5,
     },
     {
-      text: t2("list.t4.text"),
-      name: t2("list.t4.name"),
+      text: t2("qatar.list.t4.text"),
+      name: t2("qatar.list.t4.name"),
       stars: 4,
     },
   ];
@@ -62,10 +62,10 @@ const t2 = useTranslations('qatar');
           {/* Left Section */}
           <div className="flex flex-col text-center rtl:text-right ltr:md:text-left justify-center items-center rtl:items-start ltr:md:items-baseline space-y-8 md:space-y-6">
             <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize ltr:w-72 ltr:md:w-full md:w-full mx-auto md:mx-0 max-w-xl">
-              {t2('title1')}
+              {t2('qatar.title1')}
             </h2>
             <p className="text-sm md:text-base xl:text-[22px] text-gray-600 ltr:max-w-xl rtl:max-w-2xl">
-              {t('description')}
+              {t2('oman.description')}
             </p>
             <button
               className="w-fit bg-white border border-gray-300 hover:bg-[#4e4d71] hover:text-white hover:border-gray-400 text-sm font-bold md:text-base xl:text-lg text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition"
