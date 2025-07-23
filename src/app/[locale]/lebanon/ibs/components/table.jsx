@@ -27,9 +27,9 @@ const ComparisonTable = ({setIsOpen}) => {
             <thead>
               <tr className="bg-[#f1f4fb] text-left font-semibold text-[#1e2c54]">
                 <th className="py-4 px-5">Feature</th>
-                <th className="py-4 px-5 bg-gray-50">Your Broker</th>
-                <th className="py-4 px-5 bg-gray-50">
-                  <img src="/logo-blue.svg" alt="GTC Logo" className="h-8" />
+                <th className="py-4 px-5 bg-gray-50 text-center">Your Broker</th>
+                <th className="py-4 px-5 bg-gray-50 text-center">
+                  <img src="/logo-blue.svg" alt="GTC Logo" className="h-8 inline-block" />
                 </th>
               </tr>
             </thead>
@@ -43,7 +43,7 @@ const ComparisonTable = ({setIsOpen}) => {
                 ['Support Quality', 'Scripted replies', 'Real human care'],
                 [
                   'Loyalty Rewards',
-                  <span className="text-red-500 flex items-center gap-2">
+                  <span className="text-red-500 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -53,7 +53,7 @@ const ComparisonTable = ({setIsOpen}) => {
                     </svg>
                  
                   </span>,
-                  <span className="text-green-600 flex items-center gap-2">
+                  <span className="text-green-600 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -67,8 +67,8 @@ const ComparisonTable = ({setIsOpen}) => {
               ].map(([feature, broker, gtc], idx) => (
                 <tr key={idx} className="border-t border-[#e0e4f6]">
                   <td className="py-4 px-5 font-medium text-left bg-gray-100">{feature}</td>
-                  <td className="py-4 px-5 text-left">{broker}</td>
-                  <td className="py-4 px-5 text-left">{gtc}</td>
+                  <td className="py-4 px-5 text-center">{broker}</td>
+                  <td className="py-4 px-5 text-center">{gtc}</td>
                 </tr>
               ))}
             </tbody>
