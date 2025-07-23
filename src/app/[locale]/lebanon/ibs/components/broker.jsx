@@ -30,7 +30,7 @@ const Broker = ({setIsOpen}) => {
           <div>
             <ul className="text-sm md:text-base text-white/90 list-disc pl-5 space-y-5">
               <li>Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA.</li>
-              <li>Headquartered in Dubai with nearly 1 million global traders.</li>
+              <li>Headquartered in UAE with nearly 1 million global serviced traders.</li>
               <li>World-class support with a real human touch.</li>
               <li>Customer-first culture where service is strategy.</li>
             </ul>

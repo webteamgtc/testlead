@@ -58,7 +58,7 @@ const IBTestimonials = ({ setIsOpen }) => {
 
                         </h2>
                         <p className="text-sm md:text-base xl:text-[22px] text-gray-600 max-w-xl">
-                            Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back.
+                            Whether you’re a seasoned IB or just getting started, these partners made the switch and they or their traders haven’t looked back.
                         </p>
                         <button className="w-fit bg-white border border-gray-300 hover:bg-[#4e4d71] hover:text-white hover:border-gray-400 text-sm font-bold md:text-base xl:text-lg text-[#1f2937] px-8 py-3 rounded-xl flex flex-row gap-4 items-center transition" onClick={() => setIsOpen(true)}>
                             Join Us

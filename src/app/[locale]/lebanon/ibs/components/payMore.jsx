@@ -80,7 +80,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
       <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4">
         {/* Section Title */}
 
-        <h4 className="text-lg md:text-2xl font-[200]">An IBship Programme That</h4>
+        <h4 className="text-lg md:text-2xl font-[200]">A Partnership Programme That</h4>
         <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA]">
           Pays More Than Just Commission
         </h2>
