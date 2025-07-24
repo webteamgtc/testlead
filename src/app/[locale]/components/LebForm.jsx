@@ -110,8 +110,8 @@ const LebForm = () => {
                 // Redirect based on locale
                 const targetLocale =
                     locale === "ar"
-                        ? "/ar/lebanon/ibs/success"
-                        : "/lebanon/ibs/success";
+                        ? "/ar/lebanon/ib/success"
+                        : "/lebanon/ib/success";
                 router.push(targetLocale);
                 formik.resetForm();
                 setShowOtp(false);

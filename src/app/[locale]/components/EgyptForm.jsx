@@ -112,8 +112,8 @@ const EgyptForm = () => {
                 // Redirect based on locale
                 const targetLocale =
                     locale === "ar"
-                        ? "/ar/egypt/ibs/success"
-                        : "/egypt/ibs/success";
+                        ? "/ar/egypt/ib/success"
+                        : "/egypt/ib/success";
                 router.push(targetLocale);
                 formik.resetForm();
                 setShowOtp(false);

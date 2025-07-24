@@ -112,8 +112,8 @@ const OmanForm = () => {
                 // Redirect based on locale
                 const targetLocale =
                     locale === "ar"
-                        ? "/ar/oman/ibs/success"
-                        : "/oman/ibs/success";
+                        ? "/ar/oman/ib/success"
+                        : "/oman/ib/success";
                 router.push(targetLocale);
                 formik.resetForm();
                 setShowOtp(false);

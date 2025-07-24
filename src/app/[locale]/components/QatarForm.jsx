@@ -112,8 +112,8 @@ const QatarForm = () => {
                 // Redirect based on locale
                 const targetLocale =
                     locale === "ar"
-                        ? "/ar/qatar/ibs/success"
-                        : "/qatar/ibs/success";
+                        ? "/ar/qatar/ib/success"
+                        : "/qatar/ib/success";
                 router.push(targetLocale);
                 formik.resetForm();
                 setShowOtp(false);
