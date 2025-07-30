@@ -2,18 +2,18 @@
   "partner": {
     "meta": {
       "title": "Become a GTC Partner in the Saudi Today",
-      "description": "Join GTC as a Partner in Saudi. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+      "description": "Join GTC as a Partner in Saudi. Earn up to 80% Rebate, offer top bonuses to traders, and grow with a regulated global broker."
     },
     "banner": {
       "no": "80%",
-      "title": "RevShare",
+      "title": "Rebate",
       "para1": "Saudi’s Top Forex Partners Now Earn Up to",
       "para2": "with GTC",
-      "para3": "Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.",
-      "btnText": "Get 80% RevShare"
+      "para3": "Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% Rebate with fast payouts, multilingual support, and no setup costs.",
+      "btnText": "Get 80% Rebate"
     },
     "layer": {
-      "column1": "Up to 80% RevShare Paid On Demand",
+      "column1": "Up to 80% Rebate Paid On Demand",
       "column2": "Become an FX Partner in Just a Few Clicks",
       "column3": "Dynamic Leverage Up to 1:2000",
       "column4": "Your Traders Get a Tradable Bonus",
@@ -56,12 +56,12 @@
     "payMore": {
       "subtitle": "An FX Partnership Programme That",
       "title": "Pays More Than Just Commission",
-      "intro": "Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% RevShare; we give you the tools to grow your business.",
+      "intro": "Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% Rebate; we give you the tools to grow your business.",
       "outro": "From real trader bonuses to marketing support and instant payouts, this is the Forex partnership programme serious partners are switching to.",
       "cta": "Partner with GTC",
       "features": {
         "feature1": {
-          "title": "Earn Up to 80% RevShare",
+          "title": "Earn Up to 80% Rebate",
           "description": "No caps, no limits. Just real payouts you can count on."
         },
         "feature2": {
@@ -96,7 +96,7 @@
     "cta": "Join Us",
     "list": {
       "t1": {
-        "text": "“As an FX partner, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”",
+        "text": "“As an FX partner, getting up to 80% Rebate and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”",
         "name": "Judi Izdihar Shamoon, Riyadh",
         "stars": 5
       },
@@ -138,11 +138,11 @@
     "sendOtp": "Send OTP",
     "verifyCode": "Verify Code",
     "termsLabel": "Please accept the terms and conditions",
-    "termsText": "By clicking on the Get 80% RevShare button, I confirm that I am over the age of 18, have read and agree to the ",
+    "termsText": "By clicking on the Get 80% Rebate button, I confirm that I am over the age of 18, have read and agree to the ",
     "conset": "I consent to GTC contacting me at reasonable times, and that my number is not on the Do Not Call Register (DNCR).",
     "clientAgreement": "Client Agreement",
     "privacyPolicy": "Privacy Policy",
-    "submit": "Get 80% RevShare",
+    "submit": "Get 80% Rebate",
     "submitting": "Submitting...",
     "otpSuccess": "Otp Verified Successfully!",
     "otpFail": "Otp Verification Failed try again!",
@@ -176,7 +176,7 @@
     },
     "thankYoumeta": {
       "title": "Joining the GTC Partnership Programme Confirmation",
-      "description": "Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% RevShare; we give you the tools to grow your business."
+      "description": "Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% Rebate; we give you the tools to grow your business."
     }
   },
   "footer": {
@@ -350,7 +350,7 @@
  "oman":{
     "meta": {
       "title": "Become a GTC Partner in the Oman Today",
-      "description": "Join GTC as a Partner in Oman. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+      "description": "Join GTC as a Partner in Oman. Earn up to 80% Rebate, offer top bonuses to traders, and grow with a regulated global broker."
     },
     "para1": "Omani’s Top IBs Now Earn Up to",
     "column2": "Become an IB in Just a Few Clicks",
@@ -362,7 +362,7 @@
      "title1": "What the Omani’s IBs & Traders Are Saying",
        "list": {
       "t1": {
-        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "text": "“As an IB, getting up to 80% Rebate and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
         "name": "Judi Izdihar Shamoon, Muscat",
         "stars": 5
       },
@@ -386,14 +386,14 @@
   "bahrain":{
     "meta": {
       "title": "Become a GTC Partner in the Bahrain Today",
-      "description": "Join GTC as a Partner in Bahrain. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+      "description": "Join GTC as a Partner in Bahrain. Earn up to 80% Rebate, offer top bonuses to traders, and grow with a regulated global broker."
     },
     "para1": "Bahrain’s Top IBs Now Earn Up to",
     "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Bahrain’s partners scale faster, earn more, and build lasting trust with their traders.",
      "title1": "What the Bahrain’s IBs & Traders Are Saying",
        "list": {
       "t1": {
-        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "text": "“As an IB, getting up to 80% Rebate and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
         "name": "Judi Izdihar Shamoon, Manama",
         "stars": 5
       },
@@ -417,14 +417,14 @@
   "qatar":{
     "meta": {
       "title": "Become a GTC Partner in the Qatar Today",
-      "description": "Join GTC as a Partner in Qatar. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+      "description": "Join GTC as a Partner in Qatar. Earn up to 80% Rebate, offer top bonuses to traders, and grow with a regulated global broker."
     },
     "para1": "Qatar’s Top IBs Now Earn Up to",
     "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Qatar’s partners scale faster, earn more, and build lasting trust with their traders.",
      "title1": "What the Qatar’s IBs & Traders Are Saying",
        "list": {
       "t1": {
-        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "text": "“As an IB, getting up to 80% Rebate and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
         "name": "Judi Izdihar Shamoon, Doha",
         "stars": 5
       },
@@ -448,14 +448,14 @@
  "egypt":{
     "meta": {
       "title": "Become a GTC Partner in the Egypt Today",
-      "description": "Join GTC as a Partner in Egypt. Earn up to 80% RevShare, offer top bonuses to traders, and grow with a regulated global broker."
+      "description": "Join GTC as a Partner in Egypt. Earn up to 80% Rebate, offer top bonuses to traders, and grow with a regulated global broker."
     },
     "para1": "Egypt’s Top IBs Now Earn Up to",
     "description1": "You’ve seen what GTC brings to the table. Now it’s your turn. Join the IB programme that’s helping Egypt’s partners scale faster, earn more, and build lasting trust with their traders.",
      "title1": "What the Egypt’s IBs & Traders Are Saying",
        "list": {
       "t1": {
-        "text": "“As an IB, getting up to 80% RevShare and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
+        "text": "“As an IB, getting up to 80% Rebate and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after”",
         "name": "Judi Izdihar Shamoon, Cairo",
         "stars": 5
       },

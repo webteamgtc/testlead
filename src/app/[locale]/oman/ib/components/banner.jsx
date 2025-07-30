@@ -564,7 +564,7 @@ const HeroSection = ({ setIsOpen }) => {
               {t("oman.para1")}
             </h3>
             <h1 className="text-3xl rtl:md:text-[50px] ltr:md:text-[73px] font-bold text-secondary ltr:leading-tight rtl:leading-normal rtl:max-w-xl rtl:pb-3">
-              <span className="ltr:text-6xl rtl:text-5xl rtl:md:text-[70px] ltr:md:text-[88px]"> {t("partner.banner.no")} </span>
+              <span className="ltr:text-6xl rtl:text-5xl rtl:md:text-[90px] ltr:md:text-[88px]"> {t("partner.banner.no")} </span>
               <br className="block md:hidden" />
               {t("partner.banner.title")}
             </h1>

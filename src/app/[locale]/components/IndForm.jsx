@@ -382,7 +382,7 @@ const IndForm = () => {
                             className="h-5 w-5"
                         />
                        <p className="inline text-xs md:text-[13px] leading-normal">
-  By clicking on the <strong>Get 80% RevShare</strong> button, I confirm that I am over the age of 18, have read and agree to the{' '}
+  By clicking on the <strong>Get 80% Rebate</strong> button, I confirm that I am over the age of 18, have read and agree to the{' '}
   <a
     className="text-secondary underline"
     href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf"
@@ -409,7 +409,7 @@ const IndForm = () => {
                 {/* Submit Button */}
                 <div className="text-center">
                     <button disabled={isDisable} type="submit" className="bg-secondary cursor-pointer mb-10 text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]">
-                        {loading ? "Submitting.." : "Get 80% RevShare"}
+                        {loading ? "Submitting.." : "Get 80% Rebate"}
                     </button>
                 </div>
             </form>

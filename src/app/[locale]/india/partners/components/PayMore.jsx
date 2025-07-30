@@ -14,7 +14,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
         </svg>
 
       ),
-      title: "Earn Up to 80% RevShare",
+      title: "Earn Up to 80% Rebate",
       description: "No caps, no limits. Just real payouts you can count on. "
     },
     {
@@ -85,7 +85,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
           Pays More Than Just Commission
         </h2>
         <p className="text-sm md:text-base xl:text-[22px] text-white max-w-4xl mx-auto leading-relaxed">
-          Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% RevShare; we give you the tools to grow your business.
+          Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% Rebate; we give you the tools to grow your business.
         </p>
 
 
