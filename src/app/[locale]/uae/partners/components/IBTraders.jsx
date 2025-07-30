@@ -2,7 +2,7 @@ import React from "react";
 
 const testimonials = [
     {
-        text: `“As an FX partner, getting up to 80% Rebate and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
+        text: `“As an FX partner, getting up to 80% in Rebates and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
         name: "Judi Izdihar Shamoon, Dubai, UAE",
         stars: 5,
     },
