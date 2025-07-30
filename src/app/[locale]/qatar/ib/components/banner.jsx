@@ -529,7 +529,7 @@ const t2 = useTranslations();
     }
   ]
   return (
-    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 rtl:py-16 ltr:md:py-28 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 rtl:py-12 ltr:md:py-28 relative overflow-hidden">
 
       {/* Desktop Background Image Only */}
       <div className="hidden ltr:md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
