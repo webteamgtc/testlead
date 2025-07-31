@@ -42,43 +42,45 @@ const generateEmailContent = (data) => {
               <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
             </tr>
 
-            <!-- Greeting & OTP -->
-            <tr>
-              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
-                مرحباً ${data?.nickname || "عميلنا"},
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
-                شكراً لتسجيل اهتمامك معنا.
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
-                لقد اتخذت للتو الخطوة الأولى نحو برنامج الشراكة الخاص بـ GTC المصمم لمساعدتك على تنمية أعمالك في الفوركس بسرعة وربحية أكبر.
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
-                سيتواصل معك أحد مدراء الشراكات المميزين لدينا قريباً.
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size:14px; color:#000000; padding-bottom:10px;">
-                وسيساعدك في تفعيل حسابك وشرح تفاصيل البرنامج لك.
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size:14px; color:#000000; padding-bottom:20px;">
-                هل تحتاج إلى مساعدة؟ اتصل بنا على <a href="tel:+971800667788" style="color:#000000; text-decoration: underline;">+971 800 667788</a> أو أرسل بريداً إلكترونياً إلى <a href="mailto:partners@gtcfx.com" style="color:#000000; text-decoration: underline;">partners@gtcfx.com</a>.
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size:14px; color:#000000; padding-bottom:30px;">
-                نراك قريباً،<br/>
-                فريق الشراكات في GTC
-              </td>
-            </tr>
+         <!-- Greeting & OTP -->
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    مرحباً ${data?.nickname || "الاسم الأول"},
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    نشكرك على تسجيل اهتمامك بالانضمام إلى برنامج الشراكة مع GTC.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    لقد بدأت للتو أولى خطواتك نحو برنامج الشراكة الخاص بـ GTC المصمم لمساعدتك على تنمية أعمالك في عالم الفوركس بسرعة وربحية أكبر.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    سيقوم أحد مدراء الشراكات المتخصصين لدينا بالتواصل معك قريباً لمساعدتك في تفعيل حسابك والإجابة عن أي استفسارات، بالإضافة إلى تزويدك بكافة التفاصيل التي تحتاجها لتحقيق أقصى استفادة من برنامجنا.
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    هل لديك أي استفسار؟
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:10px;">
+    تواصل معنا مباشرة عبر الرقم: <span dir="ltr" style="unicode-bidi: embed;">+971 800 667788</span><br/>
+    أو عبر البريد الإلكتروني: <a href="mailto:partners@gtcfx.com" style="color:#000000; text-decoration: underline;">partners@gtcfx.com</a>
+  </td>
+</tr>
+<tr>
+  <td style="font-size:14px; color:#000000; padding-bottom:30px;">
+    نحن هنا لدعمك،<br/>
+    GTC فريق الشراكات،
+  </td>
+</tr>
+
 
             <tr>
               <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
@@ -92,10 +94,10 @@ const generateEmailContent = (data) => {
                     <td align="right">
                       <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/email-test.png" alt="شعار GTC" style="width: 140px;" />
                     </td>
-                    <td align="left" style="font-size: 13px; color: #192055; line-height: 25px;">
-                      📞 الهاتف: +971 800 667788<br/>
-                      ✉️ البريد الإلكتروني: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
-                    </td>
+                   <td align="right" dir="rtl" style="font-size: 13px; color: #192055; line-height: 25px; text-align: right;">
+                    📞 الهاتف: <span dir="ltr">+971 800 667788</span><br/>
+                    ✉️ البريد الإلكتروني: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
+                  </td>
                   </tr>
                 </table>
               </td>
@@ -412,7 +414,7 @@ You’ve just filled in the GTC Partnership Programme form. Here’s what to do 
 export async function POST(req) {
   const reqBody = await req.json();
   const mailOption = {
-    from: '"GTCFX" <portal@mx2.gtcmail.com>',
+    from: '"GTCFX" <portal@mx3.gtcmail.com>',
     to: reqBody?.email,
   };
   try {

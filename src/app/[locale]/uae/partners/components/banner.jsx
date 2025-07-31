@@ -68,7 +68,7 @@ const HeroSection = ({setIsOpen}) => {
     </filter>
   </defs>
 </svg>),
-      title: "Up to 80% RevShare Paid On Demand"
+      title: "Up to 80% in Rebates Paid On Demand"
     },
     {
       icon: (<svg
@@ -134,7 +134,7 @@ const HeroSection = ({setIsOpen}) => {
   </defs>
 </svg>
 ),
-      title: "Become an IB in Just a Few Clicks"
+      title: "Become a Partner in Just a Few Clicks"
     },
     {
       icon: (<svg
@@ -547,22 +547,22 @@ const HeroSection = ({setIsOpen}) => {
           {/* Left Column */}
           <div className="text-center md:text-left">
            <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
-              Lebanon’s Top Introducing Brokers Now Earn Up to
+              UAE's Top Forex Partners Now Earn Up to
             </h3>
                   <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
         <span className="text-6xl md:text-[88px]">80% </span> 
         <br className="block md:hidden" />
-         RevShare
+         in Rebates
       </h1>
                   <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
               with GTC
             </h3>
             <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
-              Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% RevShare with fast payouts, multilingual support, and no setup costs.
+              Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% in Rebates with fast payouts, multilingual support, and no setup costs.
             </p>
             <div className="flex flex-row justify-center md:justify-start items-center gap-4 pb-8 md:pb-20">
               <CustomButton
-                        text="Get 80% RevShare"
+                        text="Get 80% in Rebates"
                         bgColor="bg-white hover:bg-[#b2b2c2]"
                         textColor="text-[#1F2937]"
                         strokeColor="#000032"

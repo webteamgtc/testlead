@@ -8,83 +8,84 @@ import Broker from '../uae/partners/components/broker'
 import GrowIBSection from '../uae/partners/components/growIBsection'
 import MainHeader from "../components/MainHeader";
 import MainFooter from "../components/MainFooter";
-import PayMoreCom from "../india/partners/components/PayMoreCom";
-import NewHeader from "../components/NewHeader";
+import IbProgrammeSection from "../uae/partners/components/payMore";
+import PayCommission from "../components/common/PayCommission";
+import TrustBroker from "../components/common/TrustBroker";
+import GrowBusiness from "../components/common/GrowBusiness";
+import ReferTables from "../components/common/ReferTables";
+import FeedBack from "../components/common/FeedBack";
+
 
 const UaePartnerPage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const comparisonData = [
+
+  const testimonials = [
     {
-      feature: 'Average EURUSD Spread',
-      broker: '3 pips',
-      gtc: '0 pips'
+      text: `“As an FX partner, getting up to 80% in Rebates and paid out instantly was a game changer. I moved my entire client book to GTC where they’re looked after.”`,
+      name: 'Judi Izdihar Shamoon, Dubai, UAE',
+      stars: 5,
     },
     {
-      feature: 'Leverage',
-      broker: '1:500',
-      gtc: '1:2000'
+      text: `“I run monthly trading classes in Dubai, UAE. GTC gave me banners, an LP, and real bonuses for my traders. The support is unreal!”`,
+      name: 'Suoud Butrus Gaber, UAE',
+      stars: 4,
     },
     {
-      feature: 'Withdrawal Time',
-      broker: '24 hours',
-      gtc: 'Instant – 10 hours max'
+      text: `“My trading educator recommended GTC. I was sceptical at first, but now I see why he recommended them. The spreads, bonus, everything just works really well.”`,
+      name: 'Kutaiba Abdul-Matin Awad, UAE',
+      stars: 5,
     },
     {
-      feature: 'Scalping Rule',
-      broker: '3 minutes',
-      gtc: '1 minute'
+      text: `“GTC doesn’t just talk, they deliver! I get paid on time, every time, and my traders are sticking around longer than ever. They also trade gold and GTC is great with them.”`,
+      name: "Yasser Nu'aym Bazzi, UAE",
+      stars: 4,
     },
-    {
-      feature: 'Slippage During News',
-      broker: 'Increased',
-      gtc: 'Unchanged'
-    },
-    {
-      feature: 'Support Quality',
-      broker: 'Scripted replies',
-      gtc: 'Real human care'
-    },
-    {
-      feature: 'Loyalty Rewards',
-      broker: (
-          <span className="text-red-500 flex items-center gap-2">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                      fillRule="evenodd"
-                      d="M10 8.586l4.95-4.95 1.414 1.414L11.414 10l4.95 4.95-1.414 1.414L10 11.414l-4.95 4.95-1.414-1.414L8.586 10l-4.95-4.95L5.05 3.636 10 8.586z"
-                      clipRule="evenodd"
-                  />
-              </svg>
-          </span>
-      ),
-      gtc: (
-          <span className="text-green-600 flex items-center gap-2">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
-                      clipRule="evenodd"
-                  />
-              </svg>
-              GTC VIP + Margin Bonus
-          </span>
-      )
-  }
   ];
+
   return (
     <>
-      <NewHeader />
-      <HeroSection setIsOpen={setIsOpen} />
-      <ComparisonTable setIsOpen={setIsOpen} data={comparisonData} title="Here’s what your traders will get when you refer them to GTC" />
-      <PayMoreCom setIsOpen={setIsOpen} />
-      <Broker setIsOpen={setIsOpen} />
-      <IBTestimonials setIsOpen={setIsOpen} />
-      <GrowIBSection setIsOpen={setIsOpen} />
-      <MainFooter />
-      <SliderModal isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-      />
-    </>
+      <MainHeader />
+            <HeroSection setIsOpen={setIsOpen} />
+            <ReferTables setIsOpen={setIsOpen} />
+              <PayCommission 
+              topTitle="A Forex Partnership Programme That"
+              bottomText="From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to."
+              buttonText="Partner with GTC"
+              setIsOpen={setIsOpen}
+              />
+              <TrustBroker 
+               title="A Broker You Can Actually Trust"
+                  subtitle="We’re not a fly-by-night operation. GTC is licensed and regulated in multiple respected jurisdictions. Here’s how we give you confidence to trade."
+                  features={[
+                    "Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA.",
+                    'Headquartered in UAE with nearly 1 million global serviced traders.',
+                    'World-class support with a real human touch.',
+                    'Customer-first culture where service is strategy.',
+                  ]}
+                  buttonLabel="Start Earning"
+                  onClick={() => setIsOpen(true)}
+              />
+          
+            <FeedBack 
+             title="What UAE's Partners & Traders Are Saying"
+              description="Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back."
+              testimonials={testimonials}
+              buttonLabel="Join Us"
+              onClick={() => setIsOpen(true)}
+            />
+            <GrowBusiness
+              topTitle="Start Earning More."
+              mainTitle="Grow Your FX Partnership Business with GTC"
+              description1="You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping UAE’s Forex Partners scale faster, earn more, and build lasting trust with their traders."
+              description2="Join us today, and your traders will thank you tomorrow."
+              buttonLabel="Make the Switch"
+              onClick={() => setIsOpen(true)}
+            />
+            <MainFooter />
+            <SliderModal isOpen={isOpen}
+                onClose={() => setIsOpen(false)}
+            />
+    </> 
   )
 }
 

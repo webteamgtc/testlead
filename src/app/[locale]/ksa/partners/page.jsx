@@ -12,6 +12,7 @@ import ComparisonTable from "./components/table";
 import { useTranslations } from "next-intl";
 import Meta from "@/app/components/common/MetaData";
 import MainFooter from "../../components/MainFooter";
+import NewHeader from "../../components/NewHeader";
 
 export default function Home() {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Home() {
         <>
             <Meta title={t('partner.meta.title')} description={t('partner.meta.description')}/>
             <section className="">
-                <MainHeader />
+                <NewHeader />
                 <BannerMain setIsOpen={setIsOpen} />
                 <ComparisonTable setIsOpen={setIsOpen} />
                 <Paymore setIsOpen={setIsOpen} />

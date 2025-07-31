@@ -529,7 +529,7 @@ const HeroSection = ({ setIsOpen }) => {
     }
   ]
   return (
-    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 rtl:py-16 ltr:md:py-28 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 rtl:py-12 ltr:md:py-28 relative overflow-hidden">
 
       {/* Desktop Background Image Only */}
       <div className="hidden ltr:md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
@@ -564,7 +564,7 @@ const HeroSection = ({ setIsOpen }) => {
               {t("partner.banner.para1")}
             </h3>
             <h1 className="text-3xl rtl:md:text-[50px] ltr:md:text-[73px] font-bold text-secondary ltr:leading-tight rtl:leading-normal rtl:max-w-xl rtl:pb-3">
-              <span className="ltr:text-6xl rtl:text-5xl rtl:md:text-[70px] ltr:md:text-[88px]"> {t("partner.banner.no")} </span>
+              <span className="ltr:text-6xl rtl:text-5xl rtl:md:text-[90px] ltr:md:text-[88px]"> {t("partner.banner.no")} </span>
               <br className="block md:hidden" />
               {t("partner.banner.title")}
             </h1>

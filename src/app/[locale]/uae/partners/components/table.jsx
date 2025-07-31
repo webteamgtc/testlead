@@ -27,9 +27,9 @@ const ComparisonTable = ({setIsOpen,data,title}) => {
             <thead>
               <tr className="bg-[#f1f4fb] text-left font-semibold text-[#1e2c54]">
                 <th className="py-4 px-5">Feature</th>
-                <th className="py-4 px-5 bg-gray-50">Your Broker</th>
-                <th className="py-4 px-5 bg-gray-50">
-                  <img src="/logo-blue.svg" alt="GTC Logo" className="h-8" />
+                <th className="py-4 px-5 bg-gray-50 text-center">Your Broker</th>
+                <th className="py-4 px-5 bg-gray-50 text-center">
+                  <img src="/logo-blue.svg" alt="GTC Logo" className="h-8 inline-block" />
                 </th>
               </tr>
             </thead>
@@ -37,8 +37,8 @@ const ComparisonTable = ({setIsOpen,data,title}) => {
             {data?.map((item, idx) => (
                 <tr key={idx} className="border-t border-[#e0e4f6]">
                   <td className="py-4 px-5 font-medium text-left bg-gray-100">{item.feature}</td>
-                  <td className="py-4 px-5 text-left">{item.broker}</td>
-                  <td className="py-4 px-5 text-left">{item.gtc}</td>
+                  <td className="py-4 px-5 text-center">{item.broker}</td>
+                  <td className="py-4 px-5 text-center">{item.gtc}</td>
                 </tr>
               ))}
             </tbody>

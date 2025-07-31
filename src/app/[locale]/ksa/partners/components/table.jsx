@@ -25,14 +25,16 @@ const ComparisonTable = ({setIsOpen}) => {
         </h2>
 
         <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e0e4f6]">
-          <table className="w-full text-sm md:text-base text-[#1e2c54]">
-           <tr className="bg-[#f1f4fb] font-semibold text-[#1e2c54]">
-              <th className="py-4 px-5 ltr:text-left rtl:text-right">{t('colHeader1')}</th>
-              <th className="py-4 px-5 bg-gray-50 ltr:text-left rtl:text-right">{t('colHeader2')}</th>
-              <th className="py-4 px-5 bg-gray-50 ltr:text-left rtl:text-right">
-                <img src="/logo-blue.svg" alt="GTC Logo" className="h-8 inline-block" />
-              </th>
-            </tr>
+            <table className="w-full text-sm md:text-base text-[#1e2c54]">
+            <thead>
+              <tr className="bg-[#f1f4fb] font-semibold text-[#1e2c54]">
+                  <th className="py-4 px-5 ltr:text-left rtl:text-right">{t('colHeader1')}</th>
+                  <th className="py-4 px-5 bg-gray-50 text-center">{t('colHeader2')}</th>
+                  <th className="py-4 px-5 bg-gray-50 text-center">
+                    <img src="/logo-blue.svg" alt="GTC Logo" className="h-8 inline-block" />
+                  </th>
+                </tr>
+            </thead>
             <tbody>
               {[
                 [t("col1.point1"), t("col2.point1"), t("col3.point1")],
@@ -43,7 +45,7 @@ const ComparisonTable = ({setIsOpen}) => {
                 [t("col1.point6"), t("col2.point6"), t("col3.point6")],
                 [
                   t("col1.point7"),
-                  <span className="text-red-500 flex items-center gap-2">
+                  <span className="text-red-500 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -53,7 +55,7 @@ const ComparisonTable = ({setIsOpen}) => {
                     </svg>
                  
                   </span>,
-                  <span className="text-green-600 flex items-center gap-2">
+                  <span className="text-green-600 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -67,8 +69,8 @@ const ComparisonTable = ({setIsOpen}) => {
               ].map(([feature, broker, gtc], idx) => (
                 <tr key={idx} className="border-t border-[#e0e4f6]">
                  <td className="py-4 ltr:text-left rtl:text-right font-medium bg-gray-100 px-5">{feature}</td>
-                <td className="py-4 ltr:text-left rtl:text-right px-5">{broker}</td>
-                <td className="py-4 ltr:text-left rtl:text-right px-5">{gtc}</td>
+                <td className="py-4 text-center px-5">{broker}</td>
+                <td className="py-4 text-center px-5">{gtc}</td>
                               </tr>
               ))}
             </tbody>

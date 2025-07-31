@@ -14,7 +14,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
         </svg>
 
       ),
-      title: "Earn Up to 80% RevShare",
+      title: "Earn Up to 80% in Rebates",
       description: "No caps, no limits. Just real payouts you can count on. "
     },
     {
@@ -80,12 +80,12 @@ const IbProgrammeSection = ({ setIsOpen }) => {
       <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4">
         {/* Section Title */}
 
-        <h4 className="text-lg md:text-2xl font-[200]">An IBship Programme That</h4>
+        <h4 className="text-lg md:text-2xl font-[200]">A Forex Partnership Programme That</h4>
         <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA]">
           Pays More Than Just Commission
         </h2>
         <p className="text-sm md:text-base xl:text-[22px] text-white max-w-4xl mx-auto leading-relaxed">
-          Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% RevShare; we give you the tools to grow your business.
+          Welcome to a partnership built for performance. At GTC, we don’t just give you up to 80% in Rebates; we give you the tools to grow your business.
         </p>
 
 
@@ -130,8 +130,7 @@ const IbProgrammeSection = ({ setIsOpen }) => {
 
         {/* Footer Text and CTA */}
         <p className="text-sm md:text-base xl:text-2xl font-semibold text-white max-w-4xl mx-auto leading-relaxed mt-2">
-          From real trader bonuses to marketing support and instant payouts, this is the
-partnership programme serious partners are switching to.
+          From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to. 
         </p>
         <div className='flex flex-row items-center justify-center mt-2'>
           <button className="bg-gradient-to-r  from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"

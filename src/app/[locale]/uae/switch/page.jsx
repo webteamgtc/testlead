@@ -44,7 +44,7 @@ export default function LandingPage() {
         {
             feature: 'Loyalty Rewards',
             broker: (
-                <span className="text-red-500 flex items-center gap-2">
+                <span className="text-red-500 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path
                             fillRule="evenodd"
@@ -55,7 +55,7 @@ export default function LandingPage() {
                 </span>
             ),
             gtc: (
-                <span className="text-green-600 flex items-center gap-2">
+                <span className="text-green-600 flex items-center justify-center gap-2">
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path
                             fillRule="evenodd"

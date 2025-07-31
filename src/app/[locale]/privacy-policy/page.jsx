@@ -2,12 +2,14 @@ import MainFooter from '../components/MainFooter'
 import React from 'react'
 import MainHeader from '../components/MainHeader'
 import { useTranslations } from 'next-intl';
+import Meta from '@/app/components/common/MetaData';
 
 const page = () => {
     const t = useTranslations('privacyPolicy');
 
   return (
     <>
+    <Meta title={t('meta.title')} description={t('meta.description')}/>
     <MainHeader />
 <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Header */}

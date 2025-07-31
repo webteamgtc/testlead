@@ -45,7 +45,7 @@ const IBTestimonials = ({ setIsOpen }) => {
     },
     {
       text: t("list.t3.text"),
-      name: t("list.t4.name"),
+      name: t("list.t3.name"),
       stars: 5,
     },
     {
@@ -61,7 +61,7 @@ const IBTestimonials = ({ setIsOpen }) => {
         <div className="grid md:grid-cols-2 items-start gap-8 md:gap-16">
           {/* Left Section */}
           <div className="flex flex-col text-center rtl:text-right ltr:md:text-left justify-center items-center rtl:items-start ltr:md:items-baseline space-y-8 md:space-y-6">
-            <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize ltr:w-72 md:w-full mx-auto md:mx-0 max-w-xl">
+            <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#4D4D70] leading-snug capitalize ltr:w-72 ltr:md:w-full md:w-full mx-auto md:mx-0 max-w-xl">
               {t('title')}
             </h2>
             <p className="text-sm md:text-base xl:text-[22px] text-gray-600 ltr:max-w-xl rtl:max-w-2xl">
