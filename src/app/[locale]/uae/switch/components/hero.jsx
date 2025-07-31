@@ -179,7 +179,7 @@ const HeroSection = ({ setIsOpen }) => {
   ]
   return (
     <div className=" ">
-      <section className="bg-gradient-to-r from-[#F0E7DD] to-[#D9C3AA] text-[#E5E5EA] py-8 md:pt-28 pb-[200px] relative overflow-hidden">
+      <section className="bg-gradient-to-r md:from-[#F0E7DD] md:to-[#D9C3AA] from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 md:pt-28 md:pb-[200px] relative overflow-hidden">
 
         {/* Desktop Background Image Only */}
         <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] bg-white origin-bottom-right hero-bg">
@@ -191,9 +191,6 @@ const HeroSection = ({ setIsOpen }) => {
             priority
           />
         </div>
-
-
-
 
         <div className="container">
           <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">

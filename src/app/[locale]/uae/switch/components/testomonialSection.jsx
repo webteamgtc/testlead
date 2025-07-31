@@ -63,7 +63,7 @@ const IBTestimonials = ({ setIsOpen }) => {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-4 gap-3 md:gap-6">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-3 md:gap-6">
             {testimonials.map((item, idx) => {
               const odd = idx % 2 == 0 ? true : false
               return (
