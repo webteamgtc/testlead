@@ -414,7 +414,7 @@ You’ve just filled in the GTC Partnership Programme form. Here’s what to do 
 export async function POST(req) {
   const reqBody = await req.json();
   const mailOption = {
-    from: '"GTCFX" <portal@mx3.gtcmail.com>',
+    from: '"GTCFX" <portal@mx4.gtcmail.com>',
     to: reqBody?.email,
   };
   try {
