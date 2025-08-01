@@ -54,8 +54,8 @@ const IBTestimonials = ({ setIsOpen }) => {
       <div className="container mx-auto">
         <div className=" grid md:grid-cols-1 items-start gap-8 md:gap-16 ">
           {/* Left Section */}
-          <div className="flex flex-col text-center md:text-left justify-center items-center md:items-baseline space-y-2 md:space-y-2">
-            <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#000032] leading-snug capitalize  mx-auto md:mx-0">
+          <div className="flex flex-col text-left justify-center md:items-baseline space-y-5 md:space-y-2">
+            <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#000032] leading-snug capitalize w-64 md:w-full">
               What Our Arabic Traders Are Saying
             </h2>
             <p className="text-sm md:text-base xl:text-[18px] text-[#4D4D70] max-w-2xl">
@@ -63,7 +63,7 @@ const IBTestimonials = ({ setIsOpen }) => {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-3 md:gap-6">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 md:gap-6">
             {testimonials.map((item, idx) => {
               const odd = idx % 2 == 0 ? true : false
               return (

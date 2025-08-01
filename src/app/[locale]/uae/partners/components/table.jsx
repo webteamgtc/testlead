@@ -18,7 +18,7 @@ const ComparisonTable = ({setIsOpen,data,title}) => {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-8 justify-center text-center px-4 md:px-0">
-        <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#000032] capitalize max-w-3xl mx-auto leading-none md:leading-tight">
+        <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#000032] capitalize max-w-4xl mx-auto leading-none md:leading-tight">
           {title||""}
         </h2>
 

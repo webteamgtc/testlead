@@ -1,13 +1,14 @@
 
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import CustomButton from "@/app/components/common/CustomButton";
+
 const HeroSection = ({ setIsOpen }) => {
   const data = [
     {
       icon: (
-        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="60" height="60" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_8006_38535)">
             <circle cx="20" cy="19" r="15.75" stroke="white" stroke-width="0.5" shape-rendering="crispEdges" />
           </g>
@@ -30,7 +31,7 @@ const HeroSection = ({ setIsOpen }) => {
     },
     {
       icon: (
-        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="60" height="60" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_8006_38541)">
             <circle cx="20.2" cy="19" r="15.75" stroke="white" stroke-width="0.5" shape-rendering="crispEdges" />
           </g>
@@ -54,7 +55,7 @@ const HeroSection = ({ setIsOpen }) => {
     },
     {
       icon: (
-        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="60" height="60" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_8006_38547)">
             <circle cx="20.3999" cy="19" r="15.75" stroke="white" stroke-width="0.5" shape-rendering="crispEdges" />
           </g>
@@ -83,7 +84,7 @@ const HeroSection = ({ setIsOpen }) => {
     },
     {
       icon: (
-        <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="60" height="60" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_8006_38552)">
             <circle cx="20.6" cy="19" r="15.75" stroke="white" stroke-width="0.5" shape-rendering="crispEdges" />
           </g>
@@ -112,7 +113,7 @@ const HeroSection = ({ setIsOpen }) => {
     },
     {
       icon: (
-        <svg width="42" height="41" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="60" height="60" viewBox="0 0 42 41" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_8008_33695)">
             <circle cx="20.8" cy="19" r="15.75" stroke="white" stroke-width="0.5" shape-rendering="crispEdges" />
           </g>
@@ -153,7 +154,7 @@ const HeroSection = ({ setIsOpen }) => {
     },
     {
       icon: (
-        <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="60" height="60" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g filter="url(#filter0_d_8006_38570)">
             <circle cx="20" cy="19" r="15.75" stroke="white" stroke-width="0.5" shape-rendering="crispEdges" />
           </g>
@@ -177,43 +178,80 @@ const HeroSection = ({ setIsOpen }) => {
       title: "Multi-Regulated Brokerage SCA & FSC"
     }
   ]
+
+    const headlines = [
+    {
+      heading: "You Deserve Better Than 3 Pip Spreads.",
+      description: "Instant withdrawals, tighter spreads, real support. Welcome to GTC.",
+    },
+    {
+      heading: "Your Broker’s Holding You Back.",
+      description: "Unlock faster trades, lower spreads, and real rewards when you switch to GTC.",
+    },
+    {
+      heading: "Trade Without the Tricks.",
+      description: "No delays. No slippage games. No inflated spreads. Just straight-up trading.",
+    },
+    {
+      heading: "Every Trade Should Count. Not Just Theirs.",
+      description: "At GTC, you trade with power, not punishment. Make the switch.",
+    },
+  ];
+
+   const [index, setIndex] = useState(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem('gtc_user_headline');
+    if (stored !== null) {
+      setIndex(Number(stored));
+    } else {
+      const randomIndex = Math.floor(Math.random() * headlines.length);
+      localStorage.setItem('gtc_user_headline', randomIndex.toString());
+      setIndex(randomIndex);
+    }
+  }, []);
+
+  if (index === null) return null;
+
+ 
+
   return (
     <div className=" ">
-      <section className="bg-gradient-to-r md:from-[#F0E7DD] md:to-[#D9C3AA] from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 md:pt-28 md:pb-[200px] relative overflow-hidden">
+      <section className="bg-[#010005] text-[#E5E5EA] py-16 md:py-28 relative overflow-hidden">
 
         {/* Desktop Background Image Only */}
-        <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] bg-white origin-bottom-right hero-bg">
-          <Image
-            src="/bg-header.png"
-            alt="Hero BG"
-            fill
-            className="object-fill object-right 3xl:object-contain"
-            priority
-          />
-        </div>
+  <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
+    <Image
+      src="/switch/banner-switch.webp"
+      alt="Hero BG"
+      fill
+      className="object-cover object-right 3xl:object-contain"
+      priority
+    />
+  </div>
 
         <div className="container">
           <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
             {/* Left Column */}
-            <div className="text-center md:text-left">
-              <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
-                Your Brokerage Profits <br />
+            <div className="text-center md:text-left flex flex-col gap-4 items-center md:items-start">
+              <h3 className="text-xl md:text-3xl xl:text-[32px] xl:leading-10 font-light w-60 md:w-sm">
+                Your Brokerage Profits 
                 from Your Trading Pain.
               </h3>
-              <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
-                <span className="text-6xl md:text-[88px]">GTC Doesn’t.</span>
+              <h1 className="text-[30px] md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text">
+                {headlines[index].heading}
               </h1>
 
-              <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
-                Make the move to a brokerage that actually puts
-                you first. Faster withdrawals, tighter spreads, fairer conditions. You trade & we’ll take care of the rest.
+              <p className="text-sm md:text-base xl:text-[22px]
+               leading-relaxed max-w-xl">
+               Make the move to a brokerage that actually puts you first. Faster withdrawals, tighter spreads, fairer conditions. You trade & we’ll take care of the rest.
               </p>
             </div>
 
           </div>
 
           {/* Bottom Feature Bar */}
-          <div className="relative z-50 mt-12 bg-gradient-to-r from-[#f0e7dd5c] to-[#d9c3aa82] py-5 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90 gap-6 md:gap-0"
+          <div className="relative z-50 my-12 bg-gradient-to-r from-[#f0e7dd5c] to-[#d9c3aa82] py-5 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90 gap-6 md:gap-0"
 
             style={{
               boxShadow: "1px 6px 16px 0px #00000080",
@@ -223,13 +261,13 @@ const HeroSection = ({ setIsOpen }) => {
             {data?.map((item, idx) => (
               <div key={idx} className="px-2 flex flex-col text-white gap-2 items-center justify-center">
                 <p>{item?.icon}</p>
-                <span className="block text-xs xl:text-base w-40 sm:w-40 xl:w-48 mx-auto line-clamp-2">{item?.title}</span>
+                <span className="block text-xs xl:text-sm w-40 sm:w-40 xl:w-[140px] mx-auto line-clamp-2">{item?.title}</span>
               </div>
             ))}
           </div>
 
-          <div className="relative pt-12  ">
-            <button className="bg-gradient-to-r  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
+          <div className="relative pt-1 flex flex-col md:items-start items-center justify-center">
+            <button className="bg-gradient-to-r  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-semibold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
               onClick={() => setIsOpen(true)}>
               Switch Now
               <svg width="9" height="14" color="#fff" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">

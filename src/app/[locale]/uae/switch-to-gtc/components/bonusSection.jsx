@@ -60,28 +60,26 @@ const BonusSection = ({ setIsOpen }) => {
           />
         </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <h2 className="text-[21px] md:text-3xl lg:text-[40px] font-medium text-[#D9C3AA] leading-tight">
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h2 className="text-[21px] md:text-3xl lg:text-[48px] font-semibold text-[#D9C3AA] leading-tight">
             Switch & Get a Bonus That Boosts <br className="hidden md:block" />
             Your Margin, Not Your Hopes
           </h2>
 
-          <p className="text-sm md:text-base text-[#FFFFFF] mt-6 leading-relaxed">
-            Forget losable or tricky bonuses. When you switch to GTC and deposit
-            $500 or more, we’ll match your deposit with a Margin Bonus. You get
-            extra trading margin with real cashback rewards.
+          <p className="text-base md:text-lg xl:text-[22px] xl:leading-8 text-[#FFFFFF] mt-6 leading-relaxed">
+            Forget losable or tricky bonuses. When you switch to GTC and deposit $500 or more, we’ll match your deposit with a Margin Bonus. You get extra trading margin with real cashback rewards.
           </p>
 
-          <p className="text-sm md:text-base text-[#FFFFFF] mt-10">
+          <p className="text-base md:text-lg xl:text-[22px] xl:leading-8 text-[#FFFFFF] mt-6 mb-10 leading-relaxed">
             Trade FX, gold, metals or oil. Hit the cashback target.
           </p>
 
-          <p className="text-lg md:text-xl font-semibold text-[#C39F77] mt-3">
+          <p className="text-lg md:text-xl xl:text-[32px] font-semibold text-[#C39F77] mt-3">
             Withdraw your reward.
           </p>
 
           {/* Benefit items */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-8 text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 my-10 text-center">
             {benefits.map((item, idx) => (
               <div key={idx} className="flex flex-col items-center gap-2">
                 <div className="text-[#E7C494]">{item.icon}</div>
@@ -91,9 +89,9 @@ const BonusSection = ({ setIsOpen }) => {
           </div>
 
           {/* Button */}
-          <div className="mt-10">
+          <div className="button">
             <div className='flex flex-row items-center justify-center mt-2'>
-              <button className="bg-gradient-to-r  from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
+              <button className="bg-gradient-to-r  from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-semibold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
                 onClick={() => setIsOpen(true)}>
                 Switch Now
               </button>

@@ -11,6 +11,8 @@ import NewHeader from '../../components/NewHeader';
 import MainFooter from '../../components/MainFooter';
 import SliderModal from '../partners/components/SliderModal';
 import { useState } from 'react';
+import Meta from '@/app/components/common/MetaData';
+import MainHeader from '../../components/MainHeader';
 
 export default function LandingPage() {
     const [isOpen, setIsOpen] = useState(false);
@@ -69,8 +71,12 @@ export default function LandingPage() {
         }
     ];
     return (
-        <main className="text-white">
-            <NewHeader />
+        <>
+       <Meta title='Switch to GTC for Faster Withdrawals & Lower Spreads' description='Switch to GTC and experience tighter spreads, instant withdrawals, fair scalping rules, and better bonuses. Trade smarter with a broker that gets you.
+
+'/>
+
+            <MainHeader />
             <HeroSection setIsOpen={setIsOpen} />
             <ComparisonSection data={comparisonData} title={"Comparison Snapshot Your Broker vs GTC"} setIsOpen={setIsOpen} />
             <BonusSection setIsOpen={setIsOpen} />
@@ -81,7 +87,7 @@ export default function LandingPage() {
             <SliderModal isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
             />
-        </main>
+        </>
     );
 }
 

@@ -21,7 +21,7 @@ const Broker = ({ setIsOpen }) => {
       <div className="container mx-auto relative z-10">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-12 text-left items-center">
           {/* Left Column */}
-          <div className="text-left md:text-right">
+          <div className="text-left rtl:md:text-right">
             <h3 className="text-2xl md:text-2xl xl:text-[40px] font-bold text-[#B48755] mb-3">
               A Broker You Can <br /> Actually Trust
             </h3>
