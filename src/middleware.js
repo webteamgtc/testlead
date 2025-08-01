@@ -6,6 +6,8 @@ export default createMiddleware({
   localeDetection: false, // 👈 Force defaultLocale when locale is missing
 });
 
+
+
 export const config = {
   matcher: ['/((?!api|trpc|_next|_vercel|.*\\..*).*)'],
 };

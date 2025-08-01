@@ -1,7 +1,7 @@
 'use client';
 import CustomButton from "@/app/components/common/CustomButton";
 
-const ComparisonTable = ({setIsOpen}) => {
+const ComparisonTable = ({setIsOpen,data,title}) => {
   return (
         <section className="relative text-white py-8 md:py-20 overflow-hidden">
       {/* Gradient Background */}
@@ -19,7 +19,7 @@ const ComparisonTable = ({setIsOpen}) => {
       {/* Main Content */}
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col gap-8 justify-center text-center px-4 md:px-0">
         <h2 className="text-[21px] md:text-3xl xl:text-[40px] font-bold text-[#000032] capitalize max-w-3xl mx-auto leading-none md:leading-tight">
-          Here’s what your traders will get when you refer them to GTC
+          {title||""}
         </h2>
 
         <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-[#e0e4f6]">
@@ -34,41 +34,11 @@ const ComparisonTable = ({setIsOpen}) => {
               </tr>
             </thead>
             <tbody>
-              {[
-                ['Average EURUSD Spread', '3 pips', '0 pips'],
-                ['Leverage', '1:500', '1:2000'],
-                ['Withdrawal Time', '24 hours', 'Instant – 10 hours max'],
-                ['Scalping Rule', '3 minutes', '1 minute'],
-                ['Slippage During News', 'Increased', 'Unchanged'],
-                ['Support Quality', 'Scripted replies', 'Real human care'],
-                [
-                  'Loyalty Rewards',
-                  <span className="text-red-500 flex items-center justify-center gap-2">
-                    <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                        fillRule="evenodd"
-                        d="M10 8.586l4.95-4.95 1.414 1.414L11.414 10l4.95 4.95-1.414 1.414L10 11.414l-4.95 4.95-1.414-1.414L8.586 10l-4.95-4.95L5.05 3.636 10 8.586z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                 
-                  </span>,
-                  <span className="text-green-600 flex items-center  justify-center gap-2">
-                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586l-3.293-3.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    GTC VIP + Margin Bonus
-                  </span>,
-                ],
-              ].map(([feature, broker, gtc], idx) => (
+            {data?.map((item, idx) => (
                 <tr key={idx} className="border-t border-[#e0e4f6]">
-                  <td className="py-4 px-5 font-medium text-left bg-gray-100">{feature}</td>
-                  <td className="py-4 px-5 text-center">{broker}</td>
-                  <td className="py-4 px-5 text-center">{gtc}</td>
+                  <td className="py-4 px-5 font-medium text-left bg-gray-100">{item.feature}</td>
+                  <td className="py-4 px-5 text-center">{item.broker}</td>
+                  <td className="py-4 px-5 text-center">{item.gtc}</td>
                 </tr>
               ))}
             </tbody>

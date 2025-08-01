@@ -75,6 +75,11 @@ html {
   background-size: contain;
 }
 
+.india-bg-switch {
+  background: url("/india-bg.svg") no-repeat center center;
+  background-position: bottom;
+  background-size: 100% 91%;
+}
 .banner-bg {
   background: url("/bg-banner.png") no-repeat center center;
   background-position: bottom;
