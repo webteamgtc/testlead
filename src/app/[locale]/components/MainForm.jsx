@@ -15,7 +15,7 @@ import Select from "react-select";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl"; // make sure this is imported
 
-const CommonMainForm = () => {
+const CommonMainForm = ({ zapierUrl, successPath }) => {
     const { countryData } = useLocationDetail();
     const [otpLoading, setOtpLoading] = useState(false);
     const [showOtp, setShowOtp] = useState(false);
@@ -110,8 +110,7 @@ const CommonMainForm = () => {
                 // Redirect based on locale
                 const targetLocale =
                     locale === "ar"
-                        ? "/ar/uae/partners/success"
-                        : "/uae/partners/success";
+                        ? `/ar${successPath}` : successPath;
                 router.push(targetLocale);
                 formik.resetForm();
                 setShowOtp(false);
@@ -172,7 +171,7 @@ const CommonMainForm = () => {
             try {
                 setLoading(true);
                 await axios.post(
-                    "https://hooks.zapier.com/hooks/catch/16420445/2nppxqi/",
+                    zapierUrl, 
                     JSON.stringify(values)
                 );
             } catch (error) {
@@ -405,23 +404,33 @@ const CommonMainForm = () => {
                         onBlur={() => formik.setFieldTouched("country", true)}
                         value={options.find((opt) => opt.value === formik.values.country)} // ✅ ADD THIS LINE
                         className="text-white cpountry"
-                        styles={{
-                            control: (base, state) => ({
-                                ...base,
-                                backgroundColor: "#1A1A47",
-                                borderColor:
-                                    formik.touched.country && formik.errors.country
-                                        ? "red"
-                                        : "#ccccd679",
-                                color: "white",
-                            }),
-                            singleValue: (base) => ({ ...base, color: "white" }),
-                            menu: (base) => ({
-                                ...base,
-                                backgroundColor: "#1A1A47",
-                                color: "white",
-                            }),
-                        }}
+                       styles={{
+  control: (base, state) => ({
+    ...base,
+    backgroundColor: "#1A1A47",
+    borderColor:
+      formik.touched.country && formik.errors.country
+        ? "red"
+        : "#ccccd679",
+    color: "white",
+  }),
+  singleValue: (base) => ({
+    ...base,
+    color: "white",
+  }),
+  menu: (base) => ({
+    ...base,
+    backgroundColor: "#1A1A47",
+    color: "white",
+  }),
+  option: (base, state) => ({
+    ...base,
+    backgroundColor: state.isFocused ? "#b68756" : "#1A1A47", // gold on hover
+    color: state.isFocused ? "#fff" : "white",            // dark blue text on hover
+    cursor: "pointer",
+  }),
+}}
+
                     />
 
                     {formik.touched.country && formik.errors.country && (

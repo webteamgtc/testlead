@@ -84,9 +84,13 @@ export default function LandingPage() {
             <TestimonialsSection setIsOpen={setIsOpen} />
             <CTASection setIsOpen={setIsOpen} />
             <MainFooter />
-            <SliderModal isOpen={isOpen}
+                <SliderModal
+                isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
-            />
+                zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u48ff80/"
+                successPath="/uae/switch-to-gtc/success"
+                />
+
         </>
     );
 }

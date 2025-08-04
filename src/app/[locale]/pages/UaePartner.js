@@ -82,9 +82,12 @@ const UaePartnerPage = () => {
               onClick={() => setIsOpen(true)}
             />
             <MainFooter />
-            <SliderModal isOpen={isOpen}
-                onClose={() => setIsOpen(false)}
-            />
+            <SliderModal
+           isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+            zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/2nppxqi/"
+            successPath="/uae/partners/success"
+          />
     </> 
   )
 }
