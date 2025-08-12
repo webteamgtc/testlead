@@ -9,7 +9,7 @@ import OtpInput from "react-otp-input";
 import { countryList } from "../context/useCountriesDetails";
 import { useLocationDetail } from "../context/useLocationDetail";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Select from "react-select";
 import { useTranslations } from "next-intl";
@@ -23,6 +23,8 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
     const [storedOtp, setStoredOtp] = useState("");
     const [isDisable, setIsDisable] = useState(true);
     const router = useRouter();
+    const isPartnerPage = window.location?.pathname?.includes("partner")
+
     const t = useTranslations("partner.form");
     const locale = useLocale(); // inside your component
     const options = countryList.map((item) => ({
@@ -101,7 +103,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
 
     const sendDataToDb = async (data) => {
         const emailData = axios
-            .post(`/api/email`, JSON.stringify({ ...data, locale: locale }))
+            .post(`/api/email`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
             .then((res) => {
                 toast.success(t("thankYou1"));
                 formik.resetForm();
@@ -171,7 +173,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
             try {
                 setLoading(true);
                 await axios.post(
-                    zapierUrl, 
+                    zapierUrl,
                     JSON.stringify(values)
                 );
             } catch (error) {
@@ -404,32 +406,32 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                         onBlur={() => formik.setFieldTouched("country", true)}
                         value={options.find((opt) => opt.value === formik.values.country)} // ✅ ADD THIS LINE
                         className="text-white cpountry"
-                       styles={{
-  control: (base, state) => ({
-    ...base,
-    backgroundColor: "#1A1A47",
-    borderColor:
-      formik.touched.country && formik.errors.country
-        ? "red"
-        : "#ccccd679",
-    color: "white",
-  }),
-  singleValue: (base) => ({
-    ...base,
-    color: "white",
-  }),
-  menu: (base) => ({
-    ...base,
-    backgroundColor: "#1A1A47",
-    color: "white",
-  }),
-  option: (base, state) => ({
-    ...base,
-    backgroundColor: state.isFocused ? "#b68756" : "#1A1A47", // gold on hover
-    color: state.isFocused ? "#fff" : "white",            // dark blue text on hover
-    cursor: "pointer",
-  }),
-}}
+                        styles={{
+                            control: (base, state) => ({
+                                ...base,
+                                backgroundColor: "#1A1A47",
+                                borderColor:
+                                    formik.touched.country && formik.errors.country
+                                        ? "red"
+                                        : "#ccccd679",
+                                color: "white",
+                            }),
+                            singleValue: (base) => ({
+                                ...base,
+                                color: "white",
+                            }),
+                            menu: (base) => ({
+                                ...base,
+                                backgroundColor: "#1A1A47",
+                                color: "white",
+                            }),
+                            option: (base, state) => ({
+                                ...base,
+                                backgroundColor: state.isFocused ? "#b68756" : "#1A1A47", // gold on hover
+                                color: state.isFocused ? "#fff" : "white",            // dark blue text on hover
+                                cursor: "pointer",
+                            }),
+                        }}
 
                     />
 
