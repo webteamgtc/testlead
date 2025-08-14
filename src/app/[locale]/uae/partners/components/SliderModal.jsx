@@ -1,7 +1,7 @@
 import CommonMainForm from "@/app/[locale]/components/MainForm";
 import Image from "next/image";
 
-const SliderModal = ({ isOpen, onClose, zapierUrl, successPath }) => {
+const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) => {
   return (
     <div
       className={`fixed inset-0 z-[99] transition-all duration-700 ${
@@ -44,6 +44,7 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath }) => {
             <CommonMainForm
               zapierUrl={zapierUrl}
               successPath={successPath}
+              emailConfig={emailConfig} // Pass the email configuration
             />
           </div>
         </div>

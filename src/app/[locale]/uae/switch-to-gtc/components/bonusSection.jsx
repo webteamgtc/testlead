@@ -6,6 +6,7 @@ import React from "react";
 // import { BsPatchQuestion } from "react-icons/bs";
 
 const BonusSection = ({ setIsOpen }) => {
+  const t = useTranslations();
   const benefits = [
     {
       icon: (<svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">

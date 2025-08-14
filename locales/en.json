@@ -475,5 +475,110 @@
         "stars": 4
       }
     }
+ },
+ "switchToGtc":{
+ "meta": {
+      "title": "Switch to GTC for Faster Withdrawals & Lower Spreads",
+      "description": "Switch to GTC and experience tighter spreads, instant withdrawals, fair scalping rules, and better bonuses. Trade smarter with a broker that gets you."
+    },
+    "banner": {
+      "subTitle": "Your Brokerage Profits from Your Trading Pain.",
+      "title1": "You Deserve Better Than 3 Pip Spreads.",
+      "title2": "Trade Without the Tricks.",
+      "title3": "Every Trade Should Count. Not Just Theirs.",
+      "title4": "Your Broker’s Holding You Back.",
+      "para1": "Make the move to a brokerage that actually puts you first. Faster withdrawals, tighter spreads, fairer conditions. You trade & we’ll take care of the rest.",
+      "cta": "Switch Now",
+      "list": {
+        "item1": "2 Pip Spread Instead of 3",
+        "item2": "Instant & Same Day Withdrawals",
+        "item3": "Scalping Allowed After 60 Seconds",
+        "item4": "No Slippage During News Events",
+        "item5": "Real Margin Bonus with Real Cashback",
+        "item6": "Multi-Regulated Brokerage SCA, FCA & ASIC"
+      },
+      "tableHeading":"Comparison Snapshot Your Broker vs GTC"
+    },
+    "bonusSection": {
+    "heading": "Switch & Get a Bonus That Boosts Your Margin, Not Your Hopes",
+    "description1": "Forget losable or tricky bonuses. When you switch to GTC and deposit $500 or more, we’ll match your deposit with a Margin Bonus. You get extra trading margin with real cashback rewards.",
+    "description2": "Trade FX, gold, metals or oil. Hit the cashback target.",
+    "description3": "Withdraw your reward.",
+    "benefits": {
+      "benefit1": {
+        "text": "No Tricks"
+      },
+      "benefit2": {
+        "text": "No Hidden Terms"
+      },
+      "benefit3": {
+        "text": "No Equity Confusion"
+      },
+      "benefit4": {
+        "text": "Get Your Margin Bonus"
+      }
+    },
+    "buttonText": "Switch Now"
+  },
+  "brokerSection": {
+    "subheading": "A Broker You Can Actually Trust",
+    "paragraph": "We’re not a fly-by-night operation. GTC is licensed and regulated in multiple respected jurisdictions. Here’s how we give you confidence to trade.",
+    "listItems": {
+      "item1": {
+        "text": "Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA."
+      },
+      "item2": {
+        "text": "Headquartered in Dubai with nearly 1 million global traders."
+      },
+      "item3": {
+        "text": "World-class support with a real human touch."
+      },
+      "item4": {
+        "text": "Customer-first culture where service is strategy."
+      }
+    },
+    "mainHeading": "Switch to a broker that doesn’t just say it, we prove it every day.",
+    "buttonText": "Switch Now"
+  },
+  "testimonialSection": {
+    "heading": "What Our Arabic Traders Are Saying",
+    "description": "With thousands of happy traders from the UAE, Oman, Qatar, Kuwait, Iraq, Jordan & Lebanon, isn’t it time you switched to GTC?",
+    "testimonials": [
+      {
+        "text": "“I switched to GTC because the withdrawal speed blew my old broker out of the water. Instant payout in USDT? Love it.”",
+        "name": "Mohammed A.",
+        "country": "UAE"
+      },
+      {
+        "text": "“I scalp gold all day, and GTC is the only broker I’ve found that actually lets me do that without weird time limits.”",
+        "name": "Omar S.",
+        "country": "Qatar"
+      },
+      {
+        "text": "“My previous broker slipped my orders like crazy during news. GTC’s execution is solid. I finally trust the platform.”",
+        "name": "Hussein B.",
+        "country": "Iraq"
+      },
+      {
+        "text": "Customer support at GTC actually speaks to you like a human, not just a ticket number. That alone is worth switching.",
+        "name": "Abdullah K.",
+        "country": "Lebanon"
+      }
+    ],
+    "buttonText": "Switch Now"
+  },
+  "tradeSwitchSection": {
+    "heading": "Switch Now. Trade Better Today.",
+    "description1": "It only takes a few minutes to open your GTC account and access everything we’ve talked about above, including your Margin Bonus.",
+    "description2": "Say goodbye to the frustrations of your current broker. Say hello to faster trades, bigger rewards, and real transparency.",
+    "buttonText": "Make The Switch"
+  },
+  "confirmationThankYou": {
+    "heading": "Thanks, {nickname}!",
+    "subheading": "You’re Almost There!",
+    "description1": "We’ve just sent you an email to {email}, which explains what happens next.",
+    "description2": "It’s also a good idea to check your spam or junk folder as sometimes emails like to hide there. If the email we’ve sent you has made its way into your spam or junk folder, simply move it back into your inbox.",
+    "farewell": "See you soon!"
+  }
  }
 }
