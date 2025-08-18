@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const TradeSwitchSection = ({ setIsOpen }) => {
+  const t = useTranslations('switchToGtc.tradeSwitchSection');
   return (
     <div className="relative">
       <section className=" container flex items-center py-20 mx-auto text-white overflow-hidden min-h-[400px] md:min-h-[440px]">
@@ -19,30 +21,26 @@ const TradeSwitchSection = ({ setIsOpen }) => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center md:text-left h-full">
+        <div className="relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center ltr:md:text-left rtl:md-text-right h-full">
           {/* Left Title */}
           <div>
-            <h2 className="text-[28px] md:text-[48px] font-semibold leading-tight text-white w-72 mx-auto md:w-96">
-              Switch Now. 
-              Trade Better 
-              Today.
+            <h2 className="text-[28px] md:text-[48px] font-semibold leading-tight text-white w-72 mx-auto ltr:md:w-96 rtl:w-[500px]">
+             {t("heading")}
             </h2>
           </div>
 
           {/* Right Description */}
-          <div className="text-sm md:text-base text-[#E5E5EA] leading-relaxed flex flex-col gap-4 items-center md:items-start">
+          <div className="text-sm md:text-base text-[#E5E5EA] leading-relaxed flex flex-col gap-4 items-center ltr:md:items-start">
             <p>
-              It only takes a few minutes to open your GTC account and access
-              everything we’ve talked about above, including your Margin Bonus.
+              {t("description1")}
             </p>
             <p>
-              Say goodbye to the frustrations of your current broker.
-              Say hello to faster trades, bigger rewards, and real transparency.
+             {t("description2")}
             </p>
 
             <button className="bg-gradient-to-r mt-2  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
               onClick={() => setIsOpen(true)}>
-              Make The Switch
+               {t("buttonText")}
               <svg width="9" height="14" color="#fff" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
               </svg>

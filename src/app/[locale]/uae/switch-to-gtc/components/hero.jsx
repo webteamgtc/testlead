@@ -2,9 +2,10 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import CustomButton from "@/app/components/common/CustomButton";
+import { useTranslations } from "next-intl";
 
 const HeroSection = ({ setIsOpen }) => {
+  const t = useTranslations('switchToGtc');
   const data = [
     {
       icon: (
@@ -27,7 +28,7 @@ const HeroSection = ({ setIsOpen }) => {
           </defs>
         </svg>
       ),
-      title: "2 Pip Spread Instead of 3"
+      title: t("banner.list.item1"),
     },
     {
       icon: (
@@ -51,7 +52,7 @@ const HeroSection = ({ setIsOpen }) => {
         </svg>
 
       ),
-      title: "Instant & Same Day Withdrawals"
+      title: t("banner.list.item2"),
     },
     {
       icon: (
@@ -80,7 +81,7 @@ const HeroSection = ({ setIsOpen }) => {
         </svg>
 
       ),
-      title: "Scalping Allowed After 60 Seconds"
+      title: t("banner.list.item3"),
     },
     {
       icon: (
@@ -109,7 +110,7 @@ const HeroSection = ({ setIsOpen }) => {
         </svg>
 
       ),
-      title: "No Slippage During News Events"
+      title: t("banner.list.item4"),
     },
     {
       icon: (
@@ -150,7 +151,7 @@ const HeroSection = ({ setIsOpen }) => {
         </svg>
 
       ),
-      title: "Real Margin Bonus with Real Cashback "
+      title: t("banner.list.item5"),
     },
     {
       icon: (
@@ -175,26 +176,22 @@ const HeroSection = ({ setIsOpen }) => {
         </svg>
 
       ),
-      title: "Multi-Regulated Brokerage SCA, FCA & ASIC"
+      title: t("banner.list.item6"),
     }
   ]
 
     const headlines = [
     {
-      heading: "You Deserve Better Than 3 Pip Spreads.",
-      description: "Instant withdrawals, tighter spreads, real support. Welcome to GTC.",
+      heading: t("banner.title1"),
     },
     {
-      heading: "Your Broker’s Holding You Back.",
-      description: "Unlock faster trades, lower spreads, and real rewards when you switch to GTC.",
+      heading:  t("banner.title2"),
     },
     {
-      heading: "Trade Without the Tricks.",
-      description: "No delays. No slippage games. No inflated spreads. Just straight-up trading.",
+      heading:  t("banner.title3"),
     },
     {
-      heading: "Every Trade Should Count. Not Just Theirs.",
-      description: "At GTC, you trade with power, not punishment. Make the switch.",
+      heading:  t("banner.title4"),
     },
   ];
 
@@ -233,10 +230,9 @@ const HeroSection = ({ setIsOpen }) => {
         <div className="container">
           <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
             {/* Left Column */}
-            <div className="text-center md:text-left flex flex-col gap-4 items-center md:items-start">
-              <h3 className="text-xl md:text-3xl xl:text-[32px] xl:leading-10 font-light w-60 md:w-sm">
-                Your Brokerage Profits 
-                from Your Trading Pain.
+            <div className="text-center ltr:md:text-left rtl:md:text-right flex flex-col gap-4 items-center md:items-start">
+              <h3 className="text-xl md:text-3xl xl:text-[32px] xl:leading-10 font-light w-60 ltr:md:w-sm rtl:md:w-md">
+                 {t("banner.subTitle")}
               </h3>
               <h1 className="text-[30px] md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text">
                 {headlines[index].heading}
@@ -244,7 +240,7 @@ const HeroSection = ({ setIsOpen }) => {
 
               <p className="text-sm md:text-base xl:text-[22px]
                leading-relaxed max-w-xl">
-               Make the move to a brokerage that actually puts you first. Faster withdrawals, tighter spreads, fairer conditions. You trade & we’ll take care of the rest.
+               {t("banner.para1")}
               </p>
             </div>
 
@@ -275,7 +271,7 @@ const HeroSection = ({ setIsOpen }) => {
           <div className="relative pt-1 flex flex-col md:items-start items-center justify-center">
             <button className="bg-gradient-to-r  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-semibold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
               onClick={() => setIsOpen(true)}>
-              Switch Now
+              {t("banner.cta")}
               <svg width="9" height="14" color="#fff" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
               </svg>

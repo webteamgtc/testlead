@@ -1,32 +1,7 @@
 import CustomButton from "@/app/components/common/CustomButton";
-import React from "react";
+import React, { use } from "react";
+import { useTranslations } from "next-intl";
 
-const testimonials = [
-  {
-    text: `“I switched to GTC because the withdrawal speed blew my old broker out of the water. Instant payout in USDT? Love it.”`,
-    name: "Mohammed A.",
-    stars: 5,
-    country: "UAE"
-  },
-  {
-    text: `“I scalp gold all day, and GTC is the only broker I’ve found that actually lets me do that without weird time limits.”`,
-    name: "Omar S.",
-    stars: 5,
-    country: "Qatar"
-  },
-  {
-    text: `“My previous broker slipped my orders like crazy during news. GTC’s execution is solid. I finally trust the platform.”`,
-    name: "Hussein B.",
-    stars: 5,
-    country: "Iraq"
-  },
-  {
-    text: `Customer support at GTC actually speaks to you like a human, not just a ticket number. That alone is worth switching.`,
-    name: "Abdullah K.",
-    stars: 5,
-    country: "Lebanon"
-  },
-];
 
 const TestimonialCard = ({ text, name, stars, country, odd }) => (
   <div className={`bg-white rounded-[16px] p-4 text-sm space-y-1 flex flex-col gap-2 `}
@@ -49,17 +24,48 @@ const TestimonialCard = ({ text, name, stars, country, odd }) => (
 );
 
 const IBTestimonials = ({ setIsOpen }) => {
+
+  const t = useTranslations('switchToGtc.testimonialSection');
+
+
+const testimonials = [
+  {
+    text: t("testimonials.one.text"),
+    name: t("testimonials.one.name"),
+    stars: 5,
+    country: t("testimonials.one.country")
+  },
+  {
+ text: t("testimonials.two.text"),
+    name: t("testimonials.two.name"),
+    stars: 5,
+    country: t("testimonials.two.country")
+  },
+  {
+    text: t("testimonials.three.text"),
+    name: t("testimonials.three.name"),
+    stars: 5,
+    country: t("testimonials.three.country")
+  },
+  {
+ text: t("testimonials.four.text"),
+    name: t("testimonials.four.name"),
+    stars: 5,
+    country: t("testimonials.four.country")
+  },
+];
+  
   return (
     <section className="bg-[#fff] india-bg-switch py-8 md:py-20">
       <div className="container mx-auto">
-        <div className=" grid md:grid-cols-1 items-start gap-8 md:gap-16 ">
+        <div className=" grid md:grid-cols-1 gap-8 md:gap-16 ">
           {/* Left Section */}
-          <div className="flex flex-col text-left justify-center md:items-baseline space-y-5 md:space-y-2">
+          <div className="flex flex-col ltr:text-left rtl:text-right justify-center space-y-5 md:space-y-2">
             <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#000032] leading-snug capitalize w-64 md:w-full">
-              What Our Arabic Traders Are Saying
+              {t("heading")}
             </h2>
             <p className="text-sm md:text-base xl:text-[18px] text-[#4D4D70] max-w-2xl">
-              With thousands of happy traders from the UAE, Oman, Qatar, Kuwait, Iraq, Jordan & Lebanon, isn’t it time you switched to GTC?                        </p>
+             {t("description")}                </p>
           </div>
 
           {/* Testimonials Grid */}
@@ -73,7 +79,7 @@ const IBTestimonials = ({ setIsOpen }) => {
           </div>
           <div className="flex justify-center md:mt-2">
             <CustomButton
-              text="Switch Now"
+              text= {t("buttonText")}   
               bgColor="bg-[#000032] hover:bg-[#4e4d71]"
               textColor="text-[#fff]"
               onClick={() => setIsOpen(true)}

@@ -4,9 +4,10 @@ import React from "react";
 // import { PiFileTextLight } from "react-icons/pi";
 // import { TbTargetArrow } from "react-icons/tb";
 // import { BsPatchQuestion } from "react-icons/bs";
+import { useTranslations } from "next-intl";
 
 const BonusSection = ({ setIsOpen }) => {
-  const t = useTranslations();
+  const t = useTranslations('switchToGtc.bonusSection');
   const benefits = [
     {
       icon: (<svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +16,7 @@ const BonusSection = ({ setIsOpen }) => {
       </svg>
 
       ),
-      text: "No Tricks",
+      text: t("benefits.benefit1.text"),
     },
     {
       icon: (<svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +27,7 @@ const BonusSection = ({ setIsOpen }) => {
 
 
       ),
-      text: "No Hidden Terms",
+      text:  t("benefits.benefit2.text"),
     },
     {
       icon: (<svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +37,7 @@ const BonusSection = ({ setIsOpen }) => {
       </svg>
 
       ),
-      text: "No Equity Confusion",
+      text:  t("benefits.benefit3.text"),
     },
     {
       icon: (<svg width="62" height="61" viewBox="0 0 62 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +46,7 @@ const BonusSection = ({ setIsOpen }) => {
       </svg>
 
       ),
-      text: "Get Your Margin Bonus",
+      text:  t("benefits.benefit4.text"),
     },
   ];
 
@@ -63,20 +64,19 @@ const BonusSection = ({ setIsOpen }) => {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-[21px] md:text-3xl lg:text-[48px] font-semibold text-[#D9C3AA] leading-tight">
-            Switch & Get a Bonus That Boosts <br className="hidden md:block" />
-            Your Margin, Not Your Hopes
+           {t("heading")}
           </h2>
 
           <p className="text-base md:text-lg xl:text-[22px] xl:leading-8 text-[#FFFFFF] mt-6 leading-relaxed">
-            Forget losable or tricky bonuses. When you switch to GTC and deposit $500 or more, we’ll match your deposit with a Margin Bonus. You get extra trading margin with real cashback rewards.
+               {t("description1")}
           </p>
 
           <p className="text-base md:text-lg xl:text-[22px] xl:leading-8 text-[#FFFFFF] mt-6 mb-10 leading-relaxed">
-            Trade FX, gold, metals or oil. Hit the cashback target.
+                {t("description2")}
           </p>
 
           <p className="text-lg md:text-xl xl:text-[32px] font-semibold text-[#C39F77] mt-3">
-            Withdraw your reward.
+               {t("description3")}
           </p>
 
           {/* Benefit items */}
@@ -94,7 +94,7 @@ const BonusSection = ({ setIsOpen }) => {
             <div className='flex flex-row items-center justify-center mt-2'>
               <button className="bg-gradient-to-r  from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-semibold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
                 onClick={() => setIsOpen(true)}>
-                Switch Now
+                {t("buttonText")}
               </button>
             </div>
 

@@ -1,5 +1,45 @@
 'use client';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+
+// Static translations object
+const translations = {
+  en: {
+    message: "By clicking 'Fine By Me', you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.",
+    cta: "Fine By Me",
+    linkText: "Read our privacy policy here.",
+  },
+  es: {
+    message: "Al hacer clic en 'Aceptar', aceptas el almacenamiento de cookies en tu dispositivo para mejorar tu experiencia de usuario, la navegación en el sitio, analizar el uso del sitio y asistir en nuestros esfuerzos de marketing.",
+    cta: "Aceptar",
+    linkText: "Lee nuestra política de privacidad aquí.",
+  },
+  pt: {
+    message: "Ao clicar em 'Está Bem Para Mim', você concorda com o armazenamento de cookies em seu dispositivo para melhorar sua experiência de usuário, navegação no site, analisar o uso do site e auxiliar em nossos esforços de marketing.",
+    cta: "Está Bem Para Mim",
+    linkText: "Leia nossa política de privacidad aquí.",
+  },
+  ru: {
+    message: "Нажимая 'Хорошо', вы соглашаетесь с сохранением cookies на вашем устройстве для улучшения вашего пользовательского опыта, навигации по сайту, анализа использования сайта и поддержки наших маркетинговых усилий.",
+    cta: "Хорошо",
+    linkText: "Прочитайте нашу политику конфиденциальности здесь.",
+  },
+  ar: {
+    message: "من خلال النقر على 'موافق'، فإنك توافق على تخزين ملفات تعريف الارتباط على جهازك لتحسين تجربتك، والتنقل في الموقع، وتحليل استخدامه، والمساعدة في جهودنا التسويقية.",
+    cta: "موافق",
+    linkText: "اقرأ سياسة الخصوصية الخاصة بنا من هنا.",
+  },
+  zh: {
+    message: "点击'我同意'，即表示您同意我们在设备上存储Cookie以提升用户体验、优化网站导航、分析使用情况并协助我们的营销活动。",
+    cta: "我同意",
+    linkText: "在此阅读隐私政策",
+  },
+  vi: {
+  message: "Bằng cách nhấp vào 'Tôi đồng ý', bạn đồng ý cho phép lưu cookie trên thiết bị của mình để cải thiện trải nghiệm người dùng, điều hướng trang web, phân tích việc sử dụng trang web và hỗ trợ các hoạt động tiếp thị của chúng tôi.",
+  cta: "Tôi đồng ý",
+  linkText: "Đọc chính sách bảo mật của chúng tôi tại đây."
+}
+};
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -29,49 +69,37 @@ export default function CookieConsent() {
 
   if (!visible) return null;
 
-  return (
-    <div className="fixed bottom-4 inset-x-4 md:inset-x-0 md:left-1/2 md:transform md:-translate-x-1/2 md:max-w-5xl z-50 bg-gradient-to-r from-[#293794] to-[#000021] text-white px-4 py-5 rounded-md border border-[#f2f2f2]/20 shadow-lg">
-      {/* English Section (LTR) */}
-      <div className="hidden ltr:flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-center md:text-left text-xs md:text-sm leading-relaxed">
-          By clicking "Fine By Me”, you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.
-          <span className="mx-1" />
-          <a
-            href="/privacy-policy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-secondary"
-          >
-            Read our privacy policy here.
-          </a>
-        </p>
-        <button
-          onClick={handleAccept}
-          className="bg-secondary text-white font-semibold text-xs md:text-sm px-4 py-2 rounded-md hover:bg-opacity-90 transition w-full md:w-48"
-        >
-          Fine By Me
-        </button>
-      </div>
+  // Determine locale from URL or fallback to 'en'
+  const locale = typeof window !== 'undefined' ? window.location.pathname.split('/')[1] || 'en' : 'en';
+  const { message, cta, linkText } = translations[locale] || translations.en;
+  const isRTL = ['ar'].includes(locale);
 
-      {/* Arabic Section (RTL) */}
-      <div className="rtl:flex hidden flex-col md:flex-row items-center justify-between gap-4 text-right">
-        <p className="text-center md:text-right text-xs md:text-sm leading-relaxed">
-          من خلال النقر على "موافق"، فإنك توافق على تخزين ملفات تعريف الارتباط على جهازك لتحسين تجربتك، والتنقل في الموقع، وتحليل استخدامه، والمساعدة في جهودنا التسويقية.
+  return (
+    <div
+      className={`fixed bottom-4 inset-x-4 md:inset-x-0 md:max-w-5xl mx-auto z-50 bg-gradient-to-r from-[#293794] to-[#000021] text-white px-4 py-5 rounded-md border border-[#f2f2f2]/20 shadow-lg ${
+        isRTL ? 'rtl' : 'ltr'
+      }`}
+    >
+      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p
+          className={`text-center md:text-${isRTL ? 'right' : 'left'} text-xs md:text-sm leading-relaxed`}
+        >
+          {message}
           <span className="mx-1" />
-          <a
-            href="/ar/privacy-policy"
+          <Link
+            href={`/${locale}/privacy-policy`}
             target="_blank"
             rel="noopener noreferrer"
             className="underline text-secondary"
           >
-            اقرأ سياسة الخصوصية الخاصة بنا من هنا.
-          </a>
+            {linkText}
+          </Link>
         </p>
         <button
           onClick={handleAccept}
           className="bg-secondary text-white font-semibold text-xs md:text-sm px-4 py-2 rounded-md hover:bg-opacity-90 transition w-full md:w-48"
         >
-          موافق
+          {cta}
         </button>
       </div>
     </div>

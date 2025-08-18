@@ -1,7 +1,10 @@
 import CommonMainForm from "@/app/[locale]/components/MainForm";
 import Image from "next/image";
+import { useTranslations } from "next-intl"; // for localization
 
 const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) => {
+
+  const t = useTranslations("partner.form"); // adjust namespace if needed
   return (
     <div
       className={`fixed inset-0 z-[99] transition-all duration-700 ${
@@ -38,7 +41,7 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) =
               className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
             />
             <h2 className="text-center text-2xl md:text-3xl font-medium my-5 md:my-8">
-              Register Now
+                  {t("heading")}
             </h2>
 
             <CommonMainForm
@@ -54,3 +57,4 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) =
 };
 
 export default SliderModal;
+

@@ -147,12 +147,11 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
         },
         validationSchema: Yup.object({
             nickname: Yup.string()
-                .matches(/^[A-Za-z\s]+$/, t("errors.fullNameFormat"))
-                .required(t("errors.firstNameRequired")),
-
-            last_name: Yup.string()
-                .matches(/^[A-Za-z\s]+$/, t("errors.lastNameFormat"))
-                .required(t("errors.lastNameRequired")),
+        .matches(/^[^\d]+$/, t("errors.fullNameFormat"))
+        .required(t("errors.firstNameRequired")),
+      last_name: Yup.string()
+        .matches(/^[^\d]+$/, t("errors.lastNameFormat"))
+        .required(t("errors.lastNameRequired")),
 
             email: Yup.string()
                 .email(t("errors.emailInvalid"))
@@ -471,12 +470,21 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                                 {t("clientAgreement")}
                             </a>{" "}
                             & the{" "}
-                            <a
-                                className="text-secondary underline"
-                                href="/privacy-policy"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                                <a
+                                    href={
+                                    {
+                                        ar: "/ar/privacy-policy",
+                                        ru: "/ru/privacy-policy",
+                                        cn: "/cn/privacy-policy",
+                                        vi: "/vi/privacy-policy",
+                                        es: "/es/privacy-policy",
+                                        pt: "/pt/privacy-policy",
+                                    }[locale] || "/privacy-policy"
+                                    }
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-secondary underline ml-1"
+                                >
                                 {t("privacyPolicy")}
                             </a>
                             , {t("conset")}.

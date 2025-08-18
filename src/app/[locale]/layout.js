@@ -11,10 +11,10 @@ export default async function LocaleLayout({ children, params }) {
     notFound();
   }
 
-  const isArabic = locale === 'ar';
+  const isArabicOrKurdish = locale === 'ar' || locale === 'ku';
 
   return (
-    <html lang={locale} dir={isArabic ? 'rtl' : 'ltr'}>
+    <html lang={locale} dir={isArabicOrKurdish ? 'rtl' : 'ltr'}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -39,7 +39,7 @@ export default async function LocaleLayout({ children, params }) {
         />
         <style>{`
           body {
-            font-family: '${isArabic ? 'Noto Kufi Arabic' : 'Poppins'}', sans-serif;
+            font-family: '${isArabicOrKurdish ? 'Noto Kufi Arabic' : 'Poppins'}', sans-serif;
           }
         `}</style>
       </head>

@@ -79,7 +79,7 @@
       }
     },
     "broker": {
-      "heading": "A Broker You Can <br /> Actually Trust",
+      "heading": "A Broker You Can  Actually Trust",
       "paragraph": "We’re not a fly-by-night operation. GTC is licensed and regulated in multiple respected jurisdictions. Here’s how we give you confidence to trade.",
       "points": {
         "p1": "Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA.",
@@ -543,28 +543,28 @@
   "testimonialSection": {
     "heading": "What Our Arabic Traders Are Saying",
     "description": "With thousands of happy traders from the UAE, Oman, Qatar, Kuwait, Iraq, Jordan & Lebanon, isn’t it time you switched to GTC?",
-    "testimonials": [
-      {
+    "testimonials":{
+      "one": {
         "text": "“I switched to GTC because the withdrawal speed blew my old broker out of the water. Instant payout in USDT? Love it.”",
         "name": "Mohammed A.",
         "country": "UAE"
       },
-      {
+      "two": {
         "text": "“I scalp gold all day, and GTC is the only broker I’ve found that actually lets me do that without weird time limits.”",
         "name": "Omar S.",
         "country": "Qatar"
       },
-      {
+      "three": {
         "text": "“My previous broker slipped my orders like crazy during news. GTC’s execution is solid. I finally trust the platform.”",
         "name": "Hussein B.",
         "country": "Iraq"
       },
-      {
+      "four": {
         "text": "Customer support at GTC actually speaks to you like a human, not just a ticket number. That alone is worth switching.",
         "name": "Abdullah K.",
         "country": "Lebanon"
       }
-    ],
+    },
     "buttonText": "Switch Now"
   },
   "tradeSwitchSection": {
