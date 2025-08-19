@@ -217,7 +217,7 @@ const HeroSection = ({ setIsOpen }) => {
       <section className="bg-[#010005] text-[#E5E5EA] py-16 md:py-28 relative overflow-hidden">
 
         {/* Desktop Background Image Only */}
-  <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
+  <div className="hidden ltr:md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
     <Image
       src="/switch/banner-switch.webp"
       alt="Hero BG"
@@ -226,6 +226,17 @@ const HeroSection = ({ setIsOpen }) => {
       priority
     />
   </div>
+
+   {/* Desktop Background Image Only */}
+                <div className="hidden rtl:md:block absolute inset-0 z-0 rtl:scale-[1.0] origin-bottom-right hero-bg">
+                  <Image
+                    src="/switch/arabic.webp"
+                    alt="Hero BG"
+                    fill
+                    className="object-cover object-left 3xl:object-contain"
+                    priority
+                  />
+                </div>
 
         <div className="container">
           <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
