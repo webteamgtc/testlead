@@ -191,8 +191,8 @@
   "affiliateNoticeText": "Affiliate/partner content is for referral and marketing purposes only and does not constitute financial advice."
 },
 "cookie": {
-  "message": "By clicking 'Fine By Me', you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.",
-  "cta": "Fine By Me",
+  "message": "By clicking 'Agree', you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.",
+  "cta": "Agree",
   "linkText": "Read our privacy policy here."
 },
 "privacyPolicy": {

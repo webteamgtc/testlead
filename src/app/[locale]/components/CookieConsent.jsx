@@ -5,8 +5,8 @@ import Link from 'next/link';
 // Static translations object
 const translations = {
   en: {
-    message: "By clicking 'Fine By Me', you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.",
-    cta: "Fine By Me",
+    message: "By clicking 'Agree', you agree to the storing of cookies on your device to enhance your user experience, site navigation, analyse site usage, and assist in our marketing efforts.",
+    cta: "Agree",
     linkText: "Read our privacy policy here.",
   },
   es: {
