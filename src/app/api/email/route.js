@@ -1,7 +1,23 @@
 import { NextResponse } from "next/server";
 import { transporter, mailOptions } from "../../[locale]/config/nodemailer";
-import { emailTempletesArabic, emailTempletesEnglish, emailTempleteSwitchArabic, emailTempleteSwitchEnglish } from "./templetes";
+import { emailTempletesArabic, emailTempletesEnglish, emailTempleteSwitchArabic, emailTempleteSwitchChinese, emailTempleteSwitchEnglish, emailTempleteSwitchPortuguese, emailTempleteSwitchRussian, emailTempleteSwitchSpanish } from "./templetes";
 
+const getLocalizedSubject = (locale) => {
+  switch (locale) {
+    case 'ar':
+      return 'شكرًا لتسجيلك في GTC';
+    case 'ru':
+      return 'Спасибо за регистрацию в GTC';
+    case 'pt':
+      return 'Obrigado por se cadastrar na GTC';
+    case 'es':
+      return 'Gracias por registrarte en GTC';
+    case 'zh':
+      return '感谢您注册 GTC';
+    default:
+      return 'Thank you for registering with GTC';
+  }
+};
 const generateEmailContent = (data) => {
   if (data?.locale == "ar") {
     if (data?.isPartnerPage) {
@@ -15,7 +31,28 @@ const generateEmailContent = (data) => {
       }
     }
 
-  } else {
+  }
+  if (data?.locale == "ru") {
+    return {
+      html: `${emailTempleteSwitchRussian(data)}`
+    }
+  }
+  if (data?.locale == "pt") {
+    return {
+      html: `${emailTempleteSwitchPortuguese(data)}`
+    }
+  }
+  if (data?.locale == "es") {
+    return {
+      html: `${emailTempleteSwitchSpanish(data)}`
+    }
+  }
+  if (data?.locale == "zh") {
+    return {
+      html: `${emailTempleteSwitchChinese(data)}`
+    }
+  }
+  else {
     if (data?.isPartnerPage) {
       return {
         html: `${emailTempletesEnglish(data)}`
@@ -39,7 +76,7 @@ export async function POST(req) {
     await transporter.sendMail({
       ...mailOption,
       ...generateEmailContent(reqBody),
-      subject: `Thank you for registering with GTC`,
+      subject: getLocalizedSubject(reqBody?.locale),
     });
     return NextResponse.json(
       { message: "Success", email: reqBody?.email },
