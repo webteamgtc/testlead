@@ -53,7 +53,7 @@ export default function LandingPage() {
         onClose={() => setIsOpen(false)}
         zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u48ff80/"
         successPath={successPath}  // ⬅️ use the localized path here
-      />
+      /> 
     </>
   );
 }
