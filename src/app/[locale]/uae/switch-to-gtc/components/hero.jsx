@@ -245,12 +245,21 @@ const HeroSection = ({ setIsOpen }) => {
               <h3 className="text-xl md:text-3xl xl:text-[32px] xl:leading-10 font-light w-60 ltr:md:w-sm rtl:md:w-md">
                  {t("banner.subTitle")}
               </h3>
-              <h1 className="text-[30px] md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text">
+              <h1 className="text-[35px] leading-tight md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
                 {headlines[index].heading}
               </h1>
+              <div className="md:hiddent relative w-full h-[300px]">
+                <Image
+                  src="/switch/passas.webp"
+                  alt="Hero Image"
+                  fill
+                  className="object-cover object-center"
+                  priority
+                />
+              </div>
 
               <p className="text-sm md:text-base xl:text-[22px]
-               leading-relaxed max-w-xl">
+               leading-relaxed max-w-xl py-5md:py-0">
                {t("banner.para1")}
               </p>
             </div>
@@ -259,7 +268,7 @@ const HeroSection = ({ setIsOpen }) => {
 
         {/* Bottom Feature Bar */}
           <div
-            className="relative z-50 my-12 bg-gradient-to-r from-[#f0e7dd5c] to-[#d9c3aa82] py-5 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90 gap-6 md:gap-0"
+            className="relative z-50 md:my-12 md:bg-gradient-to-r from-[#f0e7dd5c] to-[#d9c3aa82] py-5 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90 gap-6 md:gap-0"
             style={{
               boxShadow: "1px 6px 16px 0px #00000080",
               backdropFilter: "blur(8px)"
