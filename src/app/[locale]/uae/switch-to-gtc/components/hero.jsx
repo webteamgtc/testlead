@@ -248,7 +248,7 @@ const HeroSection = ({ setIsOpen }) => {
               <h1 className="text-[35px] leading-tight md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
                 {headlines[index].heading}
               </h1>
-              <div className="md:hiddent relative w-full h-[300px]">
+              <div className="md:hidden relative w-full h-[300px]">
                 <Image
                   src="/switch/passas.webp"
                   alt="Hero Image"
