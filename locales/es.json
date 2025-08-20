@@ -398,16 +398,13 @@
   }
 },
 "footer": {
-    "riskWarningTitle": "Advertencia de Riesgo:",
-    "riskWarningText": "La negociación de productos apalancados como los CFDs implica un alto nivel de riesgo y puede no ser adecuada para todos los inversores. Podrías perder más que tu inversión inicial. Por favor, asegúrate de entender completamente los riesgos y consulta a un asesor independiente si es necesario.",
-    "company1": "GTC Global Ltd, regulada por la FSC Mauritius (Licencia No. GB22200292)",
-    "company2": "GTC Global Pty Ltd, regulada por la Australian Securities and Investments Commission (ASIC)",
-    "company3": "GTC Global Trade Capital Co., Limited, registrada en Vanuatu y licenciada por la Vanuatu Financial Services Commission (VFSC)",
-    "jurisdictionNoticeTitle": "Aviso de Jurisdicción:",
-    "jurisdictionNoticeText": "GTC no ofrece servicios en jurisdicciones donde dichas ofertas serían contrarias a las leyes locales.",
-    "affiliateNoticeTitle": "Aviso de Afiliados:",
-    "affiliateNoticeText": "El contenido de afiliados o socios es solo para fines de referencia y marketing y no constituye asesoramiento financiero."
-  },
+  "riskWarningTitle": "Advertencia de Riesgo:",
+  "riskWarningText": "Operar con productos apalancados como los CFDs implica un alto nivel de riesgo y puede no ser adecuado para todos los inversores. Podría perder más que su inversión inicial. Asegúrese de comprender plenamente los riesgos y consulte a un asesor independiente si es necesario.",
+  "company1": "GTC opera a través de múltiples entidades reguladas: (mencione todas las entidades, por favor consulte el siguiente ejemplo: GTC Global Ltd, regulada por la FSC Mauricio (Licencia Nº GB22200292) - aplicable a todas las entidades).",
+  "company2": "GTC no presta servicios en jurisdicciones donde dichas ofertas serían contrarias a las leyes locales.",
+  "affiliateNoticeTitle": "Aviso de Afiliados:",
+  "affiliateNoticeText": "El contenido de afiliados/socios es únicamente para fines de referencia y marketing y no constituye asesoramiento financiero."
+},
   "cookie": {
     "message": "Al hacer clic en 'Aceptar', aceptas el almacenamiento de cookies en tu dispositivo para mejorar tu experiencia de usuario, la navegación en el sitio, analizar el uso del sitio y asistir en nuestros esfuerzos de marketing.",
     "cta": "Aceptar",

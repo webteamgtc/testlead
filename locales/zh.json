@@ -426,11 +426,8 @@
   "footer": {
     "riskWarningTitle": "风险警告：",
     "riskWarningText": "交易杠杆产品（如差价合约CFDs）具有高风险，可能不适合所有投资者。您可能损失超过初始投资金额。请确保您完全理解相关风险，必要时咨询独立顾问。",
-    "company1": "GTC Global Ltd，受毛里求斯金融服务委员会（FSC）监管（牌照号 GB22200292）",
-    "company2": "GTC Global Pty Ltd，受澳大利亚证券投资委员会（ASIC）监管",
-    "company3": "GTC Global Trade Capital Co., Limited，注册于瓦努阿图并受瓦努阿图金融服务委员会（VFSC）许可",
-    "jurisdictionNoticeTitle": "司法管辖区声明：",
-    "jurisdictionNoticeText": "GTC不向当地法律禁止提供此类服务的司法管辖区提供服务。",
+    "company1": "GTC通过多个受监管实体运营：GTC Global Ltd（受毛里求斯金融服务委员会FSC监管，牌照号GB22200292）；GTC Global Pty Ltd（受澳大利亚证券投资委员会ASIC监管）；GTC Global Trade Capital Co., Limited（注册于瓦努阿图并受瓦努阿图金融服务委员会VFSC许可）",
+    "company2": "GTC不向当地法律禁止提供此类服务的司法管辖区提供服务。",
     "affiliateNoticeTitle": "联盟合作伙伴声明：",
     "affiliateNoticeText": "联盟/合作伙伴内容仅用于推荐和营销目的，不构成财务建议。"
   },

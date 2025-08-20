@@ -398,16 +398,13 @@
   }
 },
 "footer": {
-    "riskWarningTitle": "Aviso de Risco:",
-    "riskWarningText": "Negociar produtos alavancados, como CFDs, envolve um alto nível de risco e pode não ser adequado para todos os investidores. Você pode perder mais do que seu investimento inicial. Certifique-se de entender completamente os riscos e consulte um consultor independente, se necessário.",
-    "company1": "GTC Global Ltd, regulada pela FSC Mauritius (Licença No. GB22200292)",
-    "company2": "GTC Global Pty Ltd, regulada pela Australian Securities and Investments Commission (ASIC)",
-    "company3": "GTC Global Trade Capital Co., Limited, registrada em Vanuatu e licenciada pela Vanuatu Financial Services Commission (VFSC)",
-    "jurisdictionNoticeTitle": "Aviso de Jurisdição:",
-    "jurisdictionNoticeText": "A GTC não oferece serviços em jurisdições onde tais ofertas seriam contrárias às leis locais.",
-    "affiliateNoticeTitle": "Aviso de Afiliados:",
-    "affiliateNoticeText": "O conteúdo de afiliados/parceiros é apenas para fins de referência e marketing e não constitui aconselhamento financeiro."
-  },
+  "riskWarningTitle": "Aviso de Risco:",
+  "riskWarningText": "Negociar produtos alavancados, como CFDs, envolve um alto nível de risco e pode não ser adequado para todos os investidores. Você pode perder mais do que o investimento inicial. Certifique-se de compreender totalmente os riscos e consulte um consultor independente, se necessário.",
+  "company1": "A GTC opera através de várias entidades reguladas: (mencione todas as entidades, por favor consulte o exemplo abaixo: GTC Global Ltd, regulada pela FSC Maurícia (Licença Nº GB22200292) - aplicável a todas as entidades).",
+  "company2": "A GTC não fornece serviços em jurisdições onde tais ofertas sejam contrárias às leis locais.",
+  "affiliateNoticeTitle": "Aviso de Afiliados:",
+  "affiliateNoticeText": "O conteúdo de afiliados/parceiros destina-se apenas a fins de referência e marketing e não constitui aconselhamento financeiro."
+},
   "cookie": {
     "message": "Ao clicar em 'Está Bem Para Mim', você concorda com o armazenamento de cookies em seu dispositivo para melhorar sua experiência de usuário, navegação no site, analisar o uso do site e auxiliar em nossos esforços de marketing.",
     "cta": "Está Bem Para Mim",
