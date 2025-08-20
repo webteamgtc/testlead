@@ -11,16 +11,14 @@ const MainFooter = () => {
         <div className="grid grid-cols-1">
           <div className="md:col-span-2 space-y-3 text-[#cccccc] text-xs leading-relaxed">
             <p>
-              <span className="text-secondary font-medium">{t('riskWarningTitle')}</span> {t('riskWarningText')}
+              <span className="text-secondary">{t('riskWarningTitle')}</span> {t('riskWarningText')}
             </p>
-            <p><span className="text-secondary">{t('company1')}</span></p>
-            <p><span className="text-secondary">{t('company2')}</span></p>
-            <p><span className="text-secondary">{t('company3')}</span></p>
+            <p><span className="text-white">{t('company1')}</span></p>
+            <p><span className="text-white">{t('company2')}</span></p>
+
+            
             <p>
-              <span className="text-secondary font-medium">{t('jurisdictionNoticeTitle')}</span> {t('jurisdictionNoticeText')}
-            </p>
-            <p>
-              <span className="text-secondary font-medium">{t('affiliateNoticeTitle')}</span> {t('affiliateNoticeText')}
+              <span className="text-secondary">{t('affiliateNoticeTitle')}</span> {t('affiliateNoticeText')}
             </p>
           </div>
         </div>

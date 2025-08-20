@@ -182,8 +182,8 @@
   "footer": {
   "riskWarningTitle": "Risk Warning:",
   "riskWarningText": "Trading leveraged products such as CFDs involves a high level of risk and may not be suitable for all investors. You could lose more than your initial investment. Please ensure you fully understand the risks and consult an independent advisor if needed.",
-  "company1": "GTC Global Ltd, regulated by the FSC Mauritius (License No. GB22200292)",
-  "company2": "GTC Global Pty Ltd, regulated by the Australian Securities and Investments Commission (ASIC)",
+  "company1": "GTC operates through multiple regulated entities: ( mention all entities please refer to the below sample GTC Global Ltd, regulated by the FSC Mauritius (License No. GB22200292) - apply to all entities ",
+  "company2": "GTC does not provide services in jurisdictions where such offerings would be contrary to local laws.",
   "company3": "GTC Global Trade Capital Co., Limited, registered in Vanuatu and licensed by the Vanuatu Financial Services Commission (VFSC)",
   "jurisdictionNoticeTitle": "Jurisdiction Notice:",
   "jurisdictionNoticeText": "GTC does not provide services in jurisdictions where such offerings would be contrary to local laws.",
