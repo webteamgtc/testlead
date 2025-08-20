@@ -2,7 +2,7 @@
 import CustomButton from "@/app/components/common/CustomButton";
 import { useTranslations } from "next-intl";
 
-const ComparisonTable = ({setIsOpen,data,title}) => {
+const ComparisonTable = ({setIsOpen,data,title, butText}) => {
   const t = useTranslations("partner.comparisonTable");
   return (
         <section className="relative text-white py-8 md:py-20 overflow-hidden">
@@ -79,7 +79,7 @@ const ComparisonTable = ({setIsOpen,data,title}) => {
 
    <div className="flex justify-center md:mt-2">
       <CustomButton
-           text={t('cta')}
+           text={butText || t('cta')} 
           bgColor="bg-[#000032] hover:bg-[#4e4d71]"
           textColor="text-[#fff]"
            onClick={() => setIsOpen(true)}

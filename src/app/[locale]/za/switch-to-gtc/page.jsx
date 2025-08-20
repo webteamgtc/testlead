@@ -2,7 +2,7 @@
 // app/landing/page.tsx
 
 import HeroSection from './components/hero';
-import ComparisonSection from '../../uae/partners/components//table';
+import ComparisonSection from '../../uae/partners/components/table';
 import BonusSection from './components/bonusSection';
 import TrustSection from './components/trustSection';
 import TestimonialsSection from './components/testomonialSection';
@@ -42,7 +42,7 @@ export default function LandingPage() {
       <Meta title={t("meta.title")} description={t("meta.description")} />
       <MainHeader />
       <HeroSection setIsOpen={setIsOpen} />
-      <ComparisonSection data={comparisonData} title={t("banner.tableHeading")} setIsOpen={setIsOpen} />
+      <ComparisonSection data={comparisonData} title={t("banner.tableHeading")} setIsOpen={setIsOpen} butText={t("bonusSection.buttonText")} />
       <BonusSection setIsOpen={setIsOpen} />
       <TrustSection setIsOpen={setIsOpen} />
       <TestimonialsSection setIsOpen={setIsOpen} />
@@ -51,7 +51,7 @@ export default function LandingPage() {
       <SliderModal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u48ff80/"
+        zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/utrdr7i/"
         successPath={successPath}  // ⬅️ use the localized path here
       />
     </>

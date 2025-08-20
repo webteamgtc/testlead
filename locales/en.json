@@ -515,7 +515,7 @@
         "text": "Get Your Margin Bonus"
       }
     },
-    "buttonText": "Switch Now"
+    "buttonText": "Switch To GTC"
   },
   "brokerSection": {
     "subheading": "A Broker You Can Actually Trust",
@@ -535,7 +535,7 @@
       }
     },
     "mainHeading": "Switch to a broker that doesn’t just say it, we prove it every day.",
-    "buttonText": "Switch Now"
+    "buttonText": "Switch To GTC"
   },
   "testimonialSection": {
     "heading": "What Our Arabic Traders Are Saying",
@@ -562,7 +562,7 @@
         "country": "Lebanon"
       }
     },
-    "buttonText": "Switch Now"
+    "buttonText": "Switch To GTC"
   },
   "tradeSwitchSection": {
     "heading": "Switch Now. Trade Better Today.",
