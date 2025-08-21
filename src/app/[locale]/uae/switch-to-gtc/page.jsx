@@ -52,7 +52,7 @@ export default function LandingPage() {
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u48ff80/"
-        successPath='/za/switch-to-gtc/success'  // ⬅️ use the localized path here
+        successPath={successPath}  // ⬅️ use the localized path here
       /> 
     </>
   );
