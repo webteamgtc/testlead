@@ -63,7 +63,7 @@ const BonusSection = ({ setIsOpen }) => {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h2 className="text-[21px] md:text-3xl lg:text-[48px] font-semibold text-[#D9C3AA] leading-tight">
+          <h2 className="text-[22px] md:text-3xl lg:text-[48px] font-semibold text-[#D9C3AA] leading-tight">
            {t("heading")}
           </h2>
 
@@ -75,7 +75,7 @@ const BonusSection = ({ setIsOpen }) => {
                 {t("description2")}
           </p>
 
-          <p className="text-lg md:text-xl xl:text-[32px] font-semibold text-[#C39F77] mt-3">
+          <p className="text-xl md:text-2xl xl:text-[32px] text-[#C39F77] mt-3">
                {t("description3")}
           </p>
 

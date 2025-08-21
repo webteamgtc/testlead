@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const Broker = ({ setIsOpen }) => {
+const Broker = ({ setIsOpen, butText }) => {
   const t = useTranslations('partner.broker');
   return (
     <section className="relative text-white py-8 md:py-20 overflow-hidden">
@@ -53,7 +53,7 @@ const Broker = ({ setIsOpen }) => {
           <button className="bg-white text-[#B48755]  hover:bg-[#4e4d71] cursor-pointer px-6 py-3 text-sm md:text-base font-bold xl:text-lg rounded-lg flex flex-row gap-4 items-center justify-center shadow transition-all duration-300"
           onClick={() => setIsOpen(true)}
           >
-             {t("cta")}
+             {butText || t('cta')}
             <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L7 7L1 13" stroke="#B48755" strokeWidth="3" />
             </svg>

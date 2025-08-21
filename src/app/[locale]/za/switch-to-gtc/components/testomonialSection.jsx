@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 
 const TestimonialCard = ({ text, name, stars, country, odd }) => (
-  <div className={`bg-white rounded-[16px] p-4 text-sm space-y-1 flex flex-col gap-2 `}
+  <div className={`bg-white rounded-[16px] p-6 text-sm space-y-1 flex flex-col justify-between gap-2 `}
     style={{
       boxShadow: "1px 6px 16px 0px #0000001A"
     }}
@@ -30,28 +30,34 @@ const IBTestimonials = ({ setIsOpen }) => {
 
 const testimonials = [
   {
-    text: t("testimonials.one.text"),
-    name: t("testimonials.one.name"),
+    text: "“Withdrawals are instant. I requested my payout in USDT and it hit my wallet faster than I expected. No other broker I’ve tried comes close. Well done GTC!”",
+    name: "Sipho M.",
     stars: 5,
-    country: t("testimonials.one.country")
+    country: "Johannesburg, South Africa"
   },
   {
- text: t("testimonials.two.text"),
-    name: t("testimonials.two.name"),
+ text: "“I trade indices and gold every day, and GTC gives me the conditions I need. They say they offer tight spreads and fast execution and the actually do. GTC is built for real traders.”",
+    name: 'Tawanda K.',
     stars: 5,
-    country: t("testimonials.two.country")
+    country: 'Harare, Zimbabwe'
   },
   {
-    text: t("testimonials.three.text"),
-    name: t("testimonials.three.name"),
+    text: '“My old broker used to slip my orders all the time. I have to be honest that with GTC, my trades go through clean, even during high volatility, which is rare. Finally I have a platform I can rely on.”',
+    name: 'Kwame A.',
     stars: 5,
-    country: t("testimonials.three.country")
+    country: 'Accra, Ghana'
   },
   {
- text: t("testimonials.four.text"),
-    name: t("testimonials.four.name"),
+ text: '“The customer service at GTC is incredible. They are the best I  have ever seen. I can get support in minutes, and they actually solve the problem instead of sending me in circles like other brokers.”',
+    name: "David O.",
     stars: 5,
-    country: t("testimonials.four.country")
+    country: "Nairobi, Kenya"
+  },
+    {
+ text: '“GTC makes trading simple. They provide fast deposits and really smooth withdrawals. I like GTC because they also have no hidden fees. I feel secure here, and that’s why I stay.”',
+    name: "Grace N.",
+    stars: 5,
+    country: "Kampala, Uganda"
   },
 ];
   
@@ -62,14 +68,14 @@ const testimonials = [
           {/* Left Section */}
           <div className="flex flex-col ltr:text-left rtl:text-right justify-center space-y-5 md:space-y-2">
             <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#000032] leading-snug capitalize w-64 md:w-full">
-              {t("heading")}
+              What African Traders Are Saying
             </h2>
             <p className="text-sm md:text-base xl:text-[18px] text-[#4D4D70] max-w-2xl">
-             {t("description")}                </p>
+            With thousands of traders across South Africa, Zimbabwe, Ghana, Kenya & Uganda already choosing GTC, isn’t it time you switched?              </p>
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 md:gap-6">
+          <div className="grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-5 md:gap-6">
             {testimonials.map((item, idx) => {
               const odd = idx % 2 == 0 ? true : false
               return (

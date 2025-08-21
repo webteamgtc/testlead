@@ -44,7 +44,7 @@ export default function LandingPage() {
       <HeroSection setIsOpen={setIsOpen} />
       <ComparisonSection data={comparisonData} title={t("banner.tableHeading")} setIsOpen={setIsOpen} butText={t("bonusSection.buttonText")} />
       <BonusSection setIsOpen={setIsOpen} />
-      <TrustSection setIsOpen={setIsOpen} />
+      <TrustSection setIsOpen={setIsOpen}  butText={t("bonusSection.buttonText")} />
       <TestimonialsSection setIsOpen={setIsOpen} />
       <CTASection setIsOpen={setIsOpen} />
       <MainFooter />

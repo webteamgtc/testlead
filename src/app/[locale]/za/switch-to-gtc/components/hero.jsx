@@ -214,43 +214,24 @@ const HeroSection = ({ setIsOpen }) => {
 
   return (
     <div className=" ">
-      <section className="bg-[#010005] text-[#E5E5EA] py-16 md:py-28 relative overflow-hidden">
+      <section className="bg-[#000032] md:bg-[url('/switch/newbanner.webp')] bg-cover bg-center bg-no-repeat text-[#E5E5EA] py-16 md:py-28 relative overflow-hidden">
 
-        {/* Desktop Background Image Only */}
-  <div className="hidden ltr:md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
-    <Image
-      src="/switch/banner-switch.webp"
-      alt="Hero BG"
-      fill
-      className="object-cover object-right 3xl:object-contain"
-      priority
-    />
-  </div>
 
-   {/* Desktop Background Image Only */}
-                <div className="hidden rtl:md:block absolute inset-0 z-0 rtl:scale-[1.0] origin-bottom-right hero-bg">
-                  <Image
-                    src="/switch/arabic.webp"
-                    alt="Hero BG"
-                    fill
-                    className="object-cover object-left 3xl:object-contain"
-                    priority
-                  />
-                </div>
 
-        <div className="container">
+
+        <div className="max-w-[1380px] mx-auto relative z-10">
           <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
             {/* Left Column */}
             <div className="text-center ltr:md:text-left rtl:md:text-right flex flex-col gap-4 items-center md:items-start">
-              <h3 className="text-xl md:text-3xl xl:text-[32px] xl:leading-10 font-light w-60 ltr:md:w-sm rtl:md:w-md">
+              <h3 className="text-xl md:text-3xl xl:text-[32px] xl:leading-10 font-light w-60 ltr:md:w-sm rtl:md:w-md ">
                  {t("banner.subTitle")}
               </h3>
-              <h1 className="text-[35px] leading-tight md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
+              <h1 className="text-[35px] leading-tight md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0 mb-4 md:mb-0">
                 {headlines[index].heading}
               </h1>
               <div className="md:hidden relative w-full h-[300px]">
                 <Image
-                  src="/switch/passas.webp"
+                  src="/switch/pics.webp"
                   alt="Hero Image"
                   fill
                   className="object-cover object-center"
@@ -259,7 +240,7 @@ const HeroSection = ({ setIsOpen }) => {
               </div>
 
               <p className="text-sm md:text-base xl:text-[22px]
-               leading-relaxed max-w-xl py-5md:py-0">
+               leading-relaxed max-w-xl py-4 md:py-0  px-4 md:px-0">
                {t("banner.para1")}
               </p>
             </div>
