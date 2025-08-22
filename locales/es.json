@@ -561,28 +561,29 @@
   },
     "switchToGtc": {
      "meta": {
-    "title": "Cambia a GTC para Retiros Más Rápidos y Spreads Más Bajos",
-    "description": "Cambia a GTC y experimenta spreads más ajustados, retiros instantáneos, reglas justas de scalping y mejores bonos. Opera de manera más inteligente con un bróker que te entiende."
-  },
-  "banner": {
-    "subTitle": "Tu Bróker Se Beneficia de Tu Sufrimiento en el Trading.",
-    "title1": "Mereces Más que Spreads de 3 Pips.",
-    "title2": "Opera Sin Trucos.",
-    "title3": "Cada Operación Debe Contar. No Solo la de Ellos.",
-    "title4": "Tu Bróker Te Está Frenando.",
-    "para1": "Haz el cambio a un bróker que realmente te pone en primer lugar. Retiros más rápidos, spreads más ajustados, condiciones más justas. Tú operas y nosotros nos encargamos del resto.",
-    "cta": "Cambia Ahora",
-    "list": {
-      "item1": "Spread de 2 Pips en Lugar de 3",
-      "item2": "Retiros Instantáneos y en el Mismo Día",
-      "item3": "Scalping Permitido Después de 60 Segundos",
-      "item4": "Sin Deslizamiento Durante Eventos de Noticias",
-      "item5": "Bono de Margen Real con Reembolso Real",
-      "item6": "Bróker Multi-Regulado: SCA, FCA y ASIC"
+      "title": "Cámbiate a GTC para obtener Retiros más Rápidos y Spreads más Bajos",
+      "description": "Cámbiate a GTC y obten spreads más ajustados, retiros instantáneos, reglas justas para realizar scalping y mejores bonos. Opera de forma inteligente con un bróker que entiende tus necesidades."
     },
-    "tableHeading": "Comparación Rápida: Tu Bróker vs. GTC"
-  },
+    "banner": {
+      "subTitle": "Las ganancias de tu bróker provienen de tus pérdidas al operar.",
+      "title1": "Mereces algo mejor que spreads de 3 pips.",
+      "title2": "Opera sin trucos.",
+      "title3": "Cada operación Cuenta. No solo la de ellos.",
+      "title4": "Tu bróker te está frenando.",
+      "para1": "Cambiate a un bróker que realmente te pone en primer lugar. Retiros más rápidos, spreads más ajustados, condiciones más justas. Tú operas y nosotros nos encargamos del resto.",
+      "cta": "Cámbiate ahora",
+      "list": {
+        "item1": "Spread de 2 pips en lugar de 3",
+        "item2": "Retiros instantáneos y en el mismo día",
+        "item3": "Scalping permitido después de 60 segundos",
+        "item4": "Sin slippage en las noticias",
+        "item5": "Bono de margen real con \"cashback\" real",
+        "item6": "Bróker multi-regulado: SCA, FCA y ASIC"
+      },
+      "tableHeading": "Comparativa rápida: Tu bróker vs GTC"
+    },
     "bonusSection": {
+      "heading": "Cámbiate y obtén un bono que fortalece tu margen, no tus ilusiones.",
       "description1": "Venha para a GTC: depósitos a partir de US$ 500 ganham margem dobrada e cashback de verdade.\nAqui você ganha margem de negociação extra com recompensas reais de cashback.",
       "description2": "Negocie câmbio, ouro, metais ou petróleo e alcance sua meta de cashback.",
       "description3": "Resgate sua recompensa.",
