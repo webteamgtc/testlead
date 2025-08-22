@@ -51,7 +51,7 @@ export default function LandingPage() {
       <SliderModal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/utzulyp/"
+        zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/utk6oq3/"
         successPath= '/za/switch-to-gtc/success'   // ⬅️ use the localized path here 
       />
     </>
