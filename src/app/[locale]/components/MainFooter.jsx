@@ -13,7 +13,7 @@ const MainFooter = () => {
             <p>
               <span className="text-secondary">{t('riskWarningTitle')}</span> {t('riskWarningText')}
             </p>
-            <p>{t('company1')}</p>
+           
             <p>{t('company2')}</p>
  
             <p>

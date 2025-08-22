@@ -13,6 +13,8 @@ import { useState } from 'react';
 import Meta from '@/app/components/common/MetaData';
 import MainHeader from '../../components/MainHeader';
 import { useTranslations, useLocale } from 'next-intl'; // ⬅️ add useLocale
+export const dynamic = 'force-static';
+
 
 export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
