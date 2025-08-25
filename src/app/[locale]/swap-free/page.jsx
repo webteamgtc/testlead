@@ -7,6 +7,7 @@ import MainFooter from "../components/MainFooter";
 import PayCommission from "./components/payCommison";
 import IBTestimonials from "./components/testmonial";
 import TradeSwitchSection from "./components/CtaSection";
+import Meta from "@/app/components/common/MetaData";
 
 
 const SwapFreePage = () => {
@@ -15,7 +16,8 @@ const SwapFreePage = () => {
     return (
         <>
             <MainHeader />
-            <div className="bg-[#000427]">
+               <Meta title='Open a GTC Swap Free Account and earn more.' description='Open a GTC account today and enjoy lifetime Swap Free trading. No overnight fees, no surprises, just pure trading freedom, always.'/>
+            <div className="bg-[#000032]">
                 <HeroSection setIsOpen={setIsOpen} />
                 <PayCommission
                     topTitle="A Forex Partnership Programme That"

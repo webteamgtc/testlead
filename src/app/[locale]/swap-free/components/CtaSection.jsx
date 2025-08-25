@@ -7,18 +7,19 @@ const TradeSwitchSection = ({ setIsOpen }) => {
     const t = useTranslations('switchToGtc.tradeSwitchSection');
     return (
         <div className="relative">
-            <section className=" container flex items-center py-20 mx-auto text-white overflow-hidden min-h-[400px] md:min-h-[440px]">
-                {/* Background image */}
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/swap-free/bg-switch-cta.jpg" // Replace with your image path
-                        alt="Trader background"
-                        fill
-                        priority
-                        className="object-fill object-center"
-                    />
-                    <div className="absolute inset-0 bg-[#0B1035] opacity-70" />
-                </div>
+         <section className=" container flex items-center py-20 mx-auto text-white overflow-hidden min-h-[400px] md:min-h-[440px]">
+               {/* Background image */}
+               <div className="absolute inset-0 z-0">
+                 <Image
+                   src="/swap-free/then.webp" // Replace with your image path
+                   alt="Trader background"
+                   fill
+                   priority
+                   className="object-cover object-center"
+                 />
+                 <div className="absolute inset-0 bg-[#0B1035] opacity-70" />
+               </div>
+       
 
                 {/* Content */}
                 <div className="relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center ltr:md:text-left rtl:md-text-right h-full">

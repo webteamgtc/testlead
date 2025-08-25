@@ -523,7 +523,7 @@ import Image from "next/image";
     }
   ]
   return (
-    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 md:py-28 relative overflow-hidden">
+    <section className="bg-gradient-to-r from-[#000032] to-[#000032] text-[#E5E5EA] py-8 md:py-28 relative overflow-hidden">
 
       {/* Desktop Background Image Only */}
       <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
@@ -543,10 +543,10 @@ import Image from "next/image";
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
           {/* Left Column */}
           <div className="text-center md:text-left">
-            <h1 className="text-[35px] leading-tight md:text-[56px] xl:text-[76px] font-bold 2xl:text-[70px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
+            <h1 className="text-[35px] leading-tight md:text-[40px] xl:text-[45px] font-bold 2xl:text-[50px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
               Trade Swap Free for Life with GTC!
             </h1>
-            <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
+            <h3 className="text-base md:text-[32px] mb-6 font-light leadging-none">
               No Rollover Fees. No Interest Charges. Just Pure Trading Freedom, Forever.
             </h3>
             <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
