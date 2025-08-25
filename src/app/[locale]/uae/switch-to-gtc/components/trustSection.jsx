@@ -33,7 +33,7 @@ const Broker = ({ setIsOpen, butText }) => {
 
           {/* Right Column */}
           <div>
-            <ul className="text-sm md:text-base text-[#000021] list-disc pl-5 space-y-5">
+            <ul className="text-sm md:text-base text-[#000021] list-disc pl-5 space-y-5 ltr:test-left rtl:text-right">
               <li>{t("points.p1")}</li>
               <li>{t("points.p2")}</li>
               <li>{t("points.p3")}</li>
