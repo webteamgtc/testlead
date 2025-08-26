@@ -23,32 +23,29 @@ const TestimonialCard = ({ text, name, index, country, odd }) => (
 );
 
 const IBTestimonials = ({ setIsOpen }) => {
-
-  const t = useTranslations('switchToGtc.testimonialSection');
-
-
+  const t = useTranslations("swapFreePage")
   const testimonials = [
     {
-      text: "Open Your Account",
-      name: "Just pop in your name and email. It takes less than a minute, literally.",
+      text: t("swapFree.card1.title"),
+      name: t("swapFree.card1.desc"),
       stars: 5,
       country: t("testimonials.one.country")
     },
     {
-      text: "Instant Activation",
-      name: "The moment your account is set, your Swap Free benefit is live. No request needed.",
+      text: t("swapFree.card2.title"),
+      name: t("swapFree.card2.desc"),
       stars: 5,
       country: t("testimonials.two.country")
     },
     {
-      text: "Start Trading Anything",
-      name: "Pick your market, FX, gold, indices etc, you’re good to go, Swap Free.",
+      text: t("swapFree.card3.title"),
+      name: t("swapFree.card3.desc"),
       stars: 5,
       country: t("testimonials.three.country")
     },
     {
-      text: "Hold. Trade. Repeat.",
-      name: "Whether you're in for the long haul or short bursts, your strategy stays fee-free.",
+      text: t("swapFree.card4.title"),
+      name: t("swapFree.card4.desc"),
       stars: 5,
       country: t("testimonials.four.country")
     },
@@ -61,13 +58,15 @@ const IBTestimonials = ({ setIsOpen }) => {
           {/* Left Section */}
           <div className="flex flex-col ltr:text-left rtl:text-right justify-center space-y-5 md:space-y-2">
             <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#000032] leading-snug capitalize w-64 md:w-full">
-              Swap Free for Life?
+              {t("swapFree.heading")}
             </h2>
             <p className="text-base md:text-lg font-semibold xl:text-[22px] text-[#4D4D70] max-w-2xl">
-              Only with a GTC Trading Account. Let’s Make it Happen for you.</p>
-            <p className="text-sm md:text-base xl:text-[18px] text-[#4D4D70] max-w-2xl">
-              This might be the simplest upgrade you'll ever make. No forms, no waiting, no hidden catches. Just follow these quick steps to switch to GTC and trade swap free for life.
+              {t("swapFree.desc")}
             </p>
+            <p className="text-sm md:text-base xl:text-[18px] text-[#4D4D70] max-w-2xl">
+              {t("swapFree.para1")}
+            </p>
+
           </div>
 
           {/* Testimonials Grid */}
@@ -82,13 +81,13 @@ const IBTestimonials = ({ setIsOpen }) => {
           <div className="relative mt-6 ">
             <button className="bg-gradient-to-r  mx-auto  flex items-center gap-2 from-[#293794] cursor-pointer to-[#000021] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
               onClick={() => setIsOpen(true)}>
-              Trade Swap Free
+              {t("swapFree.btnText")}
               <svg width="9" height="14" color="#fff" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
               </svg>
             </button>
             <p className="text-sm md:text-base mt-3 text-center text-[#4D4D70]  font-medium  leading-relaxed">
-              T&Cs Apply
+              {t("tcApply")}
             </p>
           </div>
         </div>

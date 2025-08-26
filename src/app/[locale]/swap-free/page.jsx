@@ -16,7 +16,7 @@ const SwapFreePage = () => {
     return (
         <>
             <MainHeader />
-               <Meta title='Open a GTC Swap Free Account and earn more.' description='Open a GTC account today and enjoy lifetime Swap Free trading. No overnight fees, no surprises, just pure trading freedom, always.'/>
+            <Meta title='Open a GTC Swap Free Account and earn more.' description='Open a GTC account today and enjoy lifetime Swap Free trading. No overnight fees, no surprises, just pure trading freedom, always.' />
             <div className="bg-[#000032]">
                 <HeroSection setIsOpen={setIsOpen} />
                 <PayCommission
