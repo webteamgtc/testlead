@@ -1,5 +1,5 @@
 {
-     "menuItem": {
+  "menuItem": {
     "whyJoin": "为何参加",
     "howItWorks": "如何运作",
     "competitionDetails": "比赛详情",
@@ -7,39 +7,39 @@
     "register": "立即注册"
   },
   "partner": {
-     "comparisonTable": {
-    "title": "推荐交易者至GTC，他们将获得以下优势",
-    "cta": "立即推荐交易者",
-    "colHeader1": "功能对比",
-    "colHeader2": "其他经纪商",
-    "col1": {
-      "point1": "EURUSD平均点差",
-      "point2": "杠杆比例",
-      "point3": "出金时效",
-      "point4": "剥头皮规则",
-      "point5": "新闻时段滑点",
-      "point6": "服务质量",
-      "point7": "忠诚度奖励"
+    "comparisonTable": {
+      "title": "推荐交易者至GTC，他们将获得以下优势",
+      "cta": "立即推荐交易者",
+      "colHeader1": "功能对比",
+      "colHeader2": "其他经纪商",
+      "col1": {
+        "point1": "EURUSD平均点差",
+        "point2": "杠杆比例",
+        "point3": "出金时效",
+        "point4": "剥头皮规则",
+        "point5": "新闻时段滑点",
+        "point6": "服务质量",
+        "point7": "忠诚度奖励"
+      },
+      "col2": {
+        "point1": "3点",
+        "point2": "1:500",
+        "point3": "24小时",
+        "point4": "3分钟限制",
+        "point5": "显著增加",
+        "point6": "模板化回复",
+        "point7": "❌ 无"
+      },
+      "col3": {
+        "point1": "0点起",
+        "point2": "1:2000",
+        "point3": "即时到账（最快10小时）",
+        "point4": "1分钟限制",
+        "point5": "基本无变化",
+        "point6": "真人专属服务",
+        "point7": "✅ GTC VIP+保证金奖励"
+      }
     },
-    "col2": {
-      "point1": "3点",
-      "point2": "1:500",
-      "point3": "24小时",
-      "point4": "3分钟限制",
-      "point5": "显著增加",
-      "point6": "模板化回复",
-      "point7": "❌ 无"
-    },
-    "col3": {
-      "point1": "0点起",
-      "point2": "1:2000",
-      "point3": "即时到账（最快10小时）",
-      "point4": "1分钟限制",
-      "point5": "基本无变化",
-      "point6": "真人专属服务",
-      "point7": "✅ GTC VIP+保证金奖励"
-    }
-  },
     "broker": {
       "heading": "真正值得信赖的经纪商",
       "paragraph": "我们绝非昙花一现。GTC在全球多个权威司法管辖区持牌受监管，以下是我们的信心保障：",
@@ -53,57 +53,57 @@
       "cta": "立即创收"
     },
     "form": {
-    "heading": "立即注册",
-    "closeAlt": "关闭弹窗",
-    "firstName": "名字",
-    "lastName": "姓氏",
-    "email": "电子邮箱",
-    "phone": "手机号码",
-    "country": "居住国家",
-    "otp": "验证码已发送至邮箱",
-    "getCode": "获取验证码",
-    "sending": "发送中...",
-    "sendOtp": "发送验证码",
-    "verifyCode": "验证验证码",
-    "termsLabel": "请接受条款和条件",
-    "termsText": "我确认已年满18岁，已阅读并同意",
-    "conset": "我同意GTC在合理时间联系我，且确认我的号码未登记在拒接来电名单(DNCR)中",
-    "clientAgreement": "客户协议",
-    "privacyPolicy": "隐私政策",
-    "submit": "立即提交",
-    "submitting": "提交中...",
-    "otpSuccess": "验证码验证成功！",
-    "otpFail": "验证失败，请重试！",
-    "thankYou1": "感谢您注册GTC！",
-    "otpSent": "验证码发送成功！",
-    "errors": {
-      "fullNameFormat": "姓名只能包含字母",
-      "firstNameRequired": "请输入名字",
-      "lastNameFormat": "姓氏只能包含字母",
-      "lastNameRequired": "请输入姓氏",
-      "emailInvalid": "邮箱格式不正确",
-      "emailRequired": "请输入邮箱",
-      "phoneRequired": "请输入手机号码",
-      "countryRequired": "请选择国家",
-      "otpLength": "验证码必须为6位数字",
-      "otpRequired": "请输入验证码",
-      "termsRequired": "请接受条款和条件"
-    },
-    "thankYou": "感谢",
-    "almostThere": "即将完成！",
-    "emailSent": "我们已向{email}发送邮件，说明后续步骤",
-    "checkSpam": "建议您检查垃圾邮件文件夹，有时邮件可能会被误分类。如发现邮件在垃圾文件夹中，请将其移回收件箱",
-    "seeYou": "期待与您相见！",
-    "helpSection": {
-      "title": "遇到问题？",
-      "phoneLabel": "联系我们",
-      "phone": "+971 800 667788",
-      "emailLabel": "或发送邮件至GTC合作伙伴团队",
-      "email": "partners@gtcfx.com"
+      "heading": "立即注册",
+      "closeAlt": "关闭弹窗",
+      "firstName": "名字",
+      "lastName": "姓氏",
+      "email": "电子邮箱",
+      "phone": "手机号码",
+      "country": "居住国家",
+      "otp": "验证码已发送至邮箱",
+      "getCode": "获取验证码",
+      "sending": "发送中...",
+      "sendOtp": "发送验证码",
+      "verifyCode": "验证验证码",
+      "termsLabel": "请接受条款和条件",
+      "termsText": "我确认已年满18岁，已阅读并同意",
+      "conset": "我同意GTC在合理时间联系我，且确认我的号码未登记在拒接来电名单(DNCR)中",
+      "clientAgreement": "客户协议",
+      "privacyPolicy": "隐私政策",
+      "submit": "立即提交",
+      "submitting": "提交中...",
+      "otpSuccess": "验证码验证成功！",
+      "otpFail": "验证失败，请重试！",
+      "thankYou1": "感谢您注册GTC！",
+      "otpSent": "验证码发送成功！",
+      "errors": {
+        "fullNameFormat": "姓名只能包含字母",
+        "firstNameRequired": "请输入名字",
+        "lastNameFormat": "姓氏只能包含字母",
+        "lastNameRequired": "请输入姓氏",
+        "emailInvalid": "邮箱格式不正确",
+        "emailRequired": "请输入邮箱",
+        "phoneRequired": "请输入手机号码",
+        "countryRequired": "请选择国家",
+        "otpLength": "验证码必须为6位数字",
+        "otpRequired": "请输入验证码",
+        "termsRequired": "请接受条款和条件"
+      },
+      "thankYou": "感谢",
+      "almostThere": "即将完成！",
+      "emailSent": "我们已向{email}发送邮件，说明后续步骤",
+      "checkSpam": "建议您检查垃圾邮件文件夹，有时邮件可能会被误分类。如发现邮件在垃圾文件夹中，请将其移回收件箱",
+      "seeYou": "期待与您相见！",
+      "helpSection": {
+        "title": "遇到问题？",
+        "phoneLabel": "联系我们",
+        "phone": "+971 800 667788",
+        "emailLabel": "或发送邮件至GTC合作伙伴团队",
+        "email": "partners@gtcfx.com"
+      }
     }
-  }
   },
- "demo": {
+  "demo": {
     "meta": {
       "title": "参与GTC模拟交易赛，赢取$5000奖金！立即报名",
       "description": "即刻注册GTC模拟交易大赛，赢取5000美元奖金！赛事将于2025年8月6日启动，切勿错过。"
@@ -123,17 +123,17 @@
       "sec": "秒"
     },
     "register": {
-    "title": "已注册参赛者名单",
-    "description": "以下为已报名GTC模拟交易大赛的交易者列表，查看即将参与挑战的选手社区！",
-    "table": {
-      "account": "账户编号",
-      "firstName": "名字",
-      "lastName": "姓氏",
-      "email": "电子邮箱",
-      "balance": "账户余额"
-    }
-  },
-      "payMore": {
+      "title": "已注册参赛者名单",
+      "description": "以下为已报名GTC模拟交易大赛的交易者列表，查看即将参与挑战的选手社区！",
+      "table": {
+        "account": "账户编号",
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "email": "电子邮箱",
+        "balance": "账户余额"
+      }
+    },
+    "payMore": {
       "title": "参赛价值",
       "intro": "这不是普通比赛，而是全球专业交易者的竞技舞台！原因如下：",
       "cta": "即刻参与",
@@ -211,9 +211,7 @@
         },
         {
           "title": "参与方式",
-          "content": [
-            "点击进入注册页面，成功报名后将收到："
-          ],
+          "content": ["点击进入注册页面，成功报名后将收到："],
           "list": [
             "收取含$10000 GTC MT5模拟账户凭证的邮件",
             "赛事期间外汇/贵金属/大宗商品交易权限",
@@ -231,20 +229,14 @@
           ]
         },
         {
-          "content": [
-            "开户入金享15%赠金"
-          ]
+          "content": ["开户入金享15%赠金"]
         },
         {
-          "content": [
-            "所有参赛者可获电子证书"
-          ]
+          "content": ["所有参赛者可获电子证书"]
         },
         {
           "title": "参赛协议",
-          "content": [
-            "点击查看完整参赛协议"
-          ],
+          "content": ["点击查看完整参赛协议"],
           "linkText": "参赛协议",
           "linkUrl": "https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Demo+Trading+Competition+T%26Cs+_+Mandarin.pdf"
         }
@@ -272,9 +264,9 @@
       "termsText": "点击“获取80%佣金”，即确认：年满18周岁\n已阅读并同意《客户协议》与《隐私政策》",
       "conset": "同意GTC在合理时间联系本人\n确认号码未列入拒接来电名单(DNCR)",
       "clientAgreement": "比赛条款细则",
-    "and1": "以及",
-    "privacyPolicy": "隐私政策",
-    "submit": "注册参赛",
+      "and1": "以及",
+      "privacyPolicy": "隐私政策",
+      "submit": "注册参赛",
       "submitting": "提交中...",
       "otpSuccess": "验证成功！",
       "otpFail": "验证失败，请重试",
@@ -314,7 +306,7 @@
       "description": "欢迎加入高绩效合作计划。GTC不仅提供高达80%返佣，更为您配备业务增长工具。"
     }
   },
-    "switchToGtc": {
+  "switchToGtc": {
     "meta": {
       "title": "更换至GTC  享更快出金与更低点差",
       "description": "选择GTC，体验更低点差、即时出金、公平剥头皮规则及更优赠金\n与懂您的经纪商共启智能交易"
@@ -381,28 +373,28 @@
     "testimonialSection": {
       "heading": "阿拉伯客户见证",
       "description": "数千中东交易者之选：阿联酋/阿曼/卡塔尔/科威特/伊拉克/约旦/黎巴嫩  \n您换投GTC的时机已至",
-     "testimonials":{
-      "one": {
-         "text": "“选择GTC因其出金速度远超原经纪商。USDT即时到账？大赞！” ",
+      "testimonials": {
+        "one": {
+          "text": "“选择GTC因其出金速度远超原经纪商。USDT即时到账？大赞！” ",
           "name": "Mohammed A.",
           "country": "阿联酋"
-      },
-      "two": {
-       "text": "“我专注剥头皮交易黄金，GTC是唯一无非常规时限的经纪商” ",
+        },
+        "two": {
+          "text": "“我专注剥头皮交易黄金，GTC是唯一无非常规时限的经纪商” ",
           "name": "Omar S.",
           "country": "卡塔尔"
-      },
-      "three": {
-       "text": "“前经纪商在新闻时段严重滑点。GTC执行精准，平台值得信赖”  ",
+        },
+        "three": {
+          "text": "“前经纪商在新闻时段严重滑点。GTC执行精准，平台值得信赖”  ",
           "name": "Hussein B.",
           "country": "伊拉克"
-      },
-      "four": {
-        "text": "“GTC客服真人沟通，非冷冰冰的工单号，仅此就值得转户” ",
+        },
+        "four": {
+          "text": "“GTC客服真人沟通，非冷冰冰的工单号，仅此就值得转户” ",
           "name": "Abdullah K.",
           "country": "黎巴嫩"
-      }
-    },
+        }
+      },
       "buttonText": "立即转户"
     },
     "tradeSwitchSection": {
@@ -574,6 +566,88 @@
       "description": "有疑问或需行使数据权利？",
       "buttonText": "发送邮件至 support@gtcfx.com",
       "email": "support@gtcfx.com"
+    }
+  },
+  "swapFreePage": {
+    "banner": {
+      "heading": "在 GTC 终身免隔夜费交易！",
+      "desc": "无隔夜费，无利息收取。纯粹的交易自由，直到永远。",
+      "para1": "限时优惠：开立 GTC 交易账户，即可享受终身免隔夜费！无需填写表格，无需特殊申请——只要开通账户就自动生效。无论你隔夜持仓，还是进行长期布局，都无需支付任何隔夜费。这是我们给予你的完全掌控：按你的策略、用你的方式交易——没有隐藏费用，没有附加条件。",
+      "column1": {
+        "title": "隔夜费？",
+        "desc": "不再有"
+      },
+      "column2": {
+        "title": "终身",
+        "desc": "自动启用"
+      },
+      "column3": {
+        "title": "解锁",
+        "desc": "完全掌控"
+      },
+      "column4": {
+        "title": "无限制",
+        "desc": "交易自由"
+      },
+      "btnText": "免隔夜费交易"
+    },
+    "tcApply": "适用条款与细则",
+    "whyPay": {
+      "heading": "为什么还要支付隔夜费？",
+      "title": "切换到 GTC，从此告别隔夜费！",
+      "para1": "你不仅是在省去隔夜费用，更是在开启更聪明的交易方式。以下是全球交易者选择 GTC 终身免隔夜费账户的原因：",
+      "card1": {
+        "title": "更久持仓",
+        "desc": "无需被迫平仓，想持多久就持多久。"
+      },
+      "card2": {
+        "title": "交易全球市场",
+        "desc": "从黄金到外汇，全部免隔夜费。"
+      },
+      "card3": {
+        "title": "保留更多利润",
+        "desc": "费用更少 = 到手更多。"
+      },
+      "card4": {
+        "title": "无压力策略",
+        "desc": "没有夜里蹭蹭冒出来的费用，安心入睡。"
+      },
+      "card5": {
+        "title": "即时生效",
+        "desc": "无需额外步骤，无需表格。开通即用。"
+      },
+      "card6": {
+        "title": "人人适用",
+        "desc": "新手或老手，都同样受益。"
+      },
+      "btnText": "切换到 GTC"
+    },
+    "swapFree": {
+      "heading": "终身免隔夜费？",
+      "desc": "只有 GTC 交易账户可以。我们帮你实现。",
+      "para1": "这可能是你最简单的一次升级。无表格、无等待、无套路。按以下几个步骤，切换到 GTC，从此终身免隔夜费：",
+      "card1": {
+        "title": "开立账户",
+        "desc": "填写姓名和邮箱即可，真的不到一分钟。"
+      },
+      "card2": {
+        "title": "即时激活",
+        "desc": "账户一开通，免隔夜费权益立即生效，无需申请。"
+      },
+      "card3": {
+        "title": "开始交易任意品种",
+        "desc": "选择你的市场：外汇、黄金、指数等，全部免隔夜费。"
+      },
+      "card4": {
+        "title": "持有·交易·重复",
+        "desc": "无论长线或短线，你的策略始终零费用束缚。"
+      },
+      "btnText": "免隔夜费交易"
+    },
+    "readyToSwap": {
+      "heading": "准备好免隔夜费交易了吗？",
+      "desc": "今天就切换到 GTC，终身免隔夜费，确定无疑！此外，你还将享有 GTC 账户的一切优势：超具竞争力的点差、超高速执行，以及真正用心的客户服务！",
+      "btnText": "切换到 GTC"
     }
   }
 }
