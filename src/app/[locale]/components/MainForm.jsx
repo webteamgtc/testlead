@@ -68,7 +68,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
     const sendVerificationCode = () => {
         setOtpLoading(true);
         axios
-            .post(`/api/otp-smtp`, {
+            .post(`/api/swap-otp`, {
                 email: formik?.values?.email,
                 first_name: formik?.values?.nickname,
                 type: "0",
@@ -103,7 +103,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
 
     const sendDataToDb = async (data) => {
         const emailData = axios
-            .post(`/api/email`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
+            .post(`/api/swap-email`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
             .then((res) => {
                 toast.success(t("thankYou1"));
                 formik.resetForm();

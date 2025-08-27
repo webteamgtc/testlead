@@ -53,7 +53,7 @@ export async function POST(req) {
                         ? "Ваши учетные данные для турнира GTC"
                         : data?.locale == "vi"
                             ? "Thông tin đăng nhập giải đấu GTC của bạn"
-                            : "Your GTC Tournament Credentials",
+                            : "Trade Swap Free for Life with GTC!",
         html:
             data?.locale == "ar"
                 ? `${getArabicEmailMT5Templetes(data)}`
