@@ -11,7 +11,7 @@ const HeroSection = ({ setIsOpen }) => {
       {/* Desktop Background Image Only */}
       <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
         <Image
-          src="/swap-free/hero.png"
+          src="/swap-free/banner-img.webp"
           alt="Hero BG"
           fill
           className="object-cover object-right 3xl:object-contain"
