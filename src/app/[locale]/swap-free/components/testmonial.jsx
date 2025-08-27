@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 
 const TestimonialCard = ({ text, name, index, country, odd }) => (
-  <div className={`bg-white rounded-[16px] p-4 text-sm space-y-1 flex flex-col gap-2 `}
+  <div className={`bg-white rounded-[16px] p-9 md:p-4 text-sm space-y-1 flex flex-col gap-2 `}
     style={{
       boxShadow: "1px 6px 16px 0px #0000001A"
     }}
@@ -52,7 +52,7 @@ const IBTestimonials = ({ setIsOpen }) => {
   ];
 
   return (
-    <section className="bg-[#fff] india-bg-switch py-8 md:py-20">
+    <section className="bg-[#fff] india-bg-switch py-12 md:py-20">
       <div className="container mx-auto">
         <div className=" grid md:grid-cols-1 gap-8 md:gap-16 ">
           {/* Left Section */}
@@ -70,7 +70,7 @@ const IBTestimonials = ({ setIsOpen }) => {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 md:gap-6">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 md:gap-6">
             {testimonials.map((item, idx) => {
               const odd = idx % 2 == 0 ? true : false
               return (

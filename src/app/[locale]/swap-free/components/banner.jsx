@@ -26,10 +26,13 @@ const HeroSection = ({ setIsOpen }) => {
             <h1 className="text-[35px] leading-tight md:text-[40px] xl:text-[45px] font-bold 2xl:text-[50px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
               {t("banner.heading")}
             </h1>
-            <h3 className="text-base md:text-[32px] mb-6 font-light leadging-none">
+            <h3 className="text-[22px] md:text-[32px] mb-6 font-light leadging-non px-2 md:px-0">
               {t("banner.desc")}
             </h3>
-            <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
+            <div className="flex flex-col sm:hidden relative w-full h-[200px]">
+                <Image src='/swap-free/banner.png' fill alt="" className="object-contain" />
+            </div>
+            <p className="text-base md:text-base mb-6 leading-nomral max-w-xl  px-2 md:px-0">
               {t("banner.para1")}
             </p>
             <div className="my-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center rounded-xl max-w-6xl mx-auto">

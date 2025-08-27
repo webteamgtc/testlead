@@ -76,7 +76,7 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
     };
 
     return (
-        <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] pt-28 py-8 md:pb-20 relative overflow-hidden text-center"
+        <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] pt-40 py-8 md:pb-20 relative overflow-hidden text-center"
             style={{ clipPath: "polygon(0% 10%, 100% 0, 100% 20%, 100% 100%, 0% 100%)" }}
         >
 
@@ -88,17 +88,17 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
                     className="object-cover"
                 />
             </div>
-            <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4">
+            <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4 z-50">
                 {/* Section Title */}
 
                 <h4 className="text-lg md:text-2xl font-[200]">{t("whyPay.heading")}</h4>
-                <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA]">
+                <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA] px-5 md:px-0">
                     {t("whyPay.title")}
                 </h2>
                 <p className="text-sm md:text-base xl:text-[22px] text-white max-w-4xl mx-auto leading-relaxed">
                     {t("whyPay.para1")}   </p>
                 {/* Flip Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-5 justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-5 justify-center">
                     {features.map((feat, idx) => {
                         const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
                         const isFlipped = isMobile && flippedIndex === idx;
