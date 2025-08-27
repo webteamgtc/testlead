@@ -578,6 +578,10 @@
     }
   },
   "swapFreePage": {
+     "meta": {
+      "title": "Open a GTC Swap Free Account and earn more.",
+      "description": "Open a GTC account today and enjoy lifetime Swap Free trading. No overnight fees, no surprises, just pure trading freedom, always."
+    },
     "banner": {
       "heading": "Trade Swap Free for Life with GTC!",
       "desc": "No Rollover Fees. No Interest Charges. Just Pure Trading Freedom, Forever.",
