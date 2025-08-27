@@ -25,7 +25,7 @@ const TradeSwitchSection = ({ setIsOpen }) => {
                 <div className="relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center ltr:md:text-left rtl:md-text-right h-full">
                     {/* Left Title */}
                     <div>
-                        <h2 className="text-[28px] md:text-[48px] max-w-sm font-semibold leading-tight text-white ltr:md:w-96 px-5 md:px-0 ">
+                        <h2 className="text-[28px] md:text-[48px] xl:text-[60px] max-w-sm font-semibold leading-tight text-white ltr:md:w-96 px-5 md:px-0 ">
                             {t("readyToSwap.heading")}
                         </h2>
                     </div>

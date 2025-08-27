@@ -77,8 +77,8 @@ const IBTestimonials = ({ setIsOpen }) => {
                 <TestimonialCard key={idx} {...item} index={idx} odd={odd} />
               )
             })}
-          </div>
-          <div className="relative mt-6 ">
+          </div> 
+          <div className="relative">
             <button className="bg-gradient-to-r  mx-auto  flex items-center gap-2 from-[#293794] cursor-pointer to-[#000021] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
               onClick={() => setIsOpen(true)}>
               {t("swapFree.btnText")}

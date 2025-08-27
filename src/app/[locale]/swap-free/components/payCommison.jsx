@@ -88,14 +88,14 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
                     className="object-cover"
                 />
             </div>
-            <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4 z-50">
+            <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-8 px-4 z-50">
                 {/* Section Title */}
 
                 <h4 className="text-lg md:text-2xl font-[200]">{t("whyPay.heading")}</h4>
                 <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA] px-5 md:px-0">
                     {t("whyPay.title")}
                 </h2>
-                <p className="text-sm md:text-base xl:text-[22px] text-white max-w-4xl mx-auto leading-relaxed">
+                <p className="text-sm md:text-base xl:text-[22px] text-white max-w-5xl mx-auto leading-relaxed">
                     {t("whyPay.para1")}   </p>
                 {/* Flip Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-5 justify-center">
@@ -135,7 +135,7 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
                 </div>
 
 
-                <div className="relative mt-6 ">
+                <div className="relative">
                     <button className="bg-gradient-to-r  mx-auto  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
                         onClick={() => setIsOpen(true)}>
                         {t("whyPay.btnText")}
