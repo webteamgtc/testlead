@@ -76,7 +76,7 @@ const HeroSection = ({ setIsOpen }) => {
               </div>
             </div>
 
-            <div className="relative pt-1 flex flex-col md:items-start items-center justify-center">
+            <div className="relative pt-1 flex flex-col gap-1 md:items-start items-center justify-center">
               <button className="bg-gradient-to-r mt-2  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
                 onClick={() => setIsOpen(true)}>
                 {t("banner.btnText")}
@@ -84,10 +84,11 @@ const HeroSection = ({ setIsOpen }) => {
                   <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
                 </svg>
               </button>
-            </div>
-            <p className="text-sm md:text-base mt-4  font-medium  leading-relaxed max-w-xl">
+               <a href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Cheatsheet/Swap+Free+for+Life+T%26Cs.pdf" target="_blank" className="text-sm md:text-base mt-4  font-medium  leading-relaxed max-w-xl">
               {t("tcApply")}
-            </p>
+            </a>
+            </div>
+           
             <div className="relative pt-1 flex flex-col md:items-start items-center justify-center"></div>
           </div>
         </div>
