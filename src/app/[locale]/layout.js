@@ -47,6 +47,14 @@ export default async function LocaleLayout({ children, params }) {
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <ToastContainer autoClose={3000} />
         <CookieConsent />
+             <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PSWH9QF"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
       </body>
     </html>
   );
