@@ -9,7 +9,6 @@ import IBTestimonials from "./components/testmonial";
 import TradeSwitchSection from "./components/CtaSection";
 import Meta from "@/app/components/common/MetaData";
 
-
 const SwapFreePage = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -26,14 +25,14 @@ const SwapFreePage = () => {
                     setIsOpen={setIsOpen}
                 />
             </div>
-            <IBTestimonials />
-            <TradeSwitchSection />
+            <IBTestimonials  setIsOpen={setIsOpen} />
+            <TradeSwitchSection  setIsOpen={setIsOpen} />
             <MainFooter />
             <SliderModal
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
-                zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/2nppxqi/"
-                successPath="/uae/partners/success"
+                zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/uh462x6/"
+                successPath="/swap-free/success"
             />
         </>
     )

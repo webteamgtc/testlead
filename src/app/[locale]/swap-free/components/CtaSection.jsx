@@ -25,7 +25,7 @@ const TradeSwitchSection = ({ setIsOpen }) => {
                 <div className="relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center text-center ltr:md:text-left rtl:md-text-right h-full">
                     {/* Left Title */}
                     <div>
-                        <h2 className="text-[28px] md:text-[48px] max-w-sm font-semibold leading-tight text-white ltr:md:w-96 ">
+                        <h2 className="text-[28px] md:text-[48px] xl:text-[60px] max-w-sm font-semibold leading-tight text-white ltr:md:w-96 px-5 md:px-0 ">
                             {t("readyToSwap.heading")}
                         </h2>
                     </div>
@@ -36,8 +36,8 @@ const TradeSwitchSection = ({ setIsOpen }) => {
                             {t("readyToSwap.desc")}
                         </p>
 
-
-                        <button className="bg-gradient-to-r mt-2  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
+                        <div className="relative flex flex-col gap-1">
+   <button className="bg-gradient-to-r mt-2  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
                             onClick={() => setIsOpen(true)}>
                             {t("readyToSwap.btnText")}
 
@@ -45,9 +45,11 @@ const TradeSwitchSection = ({ setIsOpen }) => {
                                 <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
                             </svg>
                         </button>
-                        <p className="text-sm md:text-base mt-3 text-center text-[#CCCCD6]  font-medium  leading-relaxed">
+                        <a href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Cheatsheet/Swap+Free+for+Life+T%26Cs.pdf" target="_blank" className="text-sm md:text-base mt-3 text-center text-[#CCCCD6]  font-medium  leading-relaxed">
                             {t("tcApply")}
-                        </p>
+                        </a>
+                        </div>
+                     
                     </div>
                 </div>
             </section>

@@ -76,7 +76,7 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
     };
 
     return (
-        <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] pt-28 py-8 md:pb-20 relative overflow-hidden text-center"
+        <section className="bg-gradient-to-r from-[#293794] to-[#000021] text-[#E5E5EA] pt-40 py-8 md:pb-20 relative overflow-hidden text-center"
             style={{ clipPath: "polygon(0% 10%, 100% 0, 100% 20%, 100% 100%, 0% 100%)" }}
         >
 
@@ -88,17 +88,17 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
                     className="object-cover"
                 />
             </div>
-            <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4">
+            <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-8 px-4 z-50">
                 {/* Section Title */}
 
                 <h4 className="text-lg md:text-2xl font-[200]">{t("whyPay.heading")}</h4>
-                <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA]">
+                <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold text-[#D9C3AA] px-5 md:px-0">
                     {t("whyPay.title")}
                 </h2>
-                <p className="text-sm md:text-base xl:text-[22px] text-white max-w-4xl mx-auto leading-relaxed">
+                <p className="text-sm md:text-base xl:text-[22px] text-white max-w-5xl mx-auto leading-relaxed">
                     {t("whyPay.para1")}   </p>
                 {/* Flip Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 md:gap-5 justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-5 justify-center">
                     {features.map((feat, idx) => {
                         const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
                         const isFlipped = isMobile && flippedIndex === idx;
@@ -135,7 +135,7 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
                 </div>
 
 
-                <div className="relative mt-6 ">
+                <div className="relative text-center flex flex-col gap-1">
                     <button className="bg-gradient-to-r  mx-auto  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
                         onClick={() => setIsOpen(true)}>
                         {t("whyPay.btnText")}
@@ -143,9 +143,9 @@ const PayCommission = ({ topTitle, bottomText, buttonText, setIsOpen }) => {
                             <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
                         </svg>
                     </button>
-                    <p className="text-sm md:text-base mt-3 text-center  font-medium  leading-relaxed">
+                    <a  href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Cheatsheet/Swap+Free+for+Life+T%26Cs.pdf" target="_blank" className="text-sm md:text-base mt-3 text-center  font-medium  leading-relaxed">
                         {t("tcApply")}
-                    </p>
+                    </a>
                 </div>
 
 

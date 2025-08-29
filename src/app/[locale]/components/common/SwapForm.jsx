@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import OtpInput from "react-otp-input";
-import { countryList } from "../context/useCountriesDetails";
-import { useLocationDetail } from "../context/useLocationDetail";
+import { countryList } from "../../context/useCountriesDetails";
+import { useLocationDetail } from "../../context/useLocationDetail";
 import { toast } from "react-toastify";
 import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
@@ -68,7 +68,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
     const sendVerificationCode = () => {
         setOtpLoading(true);
         axios
-            .post(`/api/swap-otp`, {
+            .post(`/api/otp-smtp`, {
                 email: formik?.values?.email,
                 first_name: formik?.values?.nickname,
                 type: "0",
@@ -103,7 +103,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
 
     const sendDataToDb = async (data) => {
         const emailData = axios
-            .post(`/api/swap-email`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
+            .post(`/api/swap-otp`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
             .then((res) => {
                 toast.success(t("thankYou1"));
                 formik.resetForm();
@@ -507,4 +507,4 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
     );
 };
 
-export default CommonMainForm;
+export default SwapForm;

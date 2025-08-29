@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 
 const TestimonialCard = ({ text, name, index, country, odd }) => (
-  <div className={`bg-white rounded-[16px] p-4 text-sm space-y-1 flex flex-col gap-2 `}
+  <div className={`bg-white rounded-[16px] p-9 md:p-4 text-sm space-y-1 flex flex-col gap-2 `}
     style={{
       boxShadow: "1px 6px 16px 0px #0000001A"
     }}
@@ -52,7 +52,7 @@ const IBTestimonials = ({ setIsOpen }) => {
   ];
 
   return (
-    <section className="bg-[#fff] india-bg-switch py-8 md:py-20">
+    <section className="bg-[#fff] india-bg-switch py-12 md:py-20">
       <div className="container mx-auto">
         <div className=" grid md:grid-cols-1 gap-8 md:gap-16 ">
           {/* Left Section */}
@@ -70,15 +70,15 @@ const IBTestimonials = ({ setIsOpen }) => {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5 md:gap-6">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 md:gap-6">
             {testimonials.map((item, idx) => {
               const odd = idx % 2 == 0 ? true : false
               return (
                 <TestimonialCard key={idx} {...item} index={idx} odd={odd} />
               )
             })}
-          </div>
-          <div className="relative mt-6 ">
+          </div> 
+          <div className="relative text-center flex flex-col gap-1">
             <button className="bg-gradient-to-r  mx-auto  flex items-center gap-2 from-[#293794] cursor-pointer to-[#000021] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
               onClick={() => setIsOpen(true)}>
               {t("swapFree.btnText")}
@@ -86,9 +86,9 @@ const IBTestimonials = ({ setIsOpen }) => {
                 <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
               </svg>
             </button>
-            <p className="text-sm md:text-base mt-3 text-center text-[#4D4D70]  font-medium  leading-relaxed">
+            <a  href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Cheatsheet/Swap+Free+for+Life+T%26Cs.pdf" target="_blank" className="text-sm md:text-base mt-3 text-center text-[#4D4D70]  font-medium  leading-relaxed">
               {t("tcApply")}
-            </p>
+            </a>
           </div>
         </div>
       </div>

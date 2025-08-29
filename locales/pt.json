@@ -86,16 +86,16 @@
       }
     },
     "broker": {
-      "heading": "Um Corretor em Que Você Pode Realmente Confiar",
-      "paragraph": "Não somos uma operação passageira. A GTC é licenciada e regulamentada em várias jurisdições respeitadas. Veja como oferecemos confiança para negociar.",
+      "heading": "A corretora em que você pode confiar de verdade",
+      "paragraph": "Na GTC, transparência não é promessa, é prática. Somos licenciados e regulamentados em várias jurisdições respeitadas, oferecendo a você total confiança para negociar.",
       "points": {
-        "p1": "Licenciada pela SCA dos Emirados Árabes Unidos, FSC de Maurício e FSCA da África do Sul.",
-        "p2": "Sede em Dubai com quase 1 milhão de traders globais.",
-        "p3": "Suporte de classe mundial com um toque humano real.",
-        "p4": "Cultura centrada no cliente, onde o serviço é a estratégia."
+        "p1": "Licenciada pela SCA dos Emirados Árabes Unidos, pela FSC das Ilhas Maurício e pela FSCA da África do Sul.",
+        "p2": "Sediada em Dubai, com quase 1 milhão de traders globais.",
+        "p3": "Atendimento de nível mundial, com o cuidado humano que você merece.",
+        "p4": "Cultura que prioriza o cliente, onde o serviço é estratégia."
       },
-      "bottomTitle": "Mude para um corretor que não apenas promete, mas prova isso todos os dias.",
-      "cta": "Comece a Ganhar"
+      "bottomTitle": "Confiança que se comprova.",
+      "cta": "Mude para a GTC e sinta a diferença!"
     },
     "testimonials": {
       "title": "O Que os Parceiros e Traders Forex da Arábia Saudita Estão Dizendo",
@@ -578,12 +578,12 @@
         "item5": "Bono de Margen Real con Reembolso Real",
         "item6": "Bróker Multi-Regulado: SCA, FCA y ASIC"
       },
-      "tableHeading": "Comparación Rápida: Tu Bróker vs. GTC"
+      "tableHeading": "Comparação rápida: sua corretora vs GTC"
     },
     "bonusSection": {
       "heading": "Mude e receba um bônus que aumenta sua margem, não só a sua expectativa.",
       "description1": "Venha para a GTC: depósitos a partir de US$ 500 ganham margem dobrada e cashback de verdade.\nAqui você ganha margem de negociação extra com recompensas reais de cashback.",
-      "description2": "Negocie câmbio, ouro, metais ou petróleo e alcance sua meta de cashback.",
+      "description2": "Negocie forex, ouro, metais ou petróleo e alcance sua meta de cashback.",
       "description3": "Resgate sua recompensa.",
       "benefits": {
         "benefit1": {
@@ -622,11 +622,11 @@
       "buttonText": "Mude para a GTC e sinta a diferença!"
     },
     "testimonialSection": {
-      "heading": "Opinião dos nossos Traders Árabes",
-      "description": "Com milhares de traders satisfeitos dos Emirados Árabes Unidos, Omã, Catar, Kuwait, Iraque, Jordânia e Líbano, não está na hora de você mudar para a GTC?",
+      "heading": "Confira a opinião dos nossos traders",
+      "description": "Milhares de traders dos Emirados Árabes Unidos, Omã, Catar, Kuwait, Iraque, Jordânia e Líbano estão satisfeitos. Será que não está na hora de você mudar para a GTC?",
       "testimonials": {
         "one": {
-          "text": "“Mudei para a GTC porque a velocidade de saque deixou minha antiga corretora de queixo caído. Pagamento instantâneo em USDT? Eu adoro!”",
+          "text": "“Mudei para a GTC porque a velocidade de saque deixou minha antiga corretora de queixo caído. Pagamento instantâneo em USDT?”",
           "name": "Mohammed A.",
           "country": "Emirados Árabes Unidos"
         },

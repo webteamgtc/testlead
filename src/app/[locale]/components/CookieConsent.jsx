@@ -15,9 +15,9 @@ const translations = {
     linkText: "Lee nuestra política de privacidad aquí.",
   },
   pt: {
-    message: "Ao clicar em 'Está Bem Para Mim', você concorda com o armazenamento de cookies em seu dispositivo para melhorar sua experiência de usuário, navegação no site, analisar o uso do site e auxiliar em nossos esforços de marketing.",
-    cta: "Está Bem Para Mim",
-    linkText: "Leia nossa política de privacidad aquí.",
+    message: "Ao clicar em 'Aceitar', você concorda com o armazenamento de cookies no seu dispositivo para melhorar sua experiência de usuário, facilitar a navegação no site, analisar o uso do site e auxiliar em nossos esforços de marketing.",
+    cta: "Concordar",
+    linkText: "Leia nossa política de privacidade aqui.",
   },
   ru: {
     message: "Нажимая 'Хорошо', вы соглашаетесь с сохранением cookies на вашем устройстве для улучшения вашего пользовательского опыта, навигации по сайту, анализа использования сайта и поддержки наших маркетинговых усилий.",

@@ -1,6 +1,7 @@
 import CommonMainForm from "@/app/[locale]/components/MainForm";
 import Image from "next/image";
 import { useTranslations } from "next-intl"; // for localization
+import SwapForm from "@/app/[locale]/components/MainForm";
 
 const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) => {
 
@@ -43,8 +44,7 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) =
             <h2 className="text-center text-2xl md:text-3xl font-medium my-5 md:my-8">
                   {t("heading")}
             </h2>
-
-            <CommonMainForm
+            <SwapForm
               zapierUrl={zapierUrl}
               successPath={successPath}
               emailConfig={emailConfig} // Pass the email configuration

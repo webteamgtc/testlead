@@ -11,7 +11,7 @@ const HeroSection = ({ setIsOpen }) => {
       {/* Desktop Background Image Only */}
       <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
         <Image
-          src="/swap-free/hero.png"
+          src="/swap-free/banner-img.webp"
           alt="Hero BG"
           fill
           className="object-cover object-right 3xl:object-contain"
@@ -26,10 +26,13 @@ const HeroSection = ({ setIsOpen }) => {
             <h1 className="text-[35px] leading-tight md:text-[40px] xl:text-[45px] font-bold 2xl:text-[50px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
               {t("banner.heading")}
             </h1>
-            <h3 className="text-base md:text-[32px] mb-6 font-light leadging-none">
+            <h3 className="text-[22px] md:text-[32px] mb-6 font-light leadging-non px-2 md:px-0">
               {t("banner.desc")}
             </h3>
-            <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
+            <div className="flex flex-col sm:hidden relative w-full h-[200px]">
+                <Image src='/swap-free/banner.png' fill alt="" className="object-contain" />
+            </div>
+            <p className="text-base md:text-base mb-6 leading-nomral max-w-xl  px-2 md:px-0">
               {t("banner.para1")}
             </p>
             <div className="my-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center rounded-xl max-w-6xl mx-auto">
@@ -73,7 +76,7 @@ const HeroSection = ({ setIsOpen }) => {
               </div>
             </div>
 
-            <div className="relative pt-1 flex flex-col md:items-start items-center justify-center">
+            <div className="relative pt-1 flex flex-col gap-1 md:items-start items-center justify-center">
               <button className="bg-gradient-to-r mt-2  flex items-center gap-2 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
                 onClick={() => setIsOpen(true)}>
                 {t("banner.btnText")}
@@ -81,10 +84,11 @@ const HeroSection = ({ setIsOpen }) => {
                   <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
                 </svg>
               </button>
-            </div>
-            <p className="text-sm md:text-base mt-4  font-medium  leading-relaxed max-w-xl">
+               <a href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Cheatsheet/Swap+Free+for+Life+T%26Cs.pdf" target="_blank" className="text-sm md:text-base mt-4  font-medium  leading-relaxed max-w-xl">
               {t("tcApply")}
-            </p>
+            </a>
+            </div>
+           
             <div className="relative pt-1 flex flex-col md:items-start items-center justify-center"></div>
           </div>
         </div>
