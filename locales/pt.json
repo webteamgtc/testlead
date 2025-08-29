@@ -578,7 +578,7 @@
         "item5": "Bono de Margen Real con Reembolso Real",
         "item6": "Bróker Multi-Regulado: SCA, FCA y ASIC"
       },
-      "tableHeading": "Comparação rápida: sua corretora vs GTC"
+      "tableHeading": "Comparación Rápida: Tu Bróker vs. GTC"
     },
     "bonusSection": {
       "heading": "Mude e receba um bônus que aumenta sua margem, não só a sua expectativa.",
@@ -626,7 +626,7 @@
       "description": "Milhares de traders dos Emirados Árabes Unidos, Omã, Catar, Kuwait, Iraque, Jordânia e Líbano estão satisfeitos. Será que não está na hora de você mudar para a GTC?",
       "testimonials": {
         "one": {
-          "text": "“Mudei para a GTC porque a velocidade de saque deixou minha antiga corretora de queixo caído. Pagamento instantâneo em USDT?”",
+          "text": "“Mudei para a GTC porque a velocidade de saque deixou minha antiga corretora de queixo caído. Pagamento instantâneo em USDT? Eu adoro!”",
           "name": "Mohammed A.",
           "country": "Emirados Árabes Unidos"
         },
@@ -655,9 +655,9 @@
       "buttonText": "Mude para a GTC hoje!"
     },
     "confirmationThankYou": {
-      "heading": "Obrigado, {nickname}!",
+      "heading": "Obrigado,",
       "subheading": "Você está quase lá!",
-      "description1": "Acabamos de enviar um e-mail para {email} com as próximas instruções.",
+      "description1": "Acabamos de enviar um e-mail com as próximas instruções.",
       "description2": "Confira também sua pasta de spam ou lixo eletrônico, pois nosso e-mail pode ter ido para lá. Se encontrar, basta movê-lo para a caixa de entrada.\n",
       "farewell": "Até breve!"
     }
