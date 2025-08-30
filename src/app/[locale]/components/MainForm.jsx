@@ -106,6 +106,15 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
             .post(`/api/swap-email`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
             .then((res) => {
                 toast.success(t("thankYou1"));
+                window.dataLayer = window.dataLayer || [];
+                // Call this only after the form actually succeeds (server says OK or you land on success)
+                window.dataLayer.push({
+                    event: 'reg_form_submit',
+                    form_id: 'lead-form',
+                    method: 'ajax',
+                    status: 'success'
+                    // lead_id: '12345', utm_source: 'google', etc.
+                });
                 formik.resetForm();
                 setLoading(false);
                 localStorage.setItem("user", JSON.stringify(data));
@@ -147,11 +156,11 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
         },
         validationSchema: Yup.object({
             nickname: Yup.string()
-        .matches(/^[^\d]+$/, t("errors.fullNameFormat"))
-        .required(t("errors.firstNameRequired")),
-      last_name: Yup.string()
-        .matches(/^[^\d]+$/, t("errors.lastNameFormat"))
-        .required(t("errors.lastNameRequired")),
+                .matches(/^[^\d]+$/, t("errors.fullNameFormat"))
+                .required(t("errors.firstNameRequired")),
+            last_name: Yup.string()
+                .matches(/^[^\d]+$/, t("errors.lastNameFormat"))
+                .required(t("errors.lastNameRequired")),
 
             email: Yup.string()
                 .email(t("errors.emailInvalid"))
@@ -470,8 +479,8 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                                 {t("clientAgreement")}
                             </a>{" "}
                             & the{" "}
-                                <a
-                                    href={
+                            <a
+                                href={
                                     {
                                         ar: "/ar/privacy-policy",
                                         ru: "/ru/privacy-policy",
@@ -480,11 +489,11 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                                         es: "/es/privacy-policy",
                                         pt: "/pt/privacy-policy",
                                     }[locale] || "/privacy-policy"
-                                    }
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-secondary underline ml-1"
-                                >
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-secondary underline ml-1"
+                            >
                                 {t("privacyPolicy")}
                             </a>
                             , {t("conset")}.
