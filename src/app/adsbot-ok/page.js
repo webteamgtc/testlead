@@ -6,7 +6,7 @@ export default function AdsOk() {
   return (
     <html lang="en">
       <head>
-        <title>Switch to GTC</title>
+        <title>Landing Page</title>
         <meta name="robots" content="noindex,follow" />
 
         {/* Google Tag Manager */}
@@ -31,9 +31,8 @@ export default function AdsOk() {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <main>
-          <h1>Switch to GTC</h1>
-          <p>Landing is available.</p>
+       <main>
+          <h1>Landing is available</h1>
         </main>
       </body>
     </html>
