@@ -2,8 +2,8 @@
 import { useState } from "react";
 import HeroSection from './components/banner'
 import SliderModal from './components/SliderModal'
-import MainHeader from "../components/MainHeader";
-import MainFooter from "../components/MainFooter";
+import MainHeader from "../../components/MainHeader";
+import MainFooter from "../../components/MainFooter";
 import PayCommission from "./components/payCommison";
 import IBTestimonials from "./components/testmonial";
 import TradeSwitchSection from "./components/CtaSection";
