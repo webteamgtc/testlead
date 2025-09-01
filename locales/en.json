@@ -662,5 +662,93 @@
       "desc": "Switch to GTC today & trade swap free for life! There’s nothing surer about that! Plus you get all the benefits of a GTC trading account, which means you receive super-competitive spreads, ultra-fast execution & customer care that actually cares about you!",
       "btnText": "Switch to GTC"
     }
+  },
+   "tradeGold": {
+     "meta": {
+      "title": "Trade Gold at 0.20 Spread in [COUNTRY], Only with GTC",
+      "description": "0.20 raw spreads when you trade gold with us. Hit that “TRADE GOLD” button to get started."
+    },
+    "banner": {
+      "heading": "Trade Gold at 0.20 Spread in [COUNTRY], Only with GTC",
+      "desc": "0.20 raw spreads when you trade gold with us. Thousands of traders in [COUNTRY] are now trading gold with GTC because we also offer same‑day withdrawals, plus your funds are protected as GTC is a multi-regulated broker. Hit that “TRADE GOLD” button to get started.",
+      "para1": "For a limited time, you can get your GTC trading account with a Swap Free option for life! No forms, no special requests, just open a GTC trading account and it’s done. Whether you’re holding trades overnight or are planning long-term moves, you won’t pay a single cent in swaps. It’s our way of giving you full control to trade your strategy, your way, with no hidden fees & no strings attached.",
+      "column1": {
+        "desc": "Gold Spreads from 0.20 Lower costs, better trading."
+      },
+      "column2": {
+        "desc": "Same-Day Withdrawals They’re your funds, not ours."
+      },
+      "column3": {
+        "desc": "Scalping After 60 Seconds. Fast trades. No blocks."
+      },
+      "column4": {
+        "desc": "Ultra-Fast Execution on your gold  trades at GTC"
+      },
+       "column5": {
+        "desc": "Real Bonus & Cashback that boosts your trades."
+      },
+       "column6": {
+        "desc": "Multi-Regulated Brokerage SCA & FSC"
+      },
+      "btnText": "Trade Gold"
+    },
+    "tcApply": "T&Cs Apply",
+    "whyPay": {
+      "heading": "Why Pay for Swaps?",
+      "title": "Switch to GTC & Never Pay Swap Fees Again!",
+      "para1": "You're not just skipping overnight fees, you’re unlocking a smarter way to trade. Here’s why traders all over the world are switching to GTC’s Swap Free accounts for life:",
+      "card1": {
+        "title": "Hold Trades Longer",
+        "desc": "No pressure to close positions, stay in as long as you like."
+      },
+      "card2": {
+        "title": "Trade Global Markets",
+        "desc": "From gold to forex, it all stays Swap Free."
+      },
+      "card3": {
+        "title": "Keep More Profit",
+        "desc": "Less fees = more in your pocket."
+      },
+      "card4": {
+        "title": "Stress-Free Strategy",
+        "desc": "No fees creeping in overnight. Sleep easy."
+      },
+      "card5": {
+        "title": "Instant Activation",
+        "desc": "No extra steps. No forms. Just open and go."
+      },
+      "card6": {
+        "title": "Built for Everyone",
+        "desc": "New to trading or a pro, it works for you."
+      },
+      "btnText": "Switch to GTC"
+    },
+    "swapFree": {
+      "heading": "Swap Free for Life?",
+      "desc": "Only with a GTC Trading Account. Let’s Make it Happen for you.",
+      "para1": "This might be the simplest upgrade you'll ever make. No forms, no waiting, no hidden catches. Just follow these quick steps to switch to GTC and trade swap free for life.",
+      "card1": {
+        "title": "Open Your Account",
+        "desc": "Just pop in your name and email. It takes less than a minute, literally."
+      },
+      "card2": {
+        "title": "Instant Activation",
+        "desc": "The moment your account is set, your Swap Free benefit is live. No request needed."
+      },
+      "card3": {
+        "title": "Start Trading Anything",
+        "desc": "Pick your market, FX, gold, indices etc, you’re good to go, Swap Free."
+      },
+      "card4": {
+        "title": "Hold. Trade. Repeat.",
+        "desc": "Whether you're in for the long haul or short bursts, your strategy stays fee-free."
+      },
+      "btnText": "Trade Swap Free"
+    },
+    "readyToSwap": {
+      "heading": "Ready To Trade Swap Free?",
+      "desc": "Switch to GTC today & trade swap free for life! There’s nothing surer about that! Plus you get all the benefits of a GTC trading account, which means you receive super-competitive spreads, ultra-fast execution & customer care that actually cares about you!",
+      "btnText": "Switch to GTC"
+    }
   }
 }
