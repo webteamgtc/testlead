@@ -3,7 +3,10 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import PhoneInput from "react-phone-number-input";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
+
 import "react-phone-number-input/style.css";
 import OtpInput from "react-otp-input";
 import { countryList } from "../context/useCountriesDetails";
@@ -24,6 +27,11 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
     const [isDisable, setIsDisable] = useState(true);
     const router = useRouter();
     const isPartnerPage = window.location?.pathname?.includes("partner")
+
+    const getIso2ByCountryName = (name) => {
+        const hit = countryList.find(c => c.en_short_name === name);
+        return hit?.alpha_2_code; // e.g. "PK"
+    };
 
     const t = useTranslations("partner.form");
     const locale = useLocale(); // inside your component
@@ -103,7 +111,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
 
     const sendDataToDb = async (data) => {
         const emailData = axios
-            .post(`/api/swap-email`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
+            .post(`/api/swap-email`, JSON.stringify({ ...data, name: data?.nickname, locale: locale, isPartnerPage: isPartnerPage }))
             .then((res) => {
                 toast.success(t("thankYou1"));
                 window.dataLayer = window.dataLayer || [];
@@ -166,8 +174,24 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                 .email(t("errors.emailInvalid"))
                 .required(t("errors.emailRequired")),
 
-            phone: Yup.string().required(t("errors.phoneRequired")),
+            phone: Yup.string()
+                .required(t('errors.phoneRequired'))
+                .test('is-valid-e164', "Enter valid phone number", (value) => {
+                    if (!value) return false;
+                    // e.g. "+923161028955"
+                    return isValidPhoneNumber(value);
+                })
+                .test('matches-selected-country', "Selected Country not match with phone number" /* e.g. "Number doesn't match selected country" */, function (value) {
+                    const selectedCountryName = this.parent.country;
+                    if (!value || !selectedCountryName) return true; // skip if not chosen yet
+                    const selectedIso2 = getIso2ByCountryName(selectedCountryName); // e.g. "PK"
+                    if (!selectedIso2) return true; // can't verify → don't block
 
+                    const pn = parsePhoneNumberFromString(value);
+                    if (!pn) return false; // invalid structure
+
+                    return pn.country === selectedIso2; // must match the selected country
+                }),
             country: Yup.string().required(t("errors.countryRequired")),
 
             otp: Yup.string()
