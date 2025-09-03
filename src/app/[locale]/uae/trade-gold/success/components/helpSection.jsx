@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 const HelpSection = () => {
-  const t = useTranslations('partner.form.helpSection');
+  const t = useTranslations('tradeGold');
 
   return (
     <section className="relative bg-white py-16 md:py-20 overflow-hidden">
@@ -24,28 +24,26 @@ const HelpSection = () => {
           {/* Text Content */}
           <div>
             <h3 className="text-xl md:text-2xl 2xl:text-3xl font-semibold text-[#956D42] mb-3">
-              {t('title')}
+              {t('confirmationThankYou.help.heading')}
             </h3>
-           <p className="text-sm text-[#956D42] mb-3 leading-relaxed">
-              📞 {t('phoneLabel')}{' '}
-              <a
-                href={`tel:${t('phone')}`}
-                className="font-medium underline hover:text-[#b68756]"
-                dir="ltr"
-                style={{ unicodeBidi: 'plaintext' }}
-              >
-                {t('phone')}
-              </a>, {t('emailLabel')}{' '}
+            <p className="text-sm text-[#956D42] mb-3 leading-relaxed">
+               {t('confirmationThankYou.help.phone')}{' '}
               <a
                 href={`mailto:${t('email')}`}
                 className="font-medium underline hover:text-[#b68756]"
                 dir="ltr"
                 style={{ unicodeBidi: 'plaintext' }}
               >
-                {t('email')}
+                {t('confirmationThankYou.help.email')}
               </a>.
             </p>
 
+            <p className="text-sm text-[#956D42] mb-3 leading-relaxed">
+              {t('confirmationThankYou.help.seeYou')}{' '}
+            </p>
+            <p className="text-sm text-[#956D42] mb-3 leading-relaxed">
+              {t('confirmationThankYou.help.team')}{' '}
+            </p>
           </div>
 
           {/* Icon */}

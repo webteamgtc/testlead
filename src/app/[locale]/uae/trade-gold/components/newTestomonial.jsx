@@ -1,45 +1,9 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
 
 
-const ITEMS = [
-    {
-        stars: 4,
-        quote:
-            'I recently switched to GTC because the spreads on gold were killing my profits at the previous broker I was trading with. GTC’s 2-pip spread made such a noticeable difference, plus any withdrawals I make hit my account the same day. GTC is a very professional brokerage and I’m happy to trade gold with them.',
-        author: 'Omar A.',
-        location: 'Cairo, Egypt',
-    },
-    {
-        stars: 5,
-        quote:
-            'I scalp gold all day, and GTC is the only broker I’ve found that actually lets me do that without weird time limits.',
-        author: 'Yousef H.',
-        location: 'Jeddah, Saudi Arabia',
-    },
-    {
-        stars: 5,
-        quote:
-            'Gold is my main instrument. I’ve been trading across GTC after the latest FX Expo in Limassol; their execution is fast, no slippage during spikes, and support actually knows what they’re talking about.',
-        author: 'Nour S.',
-        location: 'Beirut, Lebanon',
-    },
-    {
-        stars: 5,
-        quote:
-            'Gold is my main instrument. I’ve been trading across GTC after the latest FX Expo in Limassol; their execution is fast, no slippage during spikes, and support actually knows what they’re talking about.',
-        author: 'Nour S.',
-        location: 'Beirut, Lebanon',
-    },
-    {
-        stars: 5,
-        quote:
-            'Gold is my main instrument. I’ve been trading across GTC after the latest FX Expo in Limassol; their execution is fast, no slippage during spikes, and support actually knows what they’re talking about.',
-        author: 'Nour S.',
-        location: 'Beirut, Lebanon',
-    },
-];
 
 /* ---- UI bits ---- */
 function StarRow({ n }) {
@@ -79,6 +43,36 @@ function Card({ t }) {
 
 /* ---- main ---- */
 export default function ArabicTestimonials({ setIsOpen }) {
+    const t = useTranslations("tradeGold");
+
+
+    const ITEMS = [
+        {
+            stars: 4,
+            quote: t("testimonial.card1.title"),
+            author: t("testimonial.card1.name"),
+            location: t("testimonial.card1.country"),
+        },
+        {
+            stars: 4,
+            quote: t("testimonial.card2.title"),
+            author: t("testimonial.card2.name"),
+            location: t("testimonial.card2.country"),
+        },
+        {
+            stars: 4,
+            quote: t("testimonial.card3.title"),
+            author: t("testimonial.card3.name"),
+            location: t("testimonial.card3.country"),
+        },
+        {
+            stars: 4,
+            quote: t("testimonial.card4.title"),
+            author: t("testimonial.card4.name"),
+            location: t("testimonial.card4.country"),
+        },
+    ];
+
     // slider only on >= sm
     const [perView, setPerView] = useState(3);
     useEffect(() => {
@@ -110,10 +104,10 @@ export default function ArabicTestimonials({ setIsOpen }) {
         <section className="bg-white">
             <div className="mx-auto container py-10 md:py-14">
                 <h2 className="text-[#000032] font-extrabold text-center md:text-left tracking-tight text-[24px] leading-[32px] md:text-[32px] md:leading-[38px] xl:text-[34px] xl:leading-[42px]">
-                    What Our Arabic Traders Are Saying
+                    {t("testimonial.heading")}
                 </h2>
                 <p className="mt-3 md:text-[18px] text-[16px] text-center md:text-left leading-[26px] text-[#4D4D70] max-w-[720px]">
-                    With thousands of happy traders from the [COUNTRY], isn’t it time you switched to GTC?
+                    {t("testimonial.desc")}
                 </p>
 
                 {/* MOBILE: no slider, 1 per row */}
@@ -175,7 +169,8 @@ export default function ArabicTestimonials({ setIsOpen }) {
                          text-white text-[16px] font-semibold
                          bg-gradient-to-b from-[#E1CFBB] to-[#956D42]
                          shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:opacity-95 transition"
-                    >                        Trade Gold
+                    >
+                        {t("testimonial.btnText")}
                     </button>
                 </div>
             </div>

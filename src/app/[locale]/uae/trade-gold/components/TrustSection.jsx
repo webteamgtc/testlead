@@ -1,6 +1,10 @@
 'use client';
 
+import { useTranslations } from "next-intl";
+
 export default function HeroTrust({ setIsOpen }) {
+    const t = useTranslations("tradeGold");
+
     return (
         <section className="relative bg-gradient-to-r from-[#293794] to-[#000021]">
             <div className="mx-auto container py-10 md:py-16">
@@ -15,26 +19,21 @@ export default function HeroTrust({ setIsOpen }) {
                          md:text-[34px] md:leading-[42px]
                          xl:text-[36px] xl:leading-[44px]"
                         >
-                            Trade Gold with a Broker You
-                            <br className="hidden md:block" />
-                            Can Actually Trust
+                            {t("tradeBroker.heading")}
                         </h2>
 
                         <p className="mt-5 max-w-[520px] text-[16px] leading-[22px] text-[#fff]">
-                            When it comes to trading gold, you’re going to want a broker that
-                            understands you, is licensed and regulated in multiple respected
-                            jurisdictions, and has a track record for excellence. Here’s how we
-                            give you confidence to trade.
+                            {t("tradeGoldSection.desc")}
                         </p>
                     </div>
 
                     {/* Right: bullets */}
                     <div className="md:pl-2">
                         <ul className="list-disc pl-[32px] md:pl-0 marker:text-[#E1CFBB] text-[18px] leading-[22px] text-[#fff] space-y-2">
-                            <li>Licensed by the UAE’s SCA, Mauritius’ FSC, and South Africa’s FSCA.</li>
-                            <li>Headquartered in Dubai with nearly 1 million serviced traders.</li>
-                            <li>World-class support with a real human touch.</li>
-                            <li>Customer-first culture where service is strategy.</li>
+                            <li> {t("tradeGoldSection.item1")}</li>
+                            <li>{t("tradeGoldSection.item2")}</li>
+                            <li>{t("tradeGoldSection.item3")}</li>
+                            <li>{t("tradeGoldSection.item4")}</li>
                         </ul>
                     </div>
                 </div>
@@ -42,7 +41,7 @@ export default function HeroTrust({ setIsOpen }) {
                 {/* Centered tagline + CTA */}
                 <div className="pt-8 md:pt-16 text-center">
                     <p className="font-extrabold text-[22px]  text-left md:text-center leading-[28px] md:text-[30px] md:leading-[34px] text-[#fff]">
-                        Switch to a broker that allows you to trade gold your way!
+                        {t("tradeGoldSection.subTitle")}
                     </p>
 
                     <button
@@ -53,7 +52,7 @@ export default function HeroTrust({ setIsOpen }) {
                          bg-gradient-to-b from-[#E1CFBB] to-[#956D42]
                          shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:opacity-95 transition"
                     >
-                        Trade Gold
+                        {t("tradeGoldSection.btnText")}
                     </button>
                 </div>
             </div>

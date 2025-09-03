@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const ConfirmationThankYou = ({ user }) => {
-  const t = useTranslations('partner.form');
+  const t = useTranslations("tradeGold");
   const [dir, setDir] = useState('ltr');
 
   useEffect(() => {
@@ -40,21 +40,20 @@ const ConfirmationThankYou = ({ user }) => {
 
           <div className={isRTL ? 'order-2 md:order-2 text-right' : 'order-2 md:order-1 text-left'}>
             <h2 className="text-2xl md:text-4xl 2xl:text-5xl font-bold mb-5">
-              {t('thankYou')}, <span className="text-white">{user?.nickname}</span>!
+              {t('confirmationThankYou.heading')}, <span className="text-white">{user?.nickname}</span>!
             </h2>
             <h4 className="text-lg md:text-xl 2xl:text-2xl font-semibold text-gray-200 mb-5">
-              {t('almostThere')}
+              {t('confirmationThankYou.subheading')}
             </h4>
             <div className="max-w-xl">
+             
               <p className="text-sm md:text-base mb-5 leading-relaxed">
-                {t('emailSent', { email: user?.email })}
+                {t('confirmationThankYou.description1', { email: user?.email })}
               </p>
-              <p className="text-sm md:text-base mb-5 leading-relaxed">
-                {t('checkSpam')}
+              <p className="text-sm mt-4 md:text-base mb-5 leading-relaxed">
+                {t('confirmationThankYou.description2')}
               </p>
-              <p className="text-lg md:text-2xl mb-5 text-secondary font-semibold">
-                {t('seeYou')}
-              </p>
+
             </div>
           </div>
         </div>

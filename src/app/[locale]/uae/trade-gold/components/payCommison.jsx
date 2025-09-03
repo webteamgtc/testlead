@@ -1,9 +1,12 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 
 export default function HeroTrusted({ country = 'COUNTRY', onCtaClick, setIsOpen }) {
+    const t = useTranslations("tradeGold");
+
     return (
         <section className="relative bg-white">
             <div className="mx-auto container ">
@@ -14,23 +17,22 @@ export default function HeroTrusted({ country = 'COUNTRY', onCtaClick, setIsOpen
                            text-[24px] leading-[34px]
                            md:text-[36px] md:leading-[44px]
                            xl:text-[40px] xl:leading-[48px]">
-                            Trade Gold with a Broker that’s Trusted in <span className="whitespace-nowrap">[{country}]</span>
+                            {t("trusted.heading")}
                         </h1>
 
                         <p className="mt-3 text-[16px] leading-[22px] text-[#4D4D70]">
-                            Gold is serious business. So is trust.
+                            {t("trusted.para1")}
+
                         </p>
 
                         <p className="mt-4 text-[16px] leading-[22px] text-[#4D4D70] max-w-[560px]">
-                            GTC is licensed and regulated by multiple global authorities such as the
-                            UAE’s SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This
-                            gives traders complete peace of mind in [{country}], and the confidence
-                            they need when the Gold markets heat up.
+                            {t("trusted.para2")}
+
                         </p>
 
                         <p className="mt-3 text-[16px] leading-[22px] text-[#4D4D70] max-w-[560px]">
-                            Thousands of traders across [{country}] trust GTC for raw pricing, fast
-                            withdrawals, and regulated peace of mind when it comes to trading gold.
+                            {t("trusted.para3")}
+
                         </p>
 
                         <button
@@ -41,7 +43,8 @@ export default function HeroTrusted({ country = 'COUNTRY', onCtaClick, setIsOpen
                          bg-gradient-to-b from-[#E1CFBB] to-[#956D42]
                          shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:opacity-95 transition"
                         >
-                            Trade Gold
+                            {t("trusted.btnText")}
+
                         </button>
                     </div>
 

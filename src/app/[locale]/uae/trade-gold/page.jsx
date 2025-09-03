@@ -19,9 +19,6 @@ const TradeGoldPage = () => {
             <div className="bg-[#fff]">
                 <HeroSection setIsOpen={setIsOpen} />
                 <PayCommission
-                    topTitle="A Forex Partnership Programme That"
-                    bottomText="From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to."
-                    buttonText="Partner with GTC"
                     setIsOpen={setIsOpen}
                 />
                 <GoldBonus setIsOpen={setIsOpen} />

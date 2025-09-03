@@ -1,10 +1,13 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function HeroBetterWay({ setIsOpen }) {
+    const t = useTranslations("tradeGold");
+
     return (
-        <section className="relative overflow-hidden bg-white">
+        <section className="relative overflow-hidden md:bg-white bg-gradient-to-r from-[#ececec]  to-[#fafafd]">
             {/* BG image on desktop/tablet (left side), fully visible */}
             <div className="hidden md:block absolute inset-y-0 left-0 w-full z-0">
                 <div className="relative h-full w-full">
@@ -23,26 +26,21 @@ export default function HeroBetterWay({ setIsOpen }) {
             <div className="hidden md:block absolute inset-y-0 left-[52%] right-0 z-0 bg-gradient-to-r from-white/0 via-white/70 to-white" />
 
             {/* Content; on md+ we pad-left so it doesn't overlap the image area */}
-            <div className="relative z-10 container flex justify-end  flex-col md:flex-row mx-auto py-2 md:py-16 md:pl-[56%] md:min-h-[420px]">
+            <div className="relative z-10 container flex justify-end  flex-col md:flex-row mx-auto pt-8 md:py-16 md:pl-[56%] md:min-h-[420px]">
                 <div className="max-w-[560px] text-center md:text-left">
                     <h1 className="text-[#0E1443] font-extrabold text-center md:text-left tracking-tight
                          text-[28px] leading-[34px]
                          md:text-[34px] md:leading-[42px]
                          xl:text-[36px] xl:leading-[44px]">
-                        Trade Gold the Better Way
-                        <br className="hidden md:block" />
-                        Today.
+                        {t("tradeToday.heading")}
                     </h1>
 
                     <p className="mt-3 text-[14px] leading-[22px] text-[#6E6E7A]">
-                        It only takes a few minutes to open your GTC account and access
-                        everything we’ve talked about above.
+                        {t("tradeToday.desc1")}
                     </p>
 
                     <p className="mt-3 text-[14px] leading-[22px] text-[#6E6E7A]">
-                        Say goodbye to the frustrations you’re facing when trading gold with your
-                        current broker. Say hello to faster trades, bigger rewards, and real
-                        transparency.
+                        {t("tradeToday.desc2")}
                     </p>
 
                     <button
@@ -52,14 +50,14 @@ export default function HeroBetterWay({ setIsOpen }) {
                        bg-gradient-to-b from-[#E1CFBB] to-[#956D42]
                        shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:opacity-95 transition"
                     >
-                        Trade Gold
+                        {t("tradeToday.btnText")}
                     </button>
                 </div>
 
                 {/* Mobile image: AFTER text */}
                 <div className="mt-6 md:hidden">
                     <Image
-                        src="/trade-gold/last.png"
+                        src="/trade-gold/last-mobile-trans.png"
                         alt="Smiling trader holding gold bars"
                         width={900}
                         height={900}
