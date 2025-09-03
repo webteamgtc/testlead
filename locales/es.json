@@ -663,85 +663,89 @@
     }
   },
   "swapFreePage": {
+    "meta": {
+      "title": "Abre una Cuenta libre de Swap en GTC y gana más.",
+      "description": "Abre una cuenta en GTC hoy y disfruta de realizar trading sin Swap de por vida. Sin comisiones nocturnas, sin sorpresas, solo libertad de trading, para siempre."
+    },
     "banner": {
-      "heading": "¡Opera sin swap de por vida con GTC!",
-      "desc": "Sin comisiones de rollover. Sin intereses. Libertad de trading pura, para siempre.",
-      "para1": "Por tiempo limitado, puedes obtener tu cuenta de trading GTC con la opción sin swap de por vida. Sin formularios ni solicitudes especiales: solo abre una cuenta en GTC y listo. Ya sea que mantengas operaciones durante la noche o planifiques movimientos a largo plazo, no pagarás ni un centavo en swaps. Es nuestra forma de darte control total para operar tu estrategia, a tu manera, sin comisiones ocultas ni letras pequeñas.",
+      "heading": "¡Opera libre de Swap de por vida con GTC!",
+      "desc": "Sin comisiones de rollover. Sin cargos de interés. Solo libertad de trading, para siempre.",
+      "para1": "¡Oferta Exclusiva! Tu cuenta de trading GTC con la opción libre de Swap de por vida. No más trámites ni solicitudes. Simplemente abre tu cuenta de trading GTC y obtén este beneficio al instante. Mantén tus operaciones durante la noche o a largo plazo sin preocuparte por los costos. Con nosotros, tienes el control total para operar a tu manera, sin tarifas ocultas ni condiciones.",
       "column1": {
         "title": "¿Swaps?",
-        "desc": "Ya no"
+        "desc": "¡Nunca más!"
       },
       "column2": {
         "title": "Para siempre",
-        "desc": "Activado automáticamente"
+        "desc": "Activado Automáticamente"
       },
       "column3": {
         "title": "Desbloquea",
-        "desc": "Control total"
+        "desc": "Control Total"
       },
       "column4": {
         "title": "Ilimitado",
-        "desc": "Libertad para operar"
+        "desc": "Libertad para Operar"
       },
-      "btnText": "Operar sin swap"
+      "btnText": "Opera libre de Swap"
     },
-    "tcApply": "Aplican TyC",
+    "tcApply": "Aplican T&C",
     "whyPay": {
-      "heading": "¿Por qué pagar swaps?",
-      "title": "¡Cámbiate a GTC y no vuelvas a pagar comisiones de swap!",
-      "para1": "No solo estás evitando las comisiones nocturnas; también estás desbloqueando una forma más inteligente de operar. Por eso los traders de todo el mundo se cambian a las cuentas sin swap de GTC de por vida:",
+      "heading": "¿Por qué pagar por Swaps?",
+      "title": "¡Cámbiate a GTC y nunca más pagues comisiones de swap!",
+      "para1": "Más que evitar comisiones, estás operando de forma más inteligente. Desbloquea una nueva forma de operar: Descubre por qué traders de todo el mundo están eligiendo las cuentas libres de Swap de GTC. No solo te liberas de cargos nocturnos; ganas la tranquilidad de una estrategia sin límites.",
       "card1": {
-        "title": "Mantén tus operaciones por más tiempo",
-        "desc": "Sin presión por cerrar posiciones; permanece tanto como quieras."
+        "title": "Mantén Operaciones abiertas por más Tiempo",
+        "desc": "Sin presión para cerrar posiciones, mantenlas activas tanto como quieras."
       },
       "card2": {
-        "title": "Opera mercados globales",
-        "desc": "Desde el oro hasta forex: todo sigue sin swap."
+        "title": "Opera Mercados Globales",
+        "desc": "Desde Oro hasta forex, todo libre de Swap."
       },
       "card3": {
-        "title": "Conserva más ganancias",
-        "desc": "Menos comisiones = más para ti."
+        "title": "Manten más ganancias",
+        "desc": "Menos comisiones = más beneficios en tu bolsillo."
       },
       "card4": {
-        "title": "Estrategia sin estrés",
-        "desc": "Sin comisiones que se cuelan de noche. Duerme tranquilo."
+        "title": "Estrategia sin presión",
+        "desc": "Sin cargos que aparezcan de la noche a la mañana. Duerme tranquilo."
       },
       "card5": {
-        "title": "Activación instantánea",
-        "desc": "Sin pasos extra. Sin formularios. Abre y empieza."
+        "title": "Activación Instantánea",
+        "desc": "Sin pasos adicionales. Sin formularios. Solo abre tu cuenta y listo."
       },
       "card6": {
-        "title": "Para todos",
-        "desc": "Nuevo o profesional, funciona para ti."
+        "title": "Diseñado para Todos",
+        "desc": "¿Eres nuevo en el trading o profesional?, Esto fue hecho para ti."
       },
-      "btnText": "Cambiar a GTC"
+      "btnText": "Cámbiate a GTC"
     },
     "swapFree": {
-      "heading": "¿Sin swap de por vida?",
-      "desc": "Solo con una cuenta de trading GTC. Hagámoslo realidad para ti.",
-      "para1": "Puede que sea la mejora más simple que hagas. Sin formularios, sin espera, sin trucos. Sigue estos pasos rápidos para cambiarte a GTC y operar sin swap de por vida:",
+      "heading": "¿Libre de Swap de por vida?",
+      "desc": "Solo con una Cuenta de Trading GTC. Hazlo realidad para ti.",
+      "para1": "¡El upgrade que tu trading estaba pidiendo! Sin formularios complicados, sin esperas, sin trampas ocultas. El cambio a GTC es tan simple como seguir estos pasos rápidos. ¡Prepárate para operar Swap Free de por vida!",
       "card1": {
-        "title": "Abre tu cuenta",
-        "desc": "Solo introduce tu nombre y correo. Toma menos de un minuto, literalmente."
+        "title": "Abre Tu Cuenta",
+        "desc": "Solo ingresa tu nombre y correo. Toma menos de un minuto, literalmente."
       },
       "card2": {
-        "title": "Activación instantánea",
-        "desc": "En cuanto tu cuenta esté lista, tu beneficio sin swap estará activo. Sin solicitar nada."
+        "title": "Activación Instantánea",
+        "desc": "En el momento que tu cuenta esté lista, tu beneficio Libre de Swap quedará activo. Sin solicitud necesaria."
       },
       "card3": {
-        "title": "Empieza a operar lo que quieras",
-        "desc": "Elige tu mercado: FX, oro, índices, etc. Estás listo para operar sin swap."
+        "title": "Empieza a Operar en cualquier Mercado",
+        "desc": "Elige tu mercado: FX, Oro, Indices, etc. ¿Estás listo para empezar?, Libre de Swap."
       },
       "card4": {
-        "title": "Mantén. Opera. Repite.",
-        "desc": "Ya sea a largo plazo o ráfagas cortas, tu estrategia sigue sin comisiones."
+        "title": "Manténer. Operar. Repiter.",
+        "desc": "Ya sea que estés operando a largo plazo o en operaciones de corto plazo, tu estrategia se mantiene libre de comisiones."
       },
-      "btnText": "Operar sin swap"
+      "btnText": "Opera Libre de Swap"
     },
     "readyToSwap": {
-      "heading": "¿Listo para operar sin swap?",
-      "desc": "¡Cámbiate a GTC hoy y opera sin swap de por vida! ¡Así de seguro! Además, obtienes todos los beneficios de una cuenta GTC: spreads súper competitivos, ejecución ultrarrápida y atención al cliente que realmente se preocupa por ti.",
-      "btnText": "Cambiar a GTC"
+      "heading": "¿Listo para Operar sin cobros por Swap?",
+      "desc": "El upgrade que tu trading necesita: cámbiate a GTC. Tu trading se vuelve más inteligente. Únete a una plataforma que te da spreads competitivos, ejecución ultrarrápida y, sobre todo, una atención al cliente que se preocupa por tu experiencia. Con GTC, la transparencia es clave.",
+      "btnText": "Cámbiate a GTC"
     }
   }
 }

@@ -9,7 +9,7 @@ const HeroSection = ({ setIsOpen }) => {
     <section className="bg-gradient-to-r from-[#000032] to-[#000032] text-[#E5E5EA] py-8 md:py-28 relative overflow-hidden">
 
       {/* Desktop Background Image Only */}
-      <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
+      <div className="hidden ltr:md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
         <Image
           src="/swap-free/banner-img.webp"
           alt="Hero BG"
@@ -19,10 +19,24 @@ const HeroSection = ({ setIsOpen }) => {
         />
       </div>
 
+      {/* Desktop Background Image Only */}
+      <div className="hidden rtl:md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
+        <Image
+          src="/swap-free/arabicHero.webp"
+          alt="Hero BG"
+          fill
+          className="object-cover object-right 3xl:object-contain"
+          priority
+        />
+      </div>
+
+
+
+
       <div className="container">
         <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
           {/* Left Column */}
-          <div className="text-center md:text-left">
+          <div className="text-center ltr:md:text-left rtl:md:text-right">
             <h1 className="text-[35px] leading-tight md:text-[40px] xl:text-[45px] font-bold 2xl:text-[50px] 2xl:leading-tight bg-gradient-to-b from-[#E1CFBB] to-[#956D42] inline-block text-transparent bg-clip-text px-5 md:px-0">
               {t("banner.heading")}
             </h1>
