@@ -3,7 +3,7 @@ import React, { use } from "react";
 import { useTranslations } from "next-intl";
 
 
-const TestimonialCard = ({ text, name, index, country, odd }) => (
+const TestimonialCard = ({ text, name, index}) => (
   <div className={`bg-white rounded-[16px] p-9 md:p-4 text-sm space-y-1 flex flex-col gap-2 `}
     style={{
       boxShadow: "1px 6px 16px 0px #0000001A"
@@ -28,26 +28,21 @@ const IBTestimonials = ({ setIsOpen }) => {
     {
       text: t("swapFree.card1.title"),
       name: t("swapFree.card1.desc"),
-      stars: 5,
-      country: t("testimonials.one.country")
     },
     {
       text: t("swapFree.card2.title"),
       name: t("swapFree.card2.desc"),
-      stars: 5,
-      country: t("testimonials.two.country")
+
     },
     {
       text: t("swapFree.card3.title"),
       name: t("swapFree.card3.desc"),
-      stars: 5,
-      country: t("testimonials.three.country")
+
     },
     {
       text: t("swapFree.card4.title"),
       name: t("swapFree.card4.desc"),
-      stars: 5,
-      country: t("testimonials.four.country")
+
     },
   ];
 
