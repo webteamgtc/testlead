@@ -8,14 +8,16 @@ import PayCommission from "./components/payCommison";
 import IBTestimonials from "./components/testmonial";
 import TradeSwitchSection from "./components/CtaSection";
 import Meta from "@/app/components/common/MetaData";
+import { useTranslations } from "next-intl";
 
 const SwapFreePage = () => {
+    const t = useTranslations("swapFreePage");
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
             <MainHeader />
-            <Meta title='Open a GTC Swap Free Account and earn more.' description='Open a GTC account today and enjoy lifetime Swap Free trading. No overnight fees, no surprises, just pure trading freedom, always.' />
+            <Meta title={t("meta.title")} description={t("meta.description")} />
             <div className="bg-[#000032]">
                 <HeroSection setIsOpen={setIsOpen} />
                 <PayCommission
