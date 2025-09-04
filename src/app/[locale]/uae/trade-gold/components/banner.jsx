@@ -138,17 +138,15 @@ const HeroSection = ({ setIsOpen }) => {
       <div className="container">
         <div className="text-center">
           {/* TOP BAR WITH LOGO */}
-          <div className="text-left relative z-10">
+          <div className="text-center md:text-left relative z-10">
             {/* ← add relative z-10 */}
-            <Image
-              src="/trade-gold/logo.svg" // <- ensure this matches the actual file name exactly
-
-              width={200}
-                        height={72}
-                        alt="GTCFX"
-                        className="lg:w-[200px] mx-auto md:mx-0 lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
-              priority
-            />
+          <Image
+                    src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/footer-logo.webp"
+                    width={200}
+                    height={72}
+                    alt="GTCFX"
+                    className="lg:w-[200px] mx-auto md:mx-0 lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                  />
           </div>
         </div>
         <div className=" grid md:grid-cols-2 mt-10 items-center gap-10 z-10 relative">
