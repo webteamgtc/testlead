@@ -130,31 +130,23 @@ const HeroSection = ({ setIsOpen }) => {
   ];
   return (
     <section
-      className="bg-[#000032] text-[#E5E5EA] py-8 md:pb-34 relative overflow-hidden   [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]
+      className="bg-[url('/trade-gold/testf.webp')] bg-cover bg-center min-h-[1000px] text-[#E5E5EA] py-8 md:pb-34 relative overflow-hidden   [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]
 "
     >
-      {/* Desktop Background Image Only */}
-      <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
-        <Image
-          src="/trade-gold/banner.png"
-          alt="Hero BG"
-          fill
-          className="object-cover 3xl:object-contain"
-          priority
-        />
-      </div>
+    
 
       <div className="container">
         <div className="text-center">
           {/* TOP BAR WITH LOGO */}
-          <div className="text-center relative z-10">
+          <div className="text-left relative z-10">
             {/* ← add relative z-10 */}
             <Image
               src="/trade-gold/logo.svg" // <- ensure this matches the actual file name exactly
-              alt="GTC"
-              width={24}
-              height={24}
-              className="w-40 h-20 mx-auto md:mx-0"
+
+              width={200}
+                        height={72}
+                        alt="GTCFX"
+                        className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
               priority
             />
           </div>

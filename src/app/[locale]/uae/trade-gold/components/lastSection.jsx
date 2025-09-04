@@ -7,23 +7,23 @@ export default function HeroBetterWay({ setIsOpen }) {
     const t = useTranslations("tradeGold");
 
     return (
-        <section className="relative overflow-hidden md:bg-white bg-gradient-to-r from-[#ececec]  to-[#fafafd]">
+        <section className="relative overflow-hidden md:bg-[#e8eaec] bg-gradient-to-r from-[#e8eaec]  to-[#edeff6]">
             {/* BG image on desktop/tablet (left side), fully visible */}
             <div className="hidden md:block absolute inset-y-0 left-0 w-full z-0">
                 <div className="relative h-full w-full">
                     <Image
-                        src="/trade-gold/last.png"           // ensure this exists in /public/trade-gold/last.png
+                        src="/trade-gold/footerbg.webp"           // ensure this exists in /public/trade-gold/last.png
                         alt="Smiling trader holding gold bars"
                         fill
                         priority
                         sizes="(min-width: 1024px) 52vw, 100vw"
-                        className="object-fill object-left" // show full image without cropping
+                        className="object-contain object-center" // show full image without cropping
                     />
                 </div>
             </div>
 
             {/* Gentle fade on the right so text is always readable */}
-            <div className="hidden md:block absolute inset-y-0 left-[52%] right-0 z-0 bg-gradient-to-r from-white/0 via-white/70 to-white" />
+            <div className="hidden md:block absolute inset-y-0 left-[52%] right-0 z-0 bg-gradient-to-r from-[#f1f5f9] via-red/70 to-[#fff]" />
 
             {/* Content; on md+ we pad-left so it doesn't overlap the image area */}
             <div className="relative z-10 container flex justify-end  flex-col md:flex-row mx-auto pt-8 md:py-16 md:pl-[56%] md:min-h-[420px]">

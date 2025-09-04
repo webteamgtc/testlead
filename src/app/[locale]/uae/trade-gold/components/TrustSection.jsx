@@ -23,17 +23,17 @@ export default function HeroTrust({ setIsOpen }) {
                         </h2>
 
                         <p className="mt-5 max-w-[520px] text-[16px] leading-[22px] text-[#fff]">
-                            {t("tradeGoldSection.desc")}
+                            {t("tradeBroker.desc")}
                         </p>
                     </div>
 
                     {/* Right: bullets */}
                     <div className="md:pl-2">
                         <ul className="list-disc pl-[32px] md:pl-0 marker:text-[#E1CFBB] text-[18px] leading-[22px] text-[#fff] space-y-2">
-                            <li> {t("tradeGoldSection.item1")}</li>
-                            <li>{t("tradeGoldSection.item2")}</li>
-                            <li>{t("tradeGoldSection.item3")}</li>
-                            <li>{t("tradeGoldSection.item4")}</li>
+                            <li> {t("tradeBroker.item1")}</li>
+                            <li>{t("tradeBroker.item2")}</li>
+                            <li>{t("tradeBroker.item3")}</li>
+                            <li>{t("tradeBroker.item4")}</li>
                         </ul>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export default function HeroTrust({ setIsOpen }) {
                 {/* Centered tagline + CTA */}
                 <div className="pt-8 md:pt-16 text-center">
                     <p className="font-extrabold text-[22px]  text-left md:text-center leading-[28px] md:text-[30px] md:leading-[34px] text-[#fff]">
-                        {t("tradeGoldSection.subTitle")}
+                        {t("tradeBroker.subTitle")}
                     </p>
 
                     <button
@@ -52,7 +52,7 @@ export default function HeroTrust({ setIsOpen }) {
                          bg-gradient-to-b from-[#E1CFBB] to-[#956D42]
                          shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:opacity-95 transition"
                     >
-                        {t("tradeGoldSection.btnText")}
+                        {t("tradeBroker.btnText")}
                     </button>
                 </div>
             </div>
