@@ -578,7 +578,7 @@
     }
   },
   "swapFreePage": {
-     "meta": {
+    "meta": {
       "title": "Open a GTC Swap Free Account and earn more.",
       "description": "Open a GTC account today and enjoy lifetime Swap Free trading. No overnight fees, no surprises, just pure trading freedom, always."
     },
@@ -661,6 +661,116 @@
       "heading": "Ready To Trade Swap Free?",
       "desc": "Switch to GTC today & trade swap free for life! There’s nothing surer about that! Plus you get all the benefits of a GTC trading account, which means you receive super-competitive spreads, ultra-fast execution & customer care that actually cares about you!",
       "btnText": "Switch to GTC"
+    }
+  },
+  "tradeGold": {
+    "meta": {
+      "title": "Trade Gold at 0.20 Spread in UAE, Only with GTC",
+      "description": "0.20 raw spreads when you trade gold with us. Hit that “TRADE GOLD” button to get started."
+    },
+    "banner": {
+      "heading": "Trade Gold at 0.20 Spread in UAE, Only with GTC",
+      "desc": "0.20 raw spreads when you trade gold with us. Thousands of traders in UAE are now trading gold with GTC because we also offer same‑day withdrawals, plus your funds are protected as GTC is a multi-regulated broker. Hit that “TRADE GOLD” button to get started.",
+      "para1": "For a limited time, you can get your GTC trading account with a Swap Free option for life! No forms, no special requests, just open a GTC trading account and it’s done. Whether you’re holding trades overnight or are planning long-term moves, you won’t pay a single cent in swaps. It’s our way of giving you full control to trade your strategy, your way, with no hidden fees & no strings attached.",
+      "column1": {
+        "desc": "Gold Spreads from 0.20 Lower costs, better trading."
+      },
+      "column2": {
+        "desc": "Same-Day Withdrawals They’re your funds, not ours."
+      },
+      "column3": {
+        "desc": "Scalping After 60 Seconds. Fast trades. No blocks."
+      },
+      "column4": {
+        "desc": "Ultra-Fast Execution on your gold  trades at GTC"
+      },
+      "column5": {
+        "desc": "Real Bonus & Cashback that boosts your trades."
+      },
+      "column6": {
+        "desc": "Multi-Regulated Brokerage SCA & FSC"
+      },
+      "btnText": "Trade Gold"
+    },
+    "trusted": {
+      "heading": "Trade Gold with a Broker that’s Trusted in UAE",
+      "para1": "Gold is serious business. So is trust.",
+      "para2": "GTC is licensed and regulated by multiple global authorities such as the UAE’s SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This gives traders complete peace of mind in UAE, and the confidence they need when the Gold markets heat up.",
+      "para3": "Thousands of traders across UAE trust GTC for raw pricing, fast withdrawals, and regulated peace of mind when it comes to trading gold.",
+      "btnText": "Trade Gold"
+    },
+    "tradeGoldSection": {
+      "heading": "Trade Gold with GTC & Get a Bonus That Boosts Your Margin, Not Your Hopes",
+      "desc": "Forget losable or tricky bonuses when trading gold. When you switch to GTC, deposit $500 or more, and trade gold, we’ll match your deposit with a Margin Bonus. You get extra trading margin with real cashback rewards.",
+      "title1": "Trade gold & hit the cashback target. Withdraw your reward.",
+      "card1": {
+        "title": "Great Bonus"
+      },
+      "card2": {
+        "title": "No Hidden Terms"
+      },
+      "card3": {
+        "title": "No Equity Confusion"
+      },
+      "card4": {
+        "title": "Get Cashback Too"
+      },
+      "btnText": "Trade Gold"
+    },
+    "tradeBroker": {
+      "heading": "Trade Gold with a Broker You Can Actually Trust",
+      "desc": "When it comes to trading gold, you’re going to want a broker that understands you, is licensed and regulated in multiple respected jurisdictions, and has a track record for excellence. Here’s how we give you confidence to trade.",
+      "item1": "Licensed by the UAE’s SCA, Mauritius’ FSC, and South Africa’s FSCA.",
+      "item2": "Headquartered in Dubai with nearly 1 million serviced traders.",
+      "item3": "World-class support with a real human touch.",
+      "item4": "Customer-first culture where service is strategy.",
+      "subTitle": "Switch to a broker that allows you to trade gold your way!",
+      "btnText": "Trade Gold"
+    },
+    "testimonial": {
+      "heading": "What Our Arabic Traders Are Saying",
+      "desc": "With thousands of happy traders from the UAE, isn’t it time you switched to GTC?",
+      "card1": {
+        "title": "I recently switched to GTC because the spreads on gold were killing my profi ts at the previous broker I was trading with. GTC’s 2-pip spread made such a noticeable difference, plus any withdrawals I make hit my account the same day. GTC is a very professional brokerage and I’m happy to trade gold with them.”",
+        "name": "Omar A.",
+        "country": "Cairo, Egypt"
+      },
+      "card2": {
+        "title": "“I scalp gold all day, and GTC is the only broker I’ve found that actually lets me do that without weird time limits.”",
+        "name": "Yousef H.",
+        "country": "Jeddah, Saudi Arabia"
+      },
+      "card3": {
+        "title": "“Gold is my main instrument. I’ve been trading it for years. I came across GTC at the latest iFX Expo in Limassol, Cyprus, and opened an account as their spreads were the most competitive I’ve ever seen. I’ve been trading for years and tested a bunch of brokers. GTC feels different, plus their execution is fast, there’s very little to no slippage during spikes, and support actually knows what they’re talking about.”",
+        "name": "Nour S.",
+        "country": "Beirut, Lebanon"
+      },
+      "card4": {
+        "title": "“Honestly, I didn’t expect much when I joined, but gold trading here just works. There are no issues with their MT5 platform, spreads are tight, and I’ve never had an issue getting paid out.”",
+        "name": "Ahmad K.",
+        "country": "Manama, Bahrain"
+      },
+      "btnText": "Trade Gold"
+    },
+    "tradeToday": {
+      "heading": "Trade Gold the Better Way Today.",
+      "desc1": "It only takes a few minutes to open your GTC account and access everything we’ve talked about above.",
+      "desc2": "Say goodbye to the frustrations you’re facing when trading gold with your current broker. Say hello to faster trades, bigger rewards, and real transparency.",
+      "btnText": "Trade Gold"
+    },
+    "confirmationThankYou": {
+      "heading": "Thanks!",
+      "subheading": "You’re Almost There!",
+      "description1": "We’ve sent you an email to {email}. Go ahead and click on that link. You’ll then be called by our friendly Customer Care team who will help you set up your GTC trading account and trade gold with the lowest spreads.",
+      "description2": "Go ahead and check your spam or junk folder as sometimes emails like to hide there! If the email we’ve sent you has made its way into your spam or junk folder, simply move it back into your inbox.",
+      "farewell": "See you soon!",
+      "help":{
+        "heading":"Having trouble?",
+        "phone":"Contact us on +971 800 667788 or ",
+        "email":"email support@gtcfx.com",
+        "seeYou":"See you soon",
+        "team":"The GTC Team"
+      }
     }
   }
 }
