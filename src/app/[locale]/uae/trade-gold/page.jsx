@@ -9,13 +9,15 @@ import GoldBonus from "./components/goldBonus";
 import HeroTrust from "./components/TrustSection";
 import ArabicTestimonials from "./components/newTestomonial";
 import HeroBetterWay from "./components/lastSection";
+import { useTranslations } from "next-intl";
 
 const TradeGoldPage = () => {
+        const t = useTranslations("tradeGold");
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-            <Meta title='Open a GTC Swap Free Account and earn more.' description='Open a GTC account today and enjoy lifetime Swap Free trading. No overnight fees, no surprises, just pure trading freedom, always.' />
+             <Meta title={t("meta.title")} description={t("meta.description")} />
             <div className="bg-[#fff]">
                 <HeroSection setIsOpen={setIsOpen} />
                 <PayCommission

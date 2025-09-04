@@ -130,7 +130,7 @@ const HeroSection = ({ setIsOpen }) => {
   ];
   return (
     <section
-      className="bg-[url('/trade-gold/testf.webp')] bg-cover bg-center min-h-[1000px] text-[#E5E5EA] py-8 md:pb-34 relative overflow-hidden   [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]
+      className="bg-[#000032] md:bg-[url('/trade-gold/testf.webp')] bg-cover bg-center bg-no-repeat min-h-[1000px] text-[#E5E5EA] py-8 md:pb-34 relative overflow-hidden   [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]
 "
     >
     
@@ -146,7 +146,7 @@ const HeroSection = ({ setIsOpen }) => {
               width={200}
                         height={72}
                         alt="GTCFX"
-                        className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                        className="lg:w-[200px] mx-auto md:mx-0 lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
               priority
             />
           </div>
@@ -178,7 +178,7 @@ const HeroSection = ({ setIsOpen }) => {
             <h3 className="md:text-[22px] hidden md:block text-base mt-3 font-light leadging-[32px] px-2 md:px-0">
               {t("banner.desc")}
             </h3>
-            <div className="flex flex-col sm:hidden relative w-full my-6 h-[200px]">
+            <div className="flex flex-col sm:hidden relative w-full my-6 h-[300px]">
               <Image
                 src="/trade-gold/banner-mobile.png"
                 fill
