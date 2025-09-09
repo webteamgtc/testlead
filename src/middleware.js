@@ -21,7 +21,27 @@ function isSwitchPath(pathname) {
 function isSwapFreePath(pathname) {
   return pathname === '/uae/swap-free' || pathname.endsWith('/uae/swap-free');
 }
-
+function isSwapFreePath(pathname) {
+  return pathname === '/ng/swap-free' || pathname.endsWith('/ng/swap-free');
+}
+function isSwapFreePath(pathname) {
+  return pathname === '/ke/swap-free' || pathname.endsWith('/ke/swap-free');
+}
+function isSwapFreePath(pathname) {
+  return pathname === '/za/swap-free' || pathname.endsWith('/za/swap-free');
+}
+function isSwapFreePath(pathname) {
+  return pathname === '/zw/swap-free' || pathname.endsWith('/zw/swap-free');
+}
+function isSwapFreePath(pathname) {
+  return pathname === '/ug/swap-free' || pathname.endsWith('/ug/swap-free');
+} 
+function isSwapFreePath(pathname) {
+  return pathname === '/gh/swap-free' || pathname.endsWith('/gh/swap-free');
+}
+function isSwapFreePath(pathname) {
+  return pathname === '/uae/trade-gold' || pathname.endsWith('/uae/trade-gold');
+}
 export default function middleware(req) {
   const ua = req.headers.get('user-agent') || '';
   const { pathname } = req.nextUrl;
