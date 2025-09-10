@@ -32,7 +32,7 @@ const ConfirmationThankYou = ({ user }) => {
         <div className={`grid md:grid-cols-2 items-center gap-10 mb-8 ${isRTL ? 'text-right' : 'text-left'}`}>
           <div className={isRTL ? 'order-1 md:order-1' : 'order-1 md:order-2'}>
             <img
-              className={`w-full max-w-[120px] md:max-w-[250px] mx-auto ${isRTL ? 'pr-10' : 'pl-10'}`}
+              className={`w-full max-w-[120px] md:max-w-[320px] mx-auto ${isRTL ? 'pr-10' : 'pl-10'}`}
               src="/thank-you.svg"
               alt="Thank You"
             />

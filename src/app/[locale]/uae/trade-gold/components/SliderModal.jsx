@@ -13,7 +13,7 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) =
       }`}
     >
       <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 z-10 opacity-20 pointer-events-none">
+      <div className="absolute inset-0 z-10 opacity-60 pointer-events-none">
         <img
           src="/ib/lp.webp"
           alt="Decorative background"

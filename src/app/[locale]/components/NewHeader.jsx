@@ -15,7 +15,7 @@ const NewHeader = () => {
                         width={200}
                         height={72}
                         alt="GTCFX"
-                        className="lg:w-[200px] mx-auto lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                        className="lg:w-[150px] mx-auto lg:h-[62px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
                     />
                 </div>
                 {/* Language Switch */}

@@ -704,16 +704,16 @@
       "desc": "Forget losable or tricky bonuses when trading gold. When you switch to GTC, deposit $500 or more, and trade gold, we’ll match your deposit with a Margin Bonus. You get extra trading margin with real cashback rewards.",
       "title1": "Trade gold & hit the cashback target. Withdraw your reward.",
       "card1": {
-        "title": "Great Bonus"
+        "title": "Great <br/> Bonus"
       },
       "card2": {
-        "title": "No Hidden Terms"
+        "title": "No Hidden <br/> Terms"
       },
       "card3": {
-        "title": "No Equity Confusion"
+        "title": "No Equity <br/> Confusion"
       },
       "card4": {
-        "title": "Get Cashback Too"
+        "title": "Get Cashback <br/> Too"
       },
       "btnText": "Trade Gold"
     },

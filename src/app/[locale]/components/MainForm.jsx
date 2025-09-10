@@ -270,7 +270,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                             autoComplete="off"
                             className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 text-base border-[.5px] rounded-md border-opacity-10  ${formik.touched.nickname && formik.errors.nickname
                                 ? "border-red-500"
-                                : " border-[#ffffff1a] "
+                                : " text-[#CCCCD6]/50 "
                                 } focus:outline-none`}
                             {...formik.getFieldProps("nickname")}
                         />
@@ -291,7 +291,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                             autoComplete="off"
                             className={`w-full px-4 bg-[#1A1A47] text-base py-3 pl-3 border-[.5px] rounded-md border-opacity-10  ${formik.touched.last_name && formik.errors.last_name
                                 ? "border-red-500"
-                                : " border-[#ffffff1a] "
+                                : " text-[#CCCCD6]/50 "
                                 } focus:outline-none`}
                             {...formik.getFieldProps("last_name")}
                         />
@@ -314,7 +314,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                                 type="email"
                                 className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 text-base border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email
                                     ? "border-red-500"
-                                    : "border-[#ffffff1a]"
+                                    : "text-[#CCCCD6]/50"
                                     } focus:outline-none focus:bg-none`}
                                 {...formik.getFieldProps("email")}
                             />
@@ -379,7 +379,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                                     )}
                                 </div>
                                 <div
-                                    className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center mt-2 border border-[#ffffff1a]"
+                                    className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center mt-2 border text-[#CCCCD6]/50"
                                     onClick={() => {
                                         verifyOtpCode();
                                     }}
@@ -401,7 +401,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                             defaultCountry={countryData?.country || "AE"}
                             value={formik.values.phone}
                             onChange={(phone) => formik.setFieldValue("phone", phone)}
-                            className={`flex w-full overflow-hidden rounded-md text-base border border-[#ffffff1a] bg-[#1A1A47] phone-setting text-white focus:outline-none
+                            className={`flex w-full overflow-hidden rounded-md text-base border text-[#CCCCD6]/50 bg-[#1A1A47] phone-setting text-white focus:outline-none
     ${formik.touched.phone && formik.errors.phone ? "border-red-500" : ""}
   `}
                             style={{
@@ -530,7 +530,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                     <button
                         disabled={isDisable}
                         type="submit"
-                        className="bg-secondary cursor-pointer mb-10 text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]"
+                        className="bg-secondary hover:bg-secondary/90 hover:border-white/30 hover:shadow-md transition-colors duration-200 disabled:bg-[#1A1A47] disabled:cursor-not-allowed cursor-pointer mb-10 text-white w-full font-bold py-4 px-8 rounded-md border border-[#CCCCD6]/50"
                     >
                         {loading ? t("submitting") : t("submit")}
                     </button>

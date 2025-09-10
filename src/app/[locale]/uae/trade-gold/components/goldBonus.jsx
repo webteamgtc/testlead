@@ -36,7 +36,7 @@ export default function GoldBonus({ setIsOpen }) {
                         </h1>
 
                         <p className="mt-3 text-[16px] leading-[24px] text-[#4D4D70]">
-                           {t("tradeGoldSection.desc")}
+                            {t("tradeGoldSection.desc")}
                         </p>
 
                         <p className="mt-6 md:text-[22px] text-[16px] leading-[20px] md:leading-[28px] font-bold text-[#4D4D70]">
@@ -59,7 +59,7 @@ export default function GoldBonus({ setIsOpen }) {
                          bg-gradient-to-b from-[#E1CFBB] to-[#956D42]
                          shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:opacity-95 transition"
                         >
-                           {t("tradeGoldSection.btnText")}
+                            {t("tradeGoldSection.btnText")}
                         </button>
                     </div>
                 </div>
@@ -75,7 +75,8 @@ function Feature({ icon, label }) {
             <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#6B5AE0]">
                 <img src={icon} alt="" />
             </span>
-            <span className=' text-[#101828] md:text-[20px] text-[18px] font-bold'>{label}</span>
+            <span dangerouslySetInnerHTML={{ __html: label }}
+                className=' text-[#101828] md:text-[20px] text-[18px] leading-[26px] font-bold' />
         </div>
     );
 }
