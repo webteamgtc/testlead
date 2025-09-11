@@ -194,7 +194,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
                 {item?.icon}
               </p>
               <span
-                className={`block text-xs xl:text-sm text-center w-40 sm:w-40 xl:w-[140px] mx-auto line-clamp-2 ${idx === data.length - 1 ? "xl:min-w-[140px]" : ""
+                className={`block text-xs xl:text-sm text-center w-40 sm:w-40 xl:w-[195px] mx-auto line-clamp-2 ${idx === data.length - 1 ? "xl:min-w-[140px]" : ""
                   }`}
               >
                 {item?.title}

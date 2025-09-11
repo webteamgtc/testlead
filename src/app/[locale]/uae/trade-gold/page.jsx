@@ -32,8 +32,8 @@ const TradeGoldPage = () => {
             <SliderModal
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
-                zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/uh462x6/"
-                successPath="/uae/swap-free/success"
+                zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/udnd7lu/"
+                successPath="/uae/trade-gold/success"
             />
         </>
     )
