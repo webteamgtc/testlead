@@ -1550,225 +1550,182 @@ export const russianEmailMT5Template = (data) => {
 
 export const englishEmailMT5Template = (data) => {
   return `
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>You’ve Registered for the GTC Demo Competition
-</title>
+    <meta name="x-apple-disable-message-reformatting">
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+    <title>Thank you for joining us!</title>
+    <!-- Web fonts are often stripped; keep system fallback -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+      /* Some clients keep head styles */
+      @media (prefers-color-scheme: dark) {
+        /* optional tweaks */
+      }
     </style>
   </head>
-  <body style="margin:0;padding:0;background-color:#ffffff;font-family:'Poppins',sans-serif;">
-    <table width="100%" cellpadding="0" cellspacing="0" style="font-family: 'Poppins', sans-serif; padding: 20px;">
+  <body style="Margin:0;padding:0;background-color:#ffffff;">
+    <!-- Full-width wrapper -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;">
       <tr>
-        <td align="center">
-          <table width="650" cellpadding="0" cellspacing="0" style="border:1px solid #e0e0e0;border-radius:8px;padding:30px;">
-           <!-- Logo -->
+        <td align="center" style="padding:20px;">
+          <!-- Card container: border on table, padding on TD -->
+          <table role="presentation" width="650" cellspacing="0" cellpadding="0" border="0"
+                 style="width:650px;max-width:100%;border:1px solid #e0e0e0;border-radius:8px;background:#ffffff;border-collapse:separate;">
             <tr>
-              <td align="center" style="padding-bottom: 20px;">
-                <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/logo-email.jpg" alt="GTC Logo" style="width: 160px;" />
-              </td>
-            </tr>
-
-            <!-- Heading -->
-            <tr>
-              <td align="center" style="font-size:20px;font-weight:600;color:#000000;padding-bottom:10px;">
-             Thank you for joining us! 🌟
-
-              </td>
-            </tr>
-            <tr>
-              <td align="center" style="font-size:14px;color:#000000;padding-bottom:20px;">
-              Just wanted to say a big thank you for signing up!
-              </td>
-            </tr>
-
-            <tr>
-  <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
-</tr>
-
-            <!-- Greeting & OTP -->
-            <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-                 Hi ${data?.name},
-              </td>
-            </tr>
-             <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-
-
-     We’re really happy to have you with us. 😊
-
-
-  
-
-              </td>
-            </tr>
-
-   
-            </tr>
-               <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-You’ve just taken the first step towards trading gold smarter, faster, 
-and more rewarding.
-              </td>
-            </tr>
-
-                <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-Once you’ve done that, our friendly GTC Customer Care team will give you a quick call to help you finalise your trading account, and yes, they’re genuinely helpful (and very human).
-              </td>
-            </tr>
-
-             <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-<ul>
-  <li>Your details are safe with us.</li>
-   <li>You’ll be trading gold in no time at all. </li>
-    <li>And don’t forget that by trading gold with GTC, you’re getting access to our exclusive Margin Bonus.</li>
-
-</ul>
-              </td>
-            </tr>
-
-                <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-If you need anything in the meantime, feel free to contact us at <a href="mailto:support@gtcfx.com">support@gtcfx.com</a>
-              </td>
-            </tr>
-            
-            
-            
-
-            
- <tr>
-              <td style="font-size:16px;color:#000000;padding-bottom:10px; font-weight: 600;">
-                <br>
-             Best Regard,
-
-              </td>
-            </tr>
-            <!-- Signoff -->
-            <tr>
-              <td style="font-size:14px;color:#000000;padding-bottom:30px;">
-                Have an even better great day,<br>
-                Your GTC Team
-
-              </td>
-            </tr>
-
-             <tr>
-  <td style="border-top: 2px solid #e0e0e0; padding: 15px 0;"></td>
-</tr>
-
-            <!-- Contact Info -->
-            <tr>
-              <td style="padding-top: 0px;">
-                <table width="100%" cellpadding="0" cellspacing="0">
+              <td style="padding:30px;">
+                <!-- Logo -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <td align="left">
-                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/logo-email.jpg" alt="GTC Logo" style="width: 160px;" />
-                    </td>
-                    <td align="right" style="font-size: 13px; color: #192055; line-height: 25px;">
-                      📞 Phone: +971 800 667788<br/>
-                      ✉️ Email: <a href="mailto:support@gtcfx.com" style="color: #192055; text-decoration: none;">support@gtcfx.com</a>
+                    <td align="center" style="padding-bottom:20px;">
+                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/logo-email.jpg" width="160" alt="GTC Logo" style="display:block;border:0;outline:none;text-decoration:none;height:auto;">
                     </td>
                   </tr>
-                  
                 </table>
+
+                <!-- Heading -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:20px;line-height:1.4;font-weight:700;color:#000000;padding-bottom:10px;">
+                      Thank you for joining us! 🌟
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.6;color:#000000;padding-bottom:20px;">
+                      Just wanted to say a big thank you for signing up!
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="border-top:2px solid #e0e0e0;padding:15px 0;"></td>
+                  </tr>
+                </table>
+
+                <!-- Body -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#000000;padding-bottom:10px;">
+                      Hi ${data?.first_name || 'there'},
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#000000;padding-bottom:10px;">
+                      We’re really happy to have you with us. 😊
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#000000;padding-bottom:10px;">
+                      You’ve just taken the first step towards trading gold smarter, faster, and more rewarding.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#000000;padding-bottom:10px;">
+                      Once you’ve done that, our friendly GTC Customer Care team will give you a quick call to help you finalise your trading account, and yes, they’re genuinely helpful (and very human).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#000000;padding-bottom:10px;">
+                      <ul style="Margin:0;padding:0 0 0 20px;">
+                        <li>Your details are safe with us.</li>
+                        <li>You’ll be trading gold in no time at all.</li>
+                        <li>And don’t forget that by trading gold with GTC, you’re getting access to our exclusive Margin Bonus.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#000000;padding-top:5px;padding-bottom:10px;">
+                      If you need anything in the meantime, feel free to contact us at
+                      <a href="mailto:support@gtcfx.com" style="color:#192055;text-decoration:none;">support@gtcfx.com</a>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.7;color:#000000;font-weight:700;padding-top:10px;">
+                      Best Regard,
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.7;color:#000000;padding-bottom:20px;">
+                      Have an even better great day,<br> Your GTC Team
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="border-top:2px solid #e0e0e0;padding:15px 0;"></td>
+                  </tr>
+                </table>
+
+                <!-- Contact -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td align="left" style="padding-top:0;">
+                      <img src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/logo-email.jpg" width="160" alt="GTC Logo" style="display:block;border:0;outline:none;text-decoration:none;height:auto;">
+                    </td>
+                    <td align="right" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:25px;color:#192055;">
+                      📞 Phone: +971 800 667788<br>
+                      ✉️ Email:
+                      <a href="mailto:support@gtcfx.com" style="color:#192055;text-decoration:none;">support@gtcfx.com</a>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Legal -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style="font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:1.5;color:#666;padding:20px 0;">
+                      This website is owned and operated by GTC Global Ltd, a limited company incorporated in Mauritius (company number: C188049) and licensed by the Financial Services Commission, Mauritius (No. GB22200292) to trade as an SEC-2.1B Investment Dealer. Registered Address: Cyberati Lounge, Ground Floor, The Catalyst, Silicon Avenue, 40 Cybercity, 72201 Ebene, Republic of Mauritius. The financial services and products promoted on this website are offered by GTC Global Ltd and GTC Global Trade Capital Co. Limited, a company authorised by the Vanuatu Financial Services Commission of the Republic of Vanuatu, Company License Number: 40354.
+                      <br><br>
+                      <strong style="color:#000;">GTC Global Ltd and GTC Global Trade Capital Co. Limited</strong> belong to the GTC Financial Group, which consists of a group of entities across the globe.
+                      <br><br>
+                      Investing in derivative products carries significant risks and may not be suitable for all investors. Leveraging in these instruments can increase the level of risk and potential loss exposure. Before making any decision to engage in foreign exchange trading or CFDs, it is essential to carefully assess your investment objectives, level of experience, and risk tolerance. You should only invest funds that you can afford to lose. We strongly encourage you to educate yourself thoroughly about the associated risks and, if you have any questions, seek advice from an independent financial or tax advisor.
+                      <br><br>
+                      <strong style="color:#000;">GTC Global Ltd and GTC Global Trade Capital Co. Limited</strong> do not provide services to individuals residing in specific jurisdictions and/or jurisdictions where distribution of such services would be contrary to local law or regulation.
+                      <br><br>
+                      <strong style="color:#000;">Other Group Entities:</strong><br>
+                      The financial products and services offered on this website are <u>NOT</u> provided by the following group entities, and no recourse against the following entities is available. If you are interested in the products and services offered by each of the following entities, please visit their respective websites.
+                      <br><br>
+                      <strong style="color:#000;">GTC Group LLC-FZ</strong> is a holding company incorporated in Dubai, United Arab Emirates with Business License Number: 2311147.01. Its registered office is at Business Center 1, M Floor, Meydan Hotel, Nad Al Sheba, Dubai, United Arab Emirates.
+                      <br><br>
+                      <strong style="color:#000;">GTC Multi Trading DMCC</strong> is a limited company licensed and incorporated under the laws of the Dubai Multi Commodities Centre (No. DMCC-312687) and licensed by the Securities and Commodities Authority, United Arab Emirates (No. 202200000007) to practice the activity of Commodity Brokerage - Trading and Clearing. Registered Address: Unit No: 1501, 1 Lake Plaza, Plot No: JLT-PH2-T2A, Jumeirah Lakes Towers, Dubai, United Arab Emirates.
+                      <br><br>
+                      Each of the entities within the GTC Financial Group is managed separately. The financial products and services offered on this website are ONLY provided by GTC Global Ltd and GTC Global Trade Capital Co. Limited.
+                      <br><br>
+                      All trademarks are the property of their respective owners. All rights reserved. GTC Global Ltd is part of the GTC Financial Group, which consists of a group of entities across the globe.
+                      <br><br>
+                      <strong>Risk Warning:</strong> Trading leveraged products such as forex and derivatives may not be suitable for all investors as they carry a high degree of risk to your capital. Please ensure that you fully understand the risks involved and seek independent advice if necessary.
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Socials -->
+                <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td style="padding:0 5px;"><a href="https://www.facebook.com/GTCFXGlobalTradeCapital" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="20" height="20" alt="Facebook" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 5px;"><a href="https://x.com/GTC_fx" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" width="20" height="20" alt="X" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 5px;"><a href="https://www.youtube.com/channel/UCnKWakjm1b9Bm63xgwNFXHA" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="20" height="20" alt="YouTube" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 5px;"><a href="https://linkedin.com/company/gtcfx-official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="20" height="20" alt="LinkedIn" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 5px;"><a href="https://www.instagram.com/gtcfxofficial/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="20" height="20" alt="Instagram" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 5px;"><a href="https://api.whatsapp.com/send/?phone=448000488461&text&type=phone_number&app_absent=0" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" height="20" alt="WhatsApp" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 5px;"><a href="https://t.me/gtc_vip_signal" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="20" height="20" alt="Telegram" style="display:block;border:0;"></a></td>
+                    <td style="padding:0 5px;"><a href="https://www.tiktok.com/@gtcgroup_official" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="20" height="20" alt="TikTok" style="display:block;border:0;"></a></td>
+                  </tr>
+                </table>
+
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td align="center" style="font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.5;color:#666;padding-top:15px;padding-bottom:10px;">
+                      &copy; Copyright 2025 GTCVIP – All Rights Reserved
+                    </td>
+                  </tr>
+                </table>
+
               </td>
             </tr>
-
-            <!-- Legal Footer -->
-<tr>
-  <td style="font-size: 11px; color: #666; padding: 20px 0px; line-height: 1.5;">
-    This website is owned and operated by GTC Global Ltd, a limited company incorporated in Mauritius (company number: C188049) and licensed by the Financial Services Commission, Mauritius (No. GB22200292) to trade as an SEC-2.1B Investment Dealer. Registered Address: Cyberati Lounge, Ground Floor, The Catalyst, Silicon Avenue, 40 Cybercity, 72201 Ebene, Republic of Mauritius. The financial services and products promoted on this website are offered by GTC Global Ltd and GTC Global Trade Capital Co. Limited, a company authorised by the Vanuatu Financial Services Commission of the Republic of Vanuatu, Company License Number: 40354.
-    <br/><br/>
-    <stong style="font-weight: 600p; color: #000;">GTC Global Ltd and GTC Global Trade Capital Co. Limited</stong> belong to the GTC Financial Group, which consists of a group of entities across the globe.
-    <br/><br/>
-    Investing in derivative products carries significant risks and may not be suitable for all investors. Leveraging in these instruments can increase the level of risk and potential loss exposure. Before making any decision to engage in foreign exchange trading or CFDs, it is essential to carefully assess your investment objectives, level of experience, and risk tolerance. You should only invest funds that you can afford to lose. We strongly encourage you to educate yourself thoroughly about the associated risks and, if you have any questions, seek advice from an independent financial or tax advisor.
-    <br/><br/>
-    <stong style="font-weight: 600p; color: #000;">GTC Global Ltd and GTC Global Trade Capital Co. Limited</stong> do not provide services to individuals residing in specific jurisdictions and/or jurisdictions where distribution of such services would be contrary to local law or regulation.
-    <br/><br/>
-    <strong style="font-weight: 600p; color: #000;">Other Group Entities:</strong><br/>
-    The financial products and services offered on this website are <u>NOT</u> provided by the following group entities, and no recourse against the following entities is available. If you are interested in the products and services offered by each of the following entities, please visit their respective websites.
-    <br/><br/>
-    <strong style="font-weight: 600p; color: #000;">GTC Group LLC-FZ</strong> is a holding company incorporated in Dubai, United Arab Emirates with Business License Number: 2311147.01. Its registered office is at Business Center 1, M Floor, Meydan Hotel, Nad Al Sheba, Dubai, United Arab Emirates.
-    <br/><br/>
-    <strong style="font-weight: 600p; color: #000;">GTC Multi Trading DMCC</strong> is a limited company licensed and incorporated under the laws of the Dubai Multi Commodities Centre (No. DMCC-312687) and licensed by the Securities and Commodities Authority, United Arab Emirates (No. 202200000007) to practice the activity of Commodity Brokerage - Trading and Clearing. Registered Address: Unit No: 1501, 1 Lake Plaza, Plot No: JLT-PH2-T2A, Jumeirah Lakes Towers, Dubai, United Arab Emirates.
-    <br/><br/>
-    Each of the entities within the GTC Financial Group is managed separately. The financial products and services offered on this website are ONLY provided by GTC Global Ltd and GTC Global Trade Capital Co. Limited.
-    <br/><br/>
-    All trademarks are the property of their respective owners. All rights reserved. GTC Global Ltd is part of the GTC Financial Group, which consists of a group of entities across the globe.
-    <br/><br/>
-    <strong>Risk Warning:</strong> Trading leveraged products such as forex and derivatives may not be suitable for all investors as they carry a high degree of risk to your capital. Please ensure that you fully understand the risks involved and seek independent advice if necessary.
-  </td>
-</tr>
-
-<!-- Social Media Footer -->
-<tr>
-  <td style="padding-top: 30px; text-align: center;">
-    <table align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td style="padding: 0 5px;">
-          <a href="https://www.facebook.com/GTCFXGlobalTradeCapital" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-        <td style="padding: 0 5px;">
-          <a href="https://x.com/GTC_fx" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670151.png" alt="X" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-        <td style="padding: 0 5px;">
-          <a href="https://www.youtube.com/channel/UCnKWakjm1b9Bm63xgwNFXHA" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-        <td style="padding: 0 5px;">
-          <a href="https://linkedin.com/company/gtcfx-official" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-        <td style="padding: 0 5px;">
-          <a href="https://www.instagram.com/gtcfxofficial/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-        <td style="padding: 0 5px;">
-          <a href="https://api.whatsapp.com/send/?phone=448000488461&text&type=phone_number&app_absent=0" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-        <td style="padding: 0 5px;">
-          <a href="https://t.me/gtc_vip_signal" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-        <td style="padding: 0 5px;">
-          <a href="https://www.tiktok.com/@gtcgroup_official" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="20" height="20" style="display:block;">
-          </a>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-<tr>
-  <td align="center" style="font-size: 12px; color: #666666; padding-top: 15px; padding-bottom: 30px;">
-    &copy; Copyright 2025 GTCVIP – All Rights Reserved
-  </td>
-</tr>
-
-
           </table>
+          <!-- /Card -->
         </td>
       </tr>
     </table>
   </body>
 </html>
+
  `
 };
