@@ -31,7 +31,7 @@ function Card({ t }) {
         <article className="rounded-[10px] border border-[#E7E8EE] bg-white shadow-[0_1px_0_rgba(0,0,0,0.02)] p-4 md:p-5 min-h-[170px] flex flex-col justify-between">
             <div>
                 <StarRow n={t.stars} />
-                <p className="mt-5 text-[16px] leading-[24px] text-[#4D4D70]">“{t.quote}”</p>
+                <p className="mt-5 text-[16px] leading-[24px] text-[#4D4D70]">{t.quote}</p>
             </div>
             <div className="mt-8">
                 <p className="text-[13px] font-semibold text-[#0E1443]">{t.author}</p>
