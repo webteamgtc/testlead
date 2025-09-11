@@ -6,7 +6,7 @@ export default function AdsOk() {
   return (
     <html lang="en">
       <head>
-        <title>Landing Page</title>
+        <title>Promotion</title>
         <meta name="robots" content="noindex,follow" />
 
         {/* Google Tag Manager */}
@@ -32,8 +32,8 @@ export default function AdsOk() {
         {/* End Google Tag Manager (noscript) */}
 
        <main>
-          <h1></h1>  
-        </main>
+          <h1>Offer</h1>   
+        </main> 
       </body>
     </html>
   );
