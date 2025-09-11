@@ -669,8 +669,8 @@
       "description": "0.20 raw spreads when you trade gold with us. Hit that “TRADE GOLD” button to get started."
     },
     "banner": {
-      "heading": "Trade Gold with the Lowest Spreads in the UAE, Only with GTC",
-      "desc": "The lowest spreads guaranteed when you trade gold with us. Thousands of traders in UAE are now trading gold with GTC because we also offer same‑day withdrawals, plus your funds are protected as GTC is a multi-regulated broker. Hit that “TRADE GOLD” button to get started.",
+      "heading": "Trade Gold at 0.20 Spread in {page}, Only with GTC",
+      "desc": "0.20 raw spreads when you trade gold with us. Thousands of traders in {page} are now trading gold with GTC because we also offer same‑day withdrawals, plus your funds are protected as GTC is a multi-regulated broker. Hit that “TRADE GOLD” button to get started.",
       "para1": "For a limited time, you can get your GTC trading account with a Swap Free option for life! No forms, no special requests, just open a GTC trading account and it’s done. Whether you’re holding trades overnight or are planning long-term moves, you won’t pay a single cent in swaps. It’s our way of giving you full control to trade your strategy, your way, with no hidden fees & no strings attached.",
       "column1": {
         "desc": "Trade gold with the lowest spreads with GTC."
@@ -693,10 +693,10 @@
       "btnText": "Trade Gold"
     },
     "trusted": {
-      "heading": "Trade Gold with a Broker that’s Trusted in UAE",
+      "heading": "Trade Gold with a Broker that’s Trusted in {page}",
       "para1": "Gold is serious business. So is trust.",
-      "para2": "GTC is licensed and regulated by multiple global authorities such as the UAE’s SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This gives traders complete peace of mind in UAE, and the confidence they need when the Gold markets heat up.",
-      "para3": "Thousands of traders across UAE trust GTC for raw pricing, fast withdrawals, and regulated peace of mind when it comes to trading gold.",
+      "para2": "GTC is licensed and regulated by multiple global authorities such as the {page} SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This gives traders complete peace of mind in UAE, and the confidence they need when the Gold markets heat up.",
+      "para3": "Thousands of traders across {page} trust GTC for raw pricing, fast withdrawals, and regulated peace of mind when it comes to trading gold.",
       "btnText": "Trade Gold"
     },
     "tradeGoldSection": {
@@ -720,7 +720,7 @@
     "tradeBroker": {
       "heading": "Trade Gold with a Broker You Can Actually Trust",
       "desc": "When it comes to trading gold, you’re going to want a broker that understands you, is licensed and regulated in multiple respected jurisdictions, and has a track record for excellence. Here’s how we give you confidence to trade.",
-      "item1": "Licensed by the UAE’s SCA, Mauritius’ FSC, and South Africa’s FSCA.",
+      "item1": "Licensed by the {page}’s SCA, Mauritius’ FSC, and South Africa’s FSCA.",
       "item2": "Headquartered in Dubai with nearly 1 million serviced traders.",
       "item3": "World-class support with a real human touch.",
       "item4": "Customer-first culture where service is strategy.",

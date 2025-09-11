@@ -3,16 +3,16 @@
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export default function HeroBetterWay({ setIsOpen }) {
+export default function HeroBetterWay({ setIsOpen, page = "UAE" }) {
     const t = useTranslations("tradeGold");
 
     return (
         <section className="relative overflow-hidden md:bg-[#e8eaec] bg-gradient-to-r from-[#e8eaec]  to-[#edeff6]">
             {/* BG image on desktop/tablet (left side), fully visible */}
-            <div className="hidden md:block absolute inset-y-0 left-0 w-full z-0">
-                <div className="relative h-full w-full">
+            <div className="hidden md:block absolute  inset-y-0 left-0 w-full z-0">
+                <div className={page == "South Africa" ? "relative h-full max-w-1/2" : "relative h-full w-full"}>
                     <Image
-                        src="/trade-gold/footerbg.webp"           // ensure this exists in /public/trade-gold/last.png
+                        src={page == "South Africa" ? "/trade-gold/za-footer.png" : "/trade-gold/footerbg.webp"}         // ensure this exists in /public/trade-gold/last.png
                         alt="Smiling trader holding gold bars"
                         fill
                         priority
@@ -57,7 +57,7 @@ export default function HeroBetterWay({ setIsOpen }) {
                 {/* Mobile image: AFTER text */}
                 <div className="mt-6 md:hidden">
                     <Image
-                        src="/trade-gold/last-mobile-trans.png"
+                        src={page == "South Africa" ? "/trade-gold/za-footer.png" : "/trade-gold/footerbg.webp"}         // ensure this exists in /public/trade-gold/last.png
                         alt="Smiling trader holding gold bars"
                         width={900}
                         height={900}
