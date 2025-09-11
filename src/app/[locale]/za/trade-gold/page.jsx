@@ -26,7 +26,7 @@ const TradeGoldPage = () => {
                 />
                 <GoldBonus setIsOpen={setIsOpen} />
                 <HeroTrust setIsOpen={setIsOpen} page="South Africa"/>
-                <ArabicTestimonials setIsOpen={setIsOpen} />
+                <ArabicTestimonials setIsOpen={setIsOpen} page="South Africa"/>
                 <HeroBetterWay setIsOpen={setIsOpen} page="South Africa"/>
                 <MainFooter />
             </div>

@@ -561,7 +561,8 @@
           "country": "Lebanon"
         }
       },
-      "buttonText": "Switch To GTC"
+      "buttonText": "Switch To GTC",
+      "buttonText2":"Trade Gold"
     },
     "tradeSwitchSection": {
       "heading": "Switch Now. Trade Better Today.",
@@ -695,7 +696,7 @@
     "trusted": {
       "heading": "Trade Gold with a Broker that’s Trusted in {page}",
       "para1": "Gold is serious business. So is trust.",
-      "para2": "GTC is licensed and regulated by multiple global authorities such as the {page} SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This gives traders complete peace of mind in UAE, and the confidence they need when the Gold markets heat up.",
+      "para2": "GTC is licensed and regulated by multiple global authorities such as the {page} SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This gives traders complete peace of mind in {page}, and the confidence they need when the Gold markets heat up.",
       "para3": "Thousands of traders across {page} trust GTC for raw pricing, fast withdrawals, and regulated peace of mind when it comes to trading gold.",
       "btnText": "Trade Gold"
     },
@@ -720,7 +721,7 @@
     "tradeBroker": {
       "heading": "Trade Gold with a Broker You Can Actually Trust",
       "desc": "When it comes to trading gold, you’re going to want a broker that understands you, is licensed and regulated in multiple respected jurisdictions, and has a track record for excellence. Here’s how we give you confidence to trade.",
-      "item1": "Licensed by the {page}’s SCA, Mauritius’ FSC, and South Africa’s FSCA.",
+      "item1": "Licensed by the UAE’s SCA, Mauritius’ FSC, and South Africa’s FSCA.",
       "item2": "Headquartered in Dubai with nearly 1 million serviced traders.",
       "item3": "World-class support with a real human touch.",
       "item4": "Customer-first culture where service is strategy.",
