@@ -32,7 +32,7 @@ export default function AdsOk() {
         {/* End Google Tag Manager (noscript) */}
 
        <main>
-          <h1>Landing is available</h1>
+          <h1>Landing is available</h1> 
         </main>
       </body>
     </html>
