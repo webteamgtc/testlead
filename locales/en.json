@@ -562,7 +562,7 @@
         }
       },
       "buttonText": "Switch To GTC",
-      "buttonText2":"Trade Gold"
+      "buttonText2": "Trade Gold"
     },
     "tradeSwitchSection": {
       "heading": "Switch Now. Trade Better Today.",
@@ -694,9 +694,11 @@
       "btnText": "Trade Gold"
     },
     "trusted": {
-      "heading": "Trade Gold with a Broker that’s Trusted in {page}",
+      "heading": "Trade Gold with a Broker that’s Trusted in the {page}",
+      "headingUAE": "Trade Gold with a Broker that’s Trusted in the {page}",
       "para1": "Gold is serious business. So is trust.",
-      "para2": "GTC is licensed and regulated by multiple global authorities such as the {page} SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This gives traders complete peace of mind in {page}, and the confidence they need when the Gold markets heat up.",
+      "para2": "GTC is licensed and regulated by multiple global authorities such as the UAE's SCA, Mauritius’ FSC, South Africa’s FSCA, and Vanuatu’s VFSC. This gives traders complete peace of mind in {page}, and the confidence they need when the Gold markets heat up.",
+      "para2ZA": "GTC is licensed and regulated by multiple global authorities such as the UAE’s SCA, Mauritius’ FSC, and South Africa’s FSCA and Vanuatu’s VFSC. This gives traders complete peace of mind in {page}, and the confidence they need when the Gold markets heat up.",
       "para3": "Thousands of traders across {page} trust GTC for raw pricing, fast withdrawals, and regulated peace of mind when it comes to trading gold.",
       "btnText": "Trade Gold"
     },
@@ -765,12 +767,12 @@
       "description1": "We’ve sent you an email to {email}. Go ahead and click on that link. You’ll then be called by our friendly Customer Care team who will help you set up your GTC trading account and trade gold with the lowest spreads.",
       "description2": "Go ahead and check your spam or junk folder as sometimes emails like to hide there! If the email we’ve sent you has made its way into your spam or junk folder, simply move it back into your inbox.",
       "farewell": "See you soon!",
-      "help":{
-        "heading":"Having trouble?",
-        "phone":"Contact us on +971 800 667788 or ",
-        "email":"email support@gtcfx.com",
-        "seeYou":"See you soon",
-        "team":"The GTC Team"
+      "help": {
+        "heading": "Having trouble?",
+        "phone": "Contact us on +971 800 667788 or ",
+        "email": "email support@gtcfx.com",
+        "seeYou": "See you soon",
+        "team": "The GTC Team"
       }
     }
   }
