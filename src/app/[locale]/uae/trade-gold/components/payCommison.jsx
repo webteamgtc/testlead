@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 
-export default function HeroTrusted({ country = 'COUNTRY', onCtaClick, setIsOpen, page = "UAEF" }) {
+export default function HeroTrusted({ country = 'COUNTRY', onCtaClick, setIsOpen, page = "UAE" }) {
     const t = useTranslations("tradeGold");
 
     return (
@@ -17,18 +17,22 @@ export default function HeroTrusted({ country = 'COUNTRY', onCtaClick, setIsOpen
                            text-[24px] leading-[34px]
                            md:text-[36px] md:leading-[44px]
                            xl:text-[40px] xl:leading-[48px]">
-                            {t("trusted.heading", { page: page })}
+
+                            {page == "UAE" ? t("trusted.headingUAE", { page: page }) : t("trusted.heading", { page: page })}
                         </h1>
 
                         <p className="mt-3 text-[16px] leading-[22px] text-[#4D4D70]">
                             {t("trusted.para1", { page: page })}
 
                         </p>
-
-                        <p className="mt-4 text-[16px] leading-[22px] text-[#4D4D70] max-w-[560px]">
-                            {t("trusted.para2", { page: page })}
-
-                        </p>
+                        {page == "South Africa" ?
+                            <p className="mt-4 text-[16px] leading-[22px] text-[#4D4D70] max-w-[560px]">
+                                {t("trusted.para2ZA", { page: page })}
+                            </p>
+                            :
+                            <p className="mt-4 text-[16px] leading-[22px] text-[#4D4D70] max-w-[560px]">
+                                {t("trusted.para2", { page: page })}
+                            </p>}
 
                         <p className="mt-3 text-[16px] leading-[22px] text-[#4D4D70] max-w-[560px]">
                             {t("trusted.para3", { page: page })}

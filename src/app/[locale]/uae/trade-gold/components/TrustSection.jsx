@@ -30,7 +30,7 @@ export default function HeroTrust({ setIsOpen, page = "UAE" }) {
                     {/* Right: bullets */}
                     <div className="md:pl-2">
                         <ul className="list-disc pl-[32px] md:pl-0 marker:text-[#E1CFBB] text-[18px] leading-[22px] text-[#fff] space-y-2">
-                            <li> {t("tradeBroker.item1", { page: page })}</li>
+                            <li> {t("tradeBroker.item1")}</li>
                             <li>{t("tradeBroker.item2")}</li>
                             <li>{t("tradeBroker.item3")}</li>
                             <li>{t("tradeBroker.item4")}</li>

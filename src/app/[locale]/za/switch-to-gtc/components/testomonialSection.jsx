@@ -23,44 +23,44 @@ const TestimonialCard = ({ text, name, stars, country, odd }) => (
   </div>
 );
 
-const IBTestimonials = ({ setIsOpen }) => {
+const IBTestimonials = ({ setIsOpen, page = "UAE" }) => {
 
   const t = useTranslations('switchToGtc.testimonialSection');
 
 
-const testimonials = [
-  {
-    text: "“Withdrawals are instant. I requested my payout in USDT and it hit my wallet faster than I expected. No other broker I’ve tried comes close. Well done GTC!”",
-    name: "Sipho M.",
-    stars: 5,
-    country: "Johannesburg, South Africa"
-  },
-  {
- text: "“I trade indices and gold every day, and GTC gives me the conditions I need. They say they offer tight spreads and fast execution and the actually do. GTC is built for real traders.”",
-    name: 'Tawanda K.',
-    stars: 5,
-    country: 'Harare, Zimbabwe'
-  },
-  {
-    text: '“My old broker used to slip my orders all the time. I have to be honest that with GTC, my trades go through clean, even during high volatility, which is rare. Finally I have a platform I can rely on.”',
-    name: 'Kwame A.',
-    stars: 5,
-    country: 'Accra, Ghana'
-  },
-  {
- text: '“The customer service at GTC is incredible. They are the best I  have ever seen. I can get support in minutes, and they actually solve the problem instead of sending me in circles like other brokers.”',
-    name: "David O.",
-    stars: 5,
-    country: "Nairobi, Kenya"
-  },
+  const testimonials = [
     {
- text: '“GTC makes trading simple. They provide fast deposits and really smooth withdrawals. I like GTC because they also have no hidden fees. I feel secure here, and that’s why I stay.”',
-    name: "Grace N.",
-    stars: 5,
-    country: "Kampala, Uganda"
-  },
-];
-  
+      text: "“Withdrawals are instant. I requested my payout in USDT and it hit my wallet faster than I expected. No other broker I’ve tried comes close. Well done GTC!”",
+      name: "Sipho M.",
+      stars: 5,
+      country: "Johannesburg, South Africa"
+    },
+    {
+      text: "“I trade indices and gold every day, and GTC gives me the conditions I need. They say they offer tight spreads and fast execution and the actually do. GTC is built for real traders.”",
+      name: 'Tawanda K.',
+      stars: 5,
+      country: 'Harare, Zimbabwe'
+    },
+    {
+      text: '“My old broker used to slip my orders all the time. I have to be honest that with GTC, my trades go through clean, even during high volatility, which is rare. Finally I have a platform I can rely on.”',
+      name: 'Kwame A.',
+      stars: 5,
+      country: 'Accra, Ghana'
+    },
+    {
+      text: '“The customer service at GTC is incredible. They are the best I  have ever seen. I can get support in minutes, and they actually solve the problem instead of sending me in circles like other brokers.”',
+      name: "David O.",
+      stars: 5,
+      country: "Nairobi, Kenya"
+    },
+    {
+      text: '“GTC makes trading simple. They provide fast deposits and really smooth withdrawals. I like GTC because they also have no hidden fees. I feel secure here, and that’s why I stay.”',
+      name: "Grace N.",
+      stars: 5,
+      country: "Kampala, Uganda"
+    },
+  ];
+
   return (
     <section className="bg-[#fff] india-bg-switch py-8 md:py-20">
       <div className="container mx-auto">
@@ -71,7 +71,7 @@ const testimonials = [
               What African Traders Are Saying
             </h2>
             <p className="text-sm md:text-base xl:text-[18px] text-[#4D4D70] max-w-2xl">
-            With thousands of traders across South Africa, Zimbabwe, Ghana, Kenya & Uganda already choosing GTC, isn’t it time you switched?              </p>
+              With thousands of traders across South Africa, Zimbabwe, Ghana, Kenya & Uganda already choosing GTC, isn’t it time you switched?              </p>
           </div>
 
           {/* Testimonials Grid */}
@@ -85,7 +85,7 @@ const testimonials = [
           </div>
           <div className="flex justify-center md:mt-2">
             <CustomButton
-              text= {t("buttonText")}   
+              text={page == "South Africa" ? t("buttonText2") : t("buttonText")}
               bgColor="bg-[#000032] hover:bg-[#4e4d71]"
               textColor="text-[#fff]"
               onClick={() => setIsOpen(true)}
