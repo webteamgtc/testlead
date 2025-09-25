@@ -73,7 +73,7 @@ export default function Page() {
         </div>
       </section>
  
-          <Footer /> 
+          <Footer />  
     </>
   );
 }
