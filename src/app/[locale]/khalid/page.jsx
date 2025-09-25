@@ -36,9 +36,9 @@ export default function Page() {
 
           {/* Main content */}
           <section className="container mx-auto relative flex flex-col items-center justify-center">
-            <div className="w-full flex flex-col-reverse md:flex-row gap-6 items-center">
+            <div className="w-full flex flex-col-reverse md:flex-row gap-6 md:gap-10 items-center justify-between">
               {/* LEFT: 30% */}
-              <div className="md:w-[30%] w-full text-center ltr:md:text-left rtl:md:text-right px-2 space-y-2 md:space-y-1 text-primary">
+              <div className="md:w-[45%] w-full text-center ltr:md:text-left rtl:md:text-right px-2 space-y-2 md:space-y-1 text-primary">
                 <h5 className="text-xl md:text-2xl xl:text-[24px] font-medium pt-10">
                   Meet the #1 Influencer in UAE
                 </h5>
@@ -47,7 +47,7 @@ export default function Page() {
                   KHALID AL&nbsp;AMERI
                 </h1>
 
-                <h3 className="text-xl md:text-2xl xl:text-[21px] font-medium max-w-xs md:max-w-4xl mx-auto md:mx-0">
+                <h3 className="text-xl md:text-2xl xl:text-[24px] font-medium max-w-xs md:max-w-3xl mx-auto md:mx-0">
                   At GTC's booth, booth #36 on Monday, 6th October at 14:30 - 15:30 at the Forex Expo in Dubai.
                 </h3>
 
@@ -69,7 +69,7 @@ export default function Page() {
                   Get a chance to be a part of an exclusive experience.
                 </p>
 
-                <div className="flex flex-row justify-center md:justify-start items-center gap-4 pb-8 md:pb-20">
+                <div className="flex flex-row justify-center md:justify-start items-center gap-4">
                   <CustomButton
                     text="Register Now"
                     bgColor="bg-gradient-to-r from-[#293794] to-[#000021] hover:from-[#000021] hover:to-[#293794]"
@@ -82,7 +82,7 @@ export default function Page() {
               </div>
 
               {/* RIGHT: 70% */}
-              <div className="text-center md:w-[70%] w-full px-4 hidden md:block relative">
+              <div className="text-center md:w-[55%] w-full hidden md:block relative">
                 <div className="relative w-full h-[850px]">
                   <Image
                     src="/khalid/sidebar.webp"
