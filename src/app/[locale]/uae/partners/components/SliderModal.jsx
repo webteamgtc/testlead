@@ -45,7 +45,7 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) =
             </h2>
 
             <CommonMainForm
-              zapierUrl={zapierUrl}
+              zapierUrl={zapierUrl} 
               successPath={successPath}
               emailConfig={emailConfig} // Pass the email configuration
             />

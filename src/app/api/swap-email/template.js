@@ -1611,7 +1611,7 @@ export const englishEmailMT5Template = (data) => {
             </tr>
                <tr>
               <td style="font-size:14px;color:#000000;padding-bottom:10px;">
-You’ve taken the first step toward enjoying swap-free trading for life with GTC.
+You’ve taken the first step toward enjoying trading for life with GTC.
               </td>
             </tr>
 

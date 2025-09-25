@@ -129,7 +129,7 @@ export const englishOtpEmailTemplate = (first_name, otp) => {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Your GTC Swap Free Account OTP
+    <title>Your GTC Email Verification OTP
 </title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');

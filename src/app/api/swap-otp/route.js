@@ -22,7 +22,7 @@ export async function POST(req) {
   const mailData = {
     from: '"GTC" <portal@mx4.gtcmail.com>',
     to: email,
-    subject: "Your GTCFX OTP Code",
+    subject: "Your GTC OTP Code",
     text: `Your OTP is ${otp}`,
     html:
       locale == "ar"
