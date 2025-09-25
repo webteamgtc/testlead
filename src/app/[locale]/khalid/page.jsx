@@ -49,7 +49,7 @@ export default function Page() {
                 </h1>
 
                 <h3 className="text-xl md:text-2xl xl:text-[24px] font-medium max-w-xs md:max-w-3xl mx-auto md:mx-0">
-                  At GTC's booth, #36 on Monday, 6th October at 14:30 - 15:30 at the Forex Expo in Dubai.
+                    At the GTC booth #36 on Monday, 6th October between 2:30 to 3:30 at the Forex Expo Dubai.
                 </h3>
 
              
