@@ -24,7 +24,7 @@ export default function Page() {
        <div className="absolute top-0 right-0 bottom-0 left-0 bg-[url('/khalid/overlay.webp')] bg-top bg-repeat bg-cover object-contain opacity-50 z-20"></div>
         <div className="bg-img-banner min-h-scree relative z-40">
           {/* Top bar with logo */}
-          <div className="container mx-auto py-3 flex flex-col md:flex-row justify-start items-start gap-4">
+          <div className="container mx-auto py-3 flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start gap-4">
             <Image
               src="/khalid/logo-new1.png"
               width={250}
@@ -44,11 +44,11 @@ export default function Page() {
                   Meet the #1 Influencer in UAE
                 </h5>
 
-                <h1 className="text-7xl md:text-6xl xl:text-[70px] 2xl:text-[100px] uppercase leading-none font-black bg-gradient-to-b from-[#293794] via-[#000021] from-10% to-[#000021] to-90% inline-block text-transparent bg-clip-text max-w-xs md:max-w-xl mx-auto md:mx-0">
+                <h1 className="text-4xl md:text-6xl xl:text-[70px] 2xl:text-[100px] uppercase leading-none font-black bg-gradient-to-b from-[#293794] via-[#000021] from-10% to-[#000021] to-90% inline-block text-transparent bg-clip-text max-w-xs md:max-w-xl mx-auto md:mx-0">
                   KHALID AL&nbsp;AMERI
                 </h1>
 
-                <h3 className="text-xl md:text-2xl xl:text-[24px] font-medium max-w-xs md:max-w-3xl mx-auto md:mx-0">
+                <h3 className="text-lg md:text-2xl xl:text-[24px] font-medium max-w-xs md:max-w-3xl mx-auto md:mx-0">
                     At the GTC booth #36 on Monday, 6th October between 2:30 to 3:30 at the Forex Expo Dubai.
                 </h3>
 
