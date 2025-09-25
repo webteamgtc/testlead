@@ -58,13 +58,13 @@ export default function Page() {
 
               {/* RIGHT: 70% */}
               <div className="text-center md:w-[55%] w-full hidden md:block relative">
-                <div className="relative w-full h-[850px]">
+                <div className="relative w-full h-[850px] md:mt-[-100px]">
                   <Image
                     src="/khalid/fullim.webp"
                     alt="Khalid Al Ameri full figure"
                     fill
                     className="object-contain"
-                    priority
+                    priority 
                   />
                 </div>
               </div>
