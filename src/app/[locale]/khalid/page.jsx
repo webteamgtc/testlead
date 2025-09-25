@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <>
       <Meta
-        title="Khalid Al Ameri at Forex Expo Dubai | GTCFX"
+        title="Meet the #1 Influencer in UAE - Khalid Al Ameri | GTC"
         description="Join us at Forex Expo Dubai and meet Khalid Al Ameri, the #1 influencer in UAE. Limited slots available for an exclusive experience."
       />
 
