@@ -38,7 +38,7 @@ export default function Page() {
           <section className="container mx-auto relative flex flex-col items-center justify-center">
             <div className="w-full flex flex-col-reverse md:flex-row gap-6 items-center">
               {/* LEFT: 30% */}
-              <div className="md:w-[30%] w-full text-center ltr:md:text-left rtl:md:text-right px-2 space-y-0 text-primary">
+              <div className="md:w-[30%] w-full text-center ltr:md:text-left rtl:md:text-right px-2 space-y-2 md:space-y-1 text-primary">
                 <h5 className="text-xl md:text-2xl xl:text-[24px] font-medium pt-10">
                   Meet the #1 Influencer in UAE
                 </h5>
@@ -47,8 +47,8 @@ export default function Page() {
                   KHALID AL&nbsp;AMERI
                 </h1>
 
-                <h3 className="text-2xl md:text-2xl xl:text-[24px] font-medium max-w-xs md:max-w-xl mx-auto md:mx-0">
-                  At the Forex Expo Dubai
+                <h3 className="text-xl md:text-2xl xl:text-[21px] font-medium max-w-xs md:max-w-4xl mx-auto md:mx-0">
+                  At GTC's booth, booth #36 on Monday, 6th October at 14:30 - 15:30 at the Forex Expo in Dubai.
                 </h3>
 
                 {/* Mobile image */}
@@ -72,7 +72,7 @@ export default function Page() {
                 <div className="flex flex-row justify-center md:justify-start items-center gap-4 pb-8 md:pb-20">
                   <CustomButton
                     text="Register Now"
-                    bgColor="bg-gradient-to-r from-[#293794] to-[#000021] hover:from-[#4e4d71] hover:to-[#4e4d71]"
+                    bgColor="bg-gradient-to-r from-[#293794] to-[#000021] hover:from-[#000021] hover:to-[#293794]"
                     textColor="text-[#fff]"
                     strokeColor="#fff"
                     onClick={() => setIsOpen?.(true)}
