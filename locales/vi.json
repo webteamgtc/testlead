@@ -662,5 +662,117 @@
       "desc": "Chuyển sang GTC ngay hôm nay và giao dịch miễn phí Swap trọn đời! Không có gì chắc chắn hơn thế! Bạn còn nhận được tất cả các ưu đãi từ tài khoản giao dịch GTC: - Mức chênh lệch siêu cạnh tranh - Thực thi lệnh cực nhanh - Dịch vụ chăm sóc khách hàng tận tâm, luôn quan tâm đến bạn!",
       "btnText": "Chuyển ngay đến GTC"
     }
+  },
+  "tradeGold": {
+    "meta": {
+      "title": "Giao Dịch Vàng Với Spread Thấp Nhất Tại UAE, Chỉ Có Ở GTC",
+      "description": "Spread thô 0.20 khi bạn giao dịch vàng với chúng tôi. Nhấn nút 'GIAO DỊCH VÀNG' để bắt đầu."
+    },
+    "banner": {
+      "heading": "Giao Dịch Vàng Với Spread Thấp Nhất Tại {page}, Chỉ Có Ở GTC",
+      "desc": "Cam kết spread thấp nhất khi bạn giao dịch vàng với chúng tôi. Hàng ngàn nhà giao dịch tại {page} đang giao dịch vàng với GTC vì chúng tôi còn cung cấp rút tiền trong ngày, cùng với việc tiền của bạn được bảo vệ do GTC là nhà môi giới đa quy định. Nhấn nút 'GIAO DỊCH VÀNG' để bắt đầu.",
+      "para1": "Trong thời gian giới hạn, bạn có thể nhận tài khoản giao dịch GTC với tùy chọn Miễn Phí Swap trọn đời! Không cần biểu mẫu, không yêu cầu đặc biệt, chỉ cần mở tài khoản giao dịch GTC và hoàn tất. Dù bạn giữ lệnh qua đêm hay lên kế hoạch giao dịch dài hạn, bạn sẽ không trả một xu phí swap nào. Đây là cách chúng tôi trao cho bạn toàn quyền kiểm soát để giao dịch theo chiến lược của bạn, theo cách của bạn, không phí ẩn & không ràng buộc.",
+      "column1": {
+        "desc": "Giao dịch vàng với spread thấp nhất cùng GTC."
+      },
+      "column2": {
+        "desc": "Rút Tiền Trong Ngày Đó là tiền của bạn, không phải của chúng tôi."
+      },
+      "column3": {
+        "desc": "Scalping Sau 60 Giây. Giao dịch nhanh. Không chặn."
+      },
+      "column4": {
+        "desc": "Khớp Lệnh Siêu Nhanh cho giao dịch vàng của bạn tại GTC"
+      },
+      "column5": {
+        "desc": "Khuyến Mãi & Hoàn Tiền Thật thúc đẩy giao dịch của bạn."
+      },
+      "column6": {
+        "desc": "Nhà Môi Giới Đa Quy Định SCA & FSC"
+      },
+      "btnText": "Giao Dịch Vàng"
+    },
+    "trusted": {
+      "heading": "Giao Dịch Vàng Với Nhà Môi Giới Được Tin Cậy Tại {page}",
+      "headingUAE": "Giao Dịch Vàng Với Nhà Môi Giới Được Tin Cậy Tại {page}",
+      "para1": "Vàng là việc nghiêm túc. Niềm tin cũng vậy.",
+      "para2": "GTC được cấp phép và quy định bởi nhiều cơ quan toàn cầu như SCA của UAE, FSC của Mauritius, FSCA của Nam Phi và VFSC của Vanuatu. Điều này mang lại cho nhà giao dịch sự an tâm hoàn toàn tại {page}, và sự tự tin họ cần khi thị trường Vàng nóng lên.",
+      "para2ZA": "GTC được cấp phép và quy định bởi nhiều cơ quan toàn cầu như SCA của UAE, FSC của Mauritius, FSCA của Nam Phi và VFSC của Vanuatu. Điều này mang lại cho nhà giao dịch sự an tâm hoàn toàn tại {page}, và sự tự tin họ cần khi thị trường Vàng nóng lên.",
+      "para3": "Hàng ngàn nhà giao dịch khắp {page} tin tưởng GTC về giá thô, rút tiền nhanh, và sự an tâm có quy định khi giao dịch vàng.",
+      "btnText": "Giao Dịch Vàng"
+    },
+    "tradeGoldSection": {
+      "heading": "Giao Dịch Vàng Với GTC & Nhận Khuyến Mãi Tăng Margin, Không Phải Hy Vọng",
+      "desc": "Quên đi các khuyến mãi khó nhận hoặc đầy thủ thuật khi giao dịch vàng. Khi bạn chuyển sang GTC, nạp $500 trở lên và giao dịch vàng, chúng tôi sẽ tặng Khuyến Mãi Margin tương đương. Bạn nhận được margin giao dịch bổ sung với phần thưởng hoàn tiền thật.",
+      "title1": "Giao dịch vàng & đạt mục tiêu hoàn tiền. Rút tiền thưởng của bạn.",
+      "card1": {
+        "title": "Khuyến Mãi <br/> Tuyệt Vời"
+      },
+      "card2": {
+        "title": "Không Điều Khoản <br/> Ẩn"
+      },
+      "card3": {
+        "title": "Không Nhầm Lẫn <br/> Về Equity"
+      },
+      "card4": {
+        "title": "Nhận Hoàn Tiền <br/> Nữa"
+      },
+      "btnText": "Giao Dịch Vàng"
+    },
+    "tradeBroker": {
+      "heading": "Giao Dịch Vàng Với Nhà Môi Giới Bạn Thực Sự Có Thể Tin Tưởng",
+      "desc": "Khi giao dịch vàng, bạn sẽ muốn một nhà môi giới thấu hiểu bạn, được cấp phép và quy định tại nhiều khu vực pháp lý uy tín, và có thành tích xuất sắc. Đây là cách chúng tôi mang đến cho bạn sự tự tin khi giao dịch.",
+      "item1": "Được cấp phép bởi SCA của UAE, FSC của Mauritius và FSCA của Nam Phi.",
+      "item2": "Trụ sở chính tại Dubai với gần 1 triệu nhà giao dịch được phục vụ.",
+      "item3": "Hỗ trợ đẳng cấp thế giới với sự quan tâm thực sự.",
+      "item4": "Văn hóa lấy khách hàng làm trung tâm, nơi dịch vụ là chiến lược.",
+      "subTitle": "Chuyển sang nhà môi giới cho phép bạn giao dịch vàng theo cách của bạn!",
+      "btnText": "Giao Dịch Vàng"
+    },
+    "testimonial": {
+      "heading": "Nhà Giao Dịch Ả Rập Của Chúng Tôi Nói Gì",
+      "desc": "Với hàng ngàn nhà giao dịch hài lòng từ UAE, không phải đã đến lúc bạn chuyển sang GTC?",
+      "card1": {
+        "title": "Tôi mới chuyển sang GTC vì spread vàng tại nhà môi giới trước đang hủy hoại lợi nhuận của tôi. Spread 2 pip của GTC tạo ra sự khác biệt đáng chú ý, cộng với mọi lần rút tiền của tôi đều về tài khoản trong ngày. GTC là một nhà môi giới rất chuyên nghiệp và tôi hạnh phúc khi giao dịch vàng với họ.",
+        "name": "Omar A.",
+        "country": "Cairo, Ai Cập"
+      },
+      "card2": {
+        "title": "“Tôi scalp vàng cả ngày, và GTC là nhà môi giới duy nhất tôi tìm thấy thực sự cho phép tôi làm điều đó mà không có giới hạn thời gian kỳ lạ.”",
+        "name": "Yousef H.",
+        "country": "Jeddah, Ả Rập Xê-út"
+      },
+      "card3": {
+        "title": "“Vàng là công cụ chính của tôi. Tôi đã giao dịch nó nhiều năm. Tôi biết đến GTC tại iFX Expo gần nhất ở Limassol, Cyprus, và mở tài khoản vì spread của họ cạnh tranh nhất mà tôi từng thấy. Tôi đã giao dịch nhiều năm và thử nghiệm nhiều nhà môi giới. GTC cảm giác khác biệt, cộng với khớp lệnh nhanh, hầu như không trượt giá trong biến động mạnh, và hỗ trợ thực sự biết họ đang nói gì.”",
+        "name": "Nour S.",
+        "country": "Beirut, Lebanon"
+      },
+      "card4": {
+        "title": "“Thành thật, tôi không mong đợi nhiều khi tham gia, nhưng giao dịch vàng ở đây hoạt động tốt. Không có vấn đề gì với nền tảng MT5, spread chặt, và tôi chưa bao giờ gặp vấn đề khi nhận tiền.”",
+        "name": "Ahmad K.",
+        "country": "Manama, Bahrain"
+      },
+      "btnText": "Giao Dịch Vàng"
+    },
+    "tradeToday": {
+      "heading": "Giao Dịch Vàng Theo Cách Tốt Hơn Ngay Hôm Nay.",
+      "desc1": "Chỉ mất vài phút để mở tài khoản GTC và truy cập mọi thứ chúng tôi đã nói ở trên.",
+      "desc2": "Nói lời tạm biệt với những bực bội bạn đang đối mặt khi giao dịch vàng với nhà môi giới hiện tại. Chào đón những giao dịch nhanh hơn, phần thưởng lớn hơn và sự minh bạch thực sự.",
+      "btnText": "Giao Dịch Vàng"
+    },
+    "confirmationThankYou": {
+      "heading": "Cảm Ơn!",
+      "subheading": "Bạn Sắp Hoàn Tất!",
+      "description1": "Chúng tôi đã gửi cho bạn email đến {email}. Hãy truy cập và nhấp vào liên kết đó. Sau đó bạn sẽ được đội ngũ Chăm Sóc Khách Hàng thân thiện gọi điện để hỗ trợ bạn thiết lập tài khoản giao dịch GTC và giao dịch vàng với spread thấp nhất.",
+      "description2": "Hãy kiểm tra thư mục spam hoặc thư rác vì đôi khi email có thể ẩn ở đó! Nếu email chúng tôi gửi nằm trong thư mục spam hoặc thư rác, chỉ cần chuyển nó trở lại hộp thư đến của bạn.",
+      "farewell": "Hẹn Sớm Gặp Lại!",
+      "help": {
+        "heading": "Gặp sự cố?",
+        "phone": "Liên hệ +971 800 667788 hoặc ",
+        "email": "email support@gtcfx.com",
+        "seeYou": "Hẹn sớm gặp lại",
+        "team": "Đội Ngũ GTC"
+      }
+    }
   }
 }
