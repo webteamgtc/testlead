@@ -474,107 +474,107 @@
   },
   "switchToGtc": {
     "meta": {
-      "title": "Switch to GTC for Faster Withdrawals & Lower Spreads",
-      "description": "Switch to GTC and experience tighter spreads, instant withdrawals, fair scalping rules, and better bonuses. Trade smarter with a broker that gets you."
+      "title": "Chuyển Sang GTC Để Rút Tiền Nhanh Hơn & Spread Thấp Hơn",
+      "description": "Chuyển sang GTC và trải nghiệm spread thấp hơn, rút tiền tức thì, quy tắc scalping công bằng và khuyến mãi tốt hơn. Giao dịch thông minh hơn với một nhà môi giới thấu hiểu bạn."
     },
     "banner": {
-      "subTitle": "Your Brokerage Profits from Your Trading Pain.",
-      "title1": "You Deserve Better Than 3 Pip Spreads.",
-      "title2": "Trade Without the Tricks.",
-      "title3": "Every Trade Should Count. Not Just Theirs.",
-      "title4": "Your Broker’s Holding You Back.",
-      "para1": "Make the move to a brokerage that actually puts you first. Faster withdrawals, tighter spreads, fairer conditions. You trade & we’ll take care of the rest.",
-      "cta": "Switch Now",
+      "subTitle": "Nhà Môi Giới Của Bạn Đang Kiếm Lợi Từ Những Thiệt Hại Giao Dịch Của Bạn.",
+      "title1": "Bạn Xứng Đáng Hơn Mức Spread 3 Pip.",
+      "title2": "Giao Dịch Không Cần Thủ Thuật.",
+      "title3": "Mỗi Lệnh Giao Dịch Nên Có Ý Nghĩa. Không Chỉ Của Họ.",
+      "title4": "Nhà Môi Giới Của Bạn Đang Kìm Hãm Bạn.",
+      "para1": "Chuyển sang nhà môi giới thực sự coi bạn là ưu tiên. Rút tiền nhanh hơn, spread thấp hơn, điều kiện công bằng hơn. Bạn giao dịch & chúng tôi sẽ lo phần còn lại.",
+      "cta": "Chuyển Đổi Ngay",
       "list": {
-        "item1": "2 Pip Spread Instead of 3",
-        "item2": "Instant & Same Day Withdrawals",
-        "item3": "Scalping Allowed After 60 Seconds",
-        "item4": "No Slippage During News Events",
-        "item5": "Real Margin Bonus with Real Cashback",
-        "item6": "Multi-Regulated Brokerage SCA & FSC"
+        "item1": "Spread 2 Pip Thay Vì 3",
+        "item2": "Rút Tiền Tức Thì & Trong Ngày",
+        "item3": "Cho Phép Scalping Sau 60 Giây",
+        "item4": "Không Trượt Giá Trong Sự Kiện Tin Tức",
+        "item5": "Khuyến Mãi Margin Thật Với Hoàn Tiền Thật",
+        "item6": "Nhà Môi Giới Đa Quy Định SCA & FSC"
       },
-      "tableHeading": "Comparison Snapshot Your Broker vs GTC"
+      "tableHeading": "Bảng So Sánh Nhanh Nhà Môi Giới Của Bạn vs GTC"
     },
     "bonusSection": {
-      "heading": "Switch & Get a Bonus That Boosts Your Margin, Not Your Hopes",
-      "description1": "Forget losable or tricky bonuses. When you switch to GTC and deposit $500 or more, we’ll match your deposit with a Margin Bonus. You get extra trading margin with real cashback rewards.",
-      "description2": "Trade FX, gold, metals or oil. Hit the cashback target.",
-      "description3": "Withdraw your reward.",
+      "heading": "Chuyển Đổi & Nhận Khuyến Mãi Tăng Margin, Không Phải Hy Vọng",
+      "description1": "Quên đi các khuyến mãi khó nhận hoặc đầy thủ thuật. Khi bạn chuyển sang GTC và nạp $500 trở lên, chúng tôi sẽ tặng bạn Khuyến Mãi Margin tương đương. Bạn nhận được margin giao dịch bổ sung với phần thưởng hoàn tiền thật.",
+      "description2": "Giao dịch Forex, vàng, kim loại hoặc dầu. Đạt mục tiêu hoàn tiền.",
+      "description3": "Rút tiền thưởng của bạn.",
       "benefits": {
         "benefit1": {
-          "text": "No Tricks"
+          "text": "Không Thủ Thuật"
         },
         "benefit2": {
-          "text": "No Hidden Terms"
+          "text": "Không Điều Khoản Ẩn"
         },
         "benefit3": {
-          "text": "No Equity Confusion"
+          "text": "Không Nhầm Lẫn Về Equity"
         },
         "benefit4": {
-          "text": "Get Your Margin Bonus"
+          "text": "Nhận Khuyến Mãi Margin Của Bạn"
         }
       },
-      "buttonText": "Switch To GTC"
+      "buttonText": "Chuyển Sang GTC"
     },
     "brokerSection": {
-      "subheading": "A Broker You Can Actually Trust",
-      "paragraph": "We’re not a fly-by-night operation. GTC is licensed and regulated in multiple respected jurisdictions. Here’s how we give you confidence to trade.",
+      "subheading": "Một Nhà Môi Giới Bạn Thực Sự Có Thể Tin Tưởng",
+      "paragraph": "Chúng tôi không phải là tổ chức bất chính. GTC được cấp phép và quy định tại nhiều khu vực pháp lý uy tín. Đây là cách chúng tôi mang đến cho bạn sự tự tin khi giao dịch.",
       "listItems": {
         "item1": {
-          "text": "Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA."
+          "text": "Được cấp phép bởi SCA của UAE, FSC của Mauritius và FSCA của Nam Phi."
         },
         "item2": {
-          "text": "Headquartered in Dubai with nearly 1 million global traders."
+          "text": "Trụ sở chính tại Dubai với gần 1 triệu nhà giao dịch toàn cầu."
         },
         "item3": {
-          "text": "World-class support with a real human touch."
+          "text": "Hỗ trợ đẳng cấp thế giới với sự quan tâm thực sự."
         },
         "item4": {
-          "text": "Customer-first culture where service is strategy."
+          "text": "Văn hóa lấy khách hàng làm trung tâm, nơi dịch vụ là chiến lược."
         }
       },
-      "mainHeading": "Switch to a broker that doesn’t just say it, we prove it every day.",
-      "buttonText": "Switch To GTC"
+      "mainHeading": "Chuyển sang một nhà môi giới không chỉ nói, chúng tôi chứng minh điều đó mỗi ngày.",
+      "buttonText": "Chuyển Sang GTC"
     },
     "testimonialSection": {
-      "heading": "What Our Arabic Traders Are Saying",
-      "description": "With thousands of happy traders from the UAE, Oman, Qatar, Kuwait, Iraq, Jordan & Lebanon, isn’t it time you switched to GTC?",
+      "heading": "Nhà Giao Dịch Ả Rập Của Chúng Tôi Nói Gì",
+      "description": "Với hàng ngàn nhà giao dịch hài lòng từ UAE, Oman, Qatar, Kuwait, Iraq, Jordan & Lebanon, không phải đã đến lúc bạn chuyển sang GTC?",
       "testimonials": {
         "one": {
-          "text": "“I switched to GTC because the withdrawal speed blew my old broker out of the water. Instant payout in USDT? Love it.”",
+          "text": "“Tôi chuyển sang GTC vì tốc độ rút tiền vượt xa nhà môi giới cũ. Thanh toán tức thì bằng USDT? Tôi thích điều đó.”",
           "name": "Mohammed A.",
           "country": "UAE"
         },
         "two": {
-          "text": "“I scalp gold all day, and GTC is the only broker I’ve found that actually lets me do that without weird time limits.”",
+          "text": "“Tôi scalp vàng cả ngày, và GTC là nhà môi giới duy nhất tôi tìm thấy thực sự cho phép tôi làm điều đó mà không có giới hạn thời gian kỳ lạ.”",
           "name": "Omar S.",
           "country": "Qatar"
         },
         "three": {
-          "text": "“My previous broker slipped my orders like crazy during news. GTC’s execution is solid. I finally trust the platform.”",
+          "text": "“Nhà môi giới trước của tôi trượt giá lệnh của tôi kinh khủng trong tin tức. Khớp lệnh của GTC rất ổn định. Cuối cùng tôi đã tin tưởng vào nền tảng.”",
           "name": "Hussein B.",
           "country": "Iraq"
         },
         "four": {
-          "text": "Customer support at GTC actually speaks to you like a human, not just a ticket number. That alone is worth switching.",
+          "text": "Hỗ trợ khách hàng tại GTC thực sự nói chuyện với bạn như một con người, không chỉ là một số vé. Chỉ riêng điều đó đã đáng để chuyển đổi.",
           "name": "Abdullah K.",
           "country": "Lebanon"
         }
       },
-      "buttonText": "Switch To GTC"
+      "buttonText": "Chuyển Sang GTC"
     },
     "tradeSwitchSection": {
-      "heading": "Switch Now. Trade Better Today.",
-      "description1": "It only takes a few minutes to open your GTC account and access everything we’ve talked about above, including your Margin Bonus.",
-      "description2": "Say goodbye to the frustrations of your current broker. Say hello to faster trades, bigger rewards, and real transparency.",
-      "buttonText": "Make The Switch"
+      "heading": "Chuyển Đổi Ngay. Giao Dịch Tốt Hơn Hôm Nay.",
+      "description1": "Chỉ mất vài phút để mở tài khoản GTC và truy cập mọi thứ chúng tôi đã nói ở trên, bao gồm cả Khuyến Mãi Margin của bạn.",
+      "description2": "Nói lời tạm biệt với những bực bội từ nhà môi giới hiện tại. Chào đón những giao dịch nhanh hơn, phần thưởng lớn hơn và sự minh bạch thực sự.",
+      "buttonText": "Thực Hiện Chuyển Đổi"
     },
     "confirmationThankYou": {
-      "heading": "Thanks, {nickname}!",
-      "subheading": "You’re Almost There!",
-      "description1": "We’ve just sent you an email to {email}, which explains what happens next.",
-      "description2": "It’s also a good idea to check your spam or junk folder as sometimes emails like to hide there. If the email we’ve sent you has made its way into your spam or junk folder, simply move it back into your inbox.",
-      "farewell": "See you soon!"
+      "heading": "Cảm Ơn, {nickname}!",
+      "subheading": "Bạn Sắp Hoàn Tất!",
+      "description1": "Chúng tôi vừa gửi cho bạn một email đến {email}, giải thích những bước tiếp theo.",
+      "description2": "Bạn cũng nên kiểm tra thư mục spam hoặc thư rác vì đôi khi email có thể ẩn ở đó. Nếu email chúng tôi gửi nằm trong thư mục spam hoặc thư rác, chỉ cần chuyển nó trở lại hộp thư đến của bạn.",
+      "farewell": "Hẹn Sớm Gặp Lại!"
     }
   },
  "swapFreePage": {
