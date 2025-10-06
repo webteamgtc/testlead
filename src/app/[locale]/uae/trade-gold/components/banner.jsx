@@ -220,9 +220,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
             </svg>
           </button>
         </div>
-        <div className="mt-6">
-          <img className=" h-32 w-32 mx-auto md:mx-0" src="/qr-code.jpeg" alt="" />
-        </div>
+      
       </div>
     </section>
   );
