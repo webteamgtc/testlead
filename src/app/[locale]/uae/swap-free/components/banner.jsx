@@ -44,7 +44,7 @@ const HeroSection = ({ setIsOpen }) => {
               {t("banner.desc")}
             </h3>
             <div className="flex flex-col sm:hidden relative w-full h-[200px]">
-                <Image src='/swap-free/banner.png' fill alt="" className="object-contain" />
+              <Image src='/swap-free/banner.png' fill alt="" className="object-contain" />
             </div>
             <p className="text-base md:text-base mb-6 leading-nomral max-w-xl  px-2 md:px-0">
               {t("banner.para1")}
@@ -98,11 +98,14 @@ const HeroSection = ({ setIsOpen }) => {
                   <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
                 </svg>
               </button>
-               <a href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Cheatsheet/Swap+Free+for+Life+T%26Cs.pdf" target="_blank" className="text-sm md:text-base mt-4  font-medium  leading-relaxed max-w-xl">
-              {t("tcApply")}
-            </a>
+              <a href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Cheatsheet/Swap+Free+for+Life+T%26Cs.pdf" target="_blank" className="text-sm md:text-base mt-4  font-medium  leading-relaxed max-w-xl">
+                {t("tcApply")}
+              </a>
             </div>
-           
+            <div className="mt-6">
+              <img className=" h-32 w-32 mx-auto md:mx-0" src="/qr-code.jpeg" alt="" />
+            </div>
+
             <div className="relative pt-1 flex flex-col md:items-start items-center justify-center"></div>
           </div>
         </div>
