@@ -102,6 +102,10 @@ const HeroSection = ({ setIsOpen }) => {
               {t("tcApply")}
             </a>
             </div>
+
+              <div className="mt-6">
+              <img className=" h-32 w-32 mx-auto md:mx-0" src="/qr-code.jpeg" alt="" />
+            </div>
            
             <div className="relative pt-1 flex flex-col md:items-start items-center justify-center"></div>
           </div>
