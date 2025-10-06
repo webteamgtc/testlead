@@ -104,7 +104,8 @@ const HeroSection = ({ setIsOpen }) => {
             </div>
 
               <div className="mt-6">
-              <img className=" h-32 w-32 mx-auto md:mx-0" src="/qr-code.jpeg" alt="" />
+              <img className=" h-68 w-68 mx-auto md:mx-0" src="/qr-code.jpeg" alt="" />
+              <p className="pt-2 font-semibold text-lg">Scan the QR Code for a Bonus</p>
             </div>
            
             <div className="relative pt-1 flex flex-col md:items-start items-center justify-center"></div>
