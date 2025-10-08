@@ -102,7 +102,8 @@ const HeroSection = ({ setIsOpen }) => {
               {t("tcApply")}
             </a>
             </div>
-           
+
+      
             <div className="relative pt-1 flex flex-col md:items-start items-center justify-center"></div>
           </div>
         </div>
