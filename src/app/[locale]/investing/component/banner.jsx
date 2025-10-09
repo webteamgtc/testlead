@@ -77,7 +77,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
                   </svg>
                 </button>
               </div>
-              <p className="text-white pt-3 text-lg">Already have an account? <Link href="/" className="text-secondary">Login</Link></p>
+              <p className="text-white pt-3 text-lg">Already have an account? <Link href="https://mygtcfx.com/" target="_blank" className="text-secondary">Login</Link></p>
             </div>
 
             {/* Right Column (optional image placeholder for layout balance) */}
