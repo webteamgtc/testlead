@@ -15,7 +15,7 @@ import Select from "react-select";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl"; // make sure this is imported
 
-const TradeForm = ({ zapierUrl, successPath }) => {
+const TradeForm = ({ zapierUrl, successPath, page = "" }) => {
     const { countryData } = useLocationDetail();
     const [otpLoading, setOtpLoading] = useState(false);
     const [showOtp, setShowOtp] = useState(false);
@@ -126,6 +126,31 @@ const TradeForm = ({ zapierUrl, successPath }) => {
             });
     };
 
+    const sendDataPostBack = async (data) => {
+        const emailData = axios
+            .post(`https://us-central1-madrid-investing.cloudfunctions.net/PostbackCloudFunciton/?token=YWR2ZXJpc2VyX2FmZmlsYXRpb25fdXJs&advertiser=GTC%20Global%20LTD&brand=GTC%20FX&model=CPL&affiliate_id=1&user_id=${data?.nickname}&event_type=Lead&subID=investing-GTC`, null)
+            .then((res) => {
+                toast.success(t("thankYou1"));
+                formik.resetForm();
+                setLoading(false);
+                localStorage.setItem("user", JSON.stringify(data));
+                // Redirect based on locale
+                const targetLocale =
+                    locale === "ar"
+                        ? `/ar${successPath}` : successPath;
+                router.push(targetLocale);
+                formik.resetForm();
+                setShowOtp(false);
+            })
+            .catch((err) => {
+                toast.error("Error inserting data: " + result.error);
+                setLoading(false);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    };
+
     const formik = useFormik({
         initialValues: {
             nickname: "",
@@ -147,11 +172,11 @@ const TradeForm = ({ zapierUrl, successPath }) => {
         },
         validationSchema: Yup.object({
             nickname: Yup.string()
-        .matches(/^[^\d]+$/, t("errors.fullNameFormat"))
-        .required(t("errors.firstNameRequired")),
-      last_name: Yup.string()
-        .matches(/^[^\d]+$/, t("errors.lastNameFormat"))
-        .required(t("errors.lastNameRequired")),
+                .matches(/^[^\d]+$/, t("errors.fullNameFormat"))
+                .required(t("errors.firstNameRequired")),
+            last_name: Yup.string()
+                .matches(/^[^\d]+$/, t("errors.lastNameFormat"))
+                .required(t("errors.lastNameRequired")),
 
             email: Yup.string()
                 .email(t("errors.emailInvalid"))
@@ -177,7 +202,12 @@ const TradeForm = ({ zapierUrl, successPath }) => {
                 );
             } catch (error) {
             } finally {
-                sendDataToDb(values, formik, setLoading);
+                if (page == "investing") {
+                    sendDataPostBack(values, formik, setLoading);
+                } else {
+                    sendDataToDb(values, formik, setLoading);
+
+                }
             }
         },
     });
@@ -470,8 +500,8 @@ const TradeForm = ({ zapierUrl, successPath }) => {
                                 {t("clientAgreement")}
                             </a>{" "}
                             & the{" "}
-                                <a
-                                    href={
+                            <a
+                                href={
                                     {
                                         ar: "/ar/privacy-policy",
                                         ru: "/ru/privacy-policy",
@@ -480,11 +510,11 @@ const TradeForm = ({ zapierUrl, successPath }) => {
                                         es: "/es/privacy-policy",
                                         pt: "/pt/privacy-policy",
                                     }[locale] || "/privacy-policy"
-                                    }
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-secondary underline ml-1"
-                                >
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-secondary underline ml-1"
+                            >
                                 {t("privacyPolicy")}
                             </a>
                             , {t("conset")}.
