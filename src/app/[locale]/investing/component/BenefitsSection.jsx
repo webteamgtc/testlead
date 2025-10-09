@@ -9,7 +9,7 @@ const BenefitsSection = () => {
     {
       title: "Key Benefits",
       subtitle: "Here's why so many gold traders are turning to GTC.",
-      icon: "/investing/key.svg",
+      icon: "/investing/key-2.svg",
       frontTheme: "gold",     
       backTheme: "navy", 
       slope: "right",
@@ -126,14 +126,7 @@ const BenefitsSection = () => {
                           ].join(" ")}
                         >
                           <div className="inline-flex items-center justify-center rounded-xl px-3 py-2">
-                            <Image
-                              src={c.icon}
-                              alt={c.title}
-                              width={36}
-                              height={36}
-                              className="object-contain"
-                              priority={i === 0}
-                            />
+                            <img src={c.icon} alt=""/>
                           </div>
                         </div>
                         <div

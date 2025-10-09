@@ -9,7 +9,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
 
   return (
     <section
-      className="bg-[url('/investing/bg-mobile.webp')] md:bg-[url('/investing/investing.png')] bg-cover bg-center bg-no-repeat min-h-[900px] md:min-h-[980px] text-[#E5E5EA] relative overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]"
+      className="bg-[url('/investing/banner.webp')] md:bg-[url('/investing/banner.webp')] bg-cover bg-center bg-no-repeat min-h-[900px] md:min-h-[760px] text-[#E5E5EA] relative overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]"
     >
       {/* ==== TOP LOGO ==== */}
       <div className="container pt-3">
@@ -23,7 +23,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
       </div> 
 
       {/* ==== CENTER CONTENT ==== */}
-      <div className="flex-grow flex md:items-center pt-20">
+      <div className="flex-grow flex md:items-center">
         <div className="container">
           <div className="grid md:grid-cols-2 items-center gap-10">
             {/* Left Column */}
