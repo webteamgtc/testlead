@@ -139,9 +139,9 @@ const BenefitsSection = () => {
                           <h3 className="text-[20px] md:text-[22px] font-extrabold text-[#B99059]">
                             {c.title}
                           </h3>
-                          <p className="mt-2 text-[#0F1B3D]/80 text-[16px] leading-6 max-w-[32ch] md:max-w-none">
+                          {/* <p className="mt-2 text-[#0F1B3D]/80 text-[16px] leading-6 max-w-[32ch] md:max-w-none">
                             {c.subtitle}
-                          </p>
+                          </p> */}
                         </div>
                       </div>
                     </article>
