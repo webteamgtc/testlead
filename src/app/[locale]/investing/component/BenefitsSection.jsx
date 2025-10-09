@@ -82,8 +82,8 @@ const BenefitsSection = () => {
         : "text-left items-start";
 
   return (
-    <section className="w-full py-12 relative sm:py-16">
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none select-none">
+    <section className="w-full py-8 relative pb-10 md:pb-20 mt-0 md:mt-[-30px] pt-10 md:pt-16">
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none select-none">
         <Image
           src="/investing/section-two-bg.png"
           alt=""
