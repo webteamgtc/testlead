@@ -16,28 +16,28 @@ const ThankYouPage = () => {
     const [checked, setChecked] = useState(false); // Track if we've checked localStorage
     const t = useTranslations("");
 
-    // useEffect(() => {
-    //     if (typeof window !== "undefined") {
-    //         const storedUser = localStorage.getItem("user");
-    //         if (storedUser) {
-    //             setUser(JSON.parse(storedUser));
-    //         }
-    //         setChecked(true); // Mark check complete
-    //     }
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const storedUser = localStorage.getItem("user");
+            if (storedUser) {
+                setUser(JSON.parse(storedUser));
+            }
+            setChecked(true); // Mark check complete
+        }
 
-    //     return () => {
-    //         localStorage.removeItem("user");
-    //     };
-    // }, []);
+        return () => {
+            localStorage.removeItem("user");
+        };
+    }, []);
 
-    // useEffect(() => {
-    //     // Only redirect after checking
-    //     if (checked && !user) {
-    //         router.push("/");
-    //     }
-    // }, [checked, user]);
+    useEffect(() => {
+        // Only redirect after checking
+        if (checked && !user) {
+            router.push("/");
+        }
+    }, [checked, user]);
 
-    // if (!checked) return null; // Don't render anything until we've checked
+    if (!checked) return null; // Don't render anything until we've checked
 
     return (
         <>

@@ -127,29 +127,30 @@ const TradeForm = ({ zapierUrl, successPath, page = "" }) => {
     };
 
     const sendDataPostBack = async (data) => {
-        const emailData = axios
-            .post(`https://us-central1-madrid-investing.cloudfunctions.net/PostbackCloudFunciton/?token=YWR2ZXJpc2VyX2FmZmlsYXRpb25fdXJs&advertiser=GTC%20Global%20LTD&brand=GTC%20FX&model=CPL&affiliate_id=1&user_id=${data?.nickname}&event_type=Lead&subID=investing-GTC`, null)
-            .then((res) => {
-                toast.success(t("thankYou1"));
-                formik.resetForm();
-                setLoading(false);
-                localStorage.setItem("user", JSON.stringify(data));
-                // Redirect based on locale
-                const targetLocale =
-                    locale === "ar"
-                        ? `/ar${successPath}` : successPath;
-                router.push(targetLocale);
-                formik.resetForm();
-                setShowOtp(false);
-            })
-            .catch((err) => {
-                toast.error("Error inserting data: " + result.error);
-                setLoading(false);
-            })
-            .finally(() => {
-                setLoading(false);
+        setLoading(true);
+        try {
+            const res = await fetch("/api/investing-postback", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nickname: data?.nickname }),
             });
+
+            if (!res.ok) throw new Error(await res.text());
+
+            toast.success(t("thankYou1"));
+            formik.resetForm();
+            localStorage.setItem("user", JSON.stringify(data));
+
+            const targetLocale = locale === "ar" ? `/ar${successPath}` : successPath;
+            router.push(targetLocale);
+            setShowOtp(false);
+        } catch (err) {
+            toast.error("Error inserting data: " + (err?.message || "Unknown error"));
+        } finally {
+            setLoading(false);
+        }
     };
+
 
     const formik = useFormik({
         initialValues: {
