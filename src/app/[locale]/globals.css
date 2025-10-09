@@ -138,7 +138,7 @@ html {
 .PhoneInput {
   display: flex;
   align-items: center;
-  background-color: #1A1A47;
+  background-color: #1a1a47;
   border-radius: 0.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.75rem;
@@ -163,18 +163,43 @@ html {
   color: white;
 }
 .phone-setting .PhoneInputCountry {
-    gap: 12px !important;
+  gap: 12px !important;
 }
 .react-select__value-container {
-    padding: 10px 8px !important;
-} 
+  padding: 10px 8px !important;
+}
 .react-select__control.css-1losk6k-control {
-    border-radius: 0.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 @media (min-width: 1920px) {
   .hero-bg img {
     object-fit: contain;
   }
+}
+
+.flip-card {
+  perspective: 1200px;
+  height: 100%;
+  width: 100%;
+}
+.flip-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 500ms ease-out;
+  will-change: transform;
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+  padding: 0;
 }
