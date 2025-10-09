@@ -44,7 +44,7 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) =
                             {t("heading")}
                         </h2>
                         <TradeForm
-                            zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/udnd7lu/"
+                            zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u52nrpg/"
                             successPath="/investing/trade-gold/success"
                             emailConfig={emailConfig} // Pass the email configuration
                             page="investing"
