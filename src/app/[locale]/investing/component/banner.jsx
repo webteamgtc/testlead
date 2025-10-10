@@ -59,7 +59,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
                             {/* Mobile Button */}
                             <div className="mt-6 flex md:hidden justify-center">
                                 <button
-                                    className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42] text-sm font-bold text-white px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
+                                    className="bg-gradient-to-r justify-center w-full sm:w-fit from-[#E1CFBB] to-[#956D42] text-sm font-bold text-white px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
                                     onClick={() => setIsOpen(true)}
                                 >
                                     {t("banner.btnText")}
