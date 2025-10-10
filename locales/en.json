@@ -775,5 +775,53 @@
         "team": "The GTC Team"
       }
     }
+  },
+  "investing": {
+    "meta": {
+      "title": "Trade Gold with GTC with the Lowest Spreads",
+      "description": "0.20 raw spreads when you trade gold with us. Hit that “TRADE GOLD” button to get started."
+    },
+    "banner": {
+      "title": "Trade Gold <br/> With GTC",
+      "desc": "The Multi-Regulated Brokerage that's Preferred by Gold Traders.",
+      "alreadyAccount": "Already have an account?",
+      "login": "Login",
+      "btnText": "Trade Gold"
+    },
+    "sectionTwo": {
+      "column1": {
+        "title": "Key Benefits",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "list": {
+          "item1": "Ultra-Low Spreads on Gold, Forex & CFDs.",
+          "item2": "Up To 1:2000 Leverage.",
+          "item3": "2,000+ Trading Instruments",
+          "item4": "No Hidden Fees",
+          "item5": "Same-Day Withdrawals"
+        }
+      },
+      "column2": {
+        "title": "Trust & Credibility",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "list": {
+          "item1": "Over 1 Million Traders Globally Trust GTC",
+          "item2": "Multi-Regulated, SCA, FSCA, FSC, VFSC",
+          "item3": "Multi-Award Winning Broker"
+        }
+      },
+      "column3": {
+        "title": "Customer Support",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "list": {
+          "item1": "24/5 Multilingual Support",
+          "item2": "Rated ★★★★★ by our clients for fast and reliable service"
+        }
+      }
+    },
+    "lastSection": {
+      "title": "Are You Ready To Trade Gold?",
+      "desc": "Trade gold with super-tight spreads, high leverage, and with a broker that offers you peace of mind.",
+      "btnText": "Trade Gold"
+    }
   }
 }

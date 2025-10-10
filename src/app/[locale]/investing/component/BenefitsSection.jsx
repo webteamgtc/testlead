@@ -1,56 +1,46 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const BenefitsSection = () => {
+  const t = useTranslations("investing");
+
   const [flipped, setFlipped] = useState(null);
 
   const cards = [
     {
-      title: "Key Benefits",
-      subtitle: "Here's why so many gold traders are turning to GTC.",
-      icon: "/investing/key-2.svg",
-      frontTheme: "gold",     
-      backTheme: "navy", 
+      title: t("sectionTwo.column1.title"),
+      subtitle: t("sectionTwo.column1.desc"),
+      icon: "/investing/icon1.svg",
+      frontTheme: "gold",
+      backTheme: "navy",
       slope: "right",
       iconSide: "right",
       align: "right",
-      backItems: [
-        "Ultra-Low Spreads on Gold, Forex & CFDs.",
-        "Up to 1:2000 Leverage.",
-        "2,000+ Trading Instruments",
-        "No Hidden Fees",
-        "Same-Day Withdrawals",
-      ],
+      backItems: [t("sectionTwo.column1.list.item1"), t("sectionTwo.column1.list.item2"), t("sectionTwo.column1.list.item3"), t("sectionTwo.column1.list.item4"), t("sectionTwo.column1.list.item5")],
     },
     {
-      title: "Trust & Credibility",
-      subtitle: "Here's why so many gold traders are turning to GTC.",
-      icon: "/investing/trusted.svg",
+      title: t("sectionTwo.column2.title"),
+      subtitle: t("sectionTwo.column3.desc"),
+      icon: "/investing/icon2.svg",
       frontTheme: "navy",
-      backTheme: "gold",  
+      backTheme: "gold",
       slope: "left",
       iconSide: "left",
       align: "left",
-      backItems: [
-        "Over 1 Million Traders Globally Trust GTC",
-        "Multi-Regulated: SCA, FSCA, FSC, VFSC",
-        "Multi-Award Winning Broker",
-      ],
+      backItems: [t("sectionTwo.column2.list.item1"), t("sectionTwo.column2.list.item2"), t("sectionTwo.column2.list.item3")],
     },
     {
-      title: "Customer Support",
-      subtitle: "Here's why so many gold traders are turning to GTC.",
-      icon: "/investing/support.svg",
+      title: t("sectionTwo.column3.title"),
+      subtitle: t("sectionTwo.column3.desc"),
+      icon: "/investing/icon3.svg",
       frontTheme: "gold",
-      backTheme: "navy",     
+      backTheme: "navy",
       slope: "right",
       iconSide: "right",
       align: "right",
-      backItems: [
-        "24/5 Multilingual Support",
-        "Rated ★★★★★ by our clients for fast and reliable service",
-      ],
+      backItems: [t("sectionTwo.column3.list.item1"), t("sectionTwo.column3.list.item2")],
     },
   ]
 
@@ -100,7 +90,7 @@ const BenefitsSection = () => {
             return (
               <div
                 key={i}
-                className="relative h-[360px] rounded-2xl"
+                className="relative min-h-[360px] rounded-2xl"
                 onMouseEnter={() => setFlipped(i)}
                 onMouseLeave={() => setFlipped(null)}
                 onClick={() => setFlipped(isFlipped ? null : i)}
@@ -114,34 +104,28 @@ const BenefitsSection = () => {
                       <div className="relative h-full w-full bg-[#F4F7FB] rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-[0_8px_30px_rgba(17,38,146,0.08)]">
                         <div
                           className={[
-                            "absolute inset-x-0 top-0 h-[52%]",
+                            " h-[48%]",
                             bandFront[c.frontTheme],
                             wedge[c.slope],
                           ].join(" ")}
                         />
-                        <div
-                          className={[
-                            "absolute top-[46%] z-[1]",
-                            c.iconSide === "left" ? "left-6" : "right-6",
-                          ].join(" ")}
-                        >
-                          <div className="inline-flex items-center justify-center rounded-xl px-3 py-2">
-                            <img src={c.icon} alt=""/>
+                        <div className="p-4 flex flex-col items-center">
+                          <div className="inline-flex items-center justify-center rounded-[50%] px-2 py-2 border ">
+                            <img src={c.icon} alt="" />
                           </div>
-                        </div>
-                        <div
-                          className={[
-                            "absolute left-6 right-6 bottom-7",
-                            "flex flex-col",
-                            textAlignCls(c.align),
-                          ].join(" ")}
-                        >
-                          <h3 className="text-[20px] md:text-[22px] font-extrabold text-[#B99059]">
-                            {c.title}
-                          </h3>
-                          {/* <p className="mt-2 text-[#0F1B3D]/80 text-[16px] leading-6 max-w-[32ch] md:max-w-none">
-                            {c.subtitle}
-                          </p> */}
+                          <div
+                            className={[
+                              "",
+                              "flex flex-col",
+                            ].join(" ")}
+                          >
+                            <h3 className="text-[20px] mt-1 text-center md:text-[22px] font-extrabold text-[#B99059]">
+                              {c.title}
+                            </h3>
+                            <p className="mt-1 text-[#1A1A47] text-center text-[16px] leading-6 max-w-[32ch] md:max-w-none">
+                              {c.subtitle}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </article>
