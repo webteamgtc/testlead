@@ -34,7 +34,7 @@ export async function POST(req) {
     url.searchParams.set("affiliate_id", "1");
     url.searchParams.set("user_id", nickname);
     url.searchParams.set("event_type", "Lead");
-    url.searchParams.set("subID", "investing-GTC");
+    url.searchParams.set("subID", "MXMX_Test"); 
 
     // Server-to-server call (no CORS here)
     const upstream = await fetch(url.toString(), {

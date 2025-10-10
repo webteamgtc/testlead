@@ -91,4 +91,4 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
     );
 };
 
-export default HeroSection;
+export default HeroSection; 

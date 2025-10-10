@@ -48,4 +48,4 @@ export default function CommonLastBanner({ setIsOpen, page }) {
             </div>
         </section>
     );
-}
+} 
