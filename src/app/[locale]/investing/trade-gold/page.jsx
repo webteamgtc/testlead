@@ -7,16 +7,18 @@ import BenefitsSection from "../component/BenefitsSection";
 import CommonLastBanner from "../component/LastBanner";
 import MainFooter from "../../components/MainFooter";
 import SliderModal from "../component/SliderModal";
+import Meta from "@/app/components/common/MetaData";
 
 const TradeGoldPage = () => {
-    const t = useTranslations("tradeGold");
+    const t = useTranslations("investing");
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-            <HeroSection setIsOpen={setIsOpen}/>
+            <Meta title={t("meta.title")} description={t("meta.description")} />
+            <HeroSection setIsOpen={setIsOpen} />
             <BenefitsSection />
-            <CommonLastBanner setIsOpen={setIsOpen}/>
+            <CommonLastBanner setIsOpen={setIsOpen} />
             <MainFooter />
             <SliderModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
         </>
