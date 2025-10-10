@@ -26,7 +26,7 @@ const BenefitsSection = () => {
     {
       title: "Trust & Credibility",
       subtitle: "Here's why so many gold traders are turning to GTC.",
-      icon: "/investing/trusted.svg",
+      icon: "/investing/trust.svg",
       frontTheme: "navy",
       backTheme: "gold",  
       slope: "left",

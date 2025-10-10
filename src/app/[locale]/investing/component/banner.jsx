@@ -9,10 +9,10 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
 
   return (
     <section
-      className="bg-[url('/investing/bg-mobile.webp')] md:bg-[url('/investing/investing.png')] bg-cover bg-center bg-no-repeat min-h-[900px] md:min-h-[980px] text-[#E5E5EA] relative overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]"
+      className="bg-[url('/investing/bg-mobile.webp')] md:bg-[url('/investing/investing.png')] bg-cover bg-center bg-no-repeat min-h-[900px] md:min-h-[600px] 3xl:min-h-[980px] text-[#E5E5EA] relative overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]"
     >
       {/* ==== TOP LOGO ==== */}
-      <div className="container pt-3">
+      <div className="block md:hidden container pt-3">
         <Image
           src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/footer-logo.webp"
           width={200}
@@ -23,11 +23,20 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
       </div> 
 
       {/* ==== CENTER CONTENT ==== */}
-      <div className="flex-grow flex md:items-center pt-20">
+      <div className="flex-grow flex xl:item-top 2xl:items-center pt-5 3xl:pt-20">
         <div className="container">
           <div className="grid md:grid-cols-2 items-center gap-10">
             {/* Left Column */}
-            <div className="text-center md:text-left pb-20">
+            <div className="text-center md:text-left 2xl:pb-20">
+                 <div className="text-center md:text-left lg:pb-8 3xl:pb-20">
+                  <Image
+                      src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/footer-logo.webp"
+                      width={200}
+                      height={72}
+                      alt="GTCFX"
+                      className="lg:w-[200px] mx-auto md:mx-0 lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                    />
+              </div>
               <h1 className="text-[48px] leading-tight md:text-[55px] font-black 2xl:text-[76px] 2xl:leading-tight inline-block text-white max-w-lg px-5 md:px-0">
                 Trade Gold <br />
                 With GTC
@@ -73,7 +82,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" />
+                    <path d="M1 1L7 7L1 13" stroke="#fff" strokeWidth="3" /> 
                   </svg>
                 </button>
               </div>
