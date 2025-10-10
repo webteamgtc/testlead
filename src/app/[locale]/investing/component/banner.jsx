@@ -9,16 +9,8 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
 
     return (
         <section
-            className="bg-[url('/investing/banner-new.png')] relative md:bg-[url('/investing/banner-new.png')] bg-cover bg-center bg-no-repeat min-h-[900px] md:min-h-[760px] text-[#E5E5EA] overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]"
+            className="bg-[url('/investing/banner-new.png')] relative md:bg-[url('/investing/banner.webp')] bg-cover bg-right bg-no-repeat min-h-[900px] md:min-h-[760px] text-[#E5E5EA] overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_100%,0%_90%)]"
         >
-            <div className="pointer-events-none absolute inset-0 z-0">
-                <img
-                    src="/investing/banner-gold.png"
-                    alt=""
-                    className="absolute right-0 md:w-1/2 bottom-0 h-full max-h-[960px]"
-                    style={{ transform: "translateY(18%)" }}
-                />
-            </div>
             {/* ==== TOP LOGO ==== */}
             <div className="container pt-3">
                 <Image
@@ -31,11 +23,11 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
             </div>
 
             {/* ==== CENTER CONTENT ==== */}
-            <div className="flex-grow flex relative md:items-center">
+            <div className="flex-grow flex relative md:items-center pt-10 md:pt-0">
                 <div className="container">
                     <div className="grid md:grid-cols-2 items-center gap-10">
                         {/* Left Column */}
-                        <div className="text-center md:text-left pb-20">
+                        <div className="text-center md:text-left md:pb-20 pb-6">
                             <h1 className="text-[48px] leading-tight md:text-[55px] font-black 2xl:text-[76px] 2xl:leading-tight inline-block text-white max-w-lg px-5 md:px-0"
                                 dangerouslySetInnerHTML={{ __html: t("banner.title") }}
                             />
@@ -88,6 +80,10 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
 
                         {/* Right Column (optional image placeholder for layout balance) */}
                         <div className="hidden md:block"></div>
+                        <div className="md:hidden block">
+                            <img src="/investing/banner-gold-mobile.png" className=" absolute sm:relative" alt="" />
+                        </div>
+
                     </div>
                 </div>
             </div>
