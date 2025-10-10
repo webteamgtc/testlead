@@ -104,13 +104,13 @@ const BenefitsSection = () => {
                       <div className="relative h-full w-full bg-[#F4F7FB] rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-[0_8px_30px_rgba(17,38,146,0.08)]">
                         <div
                           className={[
-                            " h-[48%]",
+                            "h-[45%]",
                             bandFront[c.frontTheme],
                             wedge[c.slope],
                           ].join(" ")}
                         />
-                        <div className="p-4 flex flex-col items-center">
-                          <div className="inline-flex items-center justify-center rounded-[50%] px-2 py-2 border ">
+                        <div className="md:p-4 flex flex-col items-center">
+                          <div className="inline-flex items-center justify-center rounded-[50%] h-[40px] w-[40px] px-2 md:py-2 border ">
                             <img src={c.icon} alt="" />
                           </div>
                           <div

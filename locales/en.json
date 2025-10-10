@@ -136,6 +136,8 @@
       "getCode": "Get Code",
       "sending": "Sending...",
       "sendOtp": "Send OTP",
+      "password": "Password",
+      "confirmPassword": "Confirm Passowrd",
       "verifyCode": "Verify Code",
       "termsLabel": "Please accept the terms and conditions",
       "termsText": "I confirm that I am over the age of 18, have read and agree to the ",
@@ -159,6 +161,9 @@
         "countryRequired": "Country is required",
         "otpLength": "OTP must be 6 digits",
         "otpRequired": "OTP is required",
+        "passwordRequired": "Passord is required",
+        "confirmPasswordRequired": "Confirm password is required",
+        "passwordsMustMatch": "Password not match",
         "termsRequired": "Please accept the terms and conditions"
       },
       "thankYou": "Thanks",
