@@ -9,10 +9,11 @@ import OtpInput from "react-otp-input";
 import { countryList } from "../../context/useCountriesDetails";
 import { useLocationDetail } from "../../context/useLocationDetail";
 import { toast } from "react-toastify";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import Select from "react-select";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl"; // make sure this is imported
 
 const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
     const { countryData } = useLocationDetail();
@@ -21,15 +22,11 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
     const [loading, setLoading] = useState(false);
     const [storedOtp, setStoredOtp] = useState("");
     const [isDisable, setIsDisable] = useState(true);
-    const [showPwd, setShowPwd] = useState(false);
-    const [showConfirmPwd, setShowConfirmPwd] = useState(false);
     const router = useRouter();
-    const isPartnerPage =
-        typeof window !== "undefined" && window.location?.pathname?.includes("partner");
+    const isPartnerPage = window.location?.pathname?.includes("partner")
 
     const t = useTranslations("partner.form");
-    const locale = useLocale();
-
+    const locale = useLocale(); // inside your component
     const options = countryList.map((item) => ({
         value: item.en_short_name,
         label: (
@@ -61,9 +58,12 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
             const filterData = countryList.find(
                 (item) => item?.alpha_2_code == countryData.country
             );
-            formik.setFieldValue("country", filterData ? filterData?.en_short_name : "");
+            formik.setFieldValue(
+                "country",
+                filterData ? filterData?.en_short_name : ""
+            );
         }
-    }, [countryData?.country]);
+    }, [countryData?.country, countryList]);
 
     const sendVerificationCode = () => {
         setOtpLoading(true);
@@ -72,7 +72,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                 email: formik?.values?.email,
                 first_name: formik?.values?.nickname,
                 type: "0",
-                locale: locale,
+                locale: locale
             })
             .then((res) => {
                 if (res?.data?.message) {
@@ -84,36 +84,46 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                     setShowOtp(false);
                 }
             })
-            .catch(() => setShowOtp(false))
-            .finally(() => setOtpLoading(false));
+            .catch((err) => {
+                setShowOtp(false);
+            })
+            .finally(() => {
+                setOtpLoading(false);
+            });
     };
 
     const generatePassword = (length = 12) => {
         const chars =
             "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
-        return Array.from({ length }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
+        return Array.from(
+            { length },
+            () => chars[Math.floor(Math.random() * chars.length)]
+        ).join("");
     };
 
     const sendDataToDb = async (data) => {
-        axios
-            .post(
-                `/api/trade-gold`,
-                JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage })
-            )
-            .then(() => {
+        const emailData = axios
+            .post(`/api/trade-gold`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage }))
+            .then((res) => {
                 toast.success(t("thankYou1"));
                 formik.resetForm();
                 setLoading(false);
                 localStorage.setItem("user", JSON.stringify(data));
-                const targetLocale = locale === "ar" ? `/ar${successPath}` : successPath;
+                // Redirect based on locale
+                const targetLocale =
+                    locale === "ar"
+                        ? `/ar${successPath}` : successPath;
                 router.push(targetLocale);
+                formik.resetForm();
                 setShowOtp(false);
             })
             .catch((err) => {
-                toast.error("Error inserting data: " + (err?.response?.data?.error || "Unknown"));
+                toast.error("Error inserting data: " + result.error);
                 setLoading(false);
             })
-            .finally(() => setLoading(false));
+            .finally(() => {
+                setLoading(false);
+            });
     };
 
     const sendDataPostBack = async (data) => {
@@ -124,11 +134,13 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ nickname: data?.nickname }),
             });
+
             if (!res.ok) throw new Error(await res.text());
 
             toast.success(t("thankYou1"));
             formik.resetForm();
             localStorage.setItem("user", JSON.stringify(data));
+
             const targetLocale = locale === "ar" ? `/ar${successPath}` : successPath;
             router.push(targetLocale);
             setShowOtp(false);
@@ -139,11 +151,14 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
         }
     };
 
+
     const formik = useFormik({
         initialValues: {
+            nickname: "",
             email: "",
+            last_name: "",
+            phone: "",
             password: generatePassword(),
-            confirm_password: "",
             country: "",
             otp: "",
             terms: false,
@@ -157,29 +172,42 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
             gclid: "",
         },
         validationSchema: Yup.object({
-            email: Yup.string().email(t("errors.emailInvalid")).required(t("errors.emailRequired")),
+            nickname: Yup.string()
+                .matches(/^[^\d]+$/, t("errors.fullNameFormat"))
+                .required(t("errors.firstNameRequired")),
+            last_name: Yup.string()
+                .matches(/^[^\d]+$/, t("errors.lastNameFormat"))
+                .required(t("errors.lastNameRequired")),
+
+            email: Yup.string()
+                .email(t("errors.emailInvalid"))
+                .required(t("errors.emailRequired")),
+
+            phone: Yup.string().required(t("errors.phoneRequired")),
+
             country: Yup.string().required(t("errors.countryRequired")),
-            otp: Yup.string().length(6, t("errors.otpLength")).required(t("errors.otpRequired")),
-            // 🔐 Password rules
-            password: Yup.string()
-                .min(8, t("errors.passwordMin") || "Password must be at least 8 characters")
-                .required(t("errors.passwordRequired") || "Password is required"),
-            confirm_password: Yup.string()
-                .oneOf([Yup.ref("password")], t("errors.passwordsMustMatch") || "Passwords must match")
-                .required(t("errors.confirmPasswordRequired") || "Confirm your password"),
+
+            otp: Yup.string()
+                .length(6, t("errors.otpLength"))
+                .required(t("errors.otpRequired")),
+
             terms: Yup.bool().oneOf([true], t("errors.termsRequired")),
         }),
+
         onSubmit: async (values) => {
             try {
                 setLoading(true);
-                await axios.post(zapierUrl, JSON.stringify(values));
-            } catch (_e) {
-                /* ignore */
+                await axios.post(
+                    zapierUrl,
+                    JSON.stringify(values)
+                );
+            } catch (error) {
             } finally {
-                if (page === "investing") {
-                    sendDataPostBack(values);
+                if (page == "investing") {
+                    sendDataPostBack(values, formik, setLoading);
                 } else {
-                    sendDataToDb(values);
+                    sendDataToDb(values, formik, setLoading);
+
                 }
             }
         },
@@ -195,220 +223,273 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
         }
     };
 
+    //console.log({ countryList, countryData, formik })
+
     return (
-        <div className="relative max-w-xl mx-auto">
+        <div className=" max-w-xl mx-auto p-6"
+            style={{
+                borderRadius: "16px",
+                background: "#fff",
+                boxShadow: "1px 6px 16px 0 rgba(0, 0, 0, 0.10)"
+            }}
+
+        >
             <form
                 onSubmit={formik.handleSubmit}
-                className="relative text-sm rounded-3xl md:p-0 mx-auto form-setting ltr:text-left rtl:text-right text-white"
+                className=" text-sm rounded-3xl md:p-0 mx-auto form-setting ltr:text-left rtl:text-right text-white"
             >
-                {/* Hidden UTM fields */}
-                <input type="hidden" name="utm_source" value={formik.values.utm_source} />
-                <input type="hidden" name="utm_medium" value={formik.values.utm_medium} />
-                <input type="hidden" name="utm_campaign" value={formik.values.utm_campaign} />
-                <input type="hidden" name="utm_id" value={formik.values.utm_id} />
-                <input type="hidden" name="utm_term" value={formik.values.utm_term} />
-                <input type="hidden" name="utm_content" value={formik.values.utm_content} />
-                <input type="hidden" name="fbclid" value={formik.values.fbclid} />
-                <input type="hidden" name="gclid" value={formik.values.gclid} />
+                <h2 className="text-[#04417B] text-[24px]  text-center font-semibold pb-4">Register Now</h2>
+                {/* Full Name & Email */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                    <input
+                        type="hidden"
+                        name="utm_source"
+                        value={formik.values.utm_source}
+                    />
+                    <input
+                        type="hidden"
+                        name="utm_medium"
+                        value={formik.values.utm_medium}
+                    />
+                    <input
+                        type="hidden"
+                        name="utm_campaign"
+                        value={formik.values.utm_campaign}
+                    />
+                    <input type="hidden" name="utm_id" value={formik.values.utm_id} />
+                    <input type="hidden" name="utm_term" value={formik.values.utm_term} />
+                    <input type="hidden" name="fbclid" value={formik.values.fbclid} />
+                    <input type="hidden" name="gclid" value={formik.values.gclid} />
+                    <input
+                        type="hidden"
+                        name="utm_content"
+                        value={formik.values.utm_content}
+                    />
+                    <div className="relative text-[#666684]">
+                        <div className="text-sm mb-2 ">
+                            <label>{t("firstName")}</label>
+                        </div>
 
-                {/* Email + OTP */}
+                        <input
+                            type="text"
+                            inputMode="text"
+                            autoComplete="off"
+                            placeholder={t("firstName")}
+                            className={`w-full px-4 bg-[#FFF] py-3 pl-3 text-base border rounded-md  ${formik.touched.nickname && formik.errors.nickname
+                                ? "border-red-500"
+                                : " border-[#CCCCD6] "
+                                } focus:outline-none`}
+                            {...formik.getFieldProps("nickname")}
+                        />
+                        {formik.touched.nickname && formik.errors.nickname && (
+                            <p className="text-red-500 ltr:text-left rtl:text-right pt-1">
+                                {formik.errors.nickname}
+                            </p>
+                        )}
+                    </div>
+                    <div className="relative text-[#666684]">
+                        <div className="text-sm mb-2 ">
+                            <label>{t("lastName")}</label>
+                        </div>
+
+                        <input
+                            type="text"
+                            inputMode="text"
+                            autoComplete="off"
+                             placeholder={t("lastName")}
+                            className={`w-full px-4 bg-[#FFF] text-base py-3 pl-3 border-[.5px] rounded-md  ${formik.touched.last_name && formik.errors.last_name
+                                ? "border-red-500"
+                                : " border-[#CCCCD6] "
+                                } focus:outline-none`}
+                            {...formik.getFieldProps("last_name")}
+                        />
+                        {formik.touched.last_name && formik.errors.last_name && (
+                            <p className="text-red-500  pt-1 ltr:text-left rtl:text-right">
+                                {formik.errors.last_name}
+                            </p>
+                        )}
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-1 gap-3 mb-3">
                     <div className="relative">
-                        <div className="text-sm mb-2">
-                            <label>{t("email")}</label>
-                        </div>
-                        <input
-                            type="email"
-                            className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 text-base border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${formik.touched.email && formik.errors.email ? "border-red-500" : "border-[#ffffff1a]"
-                                } focus:outline-none focus:bg-none`}
-                            {...formik.getFieldProps("email")}
-                        />
-                        {formik.touched.email && formik.errors.email && (
-                            <p className="text-red-500 pt-1 ltr:text-left rtl:text-right">{formik.errors.email}</p>
-                        )}
-                        <div
-                            className="absolute top-9 bg-primary ltr:right-3 rtl:left-3 rounded-md cursor-pointer text-white py-1.5 px-2"
-                            onClick={sendVerificationCode}
-                        >
-                            {otpLoading ? t("sending") : t("getCode")}
-                        </div>
+                        <div className="relative text-[#666684]">
+                            <div className="text-sm mb-2 ">
+                                <label>{t("email")}</label>
+                            </div>
 
+                            <input
+                                type="email"
+                                 placeholder={t("email")}
+                                className={`w-full bg-[#FFF] px-4 py-3 pl-3 text-base border rounded-md ${formik.touched.email && formik.errors.email
+                                    ? "border-red-500"
+                                    : "border-[#CCCCD6]"
+                                    } focus:outline-none focus:bg-none`}
+                                {...formik.getFieldProps("email")}
+                            />
+                            {formik.touched.email && formik.errors.email && (
+                                <p className="text-red-500 pt-1 ltr:text-left rtl:text-right">
+                                    {formik.errors.email}
+                                </p>
+                            )}
+                            <div
+                                className="absolute top-9 bg-primary ltr:right-3 rtl:left-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                                onClick={() => {
+                                    sendVerificationCode();
+                                }}
+                            >
+                                {otpLoading ? t("sending") : t("getCode")}
+                            </div>
+                        </div>
                         {showOtp && (
                             <div className="grid grid-cols-1 gap-2">
                                 <div>
-                                    <p className="my-2 ltr:text-left rtl:text-right pt-1">{t("otp")}</p>
+                                    <p className="my-2 ltr:text-left rtl:text-right pt-1">
+                                        {t("otp")}
+                                    </p>
                                     <OtpInput
                                         value={formik.values.otp}
                                         onChange={(otp) => formik.setFieldValue("otp", otp)}
                                         numInputs={6}
-                                        containerStyle={{ justifyContent: "space-around", alignItems: "center", gap: "10px" }}
+                                        containerStyle={{
+                                            justifyContent: "space-around",
+                                            alignItems: "center",
+                                            gap: "10px",
+                                        }}
                                         renderInput={(props) => (
-                                            <input {...props} type="tel" inputMode="numeric" pattern="[0-9]*" />
+                                            <input
+                                                {...props}
+                                                type="tel" // Triggers number pad
+                                                inputMode="numeric" // Helps mobile keyboard detect numeric input
+                                                pattern="[0-9]*" // Optional: enforce numeric
+                                            />
                                         )}
                                         isInputNum
                                         inputStyle={{
-                                            fontSize: "16px",
+                                            fontSize: "16px", // ✅ critical to stop iOS zoom
                                             borderRadius: "5px",
                                             paddingBottom: "10px",
                                             paddingTop: "10px",
                                             width: "20%",
-                                            backgroundColor: "#1A1A47",
-                                            color: "#fff",
+                                            backgroundColor: "#fff",
+                                            color: "#1A1A47",
                                             fontWeight: "700",
                                             outlineColor: "#f9c617",
-                                            border: formik.touched.otp && formik.errors.otp ? "1px solid red" : "1px solid #ffffff1a",
+                                            border:
+                                                formik.touched.otp && formik.errors.otp
+                                                    ? "1px solid red"
+                                                    : "1px solid #CCCCD6",
                                         }}
                                     />
                                     {formik.touched.otp && formik.errors.otp && (
-                                        <p className="text-red-500 text-sm mt-2">{formik.errors.otp}</p>
+                                        <p className="text-red-500 text-sm mt-2">
+                                            {formik.errors.otp}
+                                        </p>
                                     )}
                                 </div>
                                 <div
-                                    className="bg-primary right-0 rounded-md cursor-pointer text-white py-2 px-2 text-center mt-2 border border-[#ffffff1a]"
-                                    onClick={verifyOtpCode}
+                                    className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center mt-2 border border-[#CCCCD6]"
+                                    onClick={() => {
+                                        verifyOtpCode();
+                                    }}
                                 >
                                     {t("verifyCode")}
                                 </div>
                             </div>
                         )}
                     </div>
-                </div>
+                    <div className="relative text-[#666684] investing-form">
+                        <div className="text-sm mb-2 text-[#666684]">
+                            <label htmlFor="phone">{t("phone")}</label>
+                        </div>
+                        <PhoneInput
+                            id="phone"
+                            name="phone"
+                            international
+                            countryCallingCodeEditable={false}
+                            defaultCountry={countryData?.country || "AE"}
+                            value={formik.values.phone}
+                            onChange={(phone) => formik.setFieldValue("phone", phone)}
+                            className={`flex w-full overflow-hidden rounded-md text-base border border-[#CCCCD6] bg-[#FFF] phone-setting text-white focus:outline-none
+    ${formik.touched.phone && formik.errors.phone ? "border-red-500" : ""}
+  `}
+                            style={{
+                                display: "flex",
+                                width: "100%",
+                                backgroundColor: "#FFF",
+                                borderRadius: "0.5rem",
+                                border: "1px solid #CCCCD6",
+                                padding: "0.75rem",
+                                color: "#1A1A47",
+                            }}
+                        />
 
-                {/* Country */}
-                <div className="relative mb-3">
-                    <div className="text-sm mb-2">
-                        <label>{t("country")}</label>
-                    </div>
-                    <Select
-                        name="country"
-                        options={options}
-                        classNamePrefix="react-select"
-                        onChange={(opt) => formik.setFieldValue("country", opt?.value)}
-                        onBlur={() => formik.setFieldTouched("country", true)}
-                        value={options.find((opt) => opt.value === formik.values.country)}
-                        className="text-white cpountry"
-                        styles={{
-                            control: (base) => ({
-                                ...base,
-                                backgroundColor: "#1A1A47",
-                                borderColor:
-                                    formik.touched.country && formik.errors.country ? "red" : "#ccccd679",
-                                color: "white",
-                            }),
-                            singleValue: (base) => ({ ...base, color: "white" }),
-                            menu: (base) => ({ ...base, backgroundColor: "#1A1A47", color: "white" }),
-                            option: (base, state) => ({
-                                ...base,
-                                backgroundColor: state.isFocused ? "#b68756" : "#1A1A47",
-                                color: state.isFocused ? "#fff" : "white",
-                                cursor: "pointer",
-                            }),
-                        }}
-                    />
-                    {formik.touched.country && formik.errors.country && (
-                        <p className="text-red-500 text-sm">{formik.errors.country}</p>
-                    )}
-                </div>
-
-                {/* 🔐 Password + Confirm Password */}
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-3 mb-3">
-                    {/* Password */}
-                    <div className="relative">
-                        <div className="text-sm mb-2">
-                            <label>{t("password") || "Password"}</label>
-                        </div>
-                        <div className="relative">
-                            <input
-                                type={showPwd ? "text" : "password"}
-                                autoComplete="new-password"
-                                className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 pr-12 text-base border-[.5px] rounded-md border-opacity-10 ${formik.touched.password && formik.errors.password
-                                    ? "border-red-500"
-                                    : " border-[#ffffff1a]"
-                                    } focus:outline-none`}
-                                {...formik.getFieldProps("password")}
-                            />
-                            <button
-                                type="button"
-                                onClick={() => setShowPwd((v) => !v)}
-                                className="absolute inset-y-0 right-3 my-auto h-8 w-8 grid place-items-center rounded-md hover:bg-white/10"
-                                aria-label={showPwd ? "Hide password" : "Show password"}
-                            >
-                                {showPwd ? (
-                                    // eye-off
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                                        <path d="M3 3l18 18" stroke="#fff" strokeWidth="2" />
-                                        <path d="M10.6 10.6a3 3 0 104.24 4.24" stroke="#fff" strokeWidth="2" />
-                                        <path d="M9.88 5.09A9.84 9.84 0 0121 12c-1.8 3.5-5.4 6-9.6 6-1.1 0-2.2-.17-3.2-.5" stroke="#fff" strokeWidth="2" />
-                                        <path d="M6.3 6.3A9.84 9.84 0 003 12c1.8 3.5 5.4 6 9.6 6 .7 0 1.3-.05 1.9-.16" stroke="#fff" strokeWidth="2" />
-                                    </svg>
-                                ) : (
-                                    // eye
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                                        <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" stroke="#fff" strokeWidth="2" />
-                                        <circle cx="12" cy="12" r="3" stroke="#fff" strokeWidth="2" />
-                                    </svg>
-                                )}
-                            </button>
-                        </div>
-                        {formik.touched.password && formik.errors.password && (
-                            <p className="text-red-500 pt-1 ltr:text-left rtl:text-right">{formik.errors.password}</p>
-                        )}
-                    </div>
-
-                    {/* Confirm Password */}
-                    <div className="relative">
-                        <div className="text-sm mb-2">
-                            <label>{t("confirmPassword") || "Confirm Password"}</label>
-                        </div>
-                        <div className="relative">
-                            <input
-                                type={showConfirmPwd ? "text" : "password"}
-                                autoComplete="new-password"
-                                className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 pr-12 text-base border-[.5px] rounded-md border-opacity-10 ${formik.touched.confirm_password && formik.errors.confirm_password
-                                    ? "border-red-500"
-                                    : " border-[#ffffff1a]"
-                                    } focus:outline-none`}
-                                {...formik.getFieldProps("confirm_password")}
-                            />
-                            <button
-                                type="button"
-                                onClick={() => setShowConfirmPwd((v) => !v)}
-                                className="absolute inset-y-0 right-3 my-auto h-8 w-8 grid place-items-center rounded-md hover:bg-white/10"
-                                aria-label={showConfirmPwd ? "Hide password" : "Show password"}
-                            >
-                                {showConfirmPwd ? (
-                                    // eye-off
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                                        <path d="M3 3l18 18" stroke="#fff" strokeWidth="2" />
-                                        <path d="M10.6 10.6a3 3 0 104.24 4.24" stroke="#fff" strokeWidth="2" />
-                                        <path d="M9.88 5.09A9.84 9.84 0 0121 12c-1.8 3.5-5.4 6-9.6 6-1.1 0-2.2-.17-3.2-.5" stroke="#fff" strokeWidth="2" />
-                                        <path d="M6.3 6.3A9.84 9.84 0 003 12c1.8 3.5 5.4 6 9.6 6 .7 0 1.3-.05 1.9-.16" stroke="#fff" strokeWidth="2" />
-                                    </svg>
-                                ) : (
-                                    // eye
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                                        <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z" stroke="#fff" strokeWidth="2" />
-                                        <circle cx="12" cy="12" r="3" stroke="#fff" strokeWidth="2" />
-                                    </svg>
-                                )}
-                            </button>
-                        </div>
-                        {formik.touched.confirm_password && formik.errors.confirm_password && (
-                            <p className="text-red-500 pt-1 ltr:text-left rtl:text-right">
-                                {formik.errors.confirm_password}
+                        {formik.touched.phone && formik.errors.phone && (
+                            <p className="text-red-500 text-sm ltr:text-left rtl:text-right mt-1">
+                                {formik.errors.phone}
                             </p>
                         )}
                     </div>
                 </div>
 
-                {/* Terms */}
-                <div className="mb-5">
+                <div className="relative mb-3">
+                    <div className="text-sm mb-2 text-[#666684]">
+                        <label>{t("country")}</label>
+                    </div>
+
+                    <Select
+                        name="country"
+                        options={options}
+                        classNamePrefix="react-select"
+                        onChange={(selectedOption) =>
+                            formik.setFieldValue("country", selectedOption?.value)
+                        }
+                        onBlur={() => formik.setFieldTouched("country", true)}
+                        value={options.find((opt) => opt.value === formik.values.country)} // ✅ ADD THIS LINE
+                        className="text-white cpountry"
+                        styles={{
+                            control: (base, state) => ({
+                                ...base,
+                                backgroundColor: "#1A1A47",
+                                borderColor:
+                                    formik.touched.country && formik.errors.country
+                                        ? "red"
+                                        : "#ccccd679",
+                                color: "white",
+                            }),
+                            singleValue: (base) => ({
+                                ...base,
+                                color: "white",
+                            }),
+                            menu: (base) => ({
+                                ...base,
+                                backgroundColor: "#1A1A47",
+                                color: "white",
+                            }),
+                            option: (base, state) => ({
+                                ...base,
+                                backgroundColor: state.isFocused ? "#b68756" : "#1A1A47", // gold on hover
+                                color: state.isFocused ? "#fff" : "white",            // dark blue text on hover
+                                cursor: "pointer",
+                            }),
+                        }}
+
+                    />
+
+                    {formik.touched.country && formik.errors.country && (
+                        <p className="text-red-500 text-sm">{formik.errors.country}</p>
+                    )}
+                </div>
+
+                <div className="mb-5 text-[#666684]">
                     <label
-                        className={`block text-sm pb-2 ${formik.touched.terms && formik.errors.terms ? "text-red-500" : ""
+                        className={`block text-[#666684] text-sm pb-2 ${formik.touched.terms && formik.errors.terms ? "text-red-500" : ""
                             }`}
                         htmlFor="terms"
                     >
-                        {formik.touched.terms && formik.errors.terms ? formik.errors.terms : t("termsLabel")}
+                        {formik.touched.terms && formik.errors.terms
+                            ? formik.errors.terms
+                            : t("termsLabel")}
                     </label>
                     <div className="flex items-start gap-1">
                         <input
@@ -453,19 +534,19 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                     </div>
                 </div>
 
-                {/* Submit */}
+                {/* Submit Button */}
                 <div className="text-center">
                     <button
                         disabled={isDisable}
                         type="submit"
-                        className="bg-secondary cursor-pointer mb-10 text-white w-full font-bold py-4 px-8 rounded-md border border-[#ffffff1a]"
+                        className="bg-gradient-to-b w-full justify-center mt-8 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
                     >
                         {loading ? t("submitting") : t("submit")}
                     </button>
                 </div>
             </form>
-        </div>
+        </div >
     );
 };
 
-export default InvestingForm;
+export default InvestingForm

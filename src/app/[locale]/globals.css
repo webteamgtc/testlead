@@ -203,3 +203,7 @@ html {
   transform: rotateY(180deg);
   padding: 0;
 }
+
+.investing-form input {
+  color: #666684!important;
+}
