@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl"; // for localization
 import SwapForm from "@/app/[locale]/components/MainForm";
 import TradeForm from "@/app/[locale]/components/TradeForm";
-import InvestingForm from "./InvestingForm";
 
 const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) => {
 
@@ -44,7 +43,7 @@ const SliderModal = ({ isOpen, onClose, zapierUrl, successPath, emailConfig }) =
                         <h2 className="text-center text-2xl md:text-3xl font-medium my-5 md:my-8">
                             {t("heading")}
                         </h2>
-                        <InvestingForm
+                        <TradeForm
                             zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u52nrpg/"
                             successPath="/investing/trade-gold/success"
                             emailConfig={emailConfig} // Pass the email configuration
