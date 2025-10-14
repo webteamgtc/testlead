@@ -47,8 +47,8 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                             </p>
                             <p className="text-[22px] text-[#000032] text-base mt-3 leading-[32px] px-2 md:px-0 max-w-xl">Multi-regulated, secure, and ultra-fast
                                 withdrawals when you trade with GTC.
-                                We remove all the unnecessary barriers.
-                            </p>
+                                We remove all the unnecessary barriers. 
+                            </p> 
                         </div>
 
                         {/* Right Column (optional image placeholder for layout balance) */}
