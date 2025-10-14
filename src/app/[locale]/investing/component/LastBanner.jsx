@@ -21,7 +21,7 @@ export default function CommonLastBanner({ setIsOpen, page }) {
                     <p className=" mt-5 md:text-[20px] text-[18px]  max-w-2xl mx-auto text-white"> {t("lastSection.desc")}
                     </p>
 
-                    <button
+                    {/* <button
                         className="bg-gradient-to-b mt-8 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
                         onClick={() => {
                             setIsOpen(true)
@@ -43,7 +43,7 @@ export default function CommonLastBanner({ setIsOpen, page }) {
                                 strokeLinejoin="round"
                             />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </section>

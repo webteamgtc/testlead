@@ -23,7 +23,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
                     className="lg:w-[200px] mx-auto md:mx-0 lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
                 />
             </div>
-            <div className="absolute top-0 h-full md:w-3/5 w-full opacity-70 right-0 pointer-events-none">
+            <div className="absolute top-0 h-full w-full opacity-70 right-0 pointer-events-none">
                 <Image
                     src="/investing/new-bg.svg"
                     alt="Decorative background"
@@ -52,6 +52,7 @@ const HeroSection = ({ setIsOpen, page = "UAE" }) => {
                                 zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u52nrpg/"
                                 successPath="/investing/trade-gold/success"
                                 page="investing"
+                                btnText="Trade Gold"
                             />
                         </div>
                     </div>

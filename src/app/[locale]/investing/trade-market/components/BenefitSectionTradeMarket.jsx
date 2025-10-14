@@ -71,13 +71,13 @@ const BenefitsSectionTradeMArket = () => {
 
     return (
         <section className="w-full py-8 relative pb-10 md:pb-24 mt-0 pt-10 md:pt-24">
-            {/* <div className="pointer-events-none absolute inset-0 z-0">
+            <div className="pointer-events-none absolute inset-0 z-0">
                 <img
-                    src="/investing/trade-section2-bg.svg"
+                    src="/investing/market-bg-new.svg"
                     alt=""
                     className="absolute right-0 left-0 w-full object-cover bottom-0 h-[92%] max-h-[780px] opacity-60"
                 />
-            </div> */}
+            </div>
 
             <div className="max-w-4xl mx-auto px-4 relative z-[1]">
                 <div className="grid gap-6 md:gap-8 sm:grid-cols-2 ">
