@@ -28,8 +28,8 @@ export async function POST(req) {
       "token",
       "YWR2ZXJpc2VyX2FmZmlsYXRpb25fdXJs".replace(/\s+/g, "")
     );
-    url.searchParams.set("advertiser", "GTC Global LTD");
-    url.searchParams.set("brand", "GTC FX");
+    url.searchParams.set("advertiser", "GTC%Global%LTD");
+    url.searchParams.set("brand", "GTC%FX");
     url.searchParams.set("model", "CPL");
     url.searchParams.set("affiliate_id", "1");
     url.searchParams.set("user_id", email);
