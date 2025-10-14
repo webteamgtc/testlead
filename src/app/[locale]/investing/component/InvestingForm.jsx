@@ -15,7 +15,7 @@ import Select from "react-select";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl"; // make sure this is imported
 
-const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
+const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = false }) => {
     const { countryData } = useLocationDetail();
     const [otpLoading, setOtpLoading] = useState(false);
     const [showOtp, setShowOtp] = useState(false);
@@ -132,7 +132,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
             const res = await fetch("/api/investing-postback", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ nickname: data?.nickname }),
+                body: JSON.stringify({ email: data?.email }),
             });
 
             if (!res.ok) throw new Error(await res.text());
@@ -296,7 +296,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                             type="text"
                             inputMode="text"
                             autoComplete="off"
-                             placeholder={t("lastName")}
+                            placeholder={t("lastName")}
                             className={`w-full px-4 bg-[#FFF] text-base py-3 pl-3 border-[.5px] rounded-md  ${formik.touched.last_name && formik.errors.last_name
                                 ? "border-red-500"
                                 : " border-[#CCCCD6] "
@@ -320,7 +320,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
 
                             <input
                                 type="email"
-                                 placeholder={t("email")}
+                                placeholder={t("email")}
                                 className={`w-full bg-[#FFF] px-4 py-3 pl-3 text-base border rounded-md ${formik.touched.email && formik.errors.email
                                     ? "border-red-500"
                                     : "border-[#CCCCD6]"
@@ -541,7 +541,22 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                         type="submit"
                         className="bg-gradient-to-b w-full justify-center mt-4 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:from-[#956D42] hover:to-[#E1CFBB] text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
                     >
-                        {loading ? t("submitting") : t("submit")}
+                        {loading ? t("submitting") : btnText || t("submit")}
+                        <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            className="translate-x-[1px]"
+                            fill="none"
+                        >
+                            <path
+                                d="M9 6l6 6l-6 6"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
                     </button>
                 </div>
             </form>
