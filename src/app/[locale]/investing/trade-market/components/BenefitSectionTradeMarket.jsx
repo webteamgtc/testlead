@@ -17,20 +17,37 @@ const BenefitsSectionTradeMArket = () => {
             slope: "right",
             iconSide: "right",
             align: "right",
-            backItems: [t("sectionTwo.column1.list.item1"), t("sectionTwo.column1.list.item2"), t("sectionTwo.column1.list.item3"), t("sectionTwo.column1.list.item4"), t("sectionTwo.column1.list.item5")],
+            backItems: [
+                { title: ("Fast & Easy Registration"), sub: ("Start trading the markets quickly.") },
+                { title: ("Ultra-Fast Withdrawals"), sub: ("Segregated funds & ultra-fast withdrawals.") },
+                { title: ("Flexible Bonuses & Cashback"), sub: ("Boost your trading experience & your portfolio.") },
+            ],
         },
         {
             title: "Ultimate Trading<br/> Conditions",
             icon: "/investing/market-icon2.svg",
             frontTheme: "navy",
-            backTheme: "gold",
+            backTheme: "navy",
             slope: "left",
             iconSide: "left",
             align: "left",
-            backItems: [t("sectionTwo.column2.list.item1"), t("sectionTwo.column2.list.item2"), t("sectionTwo.column2.list.item3")],
-        },
+            backItems: [
+                {
+                    title: ("Ultra-Competitive"), sub: ("Our spreads start from 0.0 pips!")
 
-    ]
+                },
+                {
+                    title: null,
+                    list: [
+                        'Access to 2000+ MarketsForex', 'Gold, Indices, Energies',
+                        'Stocks & Commodities.'
+                    ]
+
+                },
+                { title: ("Multi-Regulated"), sub: ("GTC is regulated in UAE, FSCA, FSC, & VFSC.") },
+            ],
+        },
+    ];
 
     const bandFront = {
         gold: "bg-gradient-to-br from-[#D7B790] via-[#B9926D] to-[#8E6C49]",
@@ -53,21 +70,12 @@ const BenefitsSectionTradeMArket = () => {
     }
 
     return (
-        <section className="w-full py-8 relative pb-10 md:pb-20 mt-0 pt-10 md:pt-16">
-            <div className="pointer-events-none absolute inset-0 z-0">
+        <section className="w-full py-8 relative pb-10 md:pb-24 mt-0 pt-10 md:pt-24">
+            {/* <div className="pointer-events-none absolute inset-0 z-0">
                 <img
                     src="/investing/trade-section2-bg.svg"
                     alt=""
                     className="absolute right-0 left-0 w-full object-cover bottom-0 h-[92%] max-h-[780px] opacity-60"
-                />
-            </div>
-            {/* <div className="absolute inset-0 z-0 pointer-events-none select-none">
-                <Image
-                    src="/investing/trade-section2-bg.svg"
-                    alt=""
-                    fill
-                    className="object-cover object-right"
-                    priority
                 />
             </div> */}
 
@@ -116,27 +124,40 @@ const BenefitsSectionTradeMArket = () => {
                                             </div>
                                         </article>
 
-                                        <article className="flip-face flip-back">
+                                        <article className="flip-face flip-back bg-gradient-to-br from-[#293794]  to-[#000021] ">
                                             <div
-                                                className="h-full w-full rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-[0_8px_30px_rgba(17,38,146,0.08)] p-6 md:p-7 flex"
-                                                style={backGradient(c.backTheme)}
+                                                className="h-full w-full bg-[url('/investing/card-back-bg.svg')] bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden ring-1 shadow-[0_8px_30px_rgba(17,38,146,0.08)] p-6 md:p-7 flex"
+                                            // style={backGradient(c.backTheme)}
                                             >
-                                                <div className="m-auto w-full">
-                                                    <ul
-                                                        className={[
-                                                            "list-disc pl-5 text-left space-y-2 md:space-y-2.5",
-                                                            "text-[14px] md:text-[15px] leading-6",
-                                                            backText[c.backTheme],
-                                                            c.backTheme === "gold"
-                                                                ? "marker:text-[#0B1A68]"
-                                                                : "marker:opacity-90",
-                                                        ].join(" ")}
-                                                    >
-                                                        {c.backItems.map((li, idx) => (
-                                                            <li key={idx}>{li}</li>
-                                                        ))}
-                                                    </ul>
+                                                <div className="w-full">
+                                                    <div className="w-full pt-12">
+                                                        {c.backItems.map((it, idx) => {
+                                                            const isString = typeof it === "string";
+                                                            return (
+                                                                <p
+                                                                    key={idx}
+                                                                    className={[
+                                                                        "text-left",
+                                                                        "text-[14px] md:text-[15px] leading-6",
+                                                                        "mb-2 md:mb-2.5 last:mb-0",
+                                                                        backText[c.backTheme],
+                                                                    ].join(" ")}
+                                                                >
+                                                                    {isString ? (
+                                                                        it
+                                                                    ) : (
+                                                                        <div className="pb-4">
+                                                                            <strong className="font-semibold text-[24px] text-transparent bg-gradient-to-r bg-clip-text from-[#E1CFBB] to-[#956D42]">{it.title}</strong>
+                                                                            {it.sub && <span className="block text-base text-[#FFFFFF] leading-5 opacity-80 mt-0.5">{it.sub}</span>}
+                                                                            {it.list && it?.list?.map(single => <p className="block text-base text-[#FFFFFF] leading-5 opacity-80 mt-0.5">{single}</p>)}
+                                                                        </div>
+                                                                    )}
+                                                                </p>
+                                                            );
+                                                        })}
+                                                    </div>
                                                 </div>
+
                                             </div>
                                         </article>
                                     </div>

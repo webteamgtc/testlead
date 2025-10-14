@@ -333,7 +333,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                                 </p>
                             )}
                             <div
-                                className="absolute top-9 bg-primary ltr:right-3 rtl:left-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
+                                className="absolute top-9 bg-[#000032] ltr:right-3 rtl:left-3 rounded-md cursor-pointer text-white  py-1.5 px-2"
                                 onClick={() => {
                                     sendVerificationCode();
                                 }}
@@ -450,26 +450,26 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                         styles={{
                             control: (base, state) => ({
                                 ...base,
-                                backgroundColor: "#1A1A47",
+                                backgroundColor: "#fff",
                                 borderColor:
                                     formik.touched.country && formik.errors.country
                                         ? "red"
                                         : "#ccccd679",
-                                color: "white",
+                                color: "#1A1A47",
                             }),
                             singleValue: (base) => ({
                                 ...base,
-                                color: "white",
+                                color: "#1A1A47",
                             }),
                             menu: (base) => ({
                                 ...base,
-                                backgroundColor: "#1A1A47",
-                                color: "white",
+                                backgroundColor: "#fff",
+                                color: "#1A1A47",
                             }),
                             option: (base, state) => ({
                                 ...base,
-                                backgroundColor: state.isFocused ? "#b68756" : "#1A1A47", // gold on hover
-                                color: state.isFocused ? "#fff" : "white",            // dark blue text on hover
+                                backgroundColor: state.isFocused ? "#b68756" : "#fff", // gold on hover
+                                color: state.isFocused ? "#1A1A47" : "#1A1A47",            // dark blue text on hover
                                 cursor: "pointer",
                             }),
                         }}
@@ -539,7 +539,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "" }) => {
                     <button
                         disabled={isDisable}
                         type="submit"
-                        className="bg-gradient-to-b w-full justify-center mt-8 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
+                        className="bg-gradient-to-b w-full justify-center mt-8 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:from-[#956D42] hover:to-[#E1CFBB] text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
                     >
                         {loading ? t("submitting") : t("submit")}
                     </button>
