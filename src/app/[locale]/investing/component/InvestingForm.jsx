@@ -539,7 +539,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
                     <button
                         disabled={isDisable}
                         type="submit"
-                        className={`bg-gradient-to-b w-full justify-center mt-8 ${isBlue?"from-[#293794]  to-[#000021]  hover:from-[#000021] hover:to-[#293794]":"from-[#E1CFBB]  to-[#956D42]  hover:from-[#956D42] hover:to-[#E1CFBB]" }cursor-pointer text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2`}
+                        className="bg-gradient-to-b w-full justify-center mt-4 from-[#E1CFBB] cursor-pointer to-[#956D42] hover:from-[#956D42] hover:to-[#E1CFBB] text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2"
                     >
                         {loading ? t("submitting") : btnText || t("submit")}
                         <svg
