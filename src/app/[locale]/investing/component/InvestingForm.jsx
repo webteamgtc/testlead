@@ -213,8 +213,8 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
         },
     });
 
-    const verifyOtpCode = async () => {
-        if (formik.values.otp == storedOtp) {
+    const verifyOtpCode = async (otp) => {
+        if (otp == storedOtp) {
             toast.success(t("otpSuccess"));
             setShowOtp(false);
             setIsDisable(false);
@@ -349,7 +349,14 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
                                     </p>
                                     <OtpInput
                                         value={formik.values.otp}
-                                        onChange={(otp) => formik.setFieldValue("otp", otp)}
+                                        onChange={(otp) => {
+                                            formik.setFieldValue("otp", otp)
+                                            if (otp?.length == 6) {
+                                                verifyOtpCode(otp);
+
+                                            }
+                                        }
+                                        }
                                         numInputs={6}
                                         containerStyle={{
                                             justifyContent: "space-around",
@@ -387,14 +394,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
                                         </p>
                                     )}
                                 </div>
-                                <div
-                                    className=" bg-primary right-0 rounded-md cursor-pointer text-white  py-2 px-2 text-center mt-2 border border-[#CCCCD6]"
-                                    onClick={() => {
-                                        verifyOtpCode();
-                                    }}
-                                >
-                                    {t("verifyCode")}
-                                </div>
+                               
                             </div>
                         )}
                     </div>
@@ -539,7 +539,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
                     <button
                         disabled={isDisable}
                         type="submit"
-                        className={`bg-gradient-to-b w-full justify-center mt-8 ${isBlue?"from-[#293794]  to-[#000021]  hover:from-[#000021] hover:to-[#293794]":"from-[#E1CFBB]  to-[#956D42]  hover:from-[#956D42] hover:to-[#E1CFBB]" }cursor-pointer text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2`}
+                        className={`bg-gradient-to-b w-full justify-center mt-8 ${isBlue ? "from-[#293794]  to-[#000021]  hover:from-[#000021] hover:to-[#293794]" : "from-[#E1CFBB]  to-[#956D42]  hover:from-[#956D42] hover:to-[#E1CFBB]"}cursor-pointer text-sm md:text-base xl:text-lg text-white font-bold px-8 py-3 rounded-xl transition-all duration-300 flex items-center gap-2`}
                     >
                         {loading ? t("submitting") : btnText || t("submit")}
                         <svg

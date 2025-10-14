@@ -672,7 +672,7 @@
   "tradeGold": {
     "meta": {
       "title": "Trade Gold with the Lowest Spreads in the UAE, Only with GTC",
-      "description": "0.20 raw spreads when you trade gold with us. Hit that “TRADE GOLD” button to get started." 
+      "description": "0.20 raw spreads when you trade gold with us. Hit that “TRADE GOLD” button to get started."
     },
     "banner": {
       "heading": "Trade Gold with the Lowest Spreads in the {page}, Only with GTC",
@@ -820,6 +820,113 @@
         "list": {
           "item1": "24/5 Multilingual Support",
           "item2": "Rated ★★★★★ by our clients for fast and reliable service"
+        }
+      }
+    },
+    "lastSection": {
+      "title": "Are You Ready To Trade Gold?",
+      "desc": "Trade gold with super-tight spreads, high leverage, and with a broker that offers you peace of mind.",
+      "btnText": "Trade Gold"
+    }
+  },
+  "investingMarket": {
+    "meta": {
+      "title": "Trade theMarkets",
+      "description": "Open Your GTC Trading Account & Trade Today."
+    },
+    "banner": {
+      "title": "Trade the <br/> Markets",
+      "desc": "Open Your GTC Trading <br />Account & Trade Today.",
+      "para": "Multi-regulated, secure, and ultra-fast withdrawals when you trade with GTC. We remove all the unnecessary barriers.",
+      "alreadyAccount": "Already have an account?",
+      "login": "Login",
+      "btnText": "Start Now"
+    },
+    "sectionTwo": {
+      "column1": {
+        "title": "Why Trade <br/>with GTC?",
+        "list": {
+          "itemOneTitle": "Fast & Easy Registration",
+          "para1": "Start trading the markets quickly.",
+          "itemTwoTitle": "Ultra-Fast Withdrawals",
+          "para2": "Segregated funds & ultra-fast withdrawals.",
+          "itemThreeTitle": "Flexible Bonuses & Cashback",
+          "para3": "Boost your trading experience & your portfolio."
+        }
+      },
+      "column2": {
+        "title": "Ultimate Trading<br/> Conditions",
+        "list": {
+          "item1": "Ultra-Competitive",
+          "item1para": "Our spreads start from 0.0 pips!",
+          "card2": {
+            "item1": "Access to 2000+ MarketsForex",
+            "item2": "Gold, Indices, Energies",
+            "item3": "Stocks & Commodities."
+          },
+          "card3Title": "Multi-Regulated",
+          "card3para": "GTC is regulated in UAE, FSCA, FSC, & VFSC."
+        }
+      }
+    },
+    "lastSection": {
+      "title": "Are You Ready To Trade Gold?",
+      "desc": "Trade gold with super-tight spreads, high leverage, and with a broker that offers you peace of mind.",
+      "btnText": "Trade Gold"
+    }
+  },
+  "investingGtc": {
+    "meta": {
+      "title": "Trade the Markets",
+      "description": "Open Your GTC Trading Account & Trade Today."
+    },
+    "banner": {
+      "title": "Trade <br/>  With GTC",
+      "desc": "Trade the Fed’s Next Move.",
+      "para": "Join thousands of traders who are preparing for the Federal Reserve’s (Fed) next big move. React instantly to market volatility with GTC’s multi-regulated platform.",
+      "alreadyAccount": "Already have an account?",
+      "login": "Login",
+      "btnText": "Open Free Account"
+    },
+    "sectionTwo": {
+      "column1": {
+        "title": "Why Fed Meetings Matter",
+        "desc": "Here's why so many gold traders are turning to GTC.",
+        "list": {
+          "item1": "Fed Announcements",
+          "item2": "Fed announcements can create strong market volatility within minutes.",
+          "item3": "Rate Cuts",
+          "item4": "Rate cuts may boost equities and support gold prices.",
+          "item5": "Market Updates",
+          "item6": "Markets expect a potential rate cut at the upcoming FOMC."
+        }
+      },
+      "column2": {
+        "title": "What History Shows",
+        "desc": "Here's why so many gold traders are turning to GTC.",
+        "list": {
+          "item1": "Even during rate cuts, markets don’t always react positively.",
+          "item2": "In December 2018 the S&P 500 saw its largest Fed-day swing since 2008 due to hawkish guidance."
+        }
+      },
+      "column3": {
+        "title": "Why Trade the Markets with GTC?",
+        "desc": "Here's why so many gold traders are turning to GTC.",
+        "list": {
+          "item1": "Ultra-Low Spreads on Gold, Forex & all CFDs.",
+          "item2": "Go long or short: trade both directions.",
+          "item3": "Same-Day Withdrawals.",
+          "item4": "Real-Time Alerts after FOMC; get market commentary.",
+          "item5": "Multi-Regulated: DFSA, FSCA, FSC & VFSC."
+        }
+      },
+      "column4": {
+        "title": "Start Trading in 3 Steps",
+        "desc": "Here's why so many gold traders are turning to GTC.",
+        "list": {
+          "item1": "Register your OTC account in minutes.",
+          "item2": "Verify your identity (KYC).",
+          "item3": "Deposit & trade to be ready for the Fed’s decision."
         }
       }
     },
