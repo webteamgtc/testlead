@@ -4,14 +4,14 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const BenefitsSectionTradeMArket = () => {
-    const t = useTranslations("investing");
+    const t = useTranslations("investingGtc");
 
     const [flipped, setFlipped] = useState(null);
 
     const cards = [
         {
-            title: "Why Fed Meetings Matter",
-            desc: "Here's why so many gold traders are turning to GTC.",
+            title: t("sectionTwo.column1.title"),
+            desc: t("sectionTwo.column1.desc"),
             icon: "/investing/gtc-icon1.svg",
             frontTheme: "gold",
             backTheme: "navy",
@@ -21,23 +21,23 @@ const BenefitsSectionTradeMArket = () => {
             // Card 1 → heading + paragraph blocks
             backItems: [
                 {
-                    title: "Fed Announcements",
-                    sub: "Fed announcements can create strong market volatility within minutes."
+                    title: t("sectionTwo.column1.list.item1"),
+                    sub: t("sectionTwo.column1.list.item2"),
                 },
                 {
-                    title: "Rate Cuts",
-                    sub: "Rate cuts may boost equities and support gold prices."
+                    title: t("sectionTwo.column1.list.item3"),
+                    sub: t("sectionTwo.column1.list.item4"),
                 },
                 {
-                    title: "Market Updates",
-                    sub: "Markets expect a potential rate cut at the upcoming FOMC."
+                    title: t("sectionTwo.column1.list.item5"),
+                    sub: t("sectionTwo.column1.list.item6"),
                 }
             ]
         },
 
         {
-            title: "What History Shows",
-            desc: "Here's why so many gold traders are turning to GTC.",
+            title: t("sectionTwo.column2.title"),
+            desc: t("sectionTwo.column2.desc"),
             icon: "/investing/gtc-icon2.svg",
             frontTheme: "navy",
             backTheme: "navy",
@@ -48,16 +48,16 @@ const BenefitsSectionTradeMArket = () => {
             backItems: [
                 {
                     list: [
-                        "Even during rate cuts, markets don’t always react positively.",
-                        "In December 2018 the S&P 500 saw its largest Fed-day swing since 2008 due to hawkish guidance.",
+                        t("sectionTwo.column2.list.item1"),
+                        t("sectionTwo.column2.list.item2"),
                     ]
                 }
             ]
         },
 
         {
-            title: "Why Trade the Markets with GTC?",
-            desc: "Here's why so many gold traders are turning to GTC.",
+            title: t("sectionTwo.column3.title"),
+            desc: t("sectionTwo.column3.desc"),
             icon: "/investing/gtc-icon3.svg",
             frontTheme: "gold",
             backTheme: "navy",
@@ -68,19 +68,19 @@ const BenefitsSectionTradeMArket = () => {
             backItems: [
                 {
                     list: [
-                        "Ultra-Low Spreads on Gold, Forex & all CFDs.",
-                        "Go long or short: trade both directions.",
-                        "Same-Day Withdrawals.",
-                        "Real-Time Alerts after FOMC; get market commentary.",
-                        "Multi-Regulated: DFSA, FSCA, FSC & VFSC."
+                        t("sectionTwo.column3.list.item1"),
+                        t("sectionTwo.column3.list.item2"),
+                        t("sectionTwo.column3.list.item3"),
+                        t("sectionTwo.column3.list.item4"),
+                        t("sectionTwo.column3.list.item5")
                     ]
                 }
             ]
         },
 
         {
-            title: "Start Trading in 3 Steps",
-            desc: "Here's why so many gold traders are turning to GTC.",
+            title: t("sectionTwo.column4.title"),
+            desc: t("sectionTwo.column4.desc"),
             icon: "/investing/gtc-icon4.svg",
             frontTheme: "navy",
             backTheme: "navy",
@@ -91,9 +91,9 @@ const BenefitsSectionTradeMArket = () => {
             backItems: [
                 {
                     list: [
-                        "Register your OTC account in minutes.",
-                        "Verify your identity (KYC).",
-                        "Deposit & trade to be ready for the Fed’s decision."
+                        t("sectionTwo.column4.list.item1"),
+                        t("sectionTwo.column4.list.item2"),
+                        t("sectionTwo.column4.list.item3")
                     ]
                 }
             ]
