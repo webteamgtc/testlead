@@ -14,11 +14,12 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
         >
             {/* ==== TOP LOGO ==== */}
             <div className="container pt-3">
-                <Image
+                <img
                     src="/investing/LOGO-blue.svg"
                     width={200}
                     height={72}
                     alt="GTCFX"
+                    
                 />
             </div>
 
