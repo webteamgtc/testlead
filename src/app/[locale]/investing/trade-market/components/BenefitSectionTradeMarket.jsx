@@ -4,13 +4,13 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const BenefitsSectionTradeMArket = () => {
-    const t = useTranslations("investing");
+    const t = useTranslations("investingMarket");
 
     const [flipped, setFlipped] = useState(null);
 
     const cards = [
         {
-            title: "Why Trade <br/>with GTC?",
+            title: t("sectionTwo.column1.title"),
             icon: "/investing/market-icon1.svg",
             frontTheme: "gold",
             backTheme: "navy",
@@ -18,13 +18,13 @@ const BenefitsSectionTradeMArket = () => {
             iconSide: "right",
             align: "right",
             backItems: [
-                { title: ("Fast & Easy Registration"), sub: ("Start trading the markets quickly.") },
-                { title: ("Ultra-Fast Withdrawals"), sub: ("Segregated funds & ultra-fast withdrawals.") },
-                { title: ("Flexible Bonuses & Cashback"), sub: ("Boost your trading experience & your portfolio.") },
+                { title: t("sectionTwo.column1.list.itemOneTitle"), sub: t("sectionTwo.column1.list.para1") },
+                { title: t("sectionTwo.column1.list.itemTwoTitle"), sub: t("sectionTwo.column1.list.para2") },
+                { title: t("sectionTwo.column1.list.itemThreeTitle"), sub: t("sectionTwo.column1.list.para3") },
             ],
         },
         {
-            title: "Ultimate Trading<br/> Conditions",
+            title: t("sectionTwo.column2.title"),
             icon: "/investing/market-icon2.svg",
             frontTheme: "navy",
             backTheme: "navy",
@@ -33,18 +33,18 @@ const BenefitsSectionTradeMArket = () => {
             align: "left",
             backItems: [
                 {
-                    title: ("Ultra-Competitive"), sub: ("Our spreads start from 0.0 pips!")
+                    title: t("sectionTwo.column2.list.item1"), sub: t("sectionTwo.column2.list.item1para")
 
                 },
                 {
                     title: null,
                     list: [
-                        'Access to 2000+ MarketsForex', 'Gold, Indices, Energies',
-                        'Stocks & Commodities.'
+                        t("sectionTwo.column2.list.card2.item1"), t("sectionTwo.column2.list.card2.item2"),
+                        t("sectionTwo.column2.list.card2.item3")
                     ]
 
                 },
-                { title: ("Multi-Regulated"), sub: ("GTC is regulated in UAE, FSCA, FSC, & VFSC.") },
+                { title: t("sectionTwo.column2.list.card3Title"), sub:t("sectionTwo.column2.list.card3para") },
             ],
         },
     ];
@@ -71,13 +71,13 @@ const BenefitsSectionTradeMArket = () => {
 
     return (
         <section className="w-full py-8 relative pb-10 md:pb-24 mt-0 pt-10 md:pt-24">
-            {/* <div className="pointer-events-none absolute inset-0 z-0">
+            <div className="pointer-events-none absolute inset-0 z-0">
                 <img
-                    src="/investing/trade-section2-bg.svg"
+                    src="/investing/market-bg-new.svg"
                     alt=""
                     className="absolute right-0 left-0 w-full object-cover bottom-0 h-[92%] max-h-[780px] opacity-60"
                 />
-            </div> */}
+            </div>
 
             <div className="max-w-4xl mx-auto px-4 relative z-[1]">
                 <div className="grid gap-6 md:gap-8 sm:grid-cols-2 ">

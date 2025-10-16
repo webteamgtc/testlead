@@ -12,7 +12,7 @@ import HeroSectionTradeMArket from "./components/banner";
 import BenefitsSectionTradeMArket from "./components/BenefitSectionTradeMarket";
 
 const TradeGoldPage = () => {
-    const t = useTranslations("investing");
+    const t = useTranslations("investingMarket");
     const [isOpen, setIsOpen] = useState(false);
 
     return (

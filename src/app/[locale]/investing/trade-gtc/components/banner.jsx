@@ -6,7 +6,7 @@ import Link from "next/link";
 import InvestingForm from "../../component/InvestingForm";
 
 const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
-    const t = useTranslations("investing");
+    const t = useTranslations("investingGtc");
 
     return (
         <section
@@ -39,16 +39,14 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                         {/* Left Column */}
                         <div className="text-center md:text-left md:pb-20 pb-6 md:col-span-7">
                             <h1 className="text-[48px] leading-tight md:text-[55px] font-black 2xl:text-[76px] 2xl:leading-tight inline-block text-transparent bg-gradient-to-r bg-clip-text from-[#E1CFBB] to-[#956D42] max-w-lg px-5 md:px-0"
-
-                            >Trade
-                                <br />
-                                With GTC</h1>
+                                dangerouslySetInnerHTML={{ __html: t("banner.title") }}
+                            />
 
                             <p className="text-[22px] lg:text-[22px] text-[#FFF] font-semibold text-base leading-[40px] px-2 md:px-0 max-w-xl">
-                                Trade the Fed’s Next Move.
+                                {t("banner.desc")}
                             </p>
                             <p className="text-[22px] text-[#FFF] text-base mt-2 leading-[32px] px-2 md:px-0 max-w-xl">
-                                Join thousands of traders who are preparing for the Federal Reserve’s (Fed) next big move. React instantly to market volatility with GTC’s multi-regulated platform.
+                                {t("banner.para")}
                             </p>
                         </div>
 
@@ -58,6 +56,8 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                                 zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u52nrpg/"
                                 successPath="/investing/trade-gold/success"
                                 page="investing"
+                                btnText={t("banner.btnText")}
+                                isBlue={true}
                             />
                         </div>
 

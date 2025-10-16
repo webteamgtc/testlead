@@ -6,7 +6,7 @@ import Link from "next/link";
 import InvestingForm from "../../component/InvestingForm";
 
 const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
-    const t = useTranslations("investing");
+    const t = useTranslations("investingMarket");
 
     return (
         <section
@@ -38,17 +38,22 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                         {/* Left Column */}
                         <div className="text-center md:text-left md:pb-20 pb-6 md:col-span-7">
                             <h1 className="text-[48px] leading-tight md:text-[55px] font-black 2xl:text-[76px] 2xl:leading-tight inline-block text-transparent bg-gradient-to-r bg-clip-text from-[#293794] to-[#000021]  max-w-lg px-5 md:px-0"
+                                dangerouslySetInnerHTML={{ __html: t("banner.title") }}
+                            ></h1>
 
-                            >Trade the <br />
-                                Markets</h1>
-
-                            <p className="text-[22px] lg:text-[32px] text-[#000032] text-base mt-3 font-medium leading-[40px] px-2 md:px-0 max-w-xl">
-                                Open Your GTC Trading <br />Account & Trade Today.
+                            <p className="text-[22px] lg:text-[32px] text-[#000032] text-base mt-3 font-medium leading-[40px] px-2 md:px-0 max-w-xl"
+                                dangerouslySetInnerHTML={{ __html: t("banner.desc") }}
+                            >
                             </p>
+<<<<<<< HEAD
                             <p className="text-[22px] text-[#000032] text-base mt-3 leading-[32px] px-2 md:px-0 max-w-xl">Multi-regulated, secure, and ultra-fast
                                 withdrawals when you trade with GTC.
                                 We remove all the unnecessary barriers. 
                             </p> 
+=======
+                            <p className="text-[22px] text-[#000032] text-base mt-3 leading-[32px] px-2 md:px-0 max-w-xl">{t("banner.para")}
+                            </p>
+>>>>>>> d42d5303bfb05784fc22a3edb4cd37f6c6c1f307
                         </div>
 
                         {/* Right Column (optional image placeholder for layout balance) */}
@@ -57,6 +62,7 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                                 zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u52nrpg/"
                                 successPath="/investing/trade-gold/success"
                                 page="investing"
+                                btnText={t("banner.btnText")}
                             />
                         </div>
 
