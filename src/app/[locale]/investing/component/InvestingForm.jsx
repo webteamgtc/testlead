@@ -111,8 +111,8 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
                 localStorage.setItem("user", JSON.stringify(data));
                 // Redirect based on locale
                 const targetLocale =
-                    locale === "ar"
-                        ? `/ar${successPath}` : successPath;
+                    locale === "es"
+                        ? `/es${successPath}` : successPath;
                 router.push(targetLocale);
                 formik.resetForm();
                 setShowOtp(false);
@@ -136,14 +136,26 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
             });
 
             if (!res.ok) throw new Error(await res.text());
+            await axios
+                .post(`/api/trade-gold`, JSON.stringify({ ...data, locale: locale, isPartnerPage: isPartnerPage, fist_name: data?.nickname }))
+                .then((res) => {
+                    toast.success(t("thankYou1"));
+                    formik.resetForm();
+                    localStorage.setItem("user", JSON.stringify(data));
 
-            toast.success(t("thankYou1"));
-            formik.resetForm();
-            localStorage.setItem("user", JSON.stringify(data));
+                    const targetLocale = locale === "es" ? `/es${successPath}` : successPath;
+                    router.push(targetLocale);
+                    setShowOtp(false);
+                })
+                .catch((err) => {
+                    toast.error("Error inserting data: " + result.error);
+                    setLoading(false);
+                })
+                .finally(() => {
+                    setLoading(false);
+                });
 
-            const targetLocale = locale === "ar" ? `/ar${successPath}` : successPath;
-            router.push(targetLocale);
-            setShowOtp(false);
+
         } catch (err) {
             toast.error("Error inserting data: " + (err?.message || "Unknown error"));
         } finally {
@@ -394,7 +406,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
                                         </p>
                                     )}
                                 </div>
-                               
+
                             </div>
                         )}
                     </div>

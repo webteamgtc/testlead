@@ -54,7 +54,7 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                         <div className=" md:pb-24 pb-10 md:col-span-5">
                             <InvestingForm
                                 zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u52nrpg/"
-                                successPath="/investing/trade-gold/success"
+                                successPath="/investing/success"
                                 page="investing"
                                 btnText={t("banner.btnText")}
                             />
