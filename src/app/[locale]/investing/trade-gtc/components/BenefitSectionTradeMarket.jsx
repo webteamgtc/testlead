@@ -138,7 +138,7 @@ const BenefitsSectionTradeMArket = () => {
                         return (
                             <div
                                 key={i}
-                                className="relative min-h-[450px] rounded-2xl"
+                                className="relative md:min-h-[450px] min-h-[350px] rounded-2xl"
                                 onMouseEnter={() => setFlipped(i)}
                                 onMouseLeave={() => setFlipped(null)}
                                 onClick={() => setFlipped(isFlipped ? null : i)}
@@ -152,12 +152,12 @@ const BenefitsSectionTradeMArket = () => {
                                             <div className="relative h-full w-full bg-[#F2F6F9] rounded-2xl overflow-hidden ring-1 ring-black/5 shadow-[0_8px_30px_rgba(17,38,146,0.08)]">
                                                 <div
                                                     className={[
-                                                        "h-[40%]",
+                                                        "md:h-[40%] h-[35%]",
                                                         bandFront[c.frontTheme],
                                                         wedge[c.slope],
                                                     ].join(" ")}
                                                 />
-                                                <div className="md:p-6 flex flex-col items-center">
+                                                <div className="p-6 flex flex-col items-center">
                                                     <div className={`flex w-full items-center j${c.align == "right" ? " justify-end" : " justify-start"} h-[50px] px-2 md:py-2 `}>
                                                         <img src={c.icon} alt="" />
                                                     </div>
@@ -184,7 +184,7 @@ const BenefitsSectionTradeMArket = () => {
                                                 className="h-full w-full bg-[url('/investing/gtc-card-bg.svg')] bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden ring-1 shadow-[0_8px_30px_rgba(17,38,146,0.08)] p-6 md:p-7 flex"
                                             >
                                                 <div className="w-full">
-                                                    <div className="w-full pt-12 text-left text-white">
+                                                    <div className="w-full md:pt-12 pt-6 text-left text-white">
                                                         {i === 0 ? (
                                                             /* ---------- Card 1: headings + paragraphs ---------- */
                                                             <div className="space-y-5">
