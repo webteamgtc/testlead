@@ -19,7 +19,7 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                     width={200}
                     height={72}
                     alt="GTCFX blue"
-                    
+                    className=" mx-auto md:mx-0  cursor-pointer"
                 />
             </div>
 
