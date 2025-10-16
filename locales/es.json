@@ -747,5 +747,160 @@
       "desc": "El upgrade que tu trading necesita: cámbiate a GTC. Tu trading se vuelve más inteligente. Únete a una plataforma que te da spreads competitivos, ejecución ultrarrápida y, sobre todo, una atención al cliente que se preocupa por tu experiencia. Con GTC, la transparencia es clave.",
       "btnText": "Cámbiate a GTC"
     }
+  },
+    "investing": {
+    "meta": {
+      "title": "Opera los mercados con CTG",
+      "description": "Multirregulado, retiros seguros y ultrarrápidos al operar con GTC. Eliminamos todas las barreras innecesarias."
+    },
+    "banner": {
+      "title": "Opera Oro con GTC",
+      "desc": "El broker multirregulado preferido por los traders de Oro.",
+      "alreadyAccount": "¿Tienes una cuenta?",
+      "login": "Iniciar sesión",
+      "btnText": "Opera Oro"
+    },
+    "sectionTwo": {
+      "column1": {
+        "title": "Beneficios clave",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "list": {
+          "item1": "Spreads ultra bajos en Oro, Forex y CFDs",
+          "item2": "Apalanacamiento de 1:2000",
+          "item3": "+2000 Intrumentos de Trading",
+          "item4": "Sin comisiones ocultas",
+          "item5": "Retiros en el mismo día"
+        }
+      },
+      "column2": {
+        "title": "Confianza y Credibilidad",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "list": {
+          "item1": "Mas de 1 millon de traders a nivel mundial confian en GTC",
+          "item2": "Multiregulado por SCA, FSCA, FSC, VFSC",
+          "item3": "Broker multi-premiado"
+        }
+      },
+      "column3": {
+        "title": "Soporte al cliente",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "list": {
+          "item1": "Soporte multilingue 24/5",
+          "item2": "Calificado ★★★★★ por nuestros clientes por un servicio rápido y confiable"
+        }
+      }
+    },
+    "lastSection": {
+      "title": "¿Estas listo para operar Oro?",
+      "desc": "Opera Oro con spreads muy ajustados, alto apalancamiento y con un bróker que te ofrece tranquilidad.",
+      "btnText": "Opera Oro"
+    }
+  },
+  "investingMarket": {
+    "meta": {
+      "title": "Opera en los mercados",
+      "description": "Abre tu cuenta de trading en GTC y comienza a operar hoy"
+    },
+    "banner": {
+      "title": "Opera en los mercados",
+      "desc": "Abre tu cuenta de trading en GTC y comienza a operar hoy",
+      "para": "Multirregulado, retiros seguros y ultrarrápidos al operar con GTC. Eliminamos todas las barreras innecesarias.",
+      "alreadyAccount": "¿Tienes una cuenta?",
+      "login": "Iniciar sesión",
+      "btnText": "Comienza ahora"
+    },
+    "sectionTwo": {
+      "column1": {
+        "title": "¿Por qué operar con GTC?",
+        "list": {
+          "itemOneTitle": "Registro facil y rapido",
+          "para1": "Comienza a operar rápidamente en los mercados.",
+          "itemTwoTitle": "Retiros ultra rapidos",
+          "para2": "Fondos segregados y retiros ultrarrápidos.",
+          "itemThreeTitle": "Bonificaciones flexibles y reembolsos",
+          "para3": "Mejora tu experiencia de trading y tu cartera."
+        }
+      },
+      "column2": {
+        "title": "Condiciones de trading definitivas",
+        "list": {
+          "item1": "Ultra competitiva",
+          "item1para": "¡Nuestros spreads comienzan desde 0 pips!",
+          "card2": {
+            "item1": "Accede a  más de 2000 instrumentos de Forex",
+            "item2": "Oro, Indices, Energía",
+            "item3": "Acciones y Commodties"
+          },
+          "card3Title": "Multiregulado por SCA, FSCA, FSC, VFSC",
+          "card3para": "GTC se encuentra regulado en UAE, FSCA, FSC y VFSC"
+        }
+      }
+    },
+    "lastSection": {
+      "title": "¿Estas listo para operar Oro?",
+      "desc": "Opere Oro con spreads muy ajustados, alto apalancamiento y con un bróker que te ofrece tranquilidad.",
+      "btnText": "Opera Oro"
+    }
+  },
+  "investingGtc": {
+    "meta": {
+      "title": "Opera en los mercados",
+      "description": "Abre tu cuenta de trading en GTC y comienza a operar hoy"
+    },
+    "banner": {
+      "title": "Opera con GTC",
+      "desc": "Opera con el próximo movimiento de la Reserva Federal.",
+      "para": "Únete a miles de traders que se preparan para el próximo gran movimiento de la Reserva Federal (Fed). Reacciona al instante a la volatilidad del mercado con la plataforma multirregulada de GTC.",
+      "alreadyAccount": "¿Tienes una cuenta?",
+      "login": "Iniciar sesión",
+      "btnText": "Abre tu cuenta "
+    },
+    "sectionTwo": {
+      "column1": {
+        "title": "¿Por qué la reunión de la Fed es tan importante?",
+        "desc": "Conoce por qué tantos traders de Oro se están cambiando a GTC.",
+        "list": {
+          "item1": "Anuncio de la Fed",
+          "item2": "Los anuncios de la Fed pueden generar una fuerte volatilidad en los mercados en minutos",
+          "item3": "Recorte de tasas",
+          "item4": "Los recortes de tasas pueden impulsar las acciones y respaldar los precios del oro.",
+          "item5": "Actualizaciones de mercado",
+          "item6": "Los mercados esperan un posible recorte de tasas en la próxima reunión de la Fed"
+        }
+      },
+      "column2": {
+        "title": "Que muestra la historia",
+        "desc": "Conoce por qué tantos traders de Oro se están cambiando a GTC.",
+        "list": {
+          "item1": "Incluso durante los recortes de tasas, los mercados no siempre reaccionan positivamente.",
+          "item2": "En diciembre de 2018, el S&P 500 experimentó su mayor volatilidad en un día desde 2008, debido a una orientación agresiva por parte de la Fed."
+        }
+      },
+      "column3": {
+        "title": "¿Por qué operar en los mercados con GTC?",
+        "desc": "Conoce por qué tantos traders de Oro se están cambiando a GTC.",
+        "list": {
+          "item1": "Spreads ultra bajos en Oro, Forex y CFDs",
+          "item2": "Ve largo o corto: Opera en ambas direcciones",
+          "item3": "Retiros durante el mismo día",
+          "item4": "Alertas en tiempo real después del FOMC; obten comentarios del mercado.",
+          "item5": "Multirregulado por: DFSA, FSCA, FSC y VFSC."
+        }
+      },
+      "column4": {
+        "title": "Comienza a hacer trading en 3 pasos",
+        "desc": "Conoce por qué tantos traders de Oro se están cambiando a GTC.",
+        "list": {
+          "item1": "Registrate en tu cuenta OTC en minutos",
+          "item2": "Verifica tu identidad (KYC)",
+          "item3": "Deposita y opera para estar preparado para la decisión de la Reserva Federal."
+        }
+      }
+    },
+    "lastSection": {
+      "title": "¿Estas listo para operar Oro?",
+      "desc": "Opera Oro con spreads muy ajustados, alto apalancamiento y con un bróker que te ofrece tranquilidad.",
+      "btnText": "Opera Oro"
+    }
   }
 }

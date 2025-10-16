@@ -783,8 +783,8 @@
   },
   "investing": {
     "meta": {
-      "title": "Trade the Markets With GTC",
-      "description": "Multi-regulated, secure, and ultra-fast withdrawals when you trade with GTC. We remove all the unnecessary barriers."
+      "title": "Trade Gold With GTC",
+      "description": "Trade gold with super-tight spreads, high leverage, and with a broker that offers you peace of mind."
     },
     "banner": {
       "title": "Trade Gold <br/> With GTC",
@@ -831,7 +831,7 @@
   },
   "investingMarket": {
     "meta": {
-      "title": "Trade theMarkets",
+      "title": "Trade the Markets | Open Your GTC Trading Account",
       "description": "Open Your GTC Trading Account & Trade Today."
     },
     "banner": {
@@ -877,7 +877,7 @@
   },
   "investingGtc": {
     "meta": {
-      "title": "Trade the Markets | Trade the Fed’s Next Move ",
+      "title": "Trade With GTC | Trade the Fed’s Next Move ",
       "description": "Join thousands of traders who are preparing for the Federal Reserve’s (Fed) next big move. React instantly to market volatility with GTC’s multi-regulated platform"
     },
     "banner": {
@@ -910,7 +910,7 @@
         }
       },
       "column3": {
-        "title": "Why Trade the Markets with GTC?",
+        "title": "Why Trade with GTC?",
         "desc": "Here's why so many gold traders are turning to GTC.",
         "list": {
           "item1": "Ultra-Low Spreads on Gold, Forex & all CFDs.",

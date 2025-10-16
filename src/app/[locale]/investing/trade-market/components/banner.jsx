@@ -46,15 +46,8 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
                                 dangerouslySetInnerHTML={{ __html: t("banner.desc") }}
                             >
                             </p>
-<<<<<<< HEAD
-                            <p className="text-[22px] text-[#000032] text-base mt-3 leading-[32px] px-2 md:px-0 max-w-xl">Multi-regulated, secure, and ultra-fast
-                                withdrawals when you trade with GTC.
-                                We remove all the unnecessary barriers. 
-                            </p> 
-=======
                             <p className="text-[22px] text-[#000032] text-base mt-3 leading-[32px] px-2 md:px-0 max-w-xl">{t("banner.para")}
                             </p>
->>>>>>> d42d5303bfb05784fc22a3edb4cd37f6c6c1f307
                         </div>
 
                         {/* Right Column (optional image placeholder for layout balance) */}

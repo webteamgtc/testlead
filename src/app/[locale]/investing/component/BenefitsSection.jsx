@@ -109,8 +109,8 @@ const BenefitsSection = () => {
                             wedge[c.slope],
                           ].join(" ")}
                         />
-                        <div className="md:p-4 flex flex-col items-center">
-                          <div className="inline-flex items-center justify-center rounded-[50%] h-[40px] w-[40px] px-2 md:py-2 border ">
+                        <div className="md:p-4 flex flex-col items-center mt-10">
+                          <div className="inline-flex items-center justify-center rounded-[50%] h-[40px] w-[40px] px-2 md:py-2 border">
                             <img src={c.icon} alt="" />
                           </div>
                           <div
@@ -119,12 +119,10 @@ const BenefitsSection = () => {
                               "flex flex-col",
                             ].join(" ")}
                           >
-                            <h3 className="text-[20px] mt-1 text-center md:text-[22px] font-extrabold text-[#B99059]">
+                            <h3 className="text-[20px] mt-1 text-center md:text-[22px] font-extrabold text-[#B99059] pt-5">
                               {c.title}
                             </h3>
-                            <p className="mt-1 text-[#1A1A47] text-center text-[16px] leading-6 max-w-[32ch] md:max-w-none">
-                              {c.subtitle}
-                            </p>
+                           
                           </div>
                         </div>
                       </div>
