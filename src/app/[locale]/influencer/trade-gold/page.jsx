@@ -33,7 +33,7 @@ const TradeGoldPage = () => {
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
                 zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/udnd7lu/"
-                successPath="/uae/trade-gold/success"
+                successPath="/influencer/trade-gold/success"
             />
         </>
     )
