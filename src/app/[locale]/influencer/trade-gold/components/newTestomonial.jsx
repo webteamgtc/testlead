@@ -162,16 +162,7 @@ export default function ArabicTestimonials({ setIsOpen }) {
                             </div>
                         </div>
                     </div>
-                    <button
-                        onClick={() => setIsOpen(true)}
-                        className="mt-6 inline-flex items-center justify-center
-                         h-[42px] px-5 rounded-[10px]
-                         text-white text-[16px] font-semibold
-                         bg-gradient-to-b from-[#E1CFBB] to-[#956D42]
-                         shadow-[0_1px_2px_rgba(0,0,0,0.1)] hover:opacity-95 transition"
-                    >
-                        {t("testimonial.btnText")}
-                    </button>
+            
                 </div>
             </div>
         </section>

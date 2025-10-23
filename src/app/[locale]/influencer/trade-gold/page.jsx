@@ -20,9 +20,7 @@ const TradeGoldPage = () => {
              <Meta title={t("meta.title")} description={t("meta.description")} />
             <div className="bg-[#fff]">
                 <HeroSectionNew setIsOpen={setIsOpen} />
-                <PayCommission
-                    setIsOpen={setIsOpen}
-                />
+           
                 <GoldBonus setIsOpen={setIsOpen} />
                 <HeroTrust setIsOpen={setIsOpen} />
                 <ArabicTestimonials setIsOpen={setIsOpen} />

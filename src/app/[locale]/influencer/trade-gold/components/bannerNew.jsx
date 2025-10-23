@@ -10,7 +10,7 @@ const HeroSectionNew = ({ setIsOpen, page = "UAE" }) => {
 
     return (
         <section
-            className=" relative z-10 bg-gradient-to-r items-center gap-2 from-[#101133] to-[#04060F] bg-cover bg-right bg-no-repeat pb-6 text-[#E5E5EA] overflow-hidden flex flex-col"
+            className=" relative z-10 bg-gradient-to-r items-center gap-2 from-[#101133] to-[#04060F] bg-cover bg-right bg-no-repeat pb-6 text-[#E5E5EA] overflow-hidden flex flex-col" id="topSection"
         >
             {/* ==== TOP LOGO ==== */}
             <div className="container pt-3">
@@ -32,7 +32,7 @@ const HeroSectionNew = ({ setIsOpen, page = "UAE" }) => {
                         <div className="text-center md:text-left md:pb-20 pb-6 md:col-span-4">
                             <h1 className="text-[48px] leading-tight md:text-[55px] font-black 2xl:text-[66px] 2xl:leading-tight inline-block text-transparent bg-gradient-to-b bg-clip-text from-[#A57549] via-[#EAD2A1] to-[#A57549] max-w-lg px-5 md:px-0"
                             >TRADE GOLD</h1>
-                            <p className="text-[22px] md:text-[45px] text-base mt-3 font-light leading-[55px] px-2 md:px-0 max-w-xl">
+                            <p className="text-[22px] md:text-[55px] text-base mt-3 font-light leading-[65px] px-2 md:px-0 max-w-xl">
                                 with the lowest<br /> spreads at <span className="text-transparent bg-gradient-to-b bg-clip-text from-[#A57549] via-[#EAD2A1] to-[#A57549] font-bold"> GTC</span>
                             </p>
                         </div>
@@ -46,8 +46,8 @@ const HeroSectionNew = ({ setIsOpen, page = "UAE" }) => {
                         <div className=" md:pb-6 md:col-span-4">
 
                             <InvestingForm
-                                zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/u52nrpg/"
-                                successPath="/investing/success"
+                                zapierUrl="https://hooks.zapier.com/hooks/catch/16420445/urequo1/"
+                                successPath="/influencer/trade-gold/success"
                                 page="investing"
                                 isBlue
                                 btnText={t("banner.btnText")}
