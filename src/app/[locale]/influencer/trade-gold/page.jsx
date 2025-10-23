@@ -6,8 +6,7 @@ import PayCommission from "./components/payCommison";
 import Meta from "@/app/components/common/MetaData";
 import GoldBonus from "./components/goldBonus";
 import HeroTrust from "./components/TrustSection";
-import ArabicTestimonials from "./components/newTestomonial";
-import HeroBetterWay from "./components/lastSection";
+
 import { useTranslations } from "next-intl";
 import HeroSectionNew from "./components/bannerNew";
 
@@ -19,12 +18,10 @@ const TradeGoldPage = () => {
         <>
              <Meta title={t("meta.title")} description={t("meta.description")} />
             <div className="bg-[#fff]">
-                <HeroSectionNew setIsOpen={setIsOpen} />
+                <HeroSectionNew />
            
-                <GoldBonus setIsOpen={setIsOpen} />
-                <HeroTrust setIsOpen={setIsOpen} />
-                <ArabicTestimonials setIsOpen={setIsOpen} />
-                <HeroBetterWay setIsOpen={setIsOpen} />
+                <GoldBonus/>
+                <HeroTrust />
                 <MainFooter />
             </div>
             <SliderModal
