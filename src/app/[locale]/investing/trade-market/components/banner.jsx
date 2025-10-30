@@ -10,18 +10,9 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
 
     return (
         <section
-            className="relative  bg-[#f0e7dd] bg-right bg-no-repeat text-[#E5E5EA] overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_90%,0%_100%)]"
+            className="relative  bg-[#f0e7dd] pt-14 md:pt-16 bg-right bg-no-repeat text-[#E5E5EA] overflow-hidden flex flex-col [clip-path:none] md:[clip-path:polygon(0%_0%,100%_0,100%_20%,100%_90%,0%_100%)]"
         >
-            {/* ==== TOP LOGO ==== */}
-            <div className="container pt-3">
-                <Image
-                    src="/investing/Logo-blue.svg"
-                    width={200}
-                    height={72}
-                    alt="GTCFX blue"
-                    className=" mx-auto md:mx-0  cursor-pointer"
-                />
-            </div>
+           
 
             <div className="absolute top-0 h-full w-full opacity-70 right-0 pointer-events-none">
                 <Image

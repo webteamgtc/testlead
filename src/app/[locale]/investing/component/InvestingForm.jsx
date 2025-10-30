@@ -356,7 +356,7 @@ const InvestingForm = ({ zapierUrl, successPath, page = "", btnText, isBlue = fa
                         {showOtp && (
                             <div className="grid grid-cols-1 gap-2">
                                 <div>
-                                    <p className="my-2 ltr:text-left rtl:text-right pt-1">
+                                    <p className="my-2 ltr:text-left rtl:text-right pt-1 text-primary">
                                         {t("otp")}
                                     </p>
                                     <OtpInput

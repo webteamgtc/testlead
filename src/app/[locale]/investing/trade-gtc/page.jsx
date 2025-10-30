@@ -10,6 +10,7 @@ import SliderModal from "../component/SliderModal";
 import Meta from "@/app/components/common/MetaData";
 import HeroSectionTradeMArket from "./components/banner";
 import BenefitsSectionTradeMArket from "./components/BenefitSectionTradeMarket";
+import InvestingHeader from "../../components/InvestingHeader";
 
 const TradeGoldPage = () => {
     const t = useTranslations("investingGtc");
@@ -18,6 +19,7 @@ const TradeGoldPage = () => {
     return (
         <>
             <Meta title={t("meta.title")} description={t("meta.description")} />
+            <InvestingHeader />
             <HeroSectionTradeMArket setIsOpen={setIsOpen} />
             <BenefitsSectionTradeMArket />
             <MainFooter />

@@ -6,7 +6,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const languages = [
   { code: 'en', label: 'English', country: 'gb' },
-  { code: 'ar', label: 'العربية', country: 'sa' },
+  { code: 'es', label: 'Spanish', country: 'es' },
 ];
 
 const LanguageSwitcher = () => {

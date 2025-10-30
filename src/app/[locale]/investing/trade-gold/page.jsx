@@ -8,6 +8,7 @@ import CommonLastBanner from "../component/LastBanner";
 import MainFooter from "../../components/MainFooter";
 import SliderModal from "../component/SliderModal";
 import Meta from "@/app/components/common/MetaData";
+import InvestingHeader from "../../components/InvestingHeader";
 
 const TradeGoldPage = () => {
     const t = useTranslations("investing");
@@ -16,6 +17,7 @@ const TradeGoldPage = () => {
     return (
         <>
             <Meta title={t("meta.title")} description={t("meta.description")} />
+            <InvestingHeader />
             <HeroSection setIsOpen={setIsOpen} />
             <BenefitsSection />
             <CommonLastBanner setIsOpen={setIsOpen} />

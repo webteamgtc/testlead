@@ -10,18 +10,9 @@ const HeroSectionTradeMArket = ({ setIsOpen, page = "UAE" }) => {
 
     return (
         <section
-            className="relative  bg-gradient-to-r from-[#293794] to-[#000021] bg-right bg-no-repeat text-[#E5E5EA] overflow-hidden flex flex-col"
+            className="relative  bg-gradient-to-r from-[#293794] to-[#000021] bg-right bg-no-repeat text-[#E5E5EA] overflow-hidden flex flex-col pt-12 md:pt-14"
         >
-            {/* ==== TOP LOGO ==== */}
-            <div className="container pt-3">
-                <Image
-                    src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/footer-logo.webp"
-                    width={200}
-                    height={72}
-                    alt="GTCFX"
-                    className="lg:w-[200px] mx-auto md:mx-0 lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
-                />
-            </div>
+          
 
             <div className="absolute top-0 h-full w-full  right-0 pointer-events-none">
                 <Image
