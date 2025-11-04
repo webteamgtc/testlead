@@ -38,7 +38,7 @@ const getLocalizedMessage = (key, locale) => {
 export async function POST(req) {
     const data = await req.json();
     const mailData = {
-        from: '"GTC" <portal@mx4.gtcmail.com>',
+        from: '"GTC" <portal@mx5.gtcmail.com>',
         to: data?.email,
       subject:
     data?.locale == "ar"

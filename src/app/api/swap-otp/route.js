@@ -20,7 +20,7 @@ export async function POST(req) {
     lowerCaseAlphabets: false,
   });
   const mailData = {
-    from: '"GTC" <portal@mx4.gtcmail.com>',
+    from: '"GTC" <portal@mx5.gtcmail.com>',
     to: email,
     subject: "Your GTC OTP Code",
     text: `Your OTP is ${otp}`,
