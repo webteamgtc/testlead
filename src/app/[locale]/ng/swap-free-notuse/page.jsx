@@ -1,5 +1,5 @@
 import React from 'react'
-import SwapFreePage from '../../uae/swap-free/page'
+import SwapFreePage from '../../uae/swap-free-notuse/page'
 
 const page = () => {
   return (
