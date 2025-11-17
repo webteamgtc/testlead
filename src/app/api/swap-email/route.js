@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { transporter, mailOptions } from "../../[locale]/config/nodemailer";
+import {mailOptions, MAILGUN_FROM, mailgunClient, MAILGUN_DOMAIN } from "../../[locale]/config/nodemailer";
 import {
     chineseEmailMT5Template,
     englishEmailMT5Template,
@@ -38,7 +38,7 @@ const getLocalizedMessage = (key, locale) => {
 export async function POST(req) {
     const data = await req.json();
     const mailData = {
-        from: '"GTC" <portal@mx5.gtcmail.com>',
+        from: MAILGUN_FROM,
         to: data?.email,
       subject:
     data?.locale == "ar"
@@ -68,7 +68,7 @@ export async function POST(req) {
                                 : englishEmailMT5Template(data),
     };
     try {
-        await transporter.sendMail(mailData);
+         const res = await mailgunClient.messages.create(MAILGUN_DOMAIN,mailData);
         return NextResponse.json(
             { message: getLocalizedMessage("success", data?.locale) },
             { status: 200 }

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { transporter, mailOptions } from "../../[locale]/config/nodemailer";
+import { transporter, mailOptions, MAILGUN_FROM, mailgunClient, MAILGUN_DOMAIN } from "../../[locale]/config/nodemailer";
 import { emailTempletesArabic, emailTempletesEnglish, emailTempleteSwitchArabic, emailTempleteSwitchChinese, emailTempleteSwitchEnglish, emailTempleteSwitchPortuguese, emailTempleteSwitchRussian, emailTempleteSwitchSpanish } from "./templetes";
 
 const getLocalizedSubject = (locale) => {
@@ -69,11 +69,12 @@ const generateEmailContent = (data) => {
 export async function POST(req) {
   const reqBody = await req.json();
   const mailOption = {
-    from: '"GTCFX" <portal@mx5.gtcmail.com>',
+    from: MAILGUN_FROM,
     to: reqBody?.email,
   };
+  
   try {
-    await transporter.sendMail({
+     const res = await mailgunClient.messages.create(MAILGUN_DOMAIN, {
       ...mailOption,
       ...generateEmailContent(reqBody),
       subject: getLocalizedSubject(reqBody?.locale),

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { transporter, mailOptions } from "../../[locale]/config/nodemailer";
+import { transporter, mailOptions, MAILGUN_FROM, mailgunClient, MAILGUN_DOMAIN } from "../../[locale]/config/nodemailer";
 
 const generateEmailContent = (data) => {
   if (data?.locale == "ar") {
@@ -414,11 +414,11 @@ You’ve just filled in the GTC Partnership Programme form. Here’s what to do 
 export async function POST(req) {
   const reqBody = await req.json();
   const mailOption = {
-    from: '"GTCFX" <portal@mx5.gtcmail.com>',
+    from: MAILGUN_FROM,
     to: reqBody?.email,
   };
   try {
-    await transporter.sendMail({
+     const res = await mailgunClient.messages.create(MAILGUN_DOMAIN, {
       ...mailOption,
       ...generateEmailContent(reqBody),
       subject: `Thank you for registering with GTC`,
