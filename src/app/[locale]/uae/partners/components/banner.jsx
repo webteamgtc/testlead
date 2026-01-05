@@ -3,73 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import CustomButton from "@/app/components/common/CustomButton";
+import CommonMainForm from "@/app/[locale]/components/MainForm";
 import SliderModal from "./SliderModal";
 import SlidePanelExample from "./SlidePanel";
 const HeroSection = ({setIsOpen}) => {
   const data = [
-    {
-      icon: (
-        <svg
-  width="41"
-  height="41"
-  viewBox="0 0 41 41"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g filter="url(#filter0_d_2308_72637)">
-    <circle
-      cx="20.3333"
-      cy="19"
-      r="15.75"
-      stroke="white"
-      strokeWidth="0.5"
-      shapeRendering="crispEdges"
-    />
-  </g>
-  <path
-    d="M16.1875 18C15.2611 18 14.4705 17.6583 13.8156 16.975C13.1607 16.2917 12.8333 15.4667 12.8333 14.5C12.8333 13.5333 13.1607 12.7083 13.8156 12.025C14.4705 11.3417 15.2611 11 16.1875 11C17.1139 11 17.9045 11.3417 18.5594 12.025C19.2142 12.7083 19.5416 13.5333 19.5416 14.5C19.5416 15.4667 19.2142 16.2917 18.5594 16.975C17.9045 17.6583 17.1139 18 16.1875 18ZM16.1875 16C16.5868 16 16.9264 15.8543 17.2062 15.563C17.486 15.2717 17.6256 14.9173 17.625 14.5C17.6243 14.0827 17.4847 13.7287 17.2062 13.438C16.9276 13.1473 16.5881 13.0013 16.1875 13C15.7869 12.9987 15.4476 13.1447 15.1697 13.438C14.8918 13.7313 14.7519 14.0853 14.75 14.5C14.7481 14.9147 14.888 15.269 15.1697 15.563C15.4515 15.857 15.7907 16.0027 16.1875 16ZM24.8125 27C23.8861 27 23.0955 26.6583 22.4406 25.975C21.7857 25.2917 21.4583 24.4667 21.4583 23.5C21.4583 22.5333 21.7857 21.7083 22.4406 21.025C23.0955 20.3417 23.8861 20 24.8125 20C25.7389 20 26.5295 20.3417 27.1844 21.025C27.8392 21.7083 28.1666 22.5333 28.1666 23.5C28.1666 24.4667 27.8392 25.2917 27.1844 25.975C26.5295 26.6583 25.7389 27 24.8125 27ZM24.8125 25C25.2118 25 25.5514 24.8543 25.8312 24.563C26.111 24.2717 26.2506 23.9173 26.25 23.5C26.2493 23.0827 26.1097 22.7287 25.8312 22.438C25.5526 22.1473 25.2131 22.0013 24.8125 22C24.4119 21.9987 24.0726 22.1447 23.7947 22.438C23.5168 22.7313 23.3769 23.0853 23.375 23.5C23.3731 23.9147 23.513 24.269 23.7947 24.563C24.0765 24.857 24.4157 25.0027 24.8125 25ZM14.175 27L12.8333 25.6L26.825 11L28.1666 12.4L14.175 27Z"
-    fill="white"
-  />
-  <defs>
-    <filter
-      id="filter0_d_2308_72637"
-      x="0.333313"
-      y="0.333333"
-      width="40.5333"
-      height="40.5333"
-      filterUnits="userSpaceOnUse"
-      colorInterpolationFilters="sRGB"
-    >
-      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-      <feColorMatrix
-        in="SourceAlpha"
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        result="hardAlpha"
-      />
-      <feOffset dx="0.266667" dy="1.6" />
-      <feGaussianBlur stdDeviation="2.13333" />
-      <feComposite in2="hardAlpha" operator="out" />
-      <feColorMatrix
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-      />
-      <feBlend
-        mode="normal"
-        in2="BackgroundImageFix"
-        result="effect1_dropShadow_2308_72637"
-      />
-      <feBlend
-        mode="normal"
-        in="SourceGraphic"
-        in2="effect1_dropShadow_2308_72637"
-        result="shape"
-      />
-    </filter>
-  </defs>
-</svg>),
-      title: "Up to 80% in Rebates Paid On Demand"
-    },
+  
     {
       icon: (<svg
   width="42"
@@ -204,168 +143,6 @@ const HeroSection = ({setIsOpen}) => {
       title: "Dynamic Leverage Up to 1:2000"
     },
     {
-      icon: (
-        <svg
-  width="41"
-  height="41"
-  viewBox="0 0 41 41"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g filter="url(#filter0_d_2308_72654)">
-    <circle
-      cx="20.3333"
-      cy="19"
-      r="15.75"
-      stroke="white"
-      strokeWidth="0.5"
-      shapeRendering="crispEdges"
-    />
-  </g>
-  <g clipPath="url(#clip0_2308_72654)">
-    <path
-      d="M20.7717 12.8688L22.3992 15.8178C22.4706 15.9473 22.5904 16.0398 22.7287 16.0721L25.8748 16.8032C26.2537 16.8914 26.4035 17.3796 26.1454 17.6876L24.0047 20.2414C23.9103 20.3538 23.8649 20.5027 23.8789 20.6527L24.1959 24.0538C24.2343 24.4635 23.8424 24.7656 23.487 24.6L20.5365 23.229C20.4067 23.1688 20.259 23.1688 20.1292 23.229L17.1787 24.6C16.8232 24.7651 16.4313 24.4635 16.4698 24.0538L16.7868 20.6527C16.8008 20.5032 16.7553 20.3538 16.661 20.2414L14.5203 17.6876C14.2622 17.3801 14.412 16.8914 14.7909 16.8032L17.937 16.0721C18.0753 16.0398 18.1951 15.9479 18.2665 15.8178L19.894 12.8688C20.0902 12.5135 20.574 12.5135 20.7702 12.8688H20.7717Z"
-      fill="white"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M20.3333 7.70972V9.96778"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M20.3333 28.0323V30.2904"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M25.5753 9.22205L24.5269 11.178"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M16.1398 26.8221L15.0914 28.778"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M29.4129 13.3549L27.5966 14.4839"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M13.07 23.5161L11.2538 24.6451"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M29.4129 24.6451L27.5966 23.5161"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M13.07 14.4839L11.2538 13.3549"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M25.5753 28.778L24.5269 26.8221"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M16.1398 11.178L15.0914 9.22205"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M30.8172 19H28.7204"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M11.9462 19H9.84945"
-      stroke="white"
-      strokeWidth="0.6"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </g>
-  <defs>
-    <filter
-      id="filter0_d_2308_72654"
-      x="0.333313"
-      y="0.333333"
-      width="40.5333"
-      height="40.5333"
-      filterUnits="userSpaceOnUse"
-      colorInterpolationFilters="sRGB"
-    >
-      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-      <feColorMatrix
-        in="SourceAlpha"
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        result="hardAlpha"
-      />
-      <feOffset dx="0.266667" dy="1.6" />
-      <feGaussianBlur stdDeviation="2.13333" />
-      <feComposite in2="hardAlpha" operator="out" />
-      <feColorMatrix
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-      />
-      <feBlend
-        mode="normal"
-        in2="BackgroundImageFix"
-        result="effect1_dropShadow_2308_72654"
-      />
-      <feBlend
-        mode="normal"
-        in="SourceGraphic"
-        in2="effect1_dropShadow_2308_72654"
-        result="shape"
-      />
-    </filter>
-    <clipPath id="clip0_2308_72654">
-      <rect
-        width="21.6667"
-        height="23.3333"
-        fill="white"
-        transform="translate(9.49996 7.33337)"
-      />
-    </clipPath>
-  </defs>
-</svg>
-      ),
-      title: "Your Traders Get a Tradable Bonus"
-    },
-    {
       icon: (<svg
   width="42"
   height="41"
@@ -457,138 +234,74 @@ const HeroSection = ({setIsOpen}) => {
 ),
       title: "Full Marketing & Event Support Provided"
     },
-    {
-      icon: (<svg
-  width="41"
-  height="41"
-  viewBox="0 0 41 41"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g filter="url(#filter0_d_2308_72665)">
-    <circle
-      cx="20"
-      cy="19"
-      r="15.75"
-      stroke="white"
-      strokeWidth="0.5"
-      shapeRendering="crispEdges"
-    />
-  </g>
-  <path
-    d="M18.75 19.3688L17.1312 17.75L16.25 18.6312L18.75 21.1312L23.75 16.1312L22.8688 15.25L18.75 19.3688Z"
-    fill="white"
-  />
-  <path
-    d="M20 27.75L16.14 25.6919C15.0395 25.1066 14.1192 24.2325 13.4779 23.1637C12.8366 22.0948 12.4985 20.8715 12.5 19.625V11.5C12.5 11.1685 12.6317 10.8505 12.8661 10.6161C13.1005 10.3817 13.4185 10.25 13.75 10.25H26.25C26.5815 10.25 26.8995 10.3817 27.1339 10.6161C27.3683 10.8505 27.5 11.1685 27.5 11.5V19.625C27.5015 20.8715 27.1634 22.0948 26.5221 23.1637C25.8808 24.2325 24.9605 25.1066 23.86 25.6919L20 27.75ZM13.75 11.5V19.625C13.7493 20.6448 14.0262 21.6456 14.5509 22.52C15.0757 23.3945 15.8285 24.1096 16.7288 24.5887L20 26.3331L23.2713 24.5894C24.1716 24.1102 24.9245 23.3949 25.4492 22.5204C25.974 21.6458 26.2508 20.6449 26.25 19.625V11.5H13.75Z"
-    fill="white"
-  />
-  <defs>
-    <filter
-      id="filter0_d_2308_72665"
-      x="-2.08616e-07"
-      y="0.333333"
-      width="40.5333"
-      height="40.5333"
-      filterUnits="userSpaceOnUse"
-      colorInterpolationFilters="sRGB"
-    >
-      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-      <feColorMatrix
-        in="SourceAlpha"
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-        result="hardAlpha"
-      />
-      <feOffset dx="0.266667" dy="1.6" />
-      <feGaussianBlur stdDeviation="2.13333" />
-      <feComposite in2="hardAlpha" operator="out" />
-      <feColorMatrix
-        type="matrix"
-        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-      />
-      <feBlend
-        mode="normal"
-        in2="BackgroundImageFix"
-        result="effect1_dropShadow_2308_72665"
-      />
-      <feBlend
-        mode="normal"
-        in="SourceGraphic"
-        in2="effect1_dropShadow_2308_72665"
-        result="shape"
-      />
-    </filter>
-  </defs>
-</svg>
-),
-      title: "Multi-Regulated Brokerage: SCA, FSC"
-    }
+   
   ]
   return (
-    <section className="bg-gradient-to-r from-[#00062a] to-[#000021] text-[#E5E5EA] py-8 md:py-28 relative overflow-hidden">
+    <section className="bg-[url(/ib/banner.webp)] bg-cover bg-no-repeat bg-right text-[#E5E5EA] py-8 md:py-16 relative overflow-hidden">
 
-  {/* Desktop Background Image Only */}
-  <div className="hidden md:block absolute inset-0 z-0 scale-[1.0] origin-bottom-right hero-bg">
-    <Image
-      src="/ib/banner-main.webp"
-      alt="Hero BG"
-      fill
-      className="object-cover object-right 3xl:object-contain"
-      priority
-    />
-  </div>
 
      
 
 
       <div className="container">
-        <div className=" grid md:grid-cols-2 items-center gap-10 z-10 relative">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_420px] z-10 relative">
           {/* Left Column */}
           <div className="text-center md:text-left">
-           <h3 className="text-xl md:text-3xl font-light w-60 md:w-full mx-auto">
-              UAE's Top Forex Partners Now Earn Up to
-            </h3>
-                  <h1 className="text-3xl md:text-[73px] font-bold text-secondary leading-tight">
-        <span className="text-6xl md:text-[88px]">80% </span> 
-        <br className="block md:hidden" />
-         in Rebates
+          
+                  <h1 className="text-3xl md:text-[70px] font-bold text-secondary leading-tight pb-5">
+      
+         Grow Your Client Network. Earn More. Partner Stronger.
       </h1>
-                  <h3 className="text-xl md:text-3xl mb-6 font-light leadging-none">
-              with GTC
-            </h3>
-            <p className="text-sm md:text-base mb-6 leading-relaxed max-w-xl">
-              Join a multi-regulated broker trusted worldwide. Your traders get a tradable bonus just for switching to us, plus you earn up to 80% in Rebates with fast payouts, multilingual support, and no setup costs.
+           
+            <p className="text-sm md:text-xl md:mb-6 leading-relaxed max-w-2xl">
+              Partner with the GTCFX multi-regulated company, our partnership program offers competitive rebates, fast payouts, and dedicated partner support
             </p>
-            <div className="flex flex-row justify-center md:justify-start items-center gap-4 pb-8 md:pb-20">
-              <CustomButton
-                        text="Get 80% in Rebates"
-                        bgColor="bg-white hover:bg-[#b2b2c2]"
-                        textColor="text-[#1F2937]"
-                        strokeColor="#000032"
-                        onClick={() => setIsOpen(true)}
-                      />
-            </div>
-        
+    
+          </div>
+          <div className="md:rounded-[10px] p-4 shadow-[0_22px_55px_rgba(0,0,0,0.35)] bg-gradient-to-r from-[#24358ba4] via-[#242c75] to-[#141b43b0]">
+            <CommonMainForm />
           </div>
 
+
         </div>
 
-        {/* Bottom Feature Bar */}
-        <div className="relative z-50 bg-gradient-to-b from-[#293794af] to-[#000021ab] mt-0 py-5 px-4 md:px-10 rounded-[16px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 text-sm text-center text-white/90 gap-6 md:gap-0"
+      {/* Bottom Feature Bar */}
+<div
+  className="relative z-50 bg-gradient-to-b from-[#293794af] to-[#000021ab]
+             py-5 px-4 md:px-10 rounded-[16px]
+             grid grid-cols-1 md:grid-cols-3
+             text-center text-white/90
+             mt-10"
+  style={{
+    boxShadow: "1px 6px 16px 0px #00000080",
+    backdropFilter: "blur(8px)",
+  }}
+>
+  {/* Item 1 */}
+  <div className="flex flex-col items-center justify-center gap-1 relative">
+    <span className="text-2xl font-semibold text-secondary">+28,000</span>
+    <span className="text-xs xl:text-sm opacity-90">Partners</span>
 
-          style={{
-            boxShadow: "1px 6px 16px 0px #00000080",
+    {/* divider (desktop only) */}
+    <span className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-10 w-px bg-white/30" />
+  </div>
 
-            backdropFilter: "blur(8px)"
-          }}>
-          {data?.map((item, idx) => (
-            <div key={idx} className="px-2 flex flex-col gap-2 items-center justify-center">
-           <p>{item?.icon}</p>
-              <span className="block text-xs xl:text-base w-40 sm:w-40 xl:w-48 mx-auto line-clamp-2">{item?.title}</span>
-            </div>
-          ))}
-        </div>
+  {/* Item 2 */}
+  <div className="flex flex-col items-center justify-center gap-1 relative">
+    <span className="text-2xl font-semibold text-secondary">$6 Million</span>
+    <span className="text-xs xl:text-sm opacity-90">Paid Per Month</span>
+
+    {/* divider (desktop only) */}
+    <span className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-10 w-px bg-white/30" />
+  </div>
+
+  {/* Item 3 */}
+  <div className="flex flex-col items-center justify-center gap-1">
+    <span className="text-2xl font-semibold text-secondary">$450 Billion</span>
+    <span className="text-xs xl:text-sm opacity-90">Monthly Trades</span>
+  </div>
+</div>
+
       </div>
 
     </section >

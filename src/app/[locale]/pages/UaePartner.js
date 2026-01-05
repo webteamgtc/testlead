@@ -14,6 +14,9 @@ import TrustBroker from "../components/common/TrustBroker";
 import GrowBusiness from "../components/common/GrowBusiness";
 import ReferTables from "../components/common/ReferTables";
 import FeedBack from "../components/common/FeedBack";
+import HowToBecomeIB from "../components/common/HowToBecomeIB";
+import LoyaltyVipSection from "../components/common/LoyaltyVipSection";
+import SecureClientFundsBar from "../components/SecureClientFundsBar";
 
 
 const UaePartnerPage = () => {
@@ -45,42 +48,17 @@ const UaePartnerPage = () => {
   return (
     <>
       <MainHeader />
-            <HeroSection setIsOpen={setIsOpen} />
-            <ReferTables setIsOpen={setIsOpen} />
-              <PayCommission 
+            <HeroSection setIsOpen={setIsOpen} /> 
+               <PayCommission 
               topTitle="A Forex Partnership Programme That"
               bottomText="From real trader bonuses to marketing support and instant payouts, this is the FX Partner programme serious partners are switching to."
               buttonText="Partner with GTC"
               setIsOpen={setIsOpen}
               />
-              <TrustBroker 
-               title="A Broker You Can Actually Trust"
-                  subtitle="We’re not a fly-by-night operation. GTC is licensed and regulated in multiple respected jurisdictions. Here’s how we give you confidence to trade."
-                  features={[
-                    "Licensed by the UAE’s SCA, Mauritius' FSC, and South Africa's FSCA.",
-                    'Headquartered in UAE with nearly 1 million global serviced traders.',
-                    'World-class support with a real human touch.',
-                    'Customer-first culture where service is strategy.',
-                  ]}
-                  buttonLabel="Start Earning"
-                  onClick={() => setIsOpen(true)}
-              />
-          
-            <FeedBack 
-             title="What UAE's Partners & Traders Are Saying"
-              description="Whether you’re a seasoned partner or just getting started, these partners made the switch and they or their traders haven’t looked back."
-              testimonials={testimonials}
-              buttonLabel="Join Us"
-              onClick={() => setIsOpen(true)}
-            />
-            <GrowBusiness
-              topTitle="Start Earning More."
-              mainTitle="Grow Your FX Partnership Business with GTC"
-              description1="You’ve seen what GTC brings to the table. Now it’s your turn. Join the partnership programme that’s helping UAE’s Forex Partners scale faster, earn more, and build lasting trust with their traders."
-              description2="Join us today, and your traders will thank you tomorrow."
-              buttonLabel="Make the Switch"
-              onClick={() => setIsOpen(true)}
-            />
+              <HowToBecomeIB />
+         <LoyaltyVipSection />
+         <SecureClientFundsBar />
+         
             <MainFooter />
             <SliderModal
            isOpen={isOpen}

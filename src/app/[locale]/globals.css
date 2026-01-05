@@ -207,3 +207,19 @@ html {
 .investing-form input {
   color: #666684!important;
 }
+
+.shine-text {
+  background: linear-gradient(to right, rgba(255,255,255,0.25) 0%, #ffffff 12%, rgb(182, 135, 86) 24%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-move 2.8s infinite linear;
+}
+
+@keyframes shine-move {
+  0% { background-position: 0% 0; }
+  100% { background-position: 200% 0; }
+}
+

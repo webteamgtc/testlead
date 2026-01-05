@@ -474,7 +474,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
 
                 <div className="mb-5">
                     <label
-                        className={`block text-sm pb-2 ${formik.touched.terms && formik.errors.terms ? "text-red-500" : ""
+                        className={`block text-xs pb-2 ${formik.touched.terms && formik.errors.terms ? "text-red-500" : ""
                             }`}
                         htmlFor="terms"
                     >
@@ -492,7 +492,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                             value="checked"
                             className="h-5 w-5"
                         />
-                        <p className="inline text-xs md:text-[13px] leading-normal">
+                        <p className="inline text-xs leading-normal">
                             {t("termsText")}
                             <a
                                 className="text-secondary underline"
@@ -530,7 +530,7 @@ const CommonMainForm = ({ zapierUrl, successPath }) => {
                     <button
                         disabled={isDisable}
                         type="submit"
-                        className="bg-secondary hover:bg-secondary/90 hover:border-white/30 hover:shadow-md transition-colors duration-200 disabled:bg-[#1A1A47] disabled:cursor-not-allowed cursor-pointer mb-10 text-white w-full font-bold py-4 px-8 rounded-md border border-[#CCCCD6]/50"
+                        className="bg-secondary hover:bg-secondary/90 hover:border-white/30 hover:shadow-md transition-colors duration-200 disabled:bg-[#1A1A47] disabled:cursor-not-allowed cursor-pointer text-white w-full font-bold py-4 px-8 rounded-md border border-[#CCCCD6]/50"
                     >
                         {loading ? t("submitting") : t("submit")}
                     </button>
