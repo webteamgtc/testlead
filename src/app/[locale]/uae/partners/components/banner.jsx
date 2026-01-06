@@ -6,6 +6,7 @@ import CustomButton from "@/app/components/common/CustomButton";
 import CommonMainForm from "@/app/[locale]/components/MainForm";
 import SliderModal from "./SliderModal";
 import SlidePanelExample from "./SlidePanel";
+import NewPageForm from "./FormNew";
 const HeroSection = ({setIsOpen}) => {
   const data = [
   
@@ -259,7 +260,7 @@ const HeroSection = ({setIsOpen}) => {
     
           </div>
           <div className="md:rounded-[10px] p-4 shadow-[0_22px_55px_rgba(0,0,0,0.35)] bg-gradient-to-r from-[#24358ba4] via-[#242c75] to-[#141b43b0]">
-            <CommonMainForm />
+            <NewPageForm />
           </div>
 
 
