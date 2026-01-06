@@ -47,7 +47,7 @@ function ProductRow({
   return (
     <div
       className={[
-        "grid grid-cols-1 md:grid-cols-12 items-center gap-10",
+        "grid grid-cols-1 md:grid-cols-12 items-center gap-10 md:gap-20",
         reverseOnDesktop
           ? "md:[&>div.content]:order-2 md:[&>div.image]:order-1"
           : "",
@@ -55,7 +55,7 @@ function ProductRow({
     >
       {/* IMAGE — TOP on mobile, RIGHT on desktop */}
       <div className="image md:col-span-6 flex justify-center md:justify-end order-1 md:order-2">
-        <div className="relative w-full max-w-[200px] md:max-w-[450px]">
+        <div className="relative w-full max-w-[200px] md:max-w-[300px]">
           <img
             src={image}
             alt={imageAlt}
