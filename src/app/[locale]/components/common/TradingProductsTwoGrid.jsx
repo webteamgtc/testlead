@@ -9,7 +9,7 @@ export default function TradingProductsTwoGrid() {
       desc: "Automatically follow and copy top-performing traders.",
       ctaPrimary: "Explore Copy Trading",
       ctaSecondary: "Create an account",
-      image: "/ib/original-size.webp", // replace
+      image: "/ib/image1.png", // replace
       imageAlt: "Copy Trading mobile preview",
       reverseOnDesktop: false,
     },
@@ -18,7 +18,7 @@ export default function TradingProductsTwoGrid() {
       desc: "Manage multiple client accounts with ease and transparency.",
       ctaPrimary: "Explore PAMM & MAM",
       ctaSecondary: "Create an account",
-      image: "/ib/original.webp", // replace
+      image: "/ib/image2.png", // replace
       imageAlt: "PAMM & MAM mobile preview",
       reverseOnDesktop: true,
     },
@@ -48,41 +48,14 @@ function ProductRow({
     <div
       className={[
         "grid grid-cols-1 md:grid-cols-12 items-center gap-10",
-        reverseOnDesktop ? "md:[&>div:first-child]:order-2 md:[&>div:last-child]:order-1" : "",
+        reverseOnDesktop
+          ? "md:[&>div.content]:order-2 md:[&>div.image]:order-1"
+          : "",
       ].join(" ")}
     >
-      {/* LEFT: Content (6/12) */}
-      <div className="md:col-span-6">
-        <h3 className="text-2xl sm:text-3xl font-bold text-[#0b0b0b]">
-          {title}
-        </h3>
-        <p className="mt-3 text-[#333333] text-base sm:text-lg max-w-md">
-          {desc}
-        </p>
-
-           <div className='flex flex-row items-start justify-baseline mt-10'>
-          <button
-  className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
-             hover:from-[#293794] hover:to-[#000021]
-             text-sm font-bold md:text-base xl:text-lg
-             text-white px-8 py-3 rounded-full
-             transition-all duration-300 cursor-pointer"
-  onClick={() => {
-    document
-      .getElementById("register-form")
-      ?.scrollIntoView({ behavior: "smooth" });
-
-    setIsOpen(true);
-  }}
->
-  Register now
-</button>
-        </div>
-      </div>
-
-      {/* RIGHT: Image (6/12) */}
-      <div className="md:col-span-6 flex justify-center md:justify-end">
-        <div className="relative w-full max-w-[420px]">
+      {/* IMAGE — TOP on mobile, RIGHT on desktop */}
+      <div className="image md:col-span-6 flex justify-center md:justify-end order-1 md:order-2">
+        <div className="relative w-full max-w-[200px] md:max-w-[450px]">
           <img
             src={image}
             alt={imageAlt}
@@ -90,6 +63,37 @@ function ProductRow({
           />
         </div>
       </div>
+
+      {/* CONTENT — BELOW image on mobile, LEFT on desktop */}
+      <div className="content text-center md:text-left md:col-span-6 order-2 md:order-1">
+        <h3 className="text-2xl sm:text-3xl font-bold text-[#0b0b0b]">
+          {title}
+        </h3>
+
+        <p className="mt-3 text-[#333333] text-base sm:text-lg max-w-md">
+          {desc}
+        </p>
+
+        <div className="flex flex-row items-start justify-center md:justify-start mt-10">
+          <button
+            className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+                       hover:from-[#293794] hover:to-[#000021]
+                       text-sm font-bold md:text-base xl:text-lg
+                       text-white px-8 py-3 rounded-full
+                       transition-all duration-300 cursor-pointer"
+            onClick={() => {
+              document
+                .getElementById('register-form')
+                ?.scrollIntoView({ behavior: 'smooth' });
+
+              // setIsOpen(true);
+            }}
+          >
+            Register now
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
+

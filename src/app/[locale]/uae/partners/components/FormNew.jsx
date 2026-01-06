@@ -56,21 +56,21 @@ const BLOCKED_EMAIL_DOMAINS = [
 const selectStyles = {
   control: (base, state) => ({
     ...base,
-    backgroundColor: "#fff",
-    color: "#000",
-    borderColor: state.isFocused ? "#666684" : "#d1d5db",
+    backgroundColor: "#1A1A47",
+    color: "#fff",
+    borderColor: state.isFocused ? "#ccccd679" : "#ccccd679",
     boxShadow: "none",
     ":hover": { borderColor: "#666684" },
-    minHeight: 42,
+    minHeight: 50,
   }),
-  valueContainer: (base) => ({ ...base, color: "#000" }),
-  singleValue: (base) => ({ ...base, color: "#000" }),
-  input: (base) => ({ ...base, color: "#000" }),
-  placeholder: (base) => ({ ...base, color: "#6b7280" }),
+  valueContainer: (base) => ({ ...base, color: "#fff" }),
+  singleValue: (base) => ({ ...base, color: "#fff" }),
+  input: (base) => ({ ...base, color: "#fff" }),
+  placeholder: (base) => ({ ...base, color: "#fff" }),
   menu: (base) => ({
     ...base,
     backgroundColor: "#fff",
-    color: "#000",
+    color: "#fff",
     zIndex: 9999,
   }),
   menuList: (base) => ({ ...base, backgroundColor: "#fff" }),
@@ -105,7 +105,7 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
   const fbclid = params.get("fbclid");
   const path = usePathname();
   const router = useRouter();
-  const t = useTranslations("home.form");
+  const t = useTranslations("partner.form");
   const locale = useLocale();
 
   // Detect mobile screen size
@@ -369,7 +369,7 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
     }
   };
 
-  const color = isMobile ? "text-[#fff]" : "text-[#666684]";
+  const color = isMobile ? "text-[#fff]" : "text-[#fff]";
 
   return (
     <form onSubmit={formik.handleSubmit} className="space-y-4">
@@ -410,17 +410,17 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
       />
       <div className="grid sm:grid-cols-1 gap-4">
         <div>
-          <label className={`text-sm ${color} mb-1`}>{"Full Name"}</label>
+          <label className={`text-sm ${color} mb-2`}>{"Full Name"}</label>
           <input
             type="text"
             placeholder={"Full Name"}
             {...formik.getFieldProps("nickname")}
-            className={`w-full border px-3 py-2 md:text-primary text-white ${
+            className={`w-full px-4 bg-[#1A1A47] py-3 pl-3 text-base border-[.5px] border-[#ccccd679] rounded-md border-opacity-10  mt-1 ${
               isMobile ? "bg-[#33335b]" : ""
             } rounded-md ${
               formik.touched.nickname && formik.errors.nickname
                 ? "border-red-500"
-                : "border-gray-300"
+                : "text-[#fff]"
             }`}
           />
           {formik.touched.nickname && formik.errors.nickname && (
@@ -437,12 +437,12 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
             type="email"
             placeholder={"Email"}
             {...formik.getFieldProps("email")}
-            className={`w-full border px-3 py-2 rounded-md md:text-primary text-white ${
+            className={`w-full bg-[#1A1A47] px-4 py-3 pl-3 text-base border-[.5px] border-[#ccccd679] rounded-md border-opacity-30 ${
               isMobile ? "bg-[#33335b]" : ""
             } ${
               formik.touched.email && formik.errors.email
                 ? "border-red-500"
-                : "border-gray-300"
+                : "text-[#fff]"
             }`}
           />
           {/* <button
@@ -474,7 +474,7 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
             } rounded-md ${
               formik.touched.phone && formik.errors.phone
                 ? "border-red-500"
-                : "border-gray-300"
+                : "text-[#CCCCD6]/50"
             }`}
           />
           <button
@@ -526,7 +526,7 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
                 paddingBottom: "10px",
                 paddingTop: "10px",
                 width: "15%",
-                backgroundColor: "#fff",
+                backgroundColor: "#1A1A47", 
                 color: "#666684",
                 fontWeight: "700",
                 outlineColor: "#666684",
@@ -574,9 +574,8 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
           {...formik.getFieldProps("terms")}
           className="h-5 w-5"
         />
-        <label htmlFor="terms" className="text-xs md:text-primary text-white ">
-          By submitting your detailed information, you are agreeing to be
-          contacted so that we can respond to your inquiries.
+        <label htmlFor="terms" className="text-xs  text-white ">
+          By clicking Submit, I confirm that: (1) I have read and agree to the <a className="text-secondary underline" href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/pdf-files/Vanuatu.pdf" target="_blank">Client Agreements</a>; (2) I consent to GTCFX contacting me at reasonable times; and (3) my number is not on the Do Not Call Register (DNCR).
         </label>
       </div>
       {formik.touched.terms && formik.errors.terms && (
@@ -589,9 +588,9 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
         disabled={loading || !isOtpVerified}
         className={`w-full  ${
           isMobile ? "text-[#fff]" : "text-white"
-        } py-3 rounded-full font-medium cursor-pointer text-sm disabled:opacity-50`}
+        } py-3 rounded-full font-medium cursor-pointer border border-white/50 text-sm disabled:opacity-50`}
         style={{
-          background: isMobile ? "#3A72F5" : "#B68756",
+          background: isMobile ? "#1A1A47" : "#1A1A47",
         }}
       >
         {loading ? "Submitting.." : "Submit"}

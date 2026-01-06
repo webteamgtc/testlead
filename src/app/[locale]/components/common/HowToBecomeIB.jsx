@@ -41,7 +41,7 @@ export default function HowToBecomeIB() {
         </div>
 
         {/* Steps */}
-        <div className="mt-14">
+        <div className="mt-14 px-5">
           {/* Desktop: connected flow */}
           <div className="hidden lg:flex items-start justify-between gap-8">
             {steps.map((s, i) => (
