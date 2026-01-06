@@ -9,7 +9,7 @@ export default function TradingProductsTwoGrid() {
       desc: "Automatically follow and copy top-performing traders.",
       ctaPrimary: "Explore Copy Trading",
       ctaSecondary: "Create an account",
-      image: "/ib/image1.png", // replace
+      image: "/ib/image3.png", // replace
       imageAlt: "Copy Trading mobile preview",
       reverseOnDesktop: false,
     },
@@ -18,7 +18,7 @@ export default function TradingProductsTwoGrid() {
       desc: "Manage multiple client accounts with ease and transparency.",
       ctaPrimary: "Explore PAMM & MAM",
       ctaSecondary: "Create an account",
-      image: "/ib/image2.png", // replace
+      image: "/ib/image4.png", // replace
       imageAlt: "PAMM & MAM mobile preview",
       reverseOnDesktop: true,
     },
