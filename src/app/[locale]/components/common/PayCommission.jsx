@@ -109,6 +109,16 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
 
   return (
     <section className="bg-gradient-to-t from-[#f7f7f7] to-[#fff] text-primary py-8 md:py-20 relative overflow-hidden text-center">
+        <div className="absolute inset-0 bg-white z-0" />
+
+      {/* Faded Background Image at Bottom Center */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-20">
+        <img
+          src="/ib/layer5.webp" // ✅ change this path if needed
+          alt="Decorative background"
+          className="w-full h-auto object-contain object-bottom"
+        />
+      </div>
     
       <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4">
         {/* Section Title */}
@@ -164,10 +174,22 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
         {/* Footer Text and CTA */}
        
         <div className='flex flex-row items-center justify-center mt-5'>
-          <button className="bg-gradient-to-r  from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#4e4d71] hover:to-[#4e4d71] text-sm font-bold md:text-base xl:text-lg text-white  px-8 py-3 rounded-xl transition-all duration-300"
-          onClick={() => setIsOpen(true)}>
-           {buttonText}
-          </button>
+            <button
+  className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+             hover:from-[#293794] hover:to-[#000021]
+             text-sm font-bold md:text-base xl:text-lg
+             text-white px-8 py-3 rounded-full
+             transition-all duration-300 cursor-pointer"
+  onClick={() => {
+    document
+      .getElementById("register-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setIsOpen(false);
+  }}
+>
+  Register now
+</button>
         </div>
 
 

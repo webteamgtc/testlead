@@ -31,6 +31,28 @@ export default function LoyaltyVipSection() {
               Higher activity and balances unlock better tiers, priority
               benefits, and daily rewards.
             </p>
+
+                 {/* Footer Text and CTA */}
+       
+        <div className='flex flex-row items-start justify-baseline mt-10'>
+          <button
+  className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+             hover:from-[#293794] hover:to-[#000021]
+             text-sm font-bold md:text-base xl:text-lg
+             text-white px-8 py-3 rounded-full
+             transition-all duration-300 cursor-pointer"
+  onClick={() => {
+    document
+      .getElementById("register-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setIsOpen(true);
+  }}
+>
+  Register now
+</button>
+        </div>
+
           </div>
 
           {/* RIGHT: Image (6 columns) */}

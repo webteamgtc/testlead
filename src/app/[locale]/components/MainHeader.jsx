@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const MainHeader = () => {
   return (
-    <div className="bg-[#1A1A47] text-center">
+    <div className="bg-[#1A1A47] text-center" id="register-form">
       <div className="container mx-auto text-center py-3 flex flex-col md:flex-row justify-center items-center gap-4">
         <Image
           src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/footer-logo.webp"

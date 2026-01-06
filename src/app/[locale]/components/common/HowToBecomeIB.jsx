@@ -29,7 +29,7 @@ export default function HowToBecomeIB() {
     >
    
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-6xl mx-auto py-16">
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-white font-extrabold tracking-tight text-3xl sm:text-4xl lg:text-5xl max-w-xl mx-auto leading-tight">
@@ -60,7 +60,23 @@ export default function HowToBecomeIB() {
               </div>
             ))}
           </div>
+          
         </div>
+
+             <div className='flex flex-row items-center justify-center mt-14'>
+          <button className="bg-gradient-to-r  from-[#E1CFBB] cursor-pointer to-[#956D42] hover:bg-gradient-to-r  hover:from-[#ffffff] hover:to-[#ffffff] text-sm font-bold md:text-base xl:text-lg text-white hover:text-primary  px-8 py-3 rounded-full transition-all duration-300"
+            onClick={() => {
+    document
+      .getElementById("register-form")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setIsOpen(false);
+  }}>
+           Join our Partnership Program 
+          </button>
+        </div>
+
+        
       </div>
     </section>
   );

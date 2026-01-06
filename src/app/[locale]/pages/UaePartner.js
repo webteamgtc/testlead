@@ -17,6 +17,7 @@ import FeedBack from "../components/common/FeedBack";
 import HowToBecomeIB from "../components/common/HowToBecomeIB";
 import LoyaltyVipSection from "../components/common/LoyaltyVipSection";
 import SecureClientFundsBar from "../components/SecureClientFundsBar";
+import TradingProductsTwoGrid from "../components/common/TradingProductsTwoGrid";
 
 
 const UaePartnerPage = () => {
@@ -58,6 +59,7 @@ const UaePartnerPage = () => {
               <HowToBecomeIB />
          <LoyaltyVipSection />
          <SecureClientFundsBar />
+         <TradingProductsTwoGrid />
          
             <MainFooter />
             <SliderModal

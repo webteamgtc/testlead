@@ -237,7 +237,7 @@ const HeroSection = ({setIsOpen}) => {
    
   ]
   return (
-    <section className="bg-[url(/ib/banner.webp)] bg-cover bg-no-repeat bg-right text-[#E5E5EA] py-8 md:py-16 relative overflow-hidden">
+    <section className="bg-[url(/ib/ib-banner-new.webp)] bg-cover bg-no-repeat bg-right text-[#E5E5EA] py-8 md:py-16 relative overflow-hidden" id="register-form">
 
 
      
