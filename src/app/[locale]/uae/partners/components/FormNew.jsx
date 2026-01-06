@@ -493,7 +493,7 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
 
       {showOtp && (
         <div>
-          <p className="text-sm mb-2 md:text-primary text-white">
+          <p className="text-sm mb-2 text-white">
             OTP has been sent to given Number
           </p>
           <div className=" flex gap-3 items-center">
@@ -527,7 +527,7 @@ const NewPageForm = ({ zapierUrl, successPath, isPreAccount = false }) => {
                 paddingTop: "10px",
                 width: "15%",
                 backgroundColor: "#1A1A47", 
-                color: "#666684",
+                color: "#fff",
                 fontWeight: "700",
                 outlineColor: "#666684",
                 border:
