@@ -5,7 +5,7 @@ import React from "react";
 export default function SecureClientFundsBar() {
   return (
     <section className="w-full bg-gradient-to-r from-[#243586] from-10% via-[#222e73] via-30% to-[#141b43] to-90%">
-      <div className="max-w-6xl mx-auto ">
+      <div className="max-w-6xl mx-auto px-5 ">
         <div
           className="
             relative bg-transparent w-full

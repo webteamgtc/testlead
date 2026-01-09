@@ -40,7 +40,7 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
   <path d="M16 22L12 26L16 30" stroke="#4D4D70" strokeWidth="2"/>
 </svg>
       ),
-      title: "Instant Deposit & Withdrawal",
+      title: "Instant Fund Transfers",
       description: "Fast and smooth fund processing for you and your clients."
     },
     {
@@ -82,8 +82,8 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
   <path d="M14 20L18 24L26 16" stroke="#4D4D70" strokeWidth="2"/>
 </svg>
       ),
-      title: "Most Stable Trading Platforms",
-      description: "Reliable, industry-leading trading platforms for consistent performance."
+      title: "Stable Trading Platforms",
+      description: "Industry-leading trading platforms for consistent performance."
     },
     {
       icon: (
@@ -120,55 +120,52 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
         />
       </div>
     
-      <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4">
+      <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4 md:px-0">
         {/* Section Title */}
 
-        <h4 className="text-lg md:text-2xl font-[200]">{topTitle}</h4>
+        <h4 className="text-lg md:text-2xl text-secondary">{topTitle}</h4>
         <h2 className="text-2xl md:text-3xl xl:text-[40px] font-bold">
           Why Partner With GTCFX
         </h2>
-        <p className="text-sm md:text-base xl:text-[22px] max-w-3xl mx-auto leading-relaxed">
+        <p className="text-sm md:text-base xl:text-[20px] max-w-xl mx-auto leading-relaxed">
           Advanced trading solutions and partner benefits designed for sustainable expansion.
         </p>
 
 
        {/* Flip Cards Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-5 justify-center">
-{features.map((feat, idx) => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
-  const isFlipped = isMobile && flippedIndex === idx;
-
-  return (
+{/* Slim Feature Cards */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+  {features.map((feat, idx) => (
     <div
       key={idx}
-      className="group relative w-full h-60 [perspective:1000px] bg-white rounded-2xl text-[#1F2937] flex flex-col items-center"
-      onClick={() => {
-        if (isMobile) {
-          toggleFlip(idx);
-        }
-      }}
+      className="
+        bg-white
+        rounded-xl
+        shadow-[0_6px_18px_rgba(0,0,0,0.08)]
+        p-5
+        flex flex-col md:gap-3
+        text-left
+      "
     >
-      <div
-        className={`relative w-full h-full transition-transform duration-500 shadow-2xl [transform-style:preserve-3d] ${
-          isFlipped ? '[transform:rotateY(180deg)]' : ''
-        } group-hover:[transform:rotateY(180deg)]`}
-      >
-        {/* Front Face */}
-        <div className="absolute inset-0 flex flex-col gap-4 items-center justify-center [backface-visibility:hidden] px-10">
-          <p className="text-4xl">{feat.icon}</p>
-          <h3 className="text-lg font-medium">{feat.title}</h3>
+      {/* Icon + Title */}
+      <div className="flex items-center gap-3">
+        <div className="shrink-0">
+          {feat.icon}
         </div>
 
-        {/* Back Face */}
-        <div className="absolute bg-secondary text-white inset-0 flex items-center justify-center p-6 rounded-xl text-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <p className="text-sm md:text-base max-w-60 mx-auto">{feat.description}</p>
-        </div>
+        <h3 className="text-base md:text-lg font-semibold text-[#1F2937]">
+          {feat.title}
+        </h3>
       </div>
-    </div>
-  );
-})}
 
+      {/* Description */}
+      <p className="text-sm md:text-[15px] text-[#4B5563] leading-relaxed pl-[62px]">
+        {feat.description}
+      </p>
+    </div>
+  ))}
 </div>
+
 
 
         {/* Footer Text and CTA */}
