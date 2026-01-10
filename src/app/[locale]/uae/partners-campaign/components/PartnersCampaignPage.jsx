@@ -18,9 +18,9 @@ export default function PartnersCampaignPage() {
         className="bg-white pt-8"
         style={{ boxShadow: "-6px -39px 50px 0px #0000001A" }}
       >
-        <PartnerSliderSection />
-        <HowToEarnSection />
+        {/* <PartnerSliderSection /> */}
         <WhyChooseSection />
+        <HowToEarnSection />
         <ProgramIncludesSection />
         <PartnerPortalSection />
         <PartnerBadgeSection />

@@ -1,8 +1,112 @@
 "use client";
 
-import { useState } from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+import "react-phone-number-input/style.css";
+import OtpInput from "react-otp-input";
+import { countryList } from "../../../context/useCountriesDetails";
+import { useLocationDetail } from "../../../context/useLocationDetail";
+import { toast } from "react-toastify";
+import Select from "react-select";
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter } from "@/i18n/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+
+// Blocked fake/temporary email domains
+const BLOCKED_EMAIL_DOMAINS = [
+  "yopmail.com",
+  "yopmail.fr",
+  "yopmail.net",
+  "mailinator.com",
+  "guerrillamail.com",
+  "guerrillamailblock.com",
+  "10minutemail.com",
+  "tempmail.com",
+  "throwaway.email",
+  "temp-mail.org",
+  "mohmal.com",
+  "trashmail.com",
+  "maildrop.cc",
+  "tempail.com",
+  "getnada.com",
+  "mintemail.com",
+  "mytrashmail.com",
+  "sharklasers.com",
+  "spamgourmet.com",
+  "mailnesia.com",
+  "meltmail.com",
+  "mailcatch.com",
+  "emailondeck.com",
+  "fakeinbox.com",
+  "dispostable.com",
+  "emailfake.com",
+  "getairmail.com",
+  "mailin8r.com",
+  "mailme.lv",
+  "tempr.email",
+  "tmpmail.org",
+  "mail.tm",
+  "emailnator.com",
+];
+
+const selectStyles = {
+  control: (base, state) => ({
+    ...base,
+    backgroundColor: "#fff",
+    color: "#000",
+    borderColor: state.isFocused ? "#2E59D9" : "#E5E7EB",
+    boxShadow: "none",
+    ":hover": { borderColor: "#2E59D9" },
+    minHeight: 46,
+  }),
+  valueContainer: (base) => ({ ...base, color: "#000" }),
+  singleValue: (base) => ({ ...base, color: "#000" }),
+  input: (base) => ({ ...base, color: "#000" }),
+  placeholder: (base) => ({ ...base, color: "#B6BCC8" }),
+  menu: (base) => ({
+    ...base,
+    backgroundColor: "#fff",
+    color: "#000",
+    zIndex: 9999,
+  }),
+  menuList: (base) => ({ ...base, backgroundColor: "#fff" }),
+  option: (base, state) => ({
+    ...base,
+    backgroundColor: state.isSelected
+      ? "#e5e7eb"
+      : state.isFocused
+      ? "#f3f4f6"
+      : "#fff",
+    color: "#000",
+    ":active": { backgroundColor: "#e5e7eb" },
+  }),
+  indicatorSeparator: (base) => ({ ...base, backgroundColor: "#e5e7eb" }),
+  dropdownIndicator: (base, state) => ({
+    ...base,
+    color: state.isFocused ? "#2E59D9" : "#9CA3AF",
+    ":hover": { color: "#2E59D9" },
+  }),
+};
 
 export default function NaqdiIbOnboardingForm({ isIb = false }) {
+  const { countryData } = useLocationDetail();
+  const [phoneOtpLoading, setPhoneOtpLoading] = useState(false);
+  const [showOtp, setShowOtp] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [otpPhoneNumber, setOtpPhoneNumber] = useState("");
+  const [isOtpVerified, setIsOtpVerified] = useState(false);
+  const params = useSearchParams();
+  const campaign = params.get("utm_source");
+  const fbclid = params.get("fbclid");
+  const path = usePathname();
+  const router = useRouter();
+  const t = useTranslations("home.form");
+  const locale = useLocale();
+
   const offers = [
     { label: "Level 1 - Earn $10/lot", full: true },
     { label: "Level 2 - Earn $15/lot" },
@@ -15,15 +119,357 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
 
   const [selected, setSelected] = useState(0);
 
+  // prepare country options
+  const options = countryList?.map((item) => ({
+    value: item.alpha_2_code,
+    label: (
+      <div className="flex items-center gap-2">
+        <img
+          src={`https://flagcdn.com/w40/${item.alpha_2_code.toLowerCase()}.png`}
+          alt={item.en_short_name}
+          className="w-5 h-4 object-cover"
+        />
+        <span>{item.en_short_name}</span>
+      </div>
+    ),
+  }));
+
+  const getIso2ByCountryName = (name) => {
+    const hit = countryList.find((c) => c.en_short_name === name);
+    return hit?.alpha_2_code;
+  };
+
+  // formik setup
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      country: "",
+      otp: "",
+      terms: false,
+      offer: offers[0].label,
+      fbclid: "",
+      utm_campaign: "",
+      utm_source: "",
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string().required("First Name is required"),
+      lastName: Yup.string().required("Last Name is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required")
+        .test(
+          "no-plus-sign",
+          "Email address cannot contain '+'",
+          (value) => !value || !value.includes("+")
+        )
+        .test(
+          "blocked-domain",
+          "This email domain is not allowed. Please use a valid email address.",
+          (value) => {
+            if (!value) return true;
+            const emailDomain = value.split("@")[1]?.toLowerCase();
+            return !BLOCKED_EMAIL_DOMAINS.includes(emailDomain);
+          }
+        ),
+      phone: Yup.string()
+        .required("Phone number is required")
+        .test("is-valid-e164", "Invalid phone number", (value) => {
+          if (!value) return false;
+          return isValidPhoneNumber(value);
+        })
+        .test(
+          "matches-selected-country",
+          "Number doesn't match selected country",
+          function (value) {
+            const selectedCountryCode = this.parent.country;
+            if (!value || !selectedCountryCode) return true;
+            const pn = parsePhoneNumberFromString(value);
+            if (!pn) return false;
+            return pn.country === selectedCountryCode;
+          }
+        ),
+      country: Yup.string().required("Country is required"),
+      otp: Yup.string()
+        .length(6, "OTP must be 6 digits")
+        .required("OTP is required"),
+      terms: Yup.bool().oneOf([true], "You must accept the terms"),
+    }),
+    onSubmit: async (values) => {
+      setLoading(true);
+      // Check if OTP is verified before proceeding
+      if (!isOtpVerified) {
+        toast.error(
+          "Please verify your phone number with OTP before submitting."
+        );
+        setLoading(false);
+        return;
+      }
+
+      try {
+        // Validate email first
+        const validationResponse = await axios.post(`/api/validate-email`, {
+          email: formik.values.email,
+        });
+
+        if (!validationResponse.data.valid) {
+          toast.error(
+            "Invalid email address. Please use a valid email."
+          );
+          setLoading(false);
+          return;
+        }
+
+        // Send to Zapier
+        try {
+          await axios.post(
+            "https://hooks.zapier.com/hooks/catch/16420445/uwaumm0/",
+            JSON.stringify({
+              nickname: values.firstName,
+              lastName: values.lastName,
+              email: values.email,
+              phone: values.phone,
+              country: values.country,
+              offer: values.offer,
+              locale: locale,
+              fbclid: values.fbclid,
+              utm_campaign: values.utm_campaign,
+              utm_source: values.utm_source,
+            })
+          );
+        } catch (zapierError) {
+          console.error("Zapier webhook failed:", zapierError);
+          // Continue even if Zapier fails, but log it
+        }
+
+        toast.success("Thank you! We'll be in touch soon.");
+        localStorage.setItem("user", JSON.stringify({ ...values }));
+        router.push("/uae/partners/success");
+        formik.resetForm();
+        setIsOtpVerified(false);
+      } catch (err) {
+        console.error("Form submission error:", err);
+        toast.error(
+          err?.response?.data?.message || err?.message || "Something went wrong"
+        );
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
+
+  // Set country and UTM params after formik is initialized
+  useEffect(() => {
+    if (countryData?.country) {
+      const filterData = countryList.find(
+        (item) =>
+          item?.en_short_name == countryData.country ||
+          item?.alpha_2_code == countryData.country
+      );
+      formik.setFieldValue(
+        "country",
+        filterData ? filterData?.alpha_2_code : ""
+      );
+    }
+    if (fbclid) {
+      formik.setFieldValue("fbclid", fbclid);
+    }
+    if (campaign) {
+      formik.setFieldValue("utm_source", campaign);
+    }
+    if (path) {
+      formik.setFieldValue("utm_campaign", path);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [countryData?.country, countryList, fbclid, campaign, path]);
+
+  // Reset OTP verification when phone number changes
+  useEffect(() => {
+    if (
+      otpPhoneNumber &&
+      formik.values.phone &&
+      formik.values.phone !== otpPhoneNumber
+    ) {
+      setShowOtp(false);
+      setIsOtpVerified(false);
+      formik.setFieldValue("otp", "");
+      setOtpPhoneNumber("");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [formik.values.phone, otpPhoneNumber]);
+
+  const sendPhoneVerificationCode = () => {
+    if (!formik.values.phone) {
+      toast.error("Phone number is required");
+      return;
+    }
+    if (!isValidPhoneNumber(formik.values.phone)) {
+      toast.error("Invalid phone number");
+      return;
+    }
+    setPhoneOtpLoading(true);
+    axios
+      .post(`/api/send-phone-otp`, {
+        phone: formik.values.phone,
+        first_name: formik.values.firstName,
+        locale,
+        channel: "whatsapp",
+      })
+      .then((res) => {
+        if (res?.data?.success || res?.data?.message) {
+          setShowOtp(true);
+          formik.setFieldValue("otp", "");
+          setIsOtpVerified(false);
+          setOtpPhoneNumber(formik.values.phone);
+          toast.success("OTP sent successfully");
+        } else {
+          toast.error(res?.data?.message || "Failed to send OTP");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error(
+          error?.response?.data?.message || error?.message || "Failed to send OTP"
+        );
+      })
+      .finally(() => setPhoneOtpLoading(false));
+  };
+
+  // Check if phone number is valid and complete
+  const isPhoneValid =
+    formik.values.phone && isValidPhoneNumber(formik.values.phone);
+
+  // verify OTP server-side
+  const verifyOtpCode = async (otp) => {
+    if (!otp || otp.length !== 6) {
+      return;
+    }
+
+    try {
+      const res = await axios.post("/api/verify-otp", {
+        phone: formik.values.phone,
+        otp: otp,
+      });
+
+      if (res?.data?.success) {
+        toast.success("OTP verified successfully");
+        setShowOtp(false);
+        setIsOtpVerified(true);
+      } else {
+        toast.error(res?.data?.message || "Invalid OTP");
+        setIsOtpVerified(false);
+      }
+    } catch (error) {
+      console.error("OTP verification error:", error);
+      toast.error(
+        error?.response?.data?.message ||
+          error?.message ||
+          "Failed to verify OTP"
+      );
+      setIsOtpVerified(false);
+    }
+  };
+
+  // Inject PhoneInput styles
+  useEffect(() => {
+    const styleId = "phone-input-styles";
+    if (document.getElementById(styleId)) return;
+
+    const style = document.createElement("style");
+    style.id = styleId;
+    style.textContent = `
+      .phone-input-wrapper {
+        background: white !important;
+      }
+      .phone-input-wrapper .PhoneInput {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: white !important;
+      }
+      .phone-input-wrapper .PhoneInputInput {
+        border: none !important;
+        outline: none !important;
+        background: white !important;
+        background-color: white !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: #000 !important;
+        height: 100% !important;
+        padding: 0 !important;
+        flex: 1;
+        margin-left: 8px;
+      }
+      .phone-input-wrapper .PhoneInputInput::placeholder {
+        color: #9CA3AF !important;
+      }
+      .phone-input-wrapper .PhoneInputCountryIcon {
+        width: 20px !important;
+        height: 15px !important;
+      }
+      .phone-input-wrapper .PhoneInputCountrySelect {
+        border: none !important;
+        background: white !important;
+        background-color: white !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        color: #000 !important;
+        padding: 0 4px !important;
+        height: auto !important;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      .phone-input-wrapper .PhoneInputCountrySelect:focus {
+        background: white !important;
+        background-color: white !important;
+        color: #000 !important;
+        outline: none !important;
+      }
+      .phone-input-wrapper .PhoneInputCountrySelectArrow {
+        opacity: 0.7;
+        color: #9CA3AF !important;
+        width: 12px;
+        height: 12px;
+      }
+      .phone-input-wrapper .PhoneInputCountrySelectArrow svg {
+        fill: #9CA3AF !important;
+        stroke: #9CA3AF !important;
+      }
+      .phone-input-wrapper input[type="tel"],
+      .phone-input-wrapper select {
+        background: white !important;
+        background-color: white !important;
+        color: #000 !important;
+      }
+      .phone-input-wrapper .PhoneInputCountryIcon img {
+        width: 20px !important;
+        height: 15px !important;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      const existingStyle = document.getElementById(styleId);
+      if (existingStyle) {
+        existingStyle.remove();
+      }
+    };
+  }, []);
+
   return (
-    <div className={`relative w-full`}>
-      {/* Card */}
-      <div
-        className={`relative overflow-hidden rounded-[20px] bg-white p-8 ${
-          isIb ? "px-16 py-12" : ""
-        }`}
-        style={{ boxShadow: isIb ? "0px 0px 10px 0px #0000001A" : "none" }}
-      >
+    <form onSubmit={formik.handleSubmit} className="relative w-full">
+        {/* Card */}
+        <div
+          className={`relative overflow-hidden rounded-[20px] bg-white p-8 ${
+            isIb ? "px-16 py-12" : ""
+          }`}
+          style={{ boxShadow: isIb ? "0px 0px 10px 0px #0000001A" : "none" }}
+        >
         {/* subtle circle bg bottom like screenshot */}
         <div className="pointer-events-none absolute -bottom-10 right-10 h-[260px] w-[260px] rounded-full bg-[#E9ECF7]" />
         <div className="pointer-events-none absolute -bottom-10 right-10 h-[260px] w-[260px] rounded-full bg-gradient-to-t from-[#E9ECF7] to-transparent opacity-80" />
@@ -44,104 +490,182 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
             Automated Onboarding Clients Offers
           </h3>
 
-          {/* Offers */}
-          <div className="mt-4 grid grid-cols-2 gap-6">
-            {offers.map((o, idx) => {
-              const isActive = selected === idx;
-
-              // first item spans full width like image
-              const span = o.full ? "col-span-2" : "col-span-1";
-
-              return (
-                <button
-                  key={o.label}
-                  type="button"
-                  onClick={() => setSelected(idx)}
-                  className={[
-                    span,
-                    "group flex px-4 py-3 items-center justify-between rounded-[8px] border bg-white",
-                    isActive ? "border-[#9FB3FF]" : "border-[#D9D9D9]",
-                    "shadow-[0_1px_0_rgba(0,0,0,0.02)]",
-                  ].join(" ")}
-                >
-                  <span className="flex items-center gap-2">
-                    {/* radio */}
-                    <span
-                      className={[
-                        "grid h-[14px] w-[14px] place-items-center rounded-full border",
-                        isActive ? "border-[#2E59D9]" : "border-[#D9D9D9]",
-                      ].join(" ")}
-                    >
-                      <span
-                        className={[
-                          "h-[6px] w-[6px] rounded-full",
-                          isActive ? "bg-[#2E59D9]" : "bg-transparent",
-                        ].join(" ")}
-                      />
-                    </span>
-
-                    <span className="text-[14px] font-normal text-[#4D4D4D]">
-                      {o.label}
-                    </span>
-                  </span>
-
-                  {/* info icon */}
-                  <span className="grid h-[16px] w-[16px] place-items-center rounded-full border border-[#E5E7EB] text-[10px] text-[#9CA3AF]">
-                    i
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-
           {/* Fields row 1 */}
           <div className="mt-5 grid grid-cols-2 gap-4">
-            <Field label="First Name*" />
-            <Field label="Last Name*" />
+            <div>
+              <div className="mb-1 text-[14px] font-normal text-[#868686]">
+                First Name*
+              </div>
+              <input
+                type="text"
+                {...formik.getFieldProps("firstName")}
+                className={`h-[46px] w-full rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
+                  formik.touched.firstName && formik.errors.firstName
+                    ? "border-red-500"
+                    : "border-[#E5E7EB]"
+                }`}
+                placeholder="First Name"
+              />
+              {formik.touched.firstName && formik.errors.firstName && (
+                <p className="text-xs text-red-500 mt-1">
+                  {formik.errors.firstName}
+                </p>
+              )}
+            </div>
+            <div>
+              <div className="mb-1 text-[14px] font-normal text-[#868686]">
+                Last Name*
+              </div>
+              <input
+                type="text"
+                {...formik.getFieldProps("lastName")}
+                className={`h-[46px] w-full rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
+                  formik.touched.lastName && formik.errors.lastName
+                    ? "border-red-500"
+                    : "border-[#E5E7EB]"
+                }`}
+                placeholder="Last Name"
+              />
+              {formik.touched.lastName && formik.errors.lastName && (
+                <p className="text-xs text-red-500 mt-1">
+                  {formik.errors.lastName}
+                </p>
+              )}
+            </div>
           </div>
 
           {/* Email */}
           <div className="mt-4">
-            <Field label="Email*" full />
+            <div className="mb-1 text-[14px] font-normal text-[#868686]">
+              Email*
+            </div>
+            <input
+              type="email"
+              {...formik.getFieldProps("email")}
+              className={`h-[46px] w-full rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
+                formik.touched.email && formik.errors.email
+                  ? "border-red-500"
+                  : "border-[#E5E7EB]"
+              }`}
+              placeholder="Email"
+            />
+            {formik.touched.email && formik.errors.email && (
+              <p className="text-xs text-red-500 mt-1">{formik.errors.email}</p>
+            )}
           </div>
 
           {/* Country */}
           <div className="mt-4">
-            <SelectField
-              label="Country Of Residence*"
-              placeholder="Please select or type your country name !"
+            <div className="mb-1 text-[14px] font-normal text-[#868686]">
+              Country Of Residence*
+            </div>
+            <Select
+              name="country"
+              options={options}
+              styles={selectStyles}
+              onChange={(opt) => {
+                formik.setFieldValue("country", opt?.value);
+              }}
+              onBlur={() => formik.setFieldTouched("country", true)}
+              value={options?.find(
+                (opt) => opt.value === formik.values.country
+              )}
+              placeholder="Please select or type your country name"
             />
+            {formik.touched.country && formik.errors.country && (
+              <p className="text-xs text-red-500 mt-1">
+                {formik.errors.country}
+              </p>
+            )}
           </div>
 
           {/* Phone */}
-          <div className="mt-4 grid grid-cols-[130px_1fr] items-end gap-4">
-            <SelectField label="Phone Number*" placeholder="" compact />
-            <div className="pt-[18px]">
-              <input
-                className="h-[46px] w-full rounded-[8px] border border-[#E5E7EB] bg-white px-3 text-[10px] font-medium text-[#111827] outline-none focus:border-[#2E59D9]"
-                placeholder=""
+          <div className="mt-4">
+            <div className="mb-1 text-[14px] font-normal text-[#868686]">
+              Phone Number*
+            </div>
+            <div
+              className={`phone-input-wrapper flex items-center rounded-[8px] border px-3 bg-white ${
+                formik.touched.phone && formik.errors.phone
+                  ? "border-red-500"
+                  : "border-[#E5E7EB]"
+              } focus-within:border-[#2E59D9]`}
+              style={{ height: "46px" }}
+            >
+              <PhoneInput
+                international
+                defaultCountry={
+                  countryData?.country_code || countryData?.country || "AE"
+                }
+                value={formik.values.phone}
+                onChange={(phone) => formik.setFieldValue("phone", phone)}
+                className="w-full"
               />
             </div>
+            {formik.touched.phone && formik.errors.phone && (
+              <p className="text-xs text-red-500 mt-1">
+                {formik.errors.phone}
+              </p>
+            )}
           </div>
 
           {/* OTP */}
           <div className="mt-4 flex items-center gap-4">
             <button
               type="button"
-              className="h-[46px] whitespace-pre rounded-[8px] border border-[#2E59D9] bg-white px-6 text-[14px] font-semibold text-[#293B93]"
+              onClick={sendPhoneVerificationCode}
+              disabled={phoneOtpLoading || !isPhoneValid}
+              className="h-[46px] whitespace-pre rounded-[8px] border border-[#2E59D9] bg-white px-6 text-[14px] font-semibold text-[#293B93] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send OTP
+              {phoneOtpLoading ? "Sending..." : "Send OTP"}
             </button>
 
             <div className="flex gap-3 w-full">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="h-[46px] w-full rounded-[6px] border border-[#E5E7EB] bg-white"
-                />
-              ))}
+              <OtpInput
+                value={formik.values.otp}
+                onChange={(otp) => {
+                  formik.setFieldValue("otp", otp);
+                  if (otp?.length === 6) {
+                    verifyOtpCode(otp);
+                  }
+                }}
+                numInputs={6}
+                containerStyle={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  gap: "12px",
+                  width: "100%",
+                }}
+                isInputNum
+                renderInput={(props) => (
+                  <input
+                    {...props}
+                    type="tel"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                  />
+                )}
+                inputStyle={{
+                  fontSize: "16px",
+                  borderRadius: "6px",
+                  paddingBottom: "10px",
+                  paddingTop: "10px",
+                  width: "100%",
+                  backgroundColor: "#fff",
+                  color: "#000",
+                  fontWeight: "700",
+                  outlineColor: "#2E59D9",
+                  border:
+                    formik.touched.otp && formik.errors.otp
+                      ? "1px solid red"
+                      : "1px solid #E5E7EB",
+                }}
+              />
             </div>
           </div>
+          {formik.touched.otp && formik.errors.otp && (
+            <p className="text-xs text-red-500 mt-1">{formik.errors.otp}</p>
+          )}
 
           {/* Disclaimer */}
           <p className="mt-6 text-[14px] font-normal leading-[1.5] text-[#7A7A7A]">
@@ -155,6 +679,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           <label className="mt-4 flex items-center gap-3 text-[14px] font-medium text-[#7A7A7A]">
             <input
               type="checkbox"
+              {...formik.getFieldProps("terms")}
               className="h-5 w-5 rounded border-[#D1D5DB]"
             />
             <span>
@@ -164,56 +689,24 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
               </span>
             </span>
           </label>
+          {formik.touched.terms && formik.errors.terms && (
+            <p className="text-xs text-red-500 mt-1">{formik.errors.terms}</p>
+          )}
 
           {/* Submit */}
           <button
-            type="button"
-            className="mt-8 py-4 w-full rounded-full bg-[#DCDCDC] text-[16px] font-medium text-[#868686]"
+            type="submit"
+            disabled={loading || !isOtpVerified}
+            className={`mt-8 py-4 w-full rounded-full text-[16px] font-medium ${
+              loading || !isOtpVerified
+                ? "bg-[#DCDCDC] text-[#868686] cursor-not-allowed"
+                : "bg-gradient-to-r from-[#293B93] to-[#0D122D] text-white hover:brightness-110"
+            }`}
           >
-            Become A Partner
+            {loading ? "Submitting..." : "Become A Partner"}
           </button>
         </div>
       </div>
-    </div>
-  );
-}
-
-/* ---------------- bits ---------------- */
-
-function Field({ label }) {
-  return (
-    <div>
-      <div className="mb-1 text-[14px] font-normal text-[#868686]">{label}</div>
-      <input className="h-[46px] w-full rounded-[8px] border border-[#E5E7EB] bg-white px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9]" />
-    </div>
-  );
-}
-
-function SelectField({ label, placeholder, compact }) {
-  return (
-    <div>
-      <div className="mb-1 text-[14px] font-normal text-[#868686]">{label}</div>
-      <div className="relative">
-        <input
-          className={[
-            "h-[46px] w-full rounded-[8px] border border-[#E5E7EB] bg-white pl-3 pr-9 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#B6BCC8] focus:border-[#2E59D9]",
-            compact ? "placeholder:text-transparent" : "",
-          ].join(" ")}
-          placeholder={placeholder}
-        />
-        <svg
-          className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#9CA3AF]"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M7 10l5 5 5-5"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
-    </div>
+    </form>
   );
 }

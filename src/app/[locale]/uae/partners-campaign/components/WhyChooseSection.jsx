@@ -157,33 +157,3 @@ function FeatureCard({
   );
 }
 
-function CandleStack({ reversed = false }) {
-  return (
-    <div
-      className={[
-        "flex items-end gap-3",
-        reversed ? "flex-row-reverse" : "",
-      ].join(" ")}
-    >
-      <Candle h={58} />
-      <Candle h={96} />
-      <Candle h={72} />
-    </div>
-  );
-}
-
-function Candle({ h = 80 }) {
-  return (
-    <div className="relative">
-      <div
-        className="w-[18px] rounded-[3px] bg-[#9CC4FF]"
-        style={{ height: `${h}px` }}
-      />
-      {/* wick line */}
-      <div className="absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2 bg-[#5AA0FF]" />
-      {/* tiny top/bottom caps */}
-      <div className="absolute -top-[6px] left-1/2 h-[10px] w-[10px] -translate-x-1/2 rounded-[2px] bg-[#4F96FF]" />
-      <div className="absolute -bottom-[6px] left-1/2 h-[10px] w-[10px] -translate-x-1/2 rounded-[2px] bg-[#4F96FF]" />
-    </div>
-  );
-}

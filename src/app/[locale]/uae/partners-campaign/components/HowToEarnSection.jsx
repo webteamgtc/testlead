@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function HowToEarnSectionInteractive() {
   const items = [
@@ -25,20 +25,81 @@ export default function HowToEarnSectionInteractive() {
 
   const [active, setActive] = useState(3);
 
+  // Inject wave animation styles
+  useEffect(() => {
+    const styleId = "wave-animation-styles";
+    if (document.getElementById(styleId)) return;
+
+    const style = document.createElement("style");
+    style.id = styleId;
+    style.textContent = `
+      @keyframes wave {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.2);
+          opacity: 0.4;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1.4);
+          opacity: 0;
+        }
+      }
+      .wave-circle {
+        animation: wave 3s ease-out infinite;
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      const existingStyle = document.getElementById(styleId);
+      if (existingStyle) {
+        existingStyle.remove();
+      }
+    };
+  }, []);
+
   return (
     <section className="w-full bg-white">
       <div className="mx-auto container py-14">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* LEFT */}
           <div className="relative flex items-center justify-center md:justify-start">
-            <div className="absolute left-1/2 top-1/2 h-[320px] w-[320px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B8C0DB]/55 md:left-[215px]" />
+            {/* Laptop image container - for positioning reference */}
             <div className="relative z-10 w-[360px] drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)] md:ml-2">
+              {/* Animated circle waves - positioned behind laptop, centered */}
+              <div className="absolute left-1/2 top-1/2 z-0 ">
+                {/* Wave 1 */}
+                <div 
+                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/55"
+                  style={{ 
+                    animation: 'wave 3s ease-out infinite',
+                  }} 
+                />
+                {/* Wave 2 */}
+                <div 
+                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/40"
+                  style={{ 
+                    animation: 'wave 3s ease-out infinite 1s',
+                  }} 
+                />
+                {/* Wave 3 */}
+                <div 
+                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/30"
+                  style={{ 
+                    animation: 'wave 3s ease-out infinite 2s',
+                  }} 
+                />
+              </div>
+              {/* Laptop image - on top */}
               <Image
                 src="/partner-with-us/laptop.svg"
                 alt="Platform"
                 width={520}
                 height={420}
-                className="h-auto w-full"
+                className="relative z-10 h-auto w-full"
                 priority
               />
             </div>

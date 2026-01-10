@@ -22,15 +22,6 @@ export default function IbHeroWithForm() {
     { label: "Premium \nPlatforms", icon: "/partner-with-us/banner-icon4.svg" },
   ];
 
-  const offers = [
-    "Level 1 - Earn $10/lot",
-    "Level 2 - Earn $15/lot",
-    "Level 3 - Earn $20/lot",
-    "Level 4 - Earn $25/lot",
-    "Level 5 - Earn $30/lot",
-    "Premium - Earn $28/lot",
-    "Elite RAW - Earn $35/lot",
-  ];
 
   return (
     <section className="w-full bg-[#f6f6f6]">
@@ -89,63 +80,5 @@ export default function IbHeroWithForm() {
         </div>
       </div>
     </section>
-  );
-}
-
-/* ---------- Small fields ---------- */
-
-function Field({ label, full }) {
-  return (
-    <div className={full ? "" : ""}>
-      <div className="mb-1 text-[9px] font-semibold text-[#6B7280]">
-        {label}
-      </div>
-      <input className="h-[38px] w-full rounded-[8px] border border-[#E5E7EB] bg-white px-3 text-[11px] text-[#111827] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9]" />
-    </div>
-  );
-}
-
-function SelectField({ label, placeholder, compact }) {
-  return (
-    <div className={compact ? "" : ""}>
-      <div className="mb-1 text-[9px] font-semibold text-[#6B7280]">
-        {label}
-      </div>
-      <div className="relative">
-        <input
-          className="h-[38px] w-full rounded-[8px] border border-[#E5E7EB] bg-white pl-3 pr-8 text-[11px] text-[#111827] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9]"
-          placeholder={placeholder}
-        />
-        <svg
-          className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#9CA3AF]"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M7 10l5 5 5-5"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function PerkIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M12 2l2.4 5.6L20 10l-5.2 2.4L12 18l-2.8-5.6L4 10l5.6-2.4L12 2Z"
-        fill="#2E59D9"
-        opacity="0.15"
-      />
-      <path
-        d="M12 2l2.4 5.6L20 10l-5.2 2.4L12 18l-2.8-5.6L4 10l5.6-2.4L12 2Z"
-        stroke="#2E59D9"
-        strokeWidth="1.6"
-      />
-    </svg>
   );
 }
