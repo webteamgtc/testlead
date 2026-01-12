@@ -11,28 +11,28 @@ export default function IbHeroWithForm() {
       icon: "/partner-with-us/banner-icon1.svg",
     },
     {
-      title: "24/7",
-      description: "Multilingual Support",
+      title: "24/7 Multilingual",
+      description: "Support",
       icon: "/partner-with-us/banner-icon2.svg",
     },
     {
-      title: "Quick",
+      title: "Instant & Reliable",
       description: "Withdrawal",
       icon: "/partner-with-us/banner-icon3.svg",
     },
     {
-      title: "Copy",
+      title: "Advanced Copy",
       description: "Trading",
       icon: "/partner-with-us/banner-icon4.svg",
     },
     {
-      title: "Most Stable",
-      description: "Trading Platforms",
+      title: "Stable Trading",
+      description: "Platforms",
       icon: "/partner-with-us/banner-icon1.svg",
     },
     {
-      title: "Various",
-      description: "Funding Options",
+      title: "Various Funding",
+      description: " Options",
       icon: "/partner-with-us/banner-icon2.svg",
     },
     {
@@ -41,8 +41,13 @@ export default function IbHeroWithForm() {
       icon: "/partner-with-us/banner-icon3.svg",
     },
     {
-      title: "70%",
+      title: "High & Competitive",
       description: "Rebate",
+      icon: "/partner-with-us/banner-icon4.svg",
+    },
+      {
+      title: "Real-Time IB",
+      description: "Dashboard",
       icon: "/partner-with-us/banner-icon4.svg",
     },
   ];
@@ -50,7 +55,7 @@ export default function IbHeroWithForm() {
   return (
     <section className="w-full bg-[#f6f6f6]">
       <div className="container mx-auto">
-        <div className="pt-10 flex md:justify-start justify-center">
+        <div className="pt-2 flex md:justify-start justify-center">
           <Image
             src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
             width={200}
@@ -63,18 +68,18 @@ export default function IbHeroWithForm() {
       <div className="mx-auto container px-4 pb-16 pt-3">
         <div className="mt-7 grid items-start gap-12 md:grid-cols-[1fr_600px]">
           {/* LEFT */}
-          <div className="md:text-left text-center">
-            <p className="md:text-[28px] text-[24px] font-semibold text-[#293B93]">
-              Grow Your Clients Network With Us!
+          <div className="md:text-left text-center flex flex-col gap-4 md:pt-10">
+            <p className="md:text-[22px] text-[18px] font-semibold text-primary">
+             Grow Your Client Network. Earn More. Partner Stronger.
             </p>
 
-            <h1 className="md:mt-10 mt-5 md:text-[40px] text-[30px] font-extrabold md:leading-[1.1] leading-[1.3] text-[#0B0F1A]">
-              Become an{" "}
-              <span className="text-[#B78855]">Introducing Broker</span> Into
-              and Unlock Unlimited Earning Potential!.
-            </h1>
+            <h2 className="md:text-[40px] 2xl:text-5xl text-[28px] font-extrabold md:leading-[1.1] leading-nomral text-[#202a6b]">
+              Become {" "}
+              <span className="text-[#B78855]">Our Partner </span> 
+              and Unlock Unlimited Earning Potential!
+            </h2>
 
-            <p className="md:mt-10 mt-5  md:text-[21px] text-[18px] font-normal leading-[1.4] text-[#000]">
+            <p className="md:text-[21px] text-[18px] font-normal leading-[1.4] text-[#000]">
               Power up your business expansion and client network while
               <span className="font-extrabold text-[24px] text-[#B78855]">
                 {" "}
@@ -84,33 +89,36 @@ export default function IbHeroWithForm() {
             </p>
 
             {/* Perks grid */}
-            <div className="md:mt-20 mt-10 grid max-w-4xl md:grid-cols-3 grid-cols-2 gap-4">
-              {perks.map((p, idx) => (
-                <div
-                  key={idx}
-                  className="rounded-[10px] flex items-center gap-4 bg-white px-2 py-2 shadow-sm border border-[#D9D9D9]"
-                >
-                  {/* Icon on left */}
-                  <div className="flex-shrink-0">
-                    <img
-                      className="md:h-[44px] md:w-[44px] h-[30px] w-[30px]"
-                      src={p.icon}
-                      alt={p.title}
-                      width={44}
-                      height={44}
-                    />
-                  </div>
-                  {/* Text on right */}
-                  <div className="flex-1">
-                    <div className="text-[16px] font-semibold leading-[1.25] text-[#000]">
-                      {p.title}
-                    </div>
-                    <div className="mt-1 text-[14px] font-normal leading-[1.25] text-[#000]">
-                      {p.description}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="md:mt-20 mt-5 grid max-w-4xl md:grid-cols-3 grid-cols-2 gap-4">
+             {perks.map((p, idx) => (
+  <div
+    key={idx}
+    className={`rounded-[10px] flex items-center gap-4 bg-white px-2 py-2 shadow-sm border border-[#D9D9D9]
+      ${idx === perks.length - 1 ? "hidden md:flex" : ""}`}
+  >
+    {/* Icon */}
+    <div className="flex-shrink-0">
+      <img
+        className="md:h-[44px] md:w-[44px] h-[30px] w-[30px]"
+        src={p.icon}
+        alt={p.title}
+        width={44}
+        height={44}
+      />
+    </div>
+
+    {/* Text */}
+    <div className="flex-1">
+      <div className="text-xs md:text-[16px] font-semibold leading-[1.25] text-[#000]">
+        {p.title}
+      </div>
+      <div className="mt-1 text-[14px] font-normal leading-[1.25] text-[#000]">
+        {p.description}
+      </div>
+    </div>
+  </div>
+))}
+
             </div>
           </div>
 

@@ -38,8 +38,8 @@ export default function WhyTradeSection() {
     <section className="w-full bg-white pt-6 pb-14">
       <div className="mx-auto container">
         {/* Title */}
-        <h2 className="text-center md:text-[40px] text-[30px] font-extrabold text-[#000]">
-          Why Trade with <span className="text-[#293B93]">GTCFX</span>?
+        <h2 className="text-center md:text-[40px] text-[24px] font-extrabold text-primary">
+          Why Trade with <span className="text-secondary">GTCFX</span>?
         </h2>
 
         {/* Grid */}
@@ -49,7 +49,7 @@ export default function WhyTradeSection() {
               key={c.title}
               className={[
                 "group relative overflow-hidden rounded-[20px] md:px-8 px-4 md:py-10 py-8",
-                "bg-[#F3F4F6] text-[#0B0F1A] ",
+                "bg-[#f6f6f6] text-[#0B0F1A] ",
                 "transition-all duration-300",
                 "hover:bg-gradient-to-br hover:from-[#213A8F] hover:to-[#0B143A] hover:shadow-[0_18px_32px_rgba(11,20,58,0.22)]",
               ].join(" ")}
@@ -68,7 +68,7 @@ export default function WhyTradeSection() {
 
                 <div className="md:w-[2px] w-[1px] md:h-[64px] h-[50px] bg-[#ABABAB] group-hover:bg-white flex-shrink-0"></div>
 
-                <div className="md:text-[22px] text-[18px] font-semibold text-[#000] transition-colors duration-300 group-hover:text-white">
+                <div className="md:text-[18px] text-[18px] font-semibold text-[#000] transition-colors duration-300 group-hover:text-white">
                   {c.title}
                 </div>
               </div>
@@ -84,15 +84,7 @@ export default function WhyTradeSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-10 flex justify-center">
-          <button
-            type="button"
-            className="rounded-full w-full sm:w-auto bg-gradient-to-r from-[#293B93] to-[#0D122D] px-16 py-[14px] text-[16px] font-semibold text-white hover:brightness-110 active:translate-y-[1px]"
-          >
-            Become An IB
-          </button>
-        </div>
+      
       </div>
     </section>
   );

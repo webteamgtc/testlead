@@ -109,17 +109,7 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
 
   return (
     <section className="bg-gradient-to-t from-[#f7f7f7] to-[#fff] text-primary py-8 md:py-20 relative overflow-hidden text-center">
-        <div className="absolute inset-0 bg-white z-0" />
-
-      {/* Faded Background Image at Bottom Center */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-20">
-        <img
-          src="/ib/layer5.webp" // ✅ change this path if needed
-          alt="Decorative background"
-          className="w-full h-auto object-contain object-bottom"
-        />
-      </div>
-    
+      
       <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4 md:px-0">
         {/* Section Title */}
 

@@ -48,7 +48,7 @@ const UaePartnerPage = () => {
 
   return (
     <>
-      <MainHeader />
+
             <HeroSection setIsOpen={setIsOpen} /> 
                <PayCommission 
               topTitle="A Forex Partnership Programme That"
@@ -59,7 +59,7 @@ const UaePartnerPage = () => {
               <HowToBecomeIB />
          <LoyaltyVipSection />
          <SecureClientFundsBar />
-         <TradingProductsTwoGrid />
+       
          
             <MainFooter />
             <SliderModal

@@ -10,12 +10,12 @@ export default function CompanyProfileCta() {
         <div className="mx-auto flex container items-center justify-between md:py-14 py-10">
           {/* LEFT */}
           <div className="max-w-3xl">
-            <h3 className="md:text-[36px] text-[28px] font-extrabold leading-tight text-[#000]">
+            <h3 className="md:text-[36px] text-[24px] font-extrabold leading-tight text-[#000]">
             GTCFX Group{" "}
               <span className="text-[#B48755]">Company Profile</span>
             </h3>
 
-            <p className="mt-3  md:text-[18px] text-[16px] font-normal leading-[1.4] text-[#000]">
+            <p className="mt-3  md:text-[18px] text-sm  font-normal leading-[1.4] text-[#000]">
             GTCFX invites you to learn more about our services, values, and
               commitment to excellence. Download our comprehensive company
               profile PDF to discover how we can help you achieve success in the

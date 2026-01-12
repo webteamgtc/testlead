@@ -238,28 +238,58 @@ const HeroSection = ({setIsOpen}) => {
    
   ]
   return (
-    <section className="bg-[url(/ib/ib-banner-new.webp)] bg-cover bg-no-repeat bg-right text-[#E5E5EA] py-8 md:py-16 relative overflow-hidden" id="register-form">
+    <section className="relative overflow-hidden border-b border-secondary/20" id="register-form">
+          <div className="absolute inset-0 bg-white z-0" />
+
+      {/* Faded Background Image at Bottom Center */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-20">
+        <img
+          src="/ib/layer5.webp" // ✅ change this path if needed
+          alt="Decorative background"
+          className="w-full h-auto object-contain object-bottom"
+        />
+      </div>
+    
 
 
      
 
 
-      <div className="container">
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_420px] z-10 relative">
+      <div className="relative z-50 container">
+             <div className="container mx-auto text-left py-3 flex flex-col md:flex-row justify-base items-center gap-4">
+                <Image
+                  src="/logo-2024.webp"
+                  width={200}
+                  height={72}
+                  alt="GTCFX"
+                  className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                />
+              </div>
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_420px] z-10 relative pb-10">
           {/* Left Column */}
-          <div className="text-center md:text-left">
-          
-                  <h1 className="text-3xl md:text-[70px] font-bold text-secondary leading-tight pb-5">
-      
-         Grow Your Client Network. Earn More. Partner Stronger.
-      </h1>
-           
+          <div className="text-center md:text-left  pt-8 md:pt-16 ">
+          <h1
+          className="
+            text-3xl md:text-[70px]
+            font-bold
+            leading-tight
+            pb-5
+            max-w-3xl
+            bg-gradient-to-r from-[#243586] from-10% via-[#222e73] via-30% to-[#141b43] to-90%
+            bg-clip-text text-transparent
+          "
+        >
+          Grow Your Client Network. Earn More. Partner Stronger.
+        </h1>
             <p className="text-sm md:text-xl md:mb-6 leading-relaxed max-w-2xl">
               Partner with the GTCFX multi-regulated company, our partnership program offers competitive rebates, fast payouts, and dedicated partner support
             </p>
     
           </div>
-          <div className="md:rounded-[10px] p-4 shadow-[0_22px_55px_rgba(0,0,0,0.35)] bg-gradient-to-r from-[#24358ba4] via-[#242c75] to-[#141b43b0]">
+          <div className="rounded-[10px] p-4 shadow-[0_22px_55px_rgba(0,0,0,0.35)] bg-gradient-to-r from-[#293794] to-[#000021]">
+            <h2 className="bg-secondary text-white text-center py-2 mb-5 rounded-full font-bold">
+              Become a GTC Partner
+            </h2>
             <NewPageForm />
           </div>
 
@@ -268,11 +298,11 @@ const HeroSection = ({setIsOpen}) => {
 
       {/* Bottom Feature Bar */}
 <div
-  className="relative z-50 bg-gradient-to-b from-[#293794af] to-[#000021ab]
+  className="hidden md:blockrelative z-50 bg-gradient-to-r from-[#293794] to-[#000021]
              py-5 px-4 md:px-10 rounded-[16px]
-             grid grid-cols-1 md:grid-cols-3
+             md:grid grid-cols-1 md:grid-cols-3
              text-center text-white/90
-             mt-10"
+             mt-10 mb-14"
   style={{
     boxShadow: "1px 6px 16px 0px #00000080",
     backdropFilter: "blur(8px)",

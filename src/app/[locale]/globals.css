@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
 }
 @theme {
-  --color-primary: #02002f; /* Dark blue */
+  --color-primary: #202a6b; /* Dark blue */
   --color-secondary: #b68756; /* Gold yellow */
 }
 
@@ -222,4 +222,41 @@ html {
   0% { background-position: 0% 0; }
   100% { background-position: 200% 0; }
 }
+
+.pulse-wrap {
+  position: relative;
+  width: 520px;            /* or 100% with max-width in Tailwind */
+  max-width: 520px;
+}
+
+.pulse-bg {
+  position: absolute;
+  left: 50%;
+  top: 55%;                /* slightly lower to match your sample */
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  background: #f7f7f7;
+  border-radius: 9999px;
+  animation: animate-pulse 3s linear infinite;
+  z-index: 0;
+  pointer-events: none;    /* important */
+}
+
+@keyframes animate-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255,109,74,0.15), 0 0 0 0 rgba(255,109,74,0.15);
+  }
+  40% {
+    box-shadow: 0 0 0 45px rgba(255,109,74,0.0), 0 0 0 0 rgba(255,109,74,0.20);
+  }
+  80% {
+    box-shadow: 0 0 0 45px rgba(255,109,74,0.0), 0 0 0 28px rgba(255,109,74,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255,109,74,0.0), 0 0 0 28px rgba(255,109,74,0);
+  }
+}
+
+
 

@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export default function WhyChooseNaqdiIB() {
   return (
-    <section className="w-full bg-white md:py-16 py-10">
+    <section className="w-full bg-white py-10">
       <div className="mx-auto max-w-[1200px] px-4">
         {/* Headings */}
         <div className="text-center">
-          <p className="md:text-[36px] text-[28px] font-normal text-[#293B93]">
-            Why Choose GTCFX IB?
+          <p className="md:text-[24px] text-[18px] font-normal text-[#293B93]">
+            Why Choose GTCFX
           </p>
 
-          <h2 className="mt-2 md:text-[40px] text-[30px] font-extrabold md:leading-tight leading-[1.3] text-[#000]">
+          <h2 className="mt-2 md:text-[40px] text-[24px] font-extrabold md:leading-tight leading-[1.3] text-primary">
             <span className="text-[#B48755]">The Future</span> Of Partnership
           </h2>
         </div>

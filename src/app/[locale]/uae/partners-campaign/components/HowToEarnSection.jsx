@@ -58,11 +58,11 @@ export default function HowToEarnSectionInteractive() {
   }, []);
 
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-[#f6f6f6] mt-10">
       <div className="mx-auto container md:py-14 py-10">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* LEFT */}
-          <div className="relative flex items-center justify-center md:justify-start">
+          <div className="relative flex items-center justify-center md:justify-center">
             {/* Laptop image container - for positioning reference */}
             <div className="relative z-10 md:w-[360px] w-[280px] drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)] md:ml-2">
               {/* Animated circle waves - positioned behind laptop, centered */}
@@ -103,11 +103,11 @@ export default function HowToEarnSectionInteractive() {
 
           {/* RIGHT */}
           <div className="max-w-xl">
-            <h2 className="text-center md:text-[32px] text-[28px] font-extrabold leading-tight text-[#000] md:text-left">
+            <h2 className="text-center md:text-[32px] 2xl:text-[40px] text-[24px] font-extrabold leading-tight text-primary md:text-left">
               Simple Steps to Join Our
-              <span className="text-[#B48755]"> Partnership Program</span>.
+              <span className="text-[#B48755]"> Partnership Program</span>
             </h2>
-            <p className="text-left mt-2 md:text-[16px] text-[14px] font-medium leading-[1.6] text-[#000]">
+            <p className="text-center md:text-left mt-2 md:text-[16px] text-[14px] font-medium leading-[1.6] text-primary">
               It’s fast, simple and only takes a few minutes to get started
             </p>
 
@@ -164,7 +164,7 @@ export default function HowToEarnSectionInteractive() {
                           <div
                             className={[
                               "text-[16px] font-extrabold",
-                              isActive ? "text-white" : "text-[#000]",
+                              isActive ? "text-white" : "text-primary",
                             ].join(" ")}
                           >
                             {it.title}
@@ -173,7 +173,7 @@ export default function HowToEarnSectionInteractive() {
                           <div
                             className={[
                               "mt-[3px] max-w-[430px] text-[14px] font-medium leading-[1.55]",
-                              isActive ? "text-white" : "text-[#000]",
+                              isActive ? "text-white" : "text-primary",
                             ].join(" ")}
                           >
                             {it.desc}

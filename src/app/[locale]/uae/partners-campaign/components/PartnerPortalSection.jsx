@@ -44,15 +44,15 @@ export default function PartnerPortalSection() {
   ];
 
   return (
-    <section className="w-full bg-white md:py-14 py-10">
+    <section className="w-full bg-[#f6f6f6] md:py-14 py-10">
       <div className="mx-auto container">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="md:text-[40px] text-[30px] font-extrabold leading-tight text-[#0B0F1A]">
+          <h2 className="md:text-[40px] text-[24px] font-extrabold leading-tight text-primary">
             The <span className="text-[#B78855]">GTCFX Partner</span> Portal: Explore now!
           </h2>
 
-          <p className="mt-4 md:text-[32px] text-[28px] font-semibold text-[#404040]">
+          <p className="mt-4 md:text-[32px] text-[18px] font-semibold text-[#404040]">
             Your clients, closer than ever
           </p>
 
@@ -96,15 +96,7 @@ export default function PartnerPortalSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-10 flex justify-center">
-        <button
-            type="button"
-            className="rounded-full w-full sm:w-auto bg-gradient-to-r from-[#293B93] to-[#0D122D] px-16 py-[14px] text-[16px] font-semibold text-white hover:brightness-110 active:translate-y-[1px]"
-          >
-            Become An IB
-          </button>
-        </div>
+   
       </div>
     </section>
   );

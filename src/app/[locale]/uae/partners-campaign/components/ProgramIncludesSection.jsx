@@ -53,20 +53,20 @@ export default function IbProgramIncludes() {
             />
           </div>
         </div>
-        <h2 className="text-center md:text-[40px] text-[30px] font-extrabold leading-tight text-[#0B0F1A]">
+        <h2 className="text-center md:text-[40px] text-[24px] font-extrabold leading-tight text-[#0B0F1A]">
           Why Partner With
           <span className="text-[#B48755]"> GTCFX</span>
         </h2>
-        <p className="text-center mt-2 md:text-[16px] text-[14px] font-medium leading-[1.6] text-[#000]">
+        <p className="text-center mt-2 text-sm md:text-[16px] font-medium leading-[1.6] text-[#000]">
           Advanced trading solutions and partner benefits designed for
           sustainable expansion.
         </p>
 
         {/* Cards grid */}
-        <div className="mt-20 grid md:gap-x-10 md:gap-y-24 gap-y-10 gap-x-5 md:grid-cols-3 grid-cols-2">
+        <div className="mt-10 grid md:gap-x-5 md:gap-y-12 gap-y-10 gap-x-5 md:grid-cols-3 grid-cols-2">
           {cards.map((c) => (
             <div
-              className="relative mx-auto w-full max-w-[360px] rounded-[20px] bg-[#F6F6F6]"
+              className="relative mx-auto w-full rounded-[20px] bg-[#F6F6F6]"
               style={{
                 boxShadow: "0px 4px 30px 0px #00000033",
               }}
@@ -85,8 +85,8 @@ export default function IbProgramIncludes() {
                 </div>
               </div>
 
-              <div className="card-notch relative rounded-[14px] h-full bg-white px-8 pb-7 pt-12">
-                <h3 className="text-center mt-3 md:text-[18px] text-[16px] font-extrabold text-[#000]">
+              <div className="card-notch relative rounded-[14px] h-full bg-white px-5 pb-7 pt-12">
+                <h3 className="text-center mt-3 md:text-[18px] text-[15px] font-extrabold text-secondary">
                   {c.title}
                 </h3>
                 <p className="mt-1 text-center md:text-[12px] text-[10px] font-medium text-[#000]">

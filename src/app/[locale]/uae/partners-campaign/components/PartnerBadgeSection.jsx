@@ -11,11 +11,11 @@ export default function ClaimPartnerBadge() {
           <div className="flex items-center justify-between gap-8">
             {/* Left text */}
             <div className="max-w-xl">
-              <h3 className="md:text-[36px] text-[28px] font-extrabold leading-tight text-[#000]">
-                Claim Your Partner <span className="text-[#B48755]">Badge!</span>
+              <h3 className="md:text-[36px] text-[24px] font-extrabold leading-tight text-primary text-center md:text-left ">
+                Claim Your <span className="text-[#B48755]"> Partner Badge!</span>
               </h3>
 
-              <p className="mt-3 max-w-xl md:text-[16px] text-[14px] font-medium leading-[1.6] text-[#000000]">
+              <p className="text-center md:text-left mt-3 max-w-xl md:text-[16px] text-[14px] font-medium leading-[1.6] text-primary">
                 Get your official GTCFX Partner Badge now! Display it on your website and
                 immediately highlight your trusted broker partnership.
               </p>

@@ -481,18 +481,15 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           {/* Title */}
           {isIb && (
             <div className="text-center mb-6">
-              <h2 className="text-center md:text-[32px] text-[28px] uppercase font-extrabold text-[#000]">
-                Become A <span className="text-[#B48755]">IB</span>
+              <h2 className="text-center md:text-[32px] text-[20px] uppercase font-extrabold text-primary">
+                Become Our <span className="text-[#B48755]">Partners</span>
               </h2>
-              <p className="md:text-[16px] text-[14px] text-center font-normal text-[#000000]">
+              <p className="md:text-[16px] text-[14px] text-center font-normal text-primary">
                 Complete Your Registration
               </p>
             </div>
           )}
-          <h3 className="text-[18px] font-normal text-[#293B93]">
-            Automated Onboarding Clients Offers
-          </h3>
-
+        
           {/* Fields row 1 */}
           <div className="mt-5 grid grid-cols-2 gap-4">
             <div>
