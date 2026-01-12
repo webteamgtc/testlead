@@ -5,20 +5,20 @@ import NaqdiIbOnboardingForm from "./HeroForm";
 
 export default function IbHeroWithForm() {
   const perks = [
-    { 
-      title: "Fast & Secure", 
-      description: "Execution", 
-      icon: "/partner-with-us/banner-icon1.svg" 
+    {
+      title: "Fast & Secure",
+      description: "Execution",
+      icon: "/partner-with-us/banner-icon1.svg",
     },
     {
       title: "24/7",
       description: "Multilingual Support",
       icon: "/partner-with-us/banner-icon2.svg",
     },
-    { 
-      title: "Quick", 
-      description: "Withdrawal", 
-      icon: "/partner-with-us/banner-icon3.svg" 
+    {
+      title: "Quick",
+      description: "Withdrawal",
+      icon: "/partner-with-us/banner-icon3.svg",
     },
     {
       title: "Copy",
@@ -30,25 +30,36 @@ export default function IbHeroWithForm() {
       description: "Trading Platforms",
       icon: "/partner-with-us/banner-icon1.svg",
     },
-    { 
-      title: "Various", 
-      description: "Funding Options", 
-      icon: "/partner-with-us/banner-icon2.svg" 
+    {
+      title: "Various",
+      description: "Funding Options",
+      icon: "/partner-with-us/banner-icon2.svg",
     },
     {
       title: "Multi Tier",
       description: "IB System",
       icon: "/partner-with-us/banner-icon3.svg",
     },
-    { 
-      title: "70%", 
-      description: "Rebate", 
-      icon: "/partner-with-us/banner-icon4.svg" 
+    {
+      title: "70%",
+      description: "Rebate",
+      icon: "/partner-with-us/banner-icon4.svg",
     },
   ];
 
   return (
     <section className="w-full bg-[#f6f6f6]">
+      <div className="container mx-auto">
+        <div className="pt-10">
+          <Image
+            src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/logo-2024-new.webp"
+            width={200}
+            height={72}
+            alt="GTCFX"
+            className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+          />
+        </div>
+      </div>
       <div className="mx-auto container px-4 py-16">
         <div className="mt-7 grid items-start gap-12 md:grid-cols-[1fr_600px]">
           {/* LEFT */}
@@ -106,7 +117,7 @@ export default function IbHeroWithForm() {
           {/* RIGHT FORM CARD */}
           <div className="relative">
             <NaqdiIbOnboardingForm />
-           </div>
+          </div>
         </div>
       </div>
     </section>

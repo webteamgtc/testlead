@@ -5,33 +5,33 @@ import Image from "next/image";
 export default function IbProgramIncludes() {
   const cards = [
     {
-      title: "Security of funds",
-      desc: "$1,000,000 capital protection per account",
+      title: "Fast & Secure Execution",
+      desc: "Lightning-fast order processing with advanced trade security. ",
       icon: "/partner-with-us/why-icon1.svg",
     },
     {
-      title: "Extra marketing bonus",
-      desc: "Additional marketing bonus on top of your rebates",
+      title: "Instant Fund Transfers",
+      desc: "Fast and smooth fund processing for you and your clients.",
       icon: "/partner-with-us/why-icon2.svg",
     },
     {
-      title: "Mega prizes",
-      desc: "Mega prizes with our IB Loyalty Program",
+      title: "Multi-Tier Partners System",
+      desc: "Grow your network with a powerful multi-level Partners structure.",
       icon: "/partner-with-us/why-icon3.svg",
     },
     {
-      title: "Cutting-edge trading platforms",
-      desc: "Full ECN platform, negative balance protection, no slippage",
+      title: "Copy Trading",
+      desc: "Boost retention with smart copy trading solutions.",
       icon: "/partner-with-us/why-icon4.svg",
     },
     {
-      title: "Experienced account managers",
-      desc: "A team of dedicated and highly experienced IB managers",
+      title: "Stable Trading Platforms",
+      desc: "Industry-leading trading platforms for consistent performance.",
       icon: "/partner-with-us/why-icon5.svg",
     },
     {
-      title: "Tightest spreads in the industry",
-      desc: "0.0* pips on EUR/USD",
+      title: "24/7 Multilingual Support",
+      desc: "Round-the-clock multilingual partner assistance.",
       icon: "/partner-with-us/why-icon6.svg",
     },
   ];
@@ -54,8 +54,13 @@ export default function IbProgramIncludes() {
           </div>
         </div>
         <h2 className="text-center text-[40px] font-extrabold leading-tight text-[#0B0F1A]">
-          naqdi <span className="text-[#B48755]">IB Program</span> Includes
+          Why Partner With
+          <span className="text-[#B48755]"> GTCFX</span>
         </h2>
+        <p className="text-center mt-2 text-[16px] font-medium leading-[1.6] text-[#000]">
+          Advanced trading solutions and partner benefits designed for
+          sustainable expansion.
+        </p>
 
         {/* Cards grid */}
         <div className="mt-20 grid gap-x-10 gap-y-24 md:grid-cols-3">

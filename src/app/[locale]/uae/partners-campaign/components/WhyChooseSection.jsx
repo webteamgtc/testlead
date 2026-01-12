@@ -9,7 +9,7 @@ export default function WhyChooseNaqdiIB() {
         {/* Headings */}
         <div className="text-center">
           <p className="text-[36px] font-normal text-[#293B93]">
-            Why Choose Naqdi IB?
+            Why Choose GTCFX IB?
           </p>
 
           <h2 className="mt-2 text-[40px] font-extrabold leading-tight text-[#000]">
