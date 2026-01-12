@@ -114,14 +114,20 @@ export default function IbProgramIncludes() {
         </div>
 
         {/* CTA */}
-        <div className="mt-14 flex justify-center">
-          <button
-            type="button"
-            className="rounded-full w-full sm:w-auto bg-gradient-to-r from-[#293B93] to-[#0D122D] px-16 py-[14px] text-[16px] font-semibold text-white hover:brightness-110 active:translate-y-[1px]"
-          >
-            Become An IB
-          </button>
-        </div>
+            <div className="mt-12 text-center">
+              <button
+                className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+                           hover:from-[#293794] hover:to-[#000021]
+                           text-sm font-bold md:text-base
+                           text-white px-8 py-3 rounded-full transition-all duration-300"
+                onClick={() => {
+                  document.getElementById("register-form")?.scrollIntoView({ behavior: "smooth" });
+                  setIsOpen?.(false);
+                }}
+              >
+                Register Now
+              </button>
+            </div>
       </div>
     </section>
   );

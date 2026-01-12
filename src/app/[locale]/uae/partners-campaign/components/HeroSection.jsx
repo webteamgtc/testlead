@@ -53,7 +53,7 @@ export default function IbHeroWithForm() {
   ];
 
   return (
-    <section className="w-full bg-[#f6f6f6]">
+    <section className="w-full bg-[#f6f6f6]"  id="register-form">
       <div className="container mx-auto">
         <div className="pt-2 flex md:justify-start justify-center">
           <Image
