@@ -14,7 +14,7 @@ export default function WhyTradeSection() {
     },
     {
       title: "Premium Trading",
-      desc: "Experience superior technology with Naqdi’s advanced tools & trading platforms",
+      desc: "Experience superior technology with GTCFX advanced tools & trading platforms",
       icon: "/partner-with-us/last-icon3.svg",
     },
     {
@@ -39,7 +39,7 @@ export default function WhyTradeSection() {
       <div className="mx-auto container">
         {/* Title */}
         <h2 className="text-center text-[40px] font-extrabold text-[#000]">
-          Why Trade with <span className="text-[#293B93]">Fxgtc</span>?
+          Why Trade with <span className="text-[#293B93]">GTCFX</span>?
         </h2>
 
         {/* Grid */}

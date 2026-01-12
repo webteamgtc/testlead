@@ -16,7 +16,7 @@ export default function ClaimPartnerBadge() {
               </h3>
 
               <p className="mt-3 max-w-xl text-[16px] font-medium leading-[1.6] text-[#000000]">
-                Get your official naqdi Partner Badge now! Display it on your website and
+                Get your official GTCFX Partner Badge now! Display it on your website and
                 immediately highlight your trusted broker partnership.
               </p>
             </div>

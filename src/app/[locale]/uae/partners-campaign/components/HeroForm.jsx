@@ -406,6 +406,9 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
       .phone-input-wrapper .PhoneInputInput::placeholder {
         color: #9CA3AF !important;
       }
+        .PhoneInputCountry{
+        flex-direction: row !important;
+        }
       .phone-input-wrapper .PhoneInputCountryIcon {
         width: 20px !important;
         height: 15px !important;
@@ -433,8 +436,8 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
       .phone-input-wrapper .PhoneInputCountrySelectArrow {
         opacity: 0.7;
         color: #9CA3AF !important;
-        width: 12px;
-        height: 12px;
+        // width: 12px;
+        // height: 12px;
       }
       .phone-input-wrapper .PhoneInputCountrySelectArrow svg {
         fill: #9CA3AF !important;
@@ -669,7 +672,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           <p className="mt-6 text-[14px] font-normal leading-[1.5] text-[#7A7A7A]">
             <span className="font-medium text-[#293B93]">Disclaimer:</span> By
             submitting this form, I acknowledge that I have read, understood,
-            and agree to the Client Agreement. I give my consent for Naqdi to
+            and agree to the Client Agreement. I give my consent for GTCFX to
             contact me for marketing purposes.
           </p>
 

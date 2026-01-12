@@ -49,7 +49,7 @@ export default function PartnerPortalSection() {
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-[40px] font-extrabold leading-tight text-[#0B0F1A]">
-            The <span className="text-[#B78855]">naqdi Partner</span> Portal: Explore now!
+            The <span className="text-[#B78855]">GTCFX Partner</span> Portal: Explore now!
           </h2>
 
           <p className="mt-4 text-[32px] font-semibold text-[#404040]">
@@ -57,11 +57,11 @@ export default function PartnerPortalSection() {
           </p>
 
           <p className="mx-auto mt-4 max-w-5xl text-[16px] font-medium leading-[1.65] text-[##000000]">
-            Take complete control of your client network. The naqdi Partner Portal delivers a
+            Take complete control of your client network. The GTCFX Partner Portal delivers a
             comprehensive dashboard for insights, trading stats, registrations, deposits, and
             withdrawals. Gain real-time insights, streamline client management, and access powerful
             marketing tools — all in one comprehensive dashboard. Maximize your potential with
-            naqdi.
+            GTCFX.
           </p>
         </div>
 

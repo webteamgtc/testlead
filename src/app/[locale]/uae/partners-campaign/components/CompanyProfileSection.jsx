@@ -11,12 +11,12 @@ export default function CompanyProfileCta() {
           {/* LEFT */}
           <div className="max-w-3xl">
             <h3 className="text-[36px] font-extrabold leading-tight text-[#000]">
-              Naqdi Group{" "}
+            GTCFX Group{" "}
               <span className="text-[#B48755]">Company Profile</span>
             </h3>
 
             <p className="mt-3  text-[18px] font-normal leading-[1.4] text-[#000]">
-              naqdi invites you to learn more about our services, values, and
+            GTCFX invites you to learn more about our services, values, and
               commitment to excellence. Download our comprehensive company
               profile PDF to discover how we can help you achieve success in the
               forex market.

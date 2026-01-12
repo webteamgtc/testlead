@@ -41,7 +41,7 @@ export default function IbEarningsCard() {
             </p>
 
             <h2 className="mt-4 text-center text-[40px] font-extrabold leading-[1.15] text-[#111827] md:text-[28px]">
-              Partner with naqdi.{" "}
+              Partner with GTCFX.{" "}
               <span className="text-[#B78855]">Connect Clients.</span>
               <br />
               Grow Your Income!

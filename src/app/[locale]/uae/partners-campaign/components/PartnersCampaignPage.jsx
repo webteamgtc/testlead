@@ -9,6 +9,7 @@ import PartnerBadgeSection from "./PartnerBadgeSection";
 import WhyTradeSection from "./WhyTradeSection";
 import BecomeIBFormSection from "./BecomeIBFormSection";
 import CompanyProfileSection from "./CompanyProfileSection";
+import MainFooter from "@/app/[locale]/components/MainFooter";
 
 export default function PartnersCampaignPage() {
   return (
@@ -27,6 +28,7 @@ export default function PartnersCampaignPage() {
         <WhyTradeSection />
         <BecomeIBFormSection />
         <CompanyProfileSection />
+        <MainFooter/>
       </div>
     </div>
   );
