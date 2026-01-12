@@ -109,7 +109,7 @@ export default function IbHeroWithForm() {
 
     {/* Text */}
     <div className="flex-1">
-      <div className="text-xs md:text-[16px] font-semibold leading-[1.25] text-[#000]">
+      <div className="text-xs md:text-[14px] font-semibold leading-[1.25] text-[#000]">
         {p.title}
       </div>
       <div className="mt-1 text-[14px] font-normal leading-[1.25] text-[#000]">
