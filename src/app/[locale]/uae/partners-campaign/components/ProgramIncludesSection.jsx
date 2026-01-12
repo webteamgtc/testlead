@@ -37,7 +37,7 @@ export default function IbProgramIncludes() {
   ];
 
   return (
-    <section className="relative w-full bg-white py-16">
+    <section className="relative w-full bg-white md:py-16 py-10">
       {/* Map background (replace this image with your real map asset) */}
 
       <div className="relative mx-auto container">
@@ -53,17 +53,17 @@ export default function IbProgramIncludes() {
             />
           </div>
         </div>
-        <h2 className="text-center text-[40px] font-extrabold leading-tight text-[#0B0F1A]">
+        <h2 className="text-center md:text-[40px] text-[30px] font-extrabold leading-tight text-[#0B0F1A]">
           Why Partner With
           <span className="text-[#B48755]"> GTCFX</span>
         </h2>
-        <p className="text-center mt-2 text-[16px] font-medium leading-[1.6] text-[#000]">
+        <p className="text-center mt-2 md:text-[16px] text-[14px] font-medium leading-[1.6] text-[#000]">
           Advanced trading solutions and partner benefits designed for
           sustainable expansion.
         </p>
 
         {/* Cards grid */}
-        <div className="mt-20 grid gap-x-10 gap-y-24 md:grid-cols-3">
+        <div className="mt-20 grid md:gap-x-10 md:gap-y-24 gap-y-10 gap-x-5 md:grid-cols-3 grid-cols-2">
           {cards.map((c) => (
             <div
               className="relative mx-auto w-full max-w-[360px] rounded-[20px] bg-[#F6F6F6]"
@@ -86,10 +86,10 @@ export default function IbProgramIncludes() {
               </div>
 
               <div className="card-notch relative rounded-[14px] h-full bg-white px-8 pb-7 pt-12">
-                <h3 className="text-center mt-3 text-[18px] font-extrabold text-[#000]">
+                <h3 className="text-center mt-3 md:text-[18px] text-[16px] font-extrabold text-[#000]">
                   {c.title}
                 </h3>
-                <p className="mt-1 text-center text-[12px] font-medium text-[#000]">
+                <p className="mt-1 text-center md:text-[12px] text-[10px] font-medium text-[#000]">
                   {c.desc}
                 </p>
               </div>
@@ -117,7 +117,7 @@ export default function IbProgramIncludes() {
         <div className="mt-14 flex justify-center">
           <button
             type="button"
-            className="rounded-full bg-gradient-to-r from-[#293B93] to-[#0D122D] px-16 py-[14px] text-[16px] font-semibold text-white hover:brightness-110 active:translate-y-[1px]"
+            className="rounded-full w-full sm:w-auto bg-gradient-to-r from-[#293B93] to-[#0D122D] px-16 py-[14px] text-[16px] font-semibold text-white hover:brightness-110 active:translate-y-[1px]"
           >
             Become An IB
           </button>

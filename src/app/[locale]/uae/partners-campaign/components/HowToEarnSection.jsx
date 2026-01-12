@@ -59,31 +59,31 @@ export default function HowToEarnSectionInteractive() {
 
   return (
     <section className="w-full bg-white">
-      <div className="mx-auto container py-14">
+      <div className="mx-auto container md:py-14 py-10">
         <div className="grid items-center gap-10 md:grid-cols-2">
           {/* LEFT */}
           <div className="relative flex items-center justify-center md:justify-start">
             {/* Laptop image container - for positioning reference */}
-            <div className="relative z-10 w-[360px] drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)] md:ml-2">
+            <div className="relative z-10 md:w-[360px] w-[280px] drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)] md:ml-2">
               {/* Animated circle waves - positioned behind laptop, centered */}
               <div className="absolute left-1/2 top-1/2 z-0 ">
                 {/* Wave 1 */}
                 <div
-                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/55"
+                  className="wave-circle absolute left-1/2 top-1/2 md:h-[350px] h-[280px] md:w-[350px] w-[280px] rounded-full bg-[#B8C0DB]/55"
                   style={{
                     animation: "wave 3s ease-out infinite",
                   }}
                 />
                 {/* Wave 2 */}
                 <div
-                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/40"
+                  className="wave-circle absolute left-1/2 top-1/2 md:h-[350px] h-[280px] md:w-[350px] w-[280px] rounded-full bg-[#B8C0DB]/40"
                   style={{
                     animation: "wave 3s ease-out infinite 1s",
                   }}
                 />
                 {/* Wave 3 */}
                 <div
-                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/30"
+                  className="wave-circle absolute left-1/2 top-1/2 md:h-[350px] h-[280px] md:w-[350px] w-[280px] rounded-full bg-[#B8C0DB]/30"
                   style={{
                     animation: "wave 3s ease-out infinite 2s",
                   }}
@@ -95,7 +95,7 @@ export default function HowToEarnSectionInteractive() {
                 alt="Platform"
                 width={520}
                 height={420}
-                className="relative z-10 h-auto w-full"
+                className="relative z-10 h-auto md:w-full w-[260px] mx-auto"
                 priority
               />
             </div>
@@ -103,11 +103,11 @@ export default function HowToEarnSectionInteractive() {
 
           {/* RIGHT */}
           <div className="max-w-xl">
-            <h2 className="text-center text-[32px] font-extrabold leading-tight text-[#000] md:text-left">
+            <h2 className="text-center md:text-[32px] text-[28px] font-extrabold leading-tight text-[#000] md:text-left">
               Simple Steps to Join Our
               <span className="text-[#B48755]"> Partnership Program</span>.
             </h2>
-            <p className="text-left mt-2 text-[16px] font-medium leading-[1.6] text-[#000]">
+            <p className="text-left mt-2 md:text-[16px] text-[14px] font-medium leading-[1.6] text-[#000]">
               It’s fast, simple and only takes a few minutes to get started
             </p>
 
