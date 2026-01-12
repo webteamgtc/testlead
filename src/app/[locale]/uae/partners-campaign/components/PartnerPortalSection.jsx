@@ -44,19 +44,19 @@ export default function PartnerPortalSection() {
   ];
 
   return (
-    <section className="w-full bg-white py-14">
+    <section className="w-full bg-white md:py-14 py-10">
       <div className="mx-auto container">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="text-[40px] font-extrabold leading-tight text-[#0B0F1A]">
+          <h2 className="md:text-[40px] text-[30px] font-extrabold leading-tight text-[#0B0F1A]">
             The <span className="text-[#B78855]">GTCFX Partner</span> Portal: Explore now!
           </h2>
 
-          <p className="mt-4 text-[32px] font-semibold text-[#404040]">
+          <p className="mt-4 md:text-[32px] text-[28px] font-semibold text-[#404040]">
             Your clients, closer than ever
           </p>
 
-          <p className="mx-auto mt-4 max-w-5xl text-[16px] font-medium leading-[1.65] text-[##000000]">
+          <p className="mx-auto mt-4 max-w-5xl md:text-[16px] text-[14px] font-medium leading-[1.65] text-[##000000]">
             Take complete control of your client network. The GTCFX Partner Portal delivers a
             comprehensive dashboard for insights, trading stats, registrations, deposits, and
             withdrawals. Gain real-time insights, streamline client management, and access powerful
@@ -66,7 +66,7 @@ export default function PartnerPortalSection() {
         </div>
 
         {/* Grid */}
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid md:gap-6 gap-4 md:grid-cols-2">
           {cards.map((c, idx) => (
             <div
               key={idx}
@@ -79,11 +79,11 @@ export default function PartnerPortalSection() {
               }}
             >
               <div className="relative text-center z-10">
-                <p className="text-[18px] font-semibold leading-[1.35] text-white">{c.title}</p>
+                <p className="md:text-[18px] text-[16px] font-semibold leading-[1.35] text-white">{c.title}</p>
               </div>
 
               {/* screenshot area */}
-              <div className="relative mt-4 h-[320px] border-8 border-[#7D7980] rounded-[20px] border-b-0 w-full z-10">
+              <div className="relative mt-4 md:h-[320px] h-[220px] border-8 border-[#7D7980] rounded-[20px] border-b-0 w-full z-10">
                 {/* replace this image later */}
                 <img
                   src="/partner-with-us/portal.svg"
@@ -100,7 +100,7 @@ export default function PartnerPortalSection() {
         <div className="mt-10 flex justify-center">
         <button
             type="button"
-            className="rounded-full bg-gradient-to-r from-[#293B93] to-[#0D122D] px-16 py-[14px] text-[16px] font-semibold text-white hover:brightness-110 active:translate-y-[1px]"
+            className="rounded-full w-full sm:w-auto bg-gradient-to-r from-[#293B93] to-[#0D122D] px-16 py-[14px] text-[16px] font-semibold text-white hover:brightness-110 active:translate-y-[1px]"
           >
             Become An IB
           </button>

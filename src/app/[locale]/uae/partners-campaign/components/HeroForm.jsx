@@ -468,23 +468,23 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
     <form onSubmit={formik.handleSubmit} className="relative w-full">
       {/* Card */}
       <div
-        className={`relative overflow-hidden rounded-[20px] bg-white p-8 ${
-          isIb ? "px-16 py-12" : ""
+        className={`relative overflow-hidden rounded-[20px] bg-white md:p-8 p-4 ${
+          isIb ? "md:px-16 px-4 md:py-12 py-8" : ""
         }`}
         style={{ boxShadow: isIb ? "0px 0px 10px 0px #0000001A" : "none" }}
       >
         {/* subtle circle bg bottom like screenshot */}
         {!isIb && (
-          <div className="pointer-events-none absolute -bottom-10 right-6 h-[460px] w-[88%] rounded-full bg-[#E9ECF7]" />
+          <div className="md:flex hidden pointer-events-none absolute -bottom-10 right-6 h-[460px] w-[88%] rounded-full bg-[#E9ECF7]" />
         )}
         <div className="relative">
           {/* Title */}
           {isIb && (
             <div className="text-center mb-6">
-              <h2 className="text-center text-[32px] uppercase font-extrabold text-[#000]">
+              <h2 className="text-center md:text-[32px] text-[28px] uppercase font-extrabold text-[#000]">
                 Become A <span className="text-[#B48755]">IB</span>
               </h2>
-              <p className="text-[16px] text-center font-normal text-[#000000]">
+              <p className="md:text-[16px] text-[14px] text-center font-normal text-[#000000]">
                 Complete Your Registration
               </p>
             </div>
@@ -611,12 +611,12 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           </div>
 
           {/* OTP */}
-          <div className="mt-4 flex items-center gap-4">
+          <div className="mt-4 flex md:flex-row flex-col items-center gap-4">
             <button
               type="button"
               onClick={sendPhoneVerificationCode}
               disabled={phoneOtpLoading || !isPhoneValid}
-              className="h-[46px] whitespace-pre rounded-[8px] border border-[#2E59D9] bg-white px-6 text-[14px] font-semibold text-[#293B93] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="h-[46px] w-full md:w-auto whitespace-pre rounded-[8px] border border-[#2E59D9] bg-white px-6 text-[14px] font-semibold text-[#293B93] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {phoneOtpLoading ? "Sending..." : "Send OTP"}
             </button>
