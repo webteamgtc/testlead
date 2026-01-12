@@ -25,46 +25,30 @@ export default function WhyChooseNaqdiIB() {
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: "url(/partner-with-us/candle.svg)",
+                backgroundImage: "url(/partner-with-us/bg-mobile-new.png)",
                 backgroundSize: "cover",
               }}
             />
 
             {/* phone - centered normally */}
-            <div className="relative flex h-full items-center justify-center z-10">
-              <div className="relative">
-                <img
-                  src="/partner-with-us/mobile.svg"
-                  alt="Phone"
-                  width={460}
-                  height={920}
-                  className="h-auto w-[230px] rounded-[28px]"
-                />
-                
-                {/* coins (dummy) */}
-                <div className="pointer-events-none absolute -bottom-9 left-1/2 flex -translate-x-1/2 items-end gap-4">
-                  <div className="h-[92px] w-[92px] rounded-full bg-gradient-to-br from-[#F6D36B] to-[#C8891C] shadow-[0_12px_20px_rgba(0,0,0,0.18)]" />
-                  <div className="h-[78px] w-[78px] rounded-full bg-gradient-to-br from-[#FFD98A] to-[#B7771D] shadow-[0_12px_20px_rgba(0,0,0,0.18)]" />
-                </div>
-              </div>
-            </div>
+          
           </div>
 
           {/* Cards - Left */}
           <FeatureCard
-            className="absolute left-[92px] top-[82px] hidden md:block"
+            className="absolute left-[92px] top-[62px] hidden md:block"
             title="Take control of your Earnings:"
             text="With unlimited commissions, your ambition sets the pace."
             widthClass="w-[330px]"
           />
           <FeatureCard
-            className="absolute left-[0px] top-[230px] hidden md:block"
+            className="absolute left-[0px] top-[200px] hidden md:block"
             title="World-class reputation:"
             text="Partner with the trusted leader."
             widthClass="w-[330px]"
           />
           <FeatureCard
-            className="absolute left-[92px] top-[360px] hidden md:block"
+            className="absolute left-[92px] top-[320px] hidden md:block"
             title="investment-free:"
             text="Begin your IB path. without the initial capital."
             widthClass="w-[320px]"
@@ -72,21 +56,21 @@ export default function WhyChooseNaqdiIB() {
 
           {/* Cards - Right */}
           <FeatureCard
-            className="absolute right-[40px] top-[82px] hidden md:block"
+            className="absolute right-[40px] top-[62px] hidden md:block"
             title="Excellence Rewarded:"
             text="Extraordinary performance earns you extraordinary rewards."
             widthClass="w-[330px]"
             align="right"
           />
           <FeatureCard
-            className="absolute right-0 top-[230px] hidden md:block"
+            className="absolute right-0 top-[200px] hidden md:block"
             title="Tailored Tools:"
             text="Explore our advanced Portal for your specialized needs."
             widthClass="w-[330px]"
             align="right"
           />
           <FeatureCard
-            className="absolute right-[40px] top-[360px] hidden md:block"
+            className="absolute right-[40px] top-[320px] hidden md:block"
             title="Control your earnings:"
             text="Unlimited commissions, limited only by your ambition."
             widthClass="w-[340px]"

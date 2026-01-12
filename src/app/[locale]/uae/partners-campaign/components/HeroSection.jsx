@@ -5,23 +5,47 @@ import NaqdiIbOnboardingForm from "./HeroForm";
 
 export default function IbHeroWithForm() {
   const perks = [
-    { label: "15,000+ \nProducts", icon: "/partner-with-us/banner-icon1.svg" },
+    { 
+      title: "Fast & Secure", 
+      description: "Execution", 
+      icon: "/partner-with-us/banner-icon1.svg" 
+    },
     {
-      label: "10 Billion USD \nTraded Volume",
+      title: "24/7",
+      description: "Multilingual Support",
       icon: "/partner-with-us/banner-icon2.svg",
     },
-    { label: "5-Star Support", icon: "/partner-with-us/banner-icon3.svg" },
+    { 
+      title: "Quick", 
+      description: "Withdrawal", 
+      icon: "/partner-with-us/banner-icon3.svg" 
+    },
     {
-      label: "Unmatched \nTransparency",
+      title: "Copy",
+      description: "Trading",
       icon: "/partner-with-us/banner-icon4.svg",
     },
     {
-      label: "15 Year of \nExperience",
+      title: "Most Stable",
+      description: "Trading Platforms",
+      icon: "/partner-with-us/banner-icon1.svg",
+    },
+    { 
+      title: "Various", 
+      description: "Funding Options", 
+      icon: "/partner-with-us/banner-icon2.svg" 
+    },
+    {
+      title: "Multi Tier",
+      description: "IB System",
       icon: "/partner-with-us/banner-icon3.svg",
     },
-    { label: "Premium \nPlatforms", icon: "/partner-with-us/banner-icon4.svg" },
+    { 
+      title: "70%", 
+      description: "Rebate", 
+      icon: "/partner-with-us/banner-icon4.svg" 
+    },
   ];
-
 
   return (
     <section className="w-full bg-[#f6f6f6]">
@@ -30,40 +54,49 @@ export default function IbHeroWithForm() {
           {/* LEFT */}
           <div>
             <p className="text-[28px] font-semibold text-[#293B93]">
-              naqdi IB Program
+              Grow Your Clients Network With Us!
             </p>
 
             <h1 className="mt-10 text-[40px] font-extrabold leading-[1.1] text-[#0B0F1A]">
-              Turn <span className="text-[#B78855]">Connections</span> Into
-              <br />
-              Revenue.
+              Become an{" "}
+              <span className="text-[#B78855]">Introducing Broker</span> Into
+              and Unlock Unlimited Earning Potential!.
             </h1>
 
             <p className="mt-10  text-[21px] font-normal leading-[1.4] text-[#000]">
-              Become a Naqdi Introducing Broker and earn up to{" "}
-              <span className="font-extrabold text-[24px] text-[#B78855]">70%</span> revenue
-              share on client trading activity. More clients, more earnings,
-              more growth together.
+              Power up your business expansion and client network while
+              <span className="font-extrabold text-[24px] text-[#B78855]">
+                {" "}
+                maximizing
+              </span>{" "}
+              the advantages of our IB program.
             </p>
 
             {/* Perks grid */}
-            <div className="mt-20 grid max-w-xl grid-cols-2 gap-4">
+            <div className="mt-20 grid max-w-4xl grid-cols-3 gap-4">
               {perks.map((p, idx) => (
                 <div
                   key={idx}
-                  className="rounded-[10px] flex items-center justify-center flex-col  min-h-[160px] bg-white px-6 py-6 text-center border border-[#D9D9D9]"
+                  className="rounded-[10px] flex items-center gap-4 bg-white px-2 py-2 shadow-sm border border-[#D9D9D9]"
                 >
-                  <div className="mx-auto grid  place-items-center">
+                  {/* Icon on left */}
+                  <div className="flex-shrink-0">
                     <img
                       className="h-[44px] w-[44px]"
                       src={p.icon}
-                      alt={p.label}
-                      width={34}
-                      height={34}
+                      alt={p.title}
+                      width={44}
+                      height={44}
                     />
                   </div>
-                  <div className="mt-3 whitespace-pre-line text-[18px] font-normal leading-[1.25] text-[#5C5C5C]">
-                    {p.label}
+                  {/* Text on right */}
+                  <div className="flex-1">
+                    <div className="text-[16px] font-semibold leading-[1.25] text-[#000]">
+                      {p.title}
+                    </div>
+                    <div className="mt-1 text-[14px] font-normal leading-[1.25] text-[#000]">
+                      {p.description}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -72,11 +105,8 @@ export default function IbHeroWithForm() {
 
           {/* RIGHT FORM CARD */}
           <div className="relative">
-           <NaqdiIbOnboardingForm/>
-
-            {/* faint bg circle like screenshot */}
-            <div className="pointer-events-none absolute -bottom-6 right-4 h-[180px] w-[180px] rounded-full bg-[#B8C0DB]/25 blur-[1px]" />
-          </div>
+            <NaqdiIbOnboardingForm />
+           </div>
         </div>
       </div>
     </section>

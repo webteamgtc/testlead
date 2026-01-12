@@ -215,9 +215,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
         });
 
         if (!validationResponse.data.valid) {
-          toast.error(
-            "Invalid email address. Please use a valid email."
-          );
+          toast.error("Invalid email address. Please use a valid email.");
           setLoading(false);
           return;
         }
@@ -331,7 +329,9 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
       .catch((error) => {
         console.error(error);
         toast.error(
-          error?.response?.data?.message || error?.message || "Failed to send OTP"
+          error?.response?.data?.message ||
+            error?.message ||
+            "Failed to send OTP"
         );
       })
       .finally(() => setPhoneOtpLoading(false));
@@ -463,17 +463,17 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
 
   return (
     <form onSubmit={formik.handleSubmit} className="relative w-full">
-        {/* Card */}
-        <div
-          className={`relative overflow-hidden rounded-[20px] bg-white p-8 ${
-            isIb ? "px-16 py-12" : ""
-          }`}
-          style={{ boxShadow: isIb ? "0px 0px 10px 0px #0000001A" : "none" }}
-        >
+      {/* Card */}
+      <div
+        className={`relative overflow-hidden rounded-[20px] bg-white p-8 ${
+          isIb ? "px-16 py-12" : ""
+        }`}
+        style={{ boxShadow: isIb ? "0px 0px 10px 0px #0000001A" : "none" }}
+      >
         {/* subtle circle bg bottom like screenshot */}
-        <div className="pointer-events-none absolute -bottom-10 right-10 h-[260px] w-[260px] rounded-full bg-[#E9ECF7]" />
-        <div className="pointer-events-none absolute -bottom-10 right-10 h-[260px] w-[260px] rounded-full bg-gradient-to-t from-[#E9ECF7] to-transparent opacity-80" />
-
+        {!isIb && (
+          <div className="pointer-events-none absolute -bottom-10 right-6 h-[460px] w-[88%] rounded-full bg-[#E9ECF7]" />
+        )}
         <div className="relative">
           {/* Title */}
           {isIb && (
@@ -603,9 +603,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
               />
             </div>
             {formik.touched.phone && formik.errors.phone && (
-              <p className="text-xs text-red-500 mt-1">
-                {formik.errors.phone}
-              </p>
+              <p className="text-xs text-red-500 mt-1">{formik.errors.phone}</p>
             )}
           </div>
 
