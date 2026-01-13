@@ -112,22 +112,7 @@ export default function IbProgramIncludes() {
             </div>
           ))}
         </div>
-
-        {/* CTA */}
-            <div className="mt-12 text-center">
-              <button
-                className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
-                           hover:from-[#293794] hover:to-[#000021]
-                           text-sm font-bold md:text-base
-                           text-white px-8 py-3 rounded-full transition-all duration-300"
-                onClick={() => {
-                  document.getElementById("register-form")?.scrollIntoView({ behavior: "smooth" });
-                  setIsOpen?.(false);
-                }}
-              >
-                Register Now
-              </button>
-            </div>
+       
       </div>
     </section>
   );
