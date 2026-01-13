@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function ClaimPartnerBadge() {
   return (
@@ -12,17 +12,35 @@ export default function ClaimPartnerBadge() {
             {/* Left text */}
             <div className="max-w-xl">
               <h3 className="md:text-[36px] text-[24px] font-extrabold leading-tight text-primary text-center md:text-left ">
-                Claim Your <span className="text-[#B48755]"> Partner Badge!</span>
+                Claim Your{" "}
+                <span className="text-[#B48755]"> Partner Badge!</span>
               </h3>
 
               <p className="text-center md:text-left mt-3 max-w-xl md:text-[16px] text-[14px] font-medium leading-[1.6] text-primary">
-                Get your official GTCFX Partner Badge now! Display it on your website and
-                immediately highlight your trusted broker partnership.
+                Get your official GTCFX Partner Badge now! Display it on your
+                website and immediately highlight your trusted broker
+                partnership.
               </p>
             </div>
 
             {/* Right images */}
-            <div className=" items-center gap-4 hidden md:flex">
+            <div className=" text-center">
+              <button
+                className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+                           hover:from-[#293794] hover:to-[#000021]
+                           text-sm font-bold md:text-base
+                           text-white px-8 py-3 rounded-full transition-all duration-300"
+                onClick={() => {
+                  document
+                    .getElementById("register-form")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                  setIsOpen?.(false);
+                }}
+              >
+                Register Now
+              </button>
+            </div>
+            {/* <div className=" items-center gap-4 hidden md:flex">
               <div className="relative flex justify-center items-center p-2.5 h-[140px] w-[140px] overflow-hidden"
               style={{
                 borderRadius: "20px",
@@ -51,7 +69,7 @@ export default function ClaimPartnerBadge() {
                   className=" h-[46px] opacity-90"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

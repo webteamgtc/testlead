@@ -23,7 +23,7 @@ export default function PartnersCampaignPage() {
         <WhyChooseSection />
         <HowToEarnSection />
         <ProgramIncludesSection />
-        <PartnerPortalSection />
+        {/* <PartnerPortalSection /> */}
         <PartnerBadgeSection />
         <WhyTradeSection />
         <BecomeIBFormSection />

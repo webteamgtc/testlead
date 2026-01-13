@@ -25,7 +25,7 @@ export default function WhyChooseNaqdiIB() {
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: "url(/partner-with-us/bg-mobile-new.png)",
+                backgroundImage: "url(/partner-with-us/mobile-new.png)",
                 backgroundSize: "cover",
               }}
             />
