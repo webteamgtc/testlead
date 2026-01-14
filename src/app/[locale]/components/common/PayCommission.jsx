@@ -108,7 +108,7 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
   };
 
   return (
-    <section className="bg-gradient-to-t from-[#f7f7f7] to-[#fff] text-primary py-8 md:py-20 relative overflow-hidden text-center">
+    <section className="bg-gradient-to-b from-[#f7f7f7] to-[#fff] text-primary py-8 md:py-20 relative overflow-hidden text-center">
       
       <div className="relative max-w-6xl mx-auto ainer flex flex-col gap-5 md:gap-5 px-4 md:px-0">
         {/* Section Title */}
@@ -162,7 +162,7 @@ const PayCommission = ({ topTitle,bottomText, buttonText, setIsOpen }) => {
        
         <div className='flex flex-row items-center justify-center mt-5'>
             <button
-  className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+  className=" bg-gradient-to-r from-[#B68756] via-[#995F22] to-[#995F22]
              hover:from-[#293794] hover:to-[#000021]
              text-sm font-bold md:text-base xl:text-lg
              text-white px-8 py-3 rounded-full

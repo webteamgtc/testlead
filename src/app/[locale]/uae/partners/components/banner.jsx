@@ -7,6 +7,7 @@ import CommonMainForm from "@/app/[locale]/components/MainForm";
 import SliderModal from "./SliderModal";
 import SlidePanelExample from "./SlidePanel";
 import NewPageForm from "./FormNew";
+import NaqdiIbOnboardingForm from "../../partners-campaign/components/HeroForm";
 const HeroSection = ({setIsOpen}) => {
   const data = [
   
@@ -239,7 +240,7 @@ const HeroSection = ({setIsOpen}) => {
   ]
   return (
     <section className="relative overflow-hidden border-b border-secondary/20" id="register-form">
-          <div className="absolute inset-0 bg-white z-0" />
+          <div className="absolute inset-0 bg-[#f6f6f6] z-0" />
 
       {/* Faded Background Image at Bottom Center */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-20">
@@ -265,12 +266,12 @@ const HeroSection = ({setIsOpen}) => {
                   className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
                 />
               </div>
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_420px] z-10 relative pb-10">
+        <div className="grid items-center gap-12 md:grid-cols-[1fr_600px] z-10 relative pb-10">
           {/* Left Column */}
           <div className="text-center md:text-left  pt-8 md:pt-16 ">
           <h1
           className="
-            text-3xl md:text-[70px]
+            text-3xl md:text-[60px]
             font-bold
             leading-tight
             pb-5
@@ -286,12 +287,7 @@ const HeroSection = ({setIsOpen}) => {
             </p>
     
           </div>
-          <div className="rounded-[10px] p-4 shadow-[0_22px_55px_rgba(0,0,0,0.35)] bg-gradient-to-r from-[#293794] to-[#000021]">
-            <h2 className="bg-secondary text-white text-center py-2 mb-5 rounded-full font-bold">
-              Become a GTC Partner
-            </h2>
-            <NewPageForm />
-          </div>
+          <NaqdiIbOnboardingForm />
 
 
         </div>

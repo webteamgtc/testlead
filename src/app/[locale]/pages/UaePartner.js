@@ -18,6 +18,7 @@ import HowToBecomeIB from "../components/common/HowToBecomeIB";
 import LoyaltyVipSection from "../components/common/LoyaltyVipSection";
 import SecureClientFundsBar from "../components/SecureClientFundsBar";
 import TradingProductsTwoGrid from "../components/common/TradingProductsTwoGrid";
+import HowToEarnSectionInteractive from "../uae/partners-campaign/components/HowToEarnSection";
 
 
 const UaePartnerPage = () => {
@@ -56,11 +57,12 @@ const UaePartnerPage = () => {
               buttonText="Partner with GTC"
               setIsOpen={setIsOpen}
               />
-              <HowToBecomeIB />
+
+              <HowToEarnSectionInteractive />
          <LoyaltyVipSection />
          <SecureClientFundsBar />
        
-         
+         <TradingProductsTwoGrid />
             <MainFooter />
             <SliderModal
            isOpen={isOpen}

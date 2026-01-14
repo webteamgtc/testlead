@@ -187,7 +187,7 @@ export default function HowToEarnSectionInteractive() {
             </div>
              <div className="mt-12">
               <button
-                className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+                className=" bg-gradient-to-r from-[#B68756] via-[#995F22] to-[#995F22]
                            hover:from-[#293794] hover:to-[#000021]
                            text-sm font-bold md:text-base
                            text-white px-8 py-3 rounded-full transition-all duration-300"
