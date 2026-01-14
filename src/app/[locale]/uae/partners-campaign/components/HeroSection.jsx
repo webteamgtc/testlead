@@ -16,8 +16,8 @@ export default function IbHeroWithForm() {
       icon: "/partner-with-us/4.png",
     },
     {
-      title: "Real-Time IB",
-      description: "Dashboard",
+      title: "Real-Time",
+      description: "IB Dashboard",
       icon: "/partner-with-us/5.png",
     },
     {

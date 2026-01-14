@@ -21,13 +21,15 @@ export default function PartnersCampaignPage() {
       >
         {/* <PartnerSliderSection /> */}
         <WhyChooseSection />
+        
         <HowToEarnSection />
-        <ProgramIncludesSection />
-        {/* <PartnerPortalSection /> */}
         <PartnerBadgeSection />
+
+        {/* <ProgramIncludesSection /> */}
+        {/* <PartnerPortalSection /> */}
         <WhyTradeSection />
         <BecomeIBFormSection />
-        <CompanyProfileSection />
+        {/* <CompanyProfileSection /> */}
         <MainFooter/>
       </div>
     </div>
