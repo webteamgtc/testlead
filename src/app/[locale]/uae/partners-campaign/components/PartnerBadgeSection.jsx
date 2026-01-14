@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ClaimPartnerBadge() {
   return (
-    <section className="w-full bg-white md:py-12 py-8">
+    <section className="w-full bg-white md:pb-12 pb-8">
       <div className="mx-auto container">
         {/* Card */}
         <div className="rounded-[30px] bg-[#F7F7F7] md:px-10 px-4 md:py-14 py-10">

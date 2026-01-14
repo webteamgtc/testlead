@@ -122,7 +122,7 @@ export default function BecomeIBFormSection() {
   });
 
   return (
-    <section className="w-full bg-gradient-to-b from-slate-50 via-gray-50 to-white md:py-20 py-10 px-4 md:px-8 lg:px-16">
+    <section className="w-full bg-gradient-to-t from-slate-50 via-gray-50 to-white pt-5 md:pb-20 pb-10 px-4 md:px-8 lg:px-16">
       <div className="max-w-3xl mx-auto">
         <NaqdiIbOnboardingForm isIb={true}/>
       </div>

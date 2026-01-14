@@ -35,7 +35,7 @@ export default function WhyTradeSection() {
   ];
 
   return (
-    <section className="w-full bg-white pt-6 pb-14">
+    <section className="w-full bg-white py-10 md:py-16">
       <div className="mx-auto container">
         {/* Title */}
         <h2 className="text-center md:text-[40px] text-[24px] font-extrabold text-primary">

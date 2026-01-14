@@ -91,7 +91,7 @@ export default function HowToEarnSectionInteractive() {
               </div>
               {/* Laptop image - on top */}
               <Image
-                src="/partner-with-us/laptop.svg"
+                src="/ib/laptop.png"
                 alt="Platform"
                 width={520}
                 height={420}
