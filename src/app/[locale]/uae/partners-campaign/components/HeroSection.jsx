@@ -165,10 +165,9 @@ export default function IbHeroWithForm() {
 </div>
           </div>
 
-          {/* RIGHT FORM CARD */}
-          <div className="relative">
+         
             <NaqdiIbOnboardingForm />
-          </div>
+         
         </div>
       </div>
     </section>
