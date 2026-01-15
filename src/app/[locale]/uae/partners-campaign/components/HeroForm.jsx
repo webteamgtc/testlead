@@ -481,7 +481,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           {/* Title */}
           {isIb && (
             <div className="text-center mb-6">
-              <h2 className="text-center md:text-[32px] text-[20px] uppercase font-extrabold text-primary">
+              <h2 className="text-center md:text-[25px] lg:text-[36px] text-[20px] uppercase font-extrabold text-primary">
                 Become Our <span className="text-[#B48755]">Partners</span>
               </h2>
               <p className="md:text-[16px] text-[14px] text-center font-normal text-primary">

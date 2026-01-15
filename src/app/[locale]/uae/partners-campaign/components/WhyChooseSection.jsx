@@ -8,7 +8,7 @@ export default function WhyChoosePartnersGTCFX() {
       <div className="mx-auto max-w-[1200px] px-4">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="mt-2 text-[20px] font-extrabold leading-[1.3] text-primary md:text-[40px] md:leading-tight">
+          <h2 className="mt-2 font-extrabold leading-[1.3] text-primary md:text-[25px] lg:text-[36px] text-[20px] md:leading-tight">
             Why Partners Choose <span className="text-[#B48755]">GTCFX</span>
           </h2>
         </div>
@@ -20,7 +20,7 @@ export default function WhyChoosePartnersGTCFX() {
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: "url(/partner-with-us/mobile-new.png)",
+                backgroundImage: "url(/partner-with-us/bg-mobile-new.png)",
                 backgroundSize: "cover",
               }}
             />

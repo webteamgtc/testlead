@@ -38,7 +38,7 @@ export default function WhyTradeSection() {
     <section className="w-full bg-white py-10 md:py-16">
       <div className="mx-auto container">
         {/* Title */}
-        <h2 className="text-center md:text-[40px] text-[20px] font-extrabold text-primary">
+        <h2 className="text-center md:text-[25px] lg:text-[36px] text-[20px] font-extrabold text-primary">
           Why Your Clients Will Love <span className="text-secondary">GTCFX</span>
         </h2>
 
@@ -48,17 +48,17 @@ export default function WhyTradeSection() {
             <div
               key={c.title}
               className={[
-                "group relative overflow-hidden rounded-[20px] md:px-8 px-4 md:py-10 py-8",
+                "group relative overflow-hidden rounded-[20px] md:px-8 px-4 lg:py-10 py-4",
                 "bg-[#f6f6f6] text-[#0B0F1A]",
                 "transition-all duration-300",
                 "hover:bg-gradient-to-br hover:from-[#213A8F] hover:to-[#0B143A] hover:shadow-[0_18px_32px_rgba(11,20,58,0.22)]",
               ].join(" ")}
             >
               {/* icon */}
-              <div className="flex gap-6 items-center">
+              <div className="flex gap-3 lg:gap-6 items-center">
                 <div className="flex-shrink-0">
                   <img
-                    className="md:w-[64px] w-[50px] md:h-[64px] h-[50px]"
+                    className="lg:w-[64px] w-[50px] lg:h-[64px] h-[50px]"
                     src={c.icon}
                     alt={c.title}
                     width={64}
@@ -68,12 +68,12 @@ export default function WhyTradeSection() {
 
                 <div className="md:w-[2px] w-[1px] md:h-[64px] h-[50px] bg-[#ABABAB] group-hover:bg-white flex-shrink-0" />
 
-                <div className="md:text-[18px] text-[15px] font-semibold text-[#000] transition-colors duration-300 group-hover:text-white">
+                <div className="lg:text-[18px] text-[15px] font-semibold text-[#000] transition-colors duration-300 group-hover:text-white">
                   {c.title}
                 </div>
               </div>
 
-              <p className="mt-6 md:text-[16px] text-[14px] font-medium leading-[1.5] text-[#000] transition-colors duration-300 group-hover:text-white">
+              <p className="mt-6 lg:text-[16px] text-[13px] font-medium leading-[1.5] text-[#000] transition-colors duration-300 group-hover:text-white">
                 {c.desc}
               </p>
 

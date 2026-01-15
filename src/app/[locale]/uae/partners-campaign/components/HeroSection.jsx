@@ -68,38 +68,60 @@ export default function IbHeroWithForm() {
         </div>
       </div>
     </section>
-    <section className="relative overflow-hidden border-b border-secondary/20" id="register-form">
-          <div className="absolute inset-0 bg-[#f6f6f6] z-0" />
+    <section className="relative bg-[url('/ib/ib-banner.webp')] bg-cover bg-no-repeat bg-center border-b border-secondary/20" id="register-form">
+        
 
-      {/* Faded Background Image at Bottom Center */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-30">
-        <img
-          src="/ib/layer5.webp" // ✅ change this path if needed
-          alt="Decorative background"
-          className="w-full h-[500px]  bg-repeat md:h-auto md:object-contain object-bottom"
-        />
-      </div>
     
     
       <div className="relative z-50 mx-auto container px-4 pb-16 pt-3">
-        <div className="mt-7 grid items-center gap-6 md:gap-12 md:grid-cols-[1fr_600px]">
+        <div className="mt-7 grid items-center gap-6 md:gap-12 lg:grid-cols-[1fr_600px]">
           {/* LEFT */}
-          <div className="md:text-left text-center flex flex-col gap-4">
+          <div className="lg:text-left text-center flex flex-col gap-4">
            
 
-            <h2 className="md:text-[40px] 2xl:text-5xl text-[25px] font-extrabold md:leading-[1.1] leading-tight text-[#202a6b]">
+            <h2 className="md:text-[30px] 2xl:text-5xl text-[25px] font-extrabold md:leading-[1.1] leading-tight text-[#fff] md:max-w-xl mx-auto lg:mx-0">
               Unlock <span className="text-secondary">Unlimited Earnings</span>, Grow Your Partner Business with <span className="text-secondary">GTCFX</span>
             </h2>
 
-            <p className="md:text-[21px] text-[16px] font-normal leading-[1.4] text-[#000]">
+            <p className="md:text-[21px] text-[16px] font-normal leading-[1.4] text-[#fff] md:max-w-2xl mx-auto lg:mx-0">
              Take your partner business to the next level with advanced tools, high rebate payouts, and full partner support from GTCFX.
             </p>
 
-       
+            {/* Perks grid */}
+            <div className="hidden md:mt-8 mt-5 md:grid md:max-w-4xl md:grid-cols-3 grid-cols-2 gap-4">
+              {perks.map((p, idx) => (
+                <div
+                  key={idx}
+                  className={`rounded-[10px] flex items-center gap-4 bg-white px-2 py-2 shadow-sm border border-[#D9D9D9]
+      ${idx === perks.length - 1 ? "hidden md:flex" : ""}`}
+                >
+                  {/* Icon */}
+                  <div className="flex-shrink-0">
+                    <img
+                      className="md:h-[44px] md:w-[44px] h-[30px] w-[30px]"
+                      src={p.icon}
+                      alt={p.title}
+                      width={44}
+                      height={44}
+                    />
+                  </div>
+
+                  {/* Text */}
+                  <div className="flex-1">
+                    <div className="text-xs md:text-[14px] font-semibold leading-[1.25] text-[#000]">
+                      {p.title}
+                    </div>
+                    <div className="mt-1 text-[14px] font-normal leading-[1.25] text-[#000]">
+                      {p.description}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
                   {/* Bottom Feature Bar */}
 <div
-  className="relative z-50 bg-gradient-to-r from-[#293794] to-[#000021]
+  className="relative z-50 bg-gradient-to-r from-[#293794] via-[#000021] to-[#293794]
              py-5 px-4 md:px-10 rounded-[16px]
              grid grid-cols-3 md:grid-cols-3
              text-center text-white/90
@@ -136,7 +158,7 @@ export default function IbHeroWithForm() {
           </div>
 
          
-
+            <NaqdiIbOnboardingForm />
          
         </div>
       </div>

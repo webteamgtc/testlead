@@ -103,7 +103,7 @@ export default function HowToEarnSectionInteractive() {
 
           {/* RIGHT */}
           <div className="max-w-xl">
-            <h2 className="text-center md:text-[32px] 2xl:text-[40px] text-[20px] font-extrabold leading-tight text-primary md:text-left">
+            <h2 className="text-center md:text-[25px] lg:text-[36px] text-[20px] font-extrabold leading-tight text-primary md:text-left">
               Simple Steps to Join Our
               <span className="text-[#B48755]"> Partnership Program</span>
             </h2>

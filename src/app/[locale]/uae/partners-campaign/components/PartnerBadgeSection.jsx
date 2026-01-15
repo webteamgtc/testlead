@@ -7,16 +7,16 @@ export default function ClaimPartnerBadge() {
     <section className="w-full bg-white md:pb-12 pb-8">
       <div className="mx-auto container">
         {/* Card */}
-        <div className="rounded-[30px] bg-[#F7F7F7] md:px-10 px-4 md:py-14 py-10">
+        <div className="rounded-[30px] bg-[#F7F7F7] lg:px-10 px-4 lg:py-10 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Left text */}
-            <div className="max-w-5xl">
-              <h3 className="md:text-[36px] text-[20px] font-extrabold leading-tight text-primary text-center md:text-left ">
+            <div className="lg:max-w-5xl">
+              <h3 className="md:text-[30px] lg:text-[36px] text-[20px] font-extrabold leading-tight text-primary text-center md:text-left ">
                 Claim Your  
                 <span className="text-[#B48755]"> Partner Starter Pack</span>
               </h3>
 
-              <p className="text-center md:text-left mt-3 max-w-5xl md:text-[16px] text-[14px] font-medium leading-[1.6] text-primary">
+              <p className="text-center md:text-left mt-3 lg:max-w-5xl md:text-[16px] text-[14px] font-medium leading-[1.6] text-primary">
                Get instant access to promotional materials, training resources, and tools designed to help you grow with GTCFX.
               </p>
             </div>
@@ -27,7 +27,7 @@ export default function ClaimPartnerBadge() {
                 className="bg-gradient-to-r from-[#B68756] via-[#995F22] to-[#995F22]
                            hover:from-[#293794] hover:to-[#000021]
                            text-sm font-bold md:text-base
-                           text-white px-8 py-3 rounded-full transition-all duration-300"
+                           text-white px-8 py-3 rounded-full transition-all duration-300 min-w-56"
                 onClick={() => {
                   document
                     .getElementById("register-form")
