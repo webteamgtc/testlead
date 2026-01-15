@@ -475,7 +475,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
       >
         {/* subtle circle bg bottom like screenshot */}
         {!isIb && (
-          <div className="md:flex hidden pointer-events-none absolute -bottom-10 right-6 h-[460px] w-[88%] rounded-full bg-[#E9ECF7]" />
+          <div className="md:flex hidden pointer-events-none absolute -bottom-10 right-6 h-[460px] md:w-[88%] rounded-full bg-[#E9ECF7]" />
         )}
         <div className="relative">
           {/* Title */}
@@ -491,7 +491,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           )}
         
           {/* Fields row 1 */}
-          <div className="mt-5 grid grid-cols-2 gap-4">
+          <div className="mt-5 grid md:grid-cols-2 grid-cols-1 gap-4">
             <div>
               <div className="mb-1 text-[14px] font-normal text-[#868686]">
                 First Name*

@@ -157,7 +157,8 @@ export default function IbHeroWithForm() {
 </div>
           </div>
 
-      
+         
+            <NaqdiIbOnboardingForm /> 
          
         </div>
       </div>
