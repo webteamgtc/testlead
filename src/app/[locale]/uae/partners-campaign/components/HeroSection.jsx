@@ -76,7 +76,7 @@ export default function IbHeroWithForm() {
       <div className="relative z-50 mx-auto container px-4 pb-16 pt-3">
         <div className="mt-7 grid items-center gap-6 md:gap-12 lg:grid-cols-[1fr_600px]">
           {/* LEFT */}
-          <div className="lg:text-left text-center flex flex-col gap-4">
+          <div className="lg:text-left text-center flex flex-col flex-wrap gap-4">
            
 
             <h2 className="md:text-[30px] 2xl:text-5xl text-[25px] font-extrabold md:leading-[1.1] leading-tight text-[#fff] md:max-w-xl mx-auto lg:mx-0">
