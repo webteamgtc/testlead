@@ -95,44 +95,48 @@ export default function IbHeroWithForm() {
              Take your partner business to the next level with advanced tools, high rebate payouts, and full partner support from GTCFX.
             </p>
 
-            {/* Perks grid */}
-            <div className="md:mt-8 mt-5 grid max-w-4xl md:grid-cols-3 grid-cols-2 gap-4">
-              {perks.map((p, idx) => (
-                <div
-                  key={idx}
-                  className={`rounded-[10px] flex items-center gap-4 bg-white px-2 py-2 shadow-sm border border-[#D9D9D9]
-      ${idx === perks.length - 1 ? "hidden md:flex" : ""}`}
-                >
-                  {/* Icon */}
-                  <div className="flex-shrink-0">
-                    <img
-                      className="md:h-[44px] md:w-[44px] h-[30px] w-[30px]"
-                      src={p.icon}
-                      alt={p.title}
-                      width={44}
-                      height={44}
-                    />
-                  </div>
-
-                  {/* Text */}
-                  <div className="flex-1">
-                    <div className="text-xs md:text-[14px] font-semibold leading-[1.25] text-[#000]">
-                      {p.title}
-                    </div>
-                    <div className="mt-1 text-[14px] font-normal leading-[1.25] text-[#000]">
-                      {p.description}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+       
 
                   {/* Bottom Feature Bar */}
+<div
+  className="relative z-50 bg-gradient-to-r from-[#293794] to-[#000021]
+             py-5 px-4 md:px-10 rounded-[16px]
+             grid grid-cols-3 md:grid-cols-3
+             text-center text-white/90
+             mt-3 md:mt-8"
+  style={{
+    boxShadow: "1px 6px 16px 0px #00000080",
+    backdropFilter: "blur(8px)",
+  }}
+>
+  {/* Item 1 */}
+  <div className="flex flex-col items-center justify-center gap-1 relative">
+    <span className="text-base md:text-xl font-semibold text-secondary">28,000 +</span>
+    <span className="text-xs xl:text-sm opacity-90">Partners</span>
 
+    {/* divider (desktop only) */}
+    <span className="block absolute right-0 top-1/2 -translate-y-1/2 h-10 w-px bg-white/30" />
+  </div>
+
+  {/* Item 2 */}
+  <div className="flex flex-col items-center justify-center gap-1 relative">
+    <span className="text-base md:text-xl font-semibold text-secondary">$6 Million</span>
+    <span className="text-xs xl:text-sm opacity-90">Paid Per Month</span>
+
+    {/* divider (desktop only) */}
+    <span className="block absolute right-0 top-1/2 -translate-y-1/2 h-10 w-px bg-white/30" />
+  </div>
+
+  {/* Item 3 */}
+  <div className="flex flex-col items-center justify-center gap-1">
+    <span className="text-base md:text-xl font-semibold text-secondary">$450 Billion</span>
+    <span className="text-xs xl:text-sm opacity-90">Monthly Trades</span>
+  </div>
+</div>
           </div>
 
          
-            <NaqdiIbOnboardingForm />
+
          
         </div>
       </div>
