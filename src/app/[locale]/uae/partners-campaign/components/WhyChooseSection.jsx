@@ -20,7 +20,7 @@ export default function WhyChoosePartnersGTCFX() {
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: "url(/partner-with-us/bg-mobile-new.png)",
+                backgroundImage: "url(/ib/20260115-165307.png)",
                 backgroundSize: "cover",
               }}
             />

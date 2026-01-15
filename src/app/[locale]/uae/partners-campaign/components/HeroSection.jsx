@@ -72,11 +72,11 @@ export default function IbHeroWithForm() {
           <div className="absolute inset-0 bg-[#f6f6f6] z-0" />
 
       {/* Faded Background Image at Bottom Center */}
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-30">
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-full z-0 opacity-40">
         <img
           src="/ib/banner2.webp" // ✅ change this path if needed
           alt="Decorative background"
-          className="w-full h-[500px]  bg-repeat md:h-auto md:object-contain object-bottom"
+          className="w-full h-[500px]  bg-repeat md:h-auto md:object-contain object-center"
         />
       </div>
     

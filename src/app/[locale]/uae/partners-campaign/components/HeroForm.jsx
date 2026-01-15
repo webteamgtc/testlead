@@ -467,7 +467,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
   return (
    <form onSubmit={formik.handleSubmit} className="relative w-full min-w-0">
   <div
-    className={`relative overflow-hidden rounded-[20px] bg-white md:p-8 p-4 ${
+    className={`relative overflow-hidden rounded-[20px] bg-[#ffffffd3] md:p-8 p-4 ${
       isIb ? "md:px-16 px-4 md:py-12 py-8" : ""
     }`}
     style={{ boxShadow: isIb ? "0px 0px 10px 0px #0000001A" : "none" }}
