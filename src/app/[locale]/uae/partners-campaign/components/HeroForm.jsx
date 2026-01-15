@@ -499,7 +499,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
               <input
                 type="text"
                 {...formik.getFieldProps("firstName")}
-                className={`h-[46px] w-full rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
+                className={`h-[46px] w-full min-w-0 rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
                   formik.touched.firstName && formik.errors.firstName
                     ? "border-red-500"
                     : "border-[#E5E7EB]"
@@ -519,7 +519,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
               <input
                 type="text"
                 {...formik.getFieldProps("lastName")}
-                className={`h-[46px] w-full rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
+                className={`h-[46px] w-full min-w-0 rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
                   formik.touched.lastName && formik.errors.lastName
                     ? "border-red-500"
                     : "border-[#E5E7EB]"
@@ -542,7 +542,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
             <input
               type="email"
               {...formik.getFieldProps("email")}
-              className={`h-[46px] w-full rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
+              className={`h-[46px] w-full min-w-0 rounded-[8px] border px-3 text-[14px] font-medium text-[#000] outline-none placeholder:text-[#9CA3AF] focus:border-[#2E59D9] ${
                 formik.touched.email && formik.errors.email
                   ? "border-red-500"
                   : "border-[#E5E7EB]"
@@ -613,7 +613,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
               type="button"
               onClick={sendPhoneVerificationCode}
               disabled={phoneOtpLoading || !isPhoneValid}
-              className="h-[46px] w-full md:w-auto whitespace-pre rounded-[8px] border border-[#2E59D9] bg-white px-6 text-[14px] font-semibold text-[#293B93] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="h-[46px] w-full md:w-auto whitespace-nowrap rounded-[8px] border border-[#2E59D9] bg-white px-6 text-[14px] font-semibold text-[#293B93] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {phoneOtpLoading ? "Sending..." : "Send OTP"}
             </button>
@@ -628,11 +628,12 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
                   }
                 }}
                 numInputs={6}
-                containerStyle={{
+               containerStyle={{
                   display: "flex",
                   justifyContent: "space-between",
-                  gap: "12px",
+                  gap: "8px",             // ✅ smaller gap on mobile
                   width: "100%",
+                  maxWidth: "100%",
                 }}
                 isInputNum
                 renderInput={(props) => (
@@ -644,20 +645,23 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
                   />
                 )}
                 inputStyle={{
-                  fontSize: "16px",
-                  borderRadius: "6px",
-                  paddingBottom: "10px",
-                  paddingTop: "10px",
-                  width: "100%",
-                  backgroundColor: "#fff",
-                  color: "#000",
-                  fontWeight: "700",
-                  outlineColor: "#2E59D9",
-                  border:
-                    formik.touched.otp && formik.errors.otp
-                      ? "1px solid red"
-                      : "1px solid #E5E7EB",
-                }}
+              fontSize: "16px",
+              borderRadius: "6px",
+              paddingBottom: "10px",
+              paddingTop: "10px",
+              width: "44px",          // ✅ fixed width so 6 inputs fit
+              maxWidth: "44px",
+              minWidth: "44px",
+              textAlign: "center",
+              backgroundColor: "#fff",
+              color: "#000",
+              fontWeight: "700",
+              outlineColor: "#2E59D9",
+              border:
+                formik.touched.otp && formik.errors.otp
+                  ? "1px solid red"
+                  : "1px solid #E5E7EB",
+            }}
               />
             </div>
           </div>
@@ -674,19 +678,24 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           </p>
 
           {/* Terms */}
-          <label className="mt-4 flex items-center gap-3 text-xs md:text-[14px] font-medium text-[#7A7A7A]">
-            <input
-              type="checkbox"
-              {...formik.getFieldProps("terms")}
-              className="h-5 w-5 rounded border-[#D1D5DB]"
-            />
-            <span>
-              By Becoming A Partner, You Agree To Our Partnership{" "}
-              <span className="text-[#293B93] underline">
-                <a href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Website+Client+Document/GTC+Global+LTD/TERMS+AND+CONDITIONS+-+GTC+Global+Ltd.pdf" target="_blank">Terms And Conditions</a>
-              </span>
-            </span>
-          </label>
+         <label className="mt-4 flex items-start gap-3 text-xs md:text-[14px] font-medium text-[#7A7A7A]">
+        <input
+          type="checkbox"
+          {...formik.getFieldProps("terms")}
+          className="mt-0.5 h-5 w-5 rounded border-[#D1D5DB]"
+        />
+        <span className="break-words">
+          By Becoming A Partner, You Agree To Our Partnership{" "}
+          <a
+            className="text-[#293B93] underline"
+            href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Website+Client+Document/GTC+Global+LTD/TERMS+AND+CONDITIONS+-+GTC+Global+Ltd.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Terms And Conditions
+          </a>
+        </span>
+      </label>
           {formik.touched.terms && formik.errors.terms && (
             <p className="text-xs text-red-500 mt-1">{formik.errors.terms}</p>
           )}
