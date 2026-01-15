@@ -3,33 +3,33 @@
 export default function WhyTradeSection() {
   const cards = [
     {
-      title: "Unmatched Transparency",
-      desc: "Ensuring a safe and secure trading environment with the highest level of transparency, regulated and monitored by global regulators",
+      title: "Smooth Trading Experience",
+      desc: "Fast execution, competitive spreads, and deep liquidity across global markets.",
       icon: "/partner-with-us/last-icon1.svg",
     },
     {
-      title: "5-Star Support",
-      desc: "Our multilingual team is available to provide topnotch customer service. Share your insights to help us enhance your experience",
+      title: "Easy-to-Use Platforms",
+      desc: "Trade on stable MT4 & MT5 platforms across desktop, web, and mobile devices.",
       icon: "/partner-with-us/last-icon2.svg",
     },
     {
-      title: "Premium Trading",
-      desc: "Experience superior technology with GTCFX advanced tools & trading platforms",
+      title: "Safe & Regulated",
+      desc: "Trade with confidence under a multi-regulated broker backed by over 14 years of industry experience.",
       icon: "/partner-with-us/last-icon3.svg",
     },
     {
-      title: "15 Year of Experience",
-      desc: "When it comes to trading, experience is everything. That’s why we’re proud to boast a team of professionals with exceeding 15 years of experience who can anticipate potential market roadblocks and navigate through it with the most creative solutions",
+      title: "Always-Available Support",
+      desc: "Multilingual customer support ready to assist whenever needed.",
       icon: "/partner-with-us/last-icon4.svg",
     },
     {
-      title: "Your Protection, Our Priority",
-      desc: "Your funds are secure with the highest levels of protection and accessibility on both desktop and mobile devices",
+      title: "Rewards & Investment Options",
+      desc: "Loyalty programs, copy trading, PAMM and MAM solutions that keep clients engaged.",
       icon: "/partner-with-us/last-icon5.svg",
     },
     {
-      title: "Customized Solutions",
-      desc: "Experience tailor-made trading solutions that align with your goals with personalized strategies",
+      title: "More Markets, More Opportunity",
+      desc: "Access global instruments and trading opportunities designed for active traders and long-term investors.",
       icon: "/partner-with-us/last-icon6.svg",
     },
   ];
@@ -38,8 +38,8 @@ export default function WhyTradeSection() {
     <section className="w-full bg-white py-10 md:py-16">
       <div className="mx-auto container">
         {/* Title */}
-        <h2 className="text-center md:text-[40px] text-[24px] font-extrabold text-primary">
-          Why Trade with <span className="text-secondary">GTCFX</span>?
+        <h2 className="text-center md:text-[40px] text-[20px] font-extrabold text-primary">
+          Why Your Clients Will Love <span className="text-secondary">GTCFX</span>
         </h2>
 
         {/* Grid */}
@@ -49,13 +49,13 @@ export default function WhyTradeSection() {
               key={c.title}
               className={[
                 "group relative overflow-hidden rounded-[20px] md:px-8 px-4 md:py-10 py-8",
-                "bg-[#f6f6f6] text-[#0B0F1A] ",
+                "bg-[#f6f6f6] text-[#0B0F1A]",
                 "transition-all duration-300",
                 "hover:bg-gradient-to-br hover:from-[#213A8F] hover:to-[#0B143A] hover:shadow-[0_18px_32px_rgba(11,20,58,0.22)]",
               ].join(" ")}
             >
               {/* icon */}
-              <div className="flex gap-6  items-center">
+              <div className="flex gap-6 items-center">
                 <div className="flex-shrink-0">
                   <img
                     className="md:w-[64px] w-[50px] md:h-[64px] h-[50px]"
@@ -66,25 +66,24 @@ export default function WhyTradeSection() {
                   />
                 </div>
 
-                <div className="md:w-[2px] w-[1px] md:h-[64px] h-[50px] bg-[#ABABAB] group-hover:bg-white flex-shrink-0"></div>
+                <div className="md:w-[2px] w-[1px] md:h-[64px] h-[50px] bg-[#ABABAB] group-hover:bg-white flex-shrink-0" />
 
-                <div className="md:text-[18px] text-[18px] font-semibold text-[#000] transition-colors duration-300 group-hover:text-white">
+                <div className="md:text-[18px] text-[15px] font-semibold text-[#000] transition-colors duration-300 group-hover:text-white">
                   {c.title}
                 </div>
               </div>
-              
+
               <p className="mt-6 md:text-[16px] text-[14px] font-medium leading-[1.5] text-[#000] transition-colors duration-300 group-hover:text-white">
                 {c.desc}
               </p>
-              {/* subtle diagonal light for default state only (like screenshot) */}
+
+              {/* subtle diagonal light for default state only */}
               <div className="pointer-events-none absolute inset-0 opacity-60 transition-opacity duration-300 group-hover:opacity-0">
                 <div className="absolute -left-10 top-10 md:h-20 h-[16px] md:w-44 w-[36px] -rotate-45 bg-white/40 blur-[1px]" />
               </div>
             </div>
           ))}
         </div>
-
-      
       </div>
     </section>
   );

@@ -7,15 +7,15 @@ export default function HowToEarnSectionInteractive() {
   const items = [
     {
       title: "Register",
-      desc: "Create your partner account in minutes.",
+      desc: "Create your partner account in minutes with a streamlined onboarding process.",
     },
     {
-      title: "Refer Clients",
-      desc: "Share your referral link and bring in new clients.",
+      title: "Add Your Clients",
+      desc: "Invite new or existing clients using your dedicated referral tools.",
     },
     {
-      title: "Start Earning Rebates",
-      desc: "Get paid for every trade your referred clients make.",
+      title: "Earn Rebates Instantly",
+      desc: "Rebates are credited per trade and available for immediate withdrawal.",
     },
   ];
 
@@ -103,7 +103,7 @@ export default function HowToEarnSectionInteractive() {
 
           {/* RIGHT */}
           <div className="max-w-xl">
-            <h2 className="text-center md:text-[32px] 2xl:text-[40px] text-[24px] font-extrabold leading-tight text-primary md:text-left">
+            <h2 className="text-center md:text-[32px] 2xl:text-[40px] text-[20px] font-extrabold leading-tight text-primary md:text-left">
               Simple Steps to Join Our
               <span className="text-[#B48755]"> Partnership Program</span>
             </h2>
@@ -140,7 +140,7 @@ export default function HowToEarnSectionInteractive() {
                           className={[
                             "relative w-full rounded-full transition-colors",
                             // reserve the same paddings always
-                            "py-[14px] pr-10 pl-[104px]",
+                            "py-5 md:py-[14px] pr-10 pl-[104px]",
                             isActive
                               ? "bg-gradient-to-r from-[#0D1A4B] to-[#0B143A] shadow-[0_10px_22px_rgba(11,20,58,0.22)]"
                               : "bg-transparent",
@@ -172,7 +172,7 @@ export default function HowToEarnSectionInteractive() {
 
                           <div
                             className={[
-                              "mt-[3px] max-w-[430px] text-[14px] font-medium leading-[1.55]",
+                              "mt-[3px] max-w-[430px]  text-xs md:text-[14px] font-medium leading-[1.55]",
                               isActive ? "text-white" : "text-primary",
                             ].join(" ")}
                           >
@@ -185,7 +185,7 @@ export default function HowToEarnSectionInteractive() {
                 })}
               </div>
             </div>
-             <div className="mt-12">
+             <div className="mt-8 text-center md:text-left">
               <button
                 className=" bg-gradient-to-r from-[#B68756] via-[#995F22] to-[#995F22]
                            hover:from-[#293794] hover:to-[#000021]

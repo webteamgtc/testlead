@@ -669,12 +669,12 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
           <p className="mt-6 text-[14px] font-normal leading-[1.5] text-[#7A7A7A]">
             <span className="font-medium text-[#293B93]">Disclaimer:</span> By
             submitting this form, I acknowledge that I have read, understood,
-            and agree to the Client Agreement. I give my consent for GTCFX to
+            and agree to the <a className="text-[#293B93] underline" href="" target="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Website+Client+Document/GTC+Global+LTD/Mauritius+TOB+-+Proposed+Clauses+to+add.pdf">Client Agreement</a>. I give my consent for GTCFX to
             contact me for marketing purposes.
           </p>
 
           {/* Terms */}
-          <label className="mt-4 flex items-center gap-3 text-[14px] font-medium text-[#7A7A7A]">
+          <label className="mt-4 flex items-center gap-3 text-xs md:text-[14px] font-medium text-[#7A7A7A]">
             <input
               type="checkbox"
               {...formik.getFieldProps("terms")}
@@ -683,7 +683,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
             <span>
               By Becoming A Partner, You Agree To Our Partnership{" "}
               <span className="text-[#293B93] underline">
-                Terms And Conditions
+                <a href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Website+Client+Document/GTC+Global+LTD/TERMS+AND+CONDITIONS+-+GTC+Global+Ltd.pdf" target="_blank">Terms And Conditions</a>
               </span>
             </span>
           </label>

@@ -239,6 +239,19 @@ const HeroSection = ({setIsOpen}) => {
    
   ]
   return (
+    <>   <section className="w-full bg-gradient-to-r from-[#293794] to-[#000021] py-2">
+            <div className="container mx-auto">
+            <div className="flex md:justify-center justify-center">
+               <Image
+                        src="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/img/footer-logo.webp"
+                        width={200}
+                        height={72}
+                        alt="GTCFX"
+                        className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
+                      />
+            </div>
+          </div>
+        </section>
     <section className="relative overflow-hidden border-b border-secondary/20" id="register-form">
           <div className="absolute inset-0 bg-[#f6f6f6] z-0" />
 
@@ -257,16 +270,8 @@ const HeroSection = ({setIsOpen}) => {
 
 
       <div className="relative z-50 container">
-             <div className="container mx-auto text-left py-3 flex flex-col md:flex-row justify-base items-center gap-4">
-                <Image
-                  src="/logo-2024.webp"
-                  width={200}
-                  height={72}
-                  alt="GTCFX"
-                  className="lg:w-[200px] lg:h-[72px] md:w-[120px] md:h-[53px] w-[130px] h-[47px] cursor-pointer"
-                />
-              </div>
-        <div className="grid items-center gap-12 md:grid-cols-[1fr_600px] z-10 relative pb-10">
+     
+        <div className="grid items-center gap-12 md:grid-cols-[1fr_600px] z-10 relative py-10">
           {/* Left Column */}
           <div className="text-center md:text-left  pt-8 md:pt-16 ">
           <h1
@@ -331,7 +336,8 @@ const HeroSection = ({setIsOpen}) => {
 
       </div>
 
-    </section >
+    </section>
+    </>
    );
 };
 

@@ -8,25 +8,23 @@ export default function ClaimPartnerBadge() {
       <div className="mx-auto container">
         {/* Card */}
         <div className="rounded-[30px] bg-[#F7F7F7] md:px-10 px-4 md:py-14 py-10">
-          <div className="flex items-center justify-between gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Left text */}
-            <div className="max-w-xl">
-              <h3 className="md:text-[36px] text-[24px] font-extrabold leading-tight text-primary text-center md:text-left ">
-                Claim Your{" "}
-                <span className="text-[#B48755]"> Partner Badge!</span>
+            <div className="max-w-5xl">
+              <h3 className="md:text-[36px] text-[20px] font-extrabold leading-tight text-primary text-center md:text-left ">
+                Claim Your  
+                <span className="text-[#B48755]"> Partner Starter Pack</span>
               </h3>
 
-              <p className="text-center md:text-left mt-3 max-w-xl md:text-[16px] text-[14px] font-medium leading-[1.6] text-primary">
-                Get your official GTCFX Partner Badge now! Display it on your
-                website and immediately highlight your trusted broker
-                partnership.
+              <p className="text-center md:text-left mt-3 max-w-5xl md:text-[16px] text-[14px] font-medium leading-[1.6] text-primary">
+               Get instant access to promotional materials, training resources, and tools designed to help you grow with GTCFX.
               </p>
             </div>
 
             {/* Right images */}
             <div className=" text-center">
               <button
-                className="bg-gradient-to-r from-[#E1CFBB] to-[#956D42]
+                className="bg-gradient-to-r from-[#B68756] via-[#995F22] to-[#995F22]
                            hover:from-[#293794] hover:to-[#000021]
                            text-sm font-bold md:text-base
                            text-white px-8 py-3 rounded-full transition-all duration-300"
