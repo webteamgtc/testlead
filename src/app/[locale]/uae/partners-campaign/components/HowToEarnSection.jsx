@@ -64,26 +64,26 @@ export default function HowToEarnSectionInteractive() {
           {/* LEFT */}
           <div className="relative flex items-center justify-center md:justify-center">
             {/* Laptop image container - for positioning reference */}
-            <div className="relative z-10 md:w-[360px] w-[280px] drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)] md:ml-2">
-              {/* Animated circle waves - positioned behind laptop, centered */}
-              <div className="absolute left-1/2 top-1/2 z-0 ">
+            <div className="relative z-10 md:w-[360px] w-[210px] drop-shadow-[0_10px_18px_rgba(0,0,0,0.25)] md:ml-2">
+              {/* Animated circle waves - positioned behind laptop, centered - hidden on mobile */}
+              <div className="hidden md:block absolute left-1/2 top-1/2 z-0">
                 {/* Wave 1 */}
                 <div
-                  className="wave-circle absolute left-1/2 top-1/2 md:h-[350px] h-[280px] md:w-[350px] w-[280px] rounded-full bg-[#B8C0DB]/55"
+                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/55"
                   style={{
                     animation: "wave 3s ease-out infinite",
                   }}
                 />
                 {/* Wave 2 */}
                 <div
-                  className="wave-circle absolute left-1/2 top-1/2 md:h-[350px] h-[280px] md:w-[350px] w-[280px] rounded-full bg-[#B8C0DB]/40"
+                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/40"
                   style={{
                     animation: "wave 3s ease-out infinite 1s",
                   }}
                 />
                 {/* Wave 3 */}
                 <div
-                  className="wave-circle absolute left-1/2 top-1/2 md:h-[350px] h-[280px] md:w-[350px] w-[280px] rounded-full bg-[#B8C0DB]/30"
+                  className="wave-circle absolute left-1/2 top-1/2 h-[350px] w-[350px] rounded-full bg-[#B8C0DB]/30"
                   style={{
                     animation: "wave 3s ease-out infinite 2s",
                   }}
