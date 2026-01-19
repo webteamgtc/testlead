@@ -656,7 +656,7 @@ export default function NaqdiIbOnboardingForm({ isIb = false }) {
         I acknowledge that I have read, understood, and agree to the{" "}
         <a
           className="text-[#293B93] underline break-words"
-          href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Website+Client+Document/GTC+Global+LTD/Mauritius+TOB+-+Proposed+Clauses+to+add.pdf"
+          href="https://gtcfx-bucket.s3.ap-southeast-1.amazonaws.com/Website+Client+Document/GTC+Global+Trade+Capital+Co.+Ltd+(VANUATU)/T%26S+-+GTC+GLOBAL+TRADE+CAPITAL+CO.+LTD.pdf"
           target="_blank"
           rel="noreferrer"
         >
