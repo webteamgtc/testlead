@@ -159,7 +159,7 @@ export default function IbHeroWithForm() {
 
   {/* Item 3 */}
   <div className="flex flex-col items-center justify-center gap-1">
-    <span className="text-base md:text-xl font-semibold text-secondary">$500 Billion</span>
+    <span className="text-base md:text-xl font-semibold text-secondary">$550 Billion</span>
     <span className="text-xs xl:text-sm opacity-90">Monthly Trades</span>
   </div>
 </div>
