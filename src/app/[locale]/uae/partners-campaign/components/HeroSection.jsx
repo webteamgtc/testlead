@@ -76,7 +76,7 @@ export default function IbHeroWithForm() {
         <img
           src="/ib/banner2.webp" // ✅ change this path if needed
           alt="Decorative background"
-          className="w-full h-[500px]  bg-repeat md:h-auto md:object-contain object-center"
+          className="w-full h-[500px]  bg-repeat md:h-auto md:object-contain object-bottom"
         />
       </div>
     
@@ -159,7 +159,7 @@ export default function IbHeroWithForm() {
 
   {/* Item 3 */}
   <div className="flex flex-col items-center justify-center gap-1">
-    <span className="text-base md:text-xl font-semibold text-secondary">$450 Billion</span>
+    <span className="text-base md:text-xl font-semibold text-secondary">$500 Billion</span>
     <span className="text-xs xl:text-sm opacity-90">Monthly Trades</span>
   </div>
 </div>
