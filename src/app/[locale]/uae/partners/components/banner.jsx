@@ -329,7 +329,7 @@ const HeroSection = ({setIsOpen}) => {
 
   {/* Item 3 */}
   <div className="flex flex-col items-center justify-center gap-1">
-    <span className="text-2xl font-semibold text-secondary">$450 Billion</span>
+    <span className="text-2xl font-semibold text-secondary">$550 Billion</span>
     <span className="text-xs xl:text-sm opacity-90">Monthly Trades</span>
   </div>
 </div>
