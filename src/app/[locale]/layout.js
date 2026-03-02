@@ -8,11 +8,12 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }) {
-  const locale = params?.locale ?? "en";
+  const resolvedParams = params != null ? await params : {};
+  const locale = resolvedParams?.locale ?? "en";
   const isArabicOrKurdish = locale === "ar" || locale === "ku";
   const GTM_ID = "GTM-PSWH9QF";
 

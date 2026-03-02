@@ -33,9 +33,11 @@ export default function middleware(req) {
   const ua = req.headers.get('user-agent') || '';
   const { pathname } = req.nextUrl;
 
-  // Never touch the fallback page
+  // Never touch the fallback page (now under locale)
   if (pathname === '/adsbot-ok') {
-    return NextResponse.next();
+    const url = req.nextUrl.clone();
+    url.pathname = `/${routing.defaultLocale}/adsbot-ok`;
+    return NextResponse.redirect(url);
   }
 
   // ===== ADSBOT (desktop + mobile) =====
@@ -48,7 +50,7 @@ export default function middleware(req) {
     // 2) GET: any campaign path → serve static OK page (prevents random 500s)
     if (req.method === 'GET' && isCampaignPath(pathname)) {
       const url = req.nextUrl.clone();
-      url.pathname = '/adsbot-ok';
+      url.pathname = `/${routing.defaultLocale}/adsbot-ok`;
       return NextResponse.rewrite(url);
     }
 
