@@ -58,6 +58,7 @@ export default function RootLayout({
         </Script>
 
         {/* TikTok Pixel */}
+           {/* TikTok Pixel */}
         <Script id="tiktok-pixel" strategy="afterInteractive">
           {`
             !function (w, d, t) {
