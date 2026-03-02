@@ -4,9 +4,6 @@ const withNextIntl = createNextIntlPlugin();
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-    appDir: true
-  },
   async redirects() {
     return [
       {
@@ -17,6 +14,11 @@ const nextConfig = {
       {
         source: '/uae',
         destination: '/uae/partners',
+        permanent: true,
+      },
+      {
+        source: '/adsbot-ok',
+        destination: '/en/adsbot-ok',
         permanent: true,
       },
     ];
