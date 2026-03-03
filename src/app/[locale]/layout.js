@@ -68,6 +68,19 @@ export default async function RootLayout({
             }(window, document, 'ttq');
           `}
         </Script>
+        {/* TikTok Events: ViewContent on every page; use lib/tiktok.js identify() + track*() where PII/events exist */}
+        <Script id="tiktok-events" strategy="afterInteractive">
+          {`
+            (function() {
+              if (typeof window === 'undefined' || !window.ttq) return;
+              var path = location.pathname || '';
+              var name = document.title || path || 'Page';
+              window.ttq.track('ViewContent', {
+                contents: [{ content_id: path || 'page', content_type: 'product_group', content_name: name }]
+              });
+            })();
+          `}
+        </Script>
         {/* TikTok Pixel Code End */}
         
       </head>
